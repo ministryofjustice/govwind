@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        { "name": "Primary", "slug": "primary", "color": "#000000" }
+      ]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontSize": "16px"
+    }
+  }
+}
+

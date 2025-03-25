@@ -1,0 +1,29 @@
+body {
+  @apply bg-gray-100 text-gray-900; 
+  font-family: 'Inter', sans-serif;
+}
+
+// Cstom class using Sass
+.my-button {
+  @apply px-4 py-2 bg-blue-300 text-white rounded-lg hover:bg-blue-600;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+
+  &--large {
+    @apply text-lg;
+  }
+
+  &--small {
+    @apply text-sm;
+  }
+}
+
+// Custom styles and variables
+$brand-color: #d946ef;
+
+h1 {
+  color: $brand-color;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+

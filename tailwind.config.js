@@ -3,8 +3,9 @@ module.exports = {
   mode: 'jit', // JIT mode for faster builds
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
-    './*.php',
-    './templates/*.php'
+    './patterns/*.php',
+    './templates/*.php',
+    './parts/*.html'
   ],
   theme: {
     container: {

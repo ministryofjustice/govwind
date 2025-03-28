@@ -1,34 +1,29 @@
 {
   "name": "Govwind",
   "version": "0.1.0",
-  "description": "A WP FSE theme built with a Tailwind frontent",
+  "description": "A WP FSE theme built with a Tailwind frontend",
   "scripts": {
-    "build:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --minify",
+    "build:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --minify --content './src/**/*.{js,jsx,ts,tsx},./patterns/*.php,./templates/*.php,./parts/*.html'",
     "build:sass": "sass src/styles.scss dist/styles.css",
-    "build": "npm run build:tailwind && npm run build:sass && postcss dist/styles.css -o dist/styles.css",
-    "watch:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --watch", 
+    "build": "npm run build:tailwind && npm run build:sass",
+    "watch:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --watch --content './src/**/*.{js,jsx,ts,tsx},./patterns/*.php,./templates/*.php,./parts/*.html'",
     "watch:sass": "sass src/styles.scss dist/styles.css --watch",
     "watch": "npm-run-all --parallel watch:tailwind watch:sass",
-    "start": "npm run watch",
-    "watch:vite": "vite"
+    "start": "npm run watch"
   },
   "dependencies": {
-    "tailwindcss": "^3.4.17"
+    "@tailwindcss/cli": "^4.0.17"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.19.0",
-    "eslint-plugin-tailwindcss": "^3.18.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.5.1",
-    "postcss-cli": "^11.0.0",
-    "sass": "^1.67.0"
+    "sass": "^1.67.0",
+    "tailwindcss": "^4.0.17"
   },
   "keywords": [
     "tailwind",
-    "sass",
-    "postcss"
+    "sass"
   ],
   "author": "",
   "license": "MIT"
 }
+

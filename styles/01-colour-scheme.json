@@ -6,7 +6,7 @@
 		"color": {
 			"palette": [
 				{
-					"color": "#1B1B1B",
+					"color": "#a83291",
 					"name": "Base",
 					"slug": "base"
 				},
@@ -124,3 +124,4 @@
 		}
 	}
 }
+

@@ -1,12 +1,18 @@
-<!-- wp:template-part {"slug":"header"} /-->
+<!-- wp:group -->
+<div class="wp-block-group grid grid-cols-[minmax(10px,_auto)_auto_minmax(10px,_auto)] gap-4">
+    <!-- wp:template-part {"slug":"header","className":"col-span-3"} /-->
+    <!-- wp:template-part {"slug":"nav","className":"row-start-2 col-span-3"} /-->
     <!-- wp:group -->
-     <div class="wp-block-group bg-white dark:bg-gray-900">
-         <!-- wp:group -->
-        <div class="wp-block-group max-w-screen-xl mx-auto pr-4 pl-4 md:pr-0 md:pl-0">
-              <!-- wp:post-content /-->              
-        </div>
-        <!-- /wp:group -->	
+    <div class="wp-block-group row-start-3"></div>
+    <!-- /wp:group -->	
+    <!-- wp:group -->
+    <div class="wp-block-group col-start-3 row-start-3"></div>
+    <!-- /wp:group -->	
+    <!-- wp:group -->
+    <div class="wp-block-group col-start-2 row-start-3">
+        <!-- wp:post-content /-->              
     </div>
     <!-- /wp:group -->	
-
-<!-- wp:template-part {"slug":"footer"} /-->
+    <!-- wp:template-part {"slug":"footer","className":"col-span-3 row-start-4"} /-->
+</div>
+<!-- /wp:group -->	

@@ -18,7 +18,7 @@
 	<!-- wp:group -->
 	<div class="wp-block-group max-w-screen-xl col-start-2">
 		<!-- wp:heading {"level":1} -->
-		<h1 class="wp-block-heading">Header 1 qweqwe</h1>
+		<h1 class="wp-block-heading">Header 1</h1>
 		<!-- /wp:heading -->
 		<!-- wp:heading {"level":2} -->
 		<h2 class="wp-block-heading">Header 2</h2>

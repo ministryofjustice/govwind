@@ -13,7 +13,7 @@
 ?>
 
 <!-- wp:group {"tagName":"footer"} -->
-<footer class="wp-block-group grid grid-cols-[12px_auto_12px] lg:grid-cols-[minmax(12px,_auto)_1000px_minmax(12px,_auto)] background-gray-400 border-t-2 border-gray-900 mb-3 col-span-3 row-start-4">
+<footer class="wp-block-group grid grid-cols-[12px_auto_12px] lg:grid-cols-[minmax(12px,_auto)_1000px_minmax(12px,_auto)] bg-blue-200 border-t-2 border-blue-900 mb-3 col-span-3 row-start-4">
     <!-- wp:group -->
     <div class="wp-block-group col-start-2 my-3 flex justify-between">
         

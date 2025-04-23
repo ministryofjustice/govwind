@@ -13,17 +13,17 @@
 ?>
 
 <!-- wp:group {"tagName":"footer"} -->
-<footer class="wp-block-group grid grid-cols-[12px_auto_12px] lg:grid-cols-[minmax(12px,_auto)_1000px_minmax(12px,_auto)] bg-blue-200 border-t-2 border-blue-900 mb-3 col-span-3 row-start-4">
+<footer class="wp-block-group grid grid-cols-[12px_auto_12px] lg:grid-cols-[minmax(12px,_auto)_1000px_minmax(12px,_auto)] bg-blue-200 border-t-2 border-blue-900 dark:border-blue-100 mb-3 col-span-3 row-start-4 dark:bg-blue-600 dark:color-yellow-200 dark:fill-yellow-200">
     <!-- wp:group -->
-    <div class="wp-block-group col-start-2 my-3 flex justify-between">
+    <div class="wp-block-group col-start-2 my-3 flex justify-between flex-col sm:flex-row">
         
         <!-- wp:group -->
-        <div class="wp-block-group lg:inline-block w-[100%] lg:w-[800px] align-top">
+        <div class="wp-block-group lg:inline-block w-[100%] sm:w-[calc(100%-150px)] lg:w-[800px] align-top">
             <!-- wp:template-part {"slug":"footer-nav"} /-->
         </div>
         <!-- /wp:group -->
         <!-- wp:group -->
-        <div class="wp-block-group text-center lg:inline-block mx-auto lg:mx-0 w-[100%] lg:w-[150px]">
+        <div class="wp-block-group text-center lg:inline-block mx-auto lg:mx-0 w-[150px] pt-3">
             <!-- wp:html -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-[130px] inline" id="footer-crest fill-gray-650" viewBox="0 0 702.47 624.08">
                 <g>

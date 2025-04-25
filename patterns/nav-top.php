@@ -26,7 +26,7 @@ if ($show_header_menu == 'yes') {
 
     $topmenu_args = array(
         'menu' => 'main-menu',
-        'menu_class' => 'gw-top-nav max-w-screen-xl',
+        'menu_class' => 'gw-top-nav flex',
         'menu_id' => 'menu-menu-top-menu',
         'container' => false,
         'container_class' => '',

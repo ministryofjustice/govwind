@@ -9,7 +9,8 @@
     "watch:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --watch --content './src/**/*.{js,jsx,ts,tsx},./patterns/*.php,./templates/*.php,./parts/*.html'",
     "watch:sass": "sass src/styles.scss dist/styles.css --watch",
     "watch": "npm-run-all --parallel watch:tailwind watch:sass",
-    "start": "npm run watch"
+    "start": "npm run watch",
+    "format": "npx prettier --write ."
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.17"

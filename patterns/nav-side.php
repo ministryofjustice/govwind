@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Navigation
- * Slug: govwind/nav
+ * Slug: govwind/navside
  * Categories: navigation
  * Block Types: core/template-part/navigation
  * Description: Main navigation section
@@ -26,7 +26,7 @@ if ($show_header_menu == 'yes') {
 
     $topmenu_args = array(
         'menu' => 'main-menu',
-        'menu_class' => 'govuk-header__navigation-list',
+        'menu_class' => 'gw-side-nav max-w-screen-xl',
         'menu_id' => 'menu-menu-top-menu',
         'container' => false,
         'container_class' => '',

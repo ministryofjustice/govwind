@@ -30,5 +30,10 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: "🚨 Prettier check failed. Please run `npx prettier --write .` and commit the changes."
+              body: "Prettier check failed. Run `npx prettier --write .` 
+              grab a 🌯 and commit the changes."
             })
+
+      - name: Fail the job if Prettier failed
+        if: steps.prettier.outcome == 'failure'
+        run: exit 1

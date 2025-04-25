@@ -9,12 +9,10 @@ module.exports = {
     "eslint:recommended",
     "plugin:tailwindcss/recommended", // Enable Tailwind CSS recommended rules
   ],
-  plugins: [
-    "tailwindcss",
-  ],
+  plugins: ["tailwindcss"],
   rules: {
-    "tailwindcss/classnames-order": "error",  // Enforce consistent class ordering
-    "tailwindcss/no-custom-classname": "error",  // Disallow custom class names
+    "tailwindcss/classnames-order": "error", // Enforce consistent class ordering
+    "tailwindcss/no-custom-classname": "error", // Disallow custom class names
   },
   settings: {
     tailwindcss: {
@@ -22,4 +20,3 @@ module.exports = {
     },
   },
 };
-

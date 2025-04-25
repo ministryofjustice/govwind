@@ -2,7 +2,8 @@
   "version": 2,
   "settings": {
     "color": {
-      "palette": [{ "name": "Primary", "slug": "primary", "color": "#000000" }]
+      "palette": [{ "name": "Primary", 
+"slug": "primary", "color": "#000000" }]
     }
   },
   "styles": {

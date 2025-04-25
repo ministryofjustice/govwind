@@ -1,28 +1,19 @@
-name: Prettier Format and Commit
+name: Prettier Check
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 jobs:
-  job:
-    permissions:
-      contents: write
+  check-prettier:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout current branch
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: ${{ github.head_ref || github.ref_name }}
 
-      - name: Run Prettier
-        run: npx --yes prettier --write .
+      - name: Install Prettier
+        run: npm install --no-save prettier
 
-      - name: Commit and Push Changes
-        uses: actions4git/add-commit-push@v1
+      - name: Run Prettier check
+        run: npx prettier --check .

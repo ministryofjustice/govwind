@@ -12,13 +12,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Prettier
-        run: npm install --no-save prettier
+      - name: Install Prettier and Plugins
+        run: npm install --no-save prettier prettier-plugin-tailwindcss
 
       - name: Run Prettier check
         id: prettier
         continue-on-error: true
-        run: npx prettier --check .
+        run: npx prettier --check "**/*.{js,ts,jsx,tsx,html,css,scss,json}"
 
       - name: Comment on PR if Prettier fails
         if: steps.prettier.outcome == 'failure'

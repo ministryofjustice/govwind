@@ -10,7 +10,7 @@
     "watch:sass": "sass src/styles.scss dist/styles.css --watch",
     "watch": "npm-run-all --parallel watch:tailwind watch:sass",
     "start": "npm run watch",
-    "format": "npx prettier --write .",
+    "format": "npx prettier --write \"**/*.{js,ts,jsx,tsx,html,css,scss,json}\"",
     "check": "npx prettier --check ."
   },
   "dependencies": {

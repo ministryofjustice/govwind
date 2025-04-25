@@ -10,38 +10,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  format:
+  job:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      # Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      # Install dependencies
-      - name: Install dependencies
-        run: |
-          npm install --save-dev prettier
-
-      # Run Prettier to check and format files
-      - name: Run Prettier
-        run: |
-          npx prettier --write .   # Runs Prettier to format all files
-
-      - name: Check for changes
-        id: changes
-        run: |
-          git diff --quiet || echo "has_changes=true" >> $GITHUB_OUTPUT
-
-      - name: Commit and push changes
-        if: steps.changes.outputs.has_changes == 'true'
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Apply Prettier formatting"
-          git push origin HEAD:refs/heads/${{ github.ref_name }}
+      - uses: actions/checkout@v4
+      - run: npx --yes prettier --write .
+      - uses: actions4git/add-commit-push@v1

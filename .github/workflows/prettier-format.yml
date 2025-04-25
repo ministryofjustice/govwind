@@ -30,7 +30,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: "Prettier check failed. Run `npx prettier --write .` grab a 🌯 and commit the changes."
+              body: "Prettier check failed 🌩. Run `npx prettier --write .` and re-commit the code."
             })
 
       - name: Fail the job if Prettier failed

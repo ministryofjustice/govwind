@@ -15,6 +15,14 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: npx --yes prettier --write .
-      - uses: actions4git/add-commit-push@v1
+      - name: Checkout current branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Run Prettier
+        run: npx --yes prettier --write .
+
+      - name: Commit and Push Changes
+        uses: actions4git/add-commit-push@v1

@@ -26,7 +26,7 @@ if ($show_header_menu == 'yes') {
 
     $topmenu_args = array(
         'menu' => 'main-menu',
-        'menu_class' => 'gw-top-nav flex',
+        'menu_class' => 'gw-top-nav flex flex-row',
         'menu_id' => 'menu-menu-top-menu',
         'container' => false,
         'container_class' => '',
@@ -42,6 +42,7 @@ if ($show_header_menu == 'yes') {
         'theme_location' => 'main-menu',
         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
         'item_spacing' => 'preserve',
+        'item_class' => 'flex-1 bg-green-400'
     );
     ?>
 	<!-- wp:group {"tagName":"nav"} -->

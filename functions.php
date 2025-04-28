@@ -29,3 +29,10 @@ function govwind_register_block_categories($categories) {
 }
 add_filter('block_categories_all', 'govwind_register_block_categories');
 
+function add_additional_class_on_list_item($classes, $item, $args) {
+    if(isset($args->item_class)) {
+        $classes[] = $args->item_class;
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_additional_class_on_list_item', 1, 3);

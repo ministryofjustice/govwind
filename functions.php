@@ -29,3 +29,7 @@ function govwind_register_block_categories($categories) {
 }
 add_filter('block_categories_all', 'govwind_register_block_categories');
 
+add_action('after_setup_theme', function () {
+///   remove_theme_support('core-block-patterns');
+});
+

@@ -1,13 +1,156 @@
 {
-  "version": 2,
+  "title": "JSON schema for WordPress block theme Govwind, settings and styles",
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
   "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1200px"
+    },
     "color": {
-      "palette": [{ "name": "Primary", "slug": "primary", "color": "#000000" }]
+      "palette": [
+        { "slug": "primary", "color": "#0073aa", "name": "Primary" },
+        { "slug": "background", "color": "#f9f9f9", "name": "Background" },
+        { "slug": "text", "color": "#333333", "name": "Text" },
+        {
+          "slug": "vivid-cyan-blue",
+          "color": "#0000ff",
+          "name": "Vivid Cyan Blue"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        { "slug": "small", "size": "14px", "name": "Small" },
+        { "slug": "medium", "size": "18px", "name": "Medium" },
+        { "slug": "large", "size": "28px", "name": "Large" }
+      ],
+      "fontFamilies": [
+        {
+          "slug": "pt-sans",
+          "name": "PT Sans",
+          "fontFamily": "PT Sans, sans-serif"
+        }
+      ]
     }
   },
   "styles": {
-    "typography": {
-      "fontSize": "16px"
+    "color": {
+      "background": "var(--wp--preset--color--vivid-cyan-blue)",
+      "text": "#333333"
+    },
+    "spacing": {
+      "padding": {
+        "top": "2rem",
+        "bottom": "2rem",
+        "left": "1rem",
+        "right": "1rem"
+      }
+    },
+    "border": {
+      "radius": "6px",
+      "width": "1px",
+      "color": "#cccccc"
+    },
+    "elements": {
+      "body": {
+        "typography": {
+          "fontSize": "18px",
+          "lineHeight": "1.8",
+          "fontFamily": "PT Sans, sans-serif"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#0073aa"
+        },
+        "typography": {
+          "textDecoration": "underline"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "36px",
+          "fontWeight": "700"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "28px",
+          "fontWeight": "600"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "#0073aa",
+          "text": "#ffffff"
+        },
+        "border": {
+          "radius": "4px"
+        }
+      }
+    },
+    "blocks": {
+      "core/paragraph": {
+        "spacing": {
+          "margin": {
+            "bottom": "1.5rem"
+          }
+        }
+      },
+      "core/image": {
+        "border": {
+          "radius": "8px"
+        }
+      },
+      "core/heading": {
+        "typography": {}
+      },
+      "core/separator": {
+        "color": {
+          "background": "#dddddd"
+        },
+        "spacing": {
+          "margin": {
+            "top": "2rem",
+            "bottom": "2rem"
+          }
+        }
+      }
     }
-  }
+  },
+  "customTemplates": [
+    {
+      "name": "full-width",
+      "title": "Full Width",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "no-sidebar",
+      "title": "No Sidebar",
+      "postTypes": ["page", "post"]
+    },
+    {
+      "name": "landing",
+      "title": "Landing Page",
+      "postTypes": ["page"]
+    }
+  ],
+  "patterns": [
+    "fullscreen-cover-image-gallery",
+    "hero-banner-with-overlap-images"
+  ],
+  "templateParts": [
+    {
+      "area": "header",
+      "name": "header",
+      "title": "Header"
+    },
+    {
+      "area": "footer",
+      "name": "footer",
+      "title": "Footer"
+    }
+  ]
 }

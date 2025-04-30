@@ -1,34 +1,34 @@
 {
-  "name": "Govwind",
-  "version": "0.1.0",
-  "description": "A WP FSE theme built with a Tailwind frontend",
-  "scripts": {
-    "build:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --minify --content './src/**/*.{js,jsx,ts,tsx},./patterns/*.php,./templates/*.php,./parts/*.html'",
-    "build:sass": "sass src/styles.scss dist/styles.css",
-    "build": "npm run build:tailwind && npm run build:sass",
-    "watch:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --watch --content './src/**/*.{js,jsx,ts,tsx},./patterns/*.php,./templates/*.php,./parts/*.html'",
-    "watch:sass": "sass src/styles.scss dist/styles.css --watch",
-    "watch": "npm-run-all --parallel watch:tailwind watch:sass",
-    "start": "npm run watch",
-    "format": "npx prettier --write \"**/*.{js,ts,jsx,tsx,html,css,scss,json}\"",
-    "check": "npx prettier --check ."
-  },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.0.17"
-  },
-  "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "sass": "^1.67.0",
-    "tailwindcss": "^4.0.17",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11"
-  },
-  "keywords": [
-    "tailwind",
-    "sass"
-  ],
-  "author": "",
-  "license": "MIT"
+	"name": "Govwind",
+	"version": "0.1.0",
+	"description": "A WP FSE theme built with a Tailwind frontend",
+	"scripts": {
+		"build:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --minify --content './src/**/*.{js,jsx,ts,tsx},./patterns/*.php,./templates/*.php,./parts/*.html'",
+		"build:sass": "sass src/styles.scss dist/styles.css",
+		"build": "npm run build:tailwind && npm run build:sass",
+		"watch:tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --watch --content './src/**/*.{js,jsx,ts,tsx},./patterns/*.php,./templates/*.php,./parts/*.html'",
+		"watch:sass": "sass src/styles.scss dist/styles.css --watch",
+		"watch": "npm-run-all --parallel watch:tailwind watch:sass",
+		"start": "npm run watch",
+		"format": "npx prettier --write \"**/*.{js,ts,jsx,tsx,html,css,scss,json}\"",
+		"check": "npx prettier --check ."
+	},
+	"dependencies": {
+		"@tailwindcss/cli": "^4.0.17"
+	},
+	"devDependencies": {
+		"npm-run-all": "^4.1.5",
+		"prettier": "^3.5.3",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"sass": "^1.67.0",
+		"tailwindcss": "^4.0.17",
+		"prettier": "^3.5.3",
+		"prettier-plugin-tailwindcss": "^0.6.11"
+	},
+	"keywords": [
+		"tailwind",
+		"sass"
+	],
+	"author": "",
+	"license": "MIT"
 }

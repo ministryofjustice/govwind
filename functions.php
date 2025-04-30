@@ -36,3 +36,8 @@ function add_additional_class_on_list_item($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_list_item', 1, 3);
+
+add_action('after_setup_theme', function () {
+    ///   remove_theme_support('core-block-patterns');
+});
+

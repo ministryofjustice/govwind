@@ -5,11 +5,11 @@
 }
 
 html {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    purple,
-    purple 200px,
-    yellow 200px,
-    yellow 400px
-  );
+	background-image: repeating-linear-gradient(
+		-45deg,
+		purple,
+		purple 200px,
+		yellow 200px,
+		yellow 400px
+	);
 }

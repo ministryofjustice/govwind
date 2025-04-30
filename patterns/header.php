@@ -14,12 +14,12 @@
  
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull bg-mint-500">
+<div class="mycustomcss wp-block-group alignfull bg-blue-500">
 
 	<!-- wp:group -->
 	<div class="wp-block-group max-w-screen-xl mx-auto pr-4 pl-4 md:pr-0 md:pl-0">
 		<!-- wp:heading {"level":1} -->
-		<h1 class="wp-block-heading">Header 3</h1>
+		<h1 class="wp-block-heading">Header 5</h1>
 		<!-- /wp:heading -->
 
 		<!-- wp:group {"layout":{"type":"constrained"}} -->

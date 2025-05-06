@@ -33,7 +33,8 @@
 					"fontFamily": "PT Sans, sans-serif"
 				}
 			]
-		}
+		},
+		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
 		"color": {
@@ -41,9 +42,10 @@
 			"text": "#333333"
 		},
 		"spacing": {
+			"blockGap": "0",
 			"padding": {
-				"top": "2rem",
-				"bottom": "2rem",
+				"top": "0rem",
+				"bottom": "0rem",
 				"left": "1rem",
 				"right": "1rem"
 			}

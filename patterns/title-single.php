@@ -3,7 +3,6 @@
  * Title: Title-single
  * Slug: govwind/title-single
  * Categories: title
- * Block Types: core/template-part/titlesingle
  * Description: Page title.
  *
  * @package WordPress

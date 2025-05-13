@@ -19,5 +19,6 @@
 ?>
 
 <div class="col-start-2 pb-10 text-sm font-bold">
-    Penned by <?php echo $fullname; ?>
+    Penned by <?php echo $fullname; ?> <br />
+    Penned by <!-- wp:post-author-name /-->
 </div>

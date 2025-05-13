@@ -12,7 +12,7 @@
 ?>
 
 <!-- wp:heading {"level":1,"align":"left"} -->
-<h1 class="wp-block-heading col-start-2 text-5xl pb-10">
+<h1 class="wp-block-heading text-5xl pb-10">
 	<?php single_post_title(); ?>
 </h1>
 <!-- /wp:heading -->

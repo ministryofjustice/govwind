@@ -18,7 +18,7 @@
     if (trim($fullname) == "") $fullname = get_the_author_meta('display_name');
 ?>
 
-<div class="col-start-2 pb-10 text-sm font-bold">
+<div class="pb-10 text-sm font-bold">
     Penned by <?php echo $fullname; ?> <br />
     Penned by <!-- wp:post-author-name /-->
 </div>

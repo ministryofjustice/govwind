@@ -16,7 +16,7 @@
 
 	if ( !empty($summary) ) :
 ?>
-	<div class="col-start-2 pb-10">
+	<div class="pb-10">
 		<?php echo wpautop($summary); ?>
 	</div>
 <?php

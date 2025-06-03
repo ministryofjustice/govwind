@@ -16,9 +16,14 @@
     $surname = get_the_author_meta('last_name');
     $fullname = $firstname . " " . $surname;
     if (trim($fullname) == "") $fullname = get_the_author_meta('display_name');
+    if (trim($fullname) != "") {
 ?>
 
-<div class="col-start-2 pb-10 text-sm font-bold">
-    Penned by <?php echo $fullname; ?> <br />
-    Penned by <!-- wp:post-author-name /-->
-</div>
+<!-- wp:paragraph -->
+<p class="">
+    Penned by <?php echo $fullname; ?>
+</p>
+<!-- /wp:paragraph -->
+
+<?php
+    }

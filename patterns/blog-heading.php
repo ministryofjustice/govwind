@@ -7,7 +7,7 @@
 ?>
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading col-start-2" id="page-not-found">
+<h1 class="wp-block-heading" id="page-not-found">
 	Blog
 </h1>
 <!-- /wp:heading -->

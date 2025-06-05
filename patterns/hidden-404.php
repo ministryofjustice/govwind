@@ -8,7 +8,7 @@
 
 <!-- wp:heading {"level":1} -->
 <h1 class="wp-block-heading" id="page-not-found">
-	Page Not found
+	Page not found 
 </h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->

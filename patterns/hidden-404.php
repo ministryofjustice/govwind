@@ -8,7 +8,7 @@
 
 <!-- wp:heading {"level":1} -->
 <h1 class="wp-block-heading" id="page-not-found">
-	Page Not found
+	Page not found 
 </h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
@@ -16,4 +16,3 @@
 	The page you are looking for does not exist, or it has been moved. 
 </p>
 <!-- /wp:paragraph -->
-<!-- wp:pattern {"slug":"twentytwentyfour/hidden-search"} /-->

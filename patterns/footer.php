@@ -12,8 +12,8 @@
  */
 ?>
 
-<!-- wp:group {"tagName":"footer"} -->
-<footer class="wp-block-group col-start-2 my-3 flex justify-between flex-col sm:flex-row">
+<!-- wp:group {"tagName":"div"} -->
+<div class="wp-block-group col-start-2 my-3 flex justify-between flex-col sm:flex-row">
     <!-- wp:group -->
     <div class="wp-block-group lg:inline-block w-[100%] sm:w-[calc(100%-150px)] xl:w-[1056px] align-top">
         <!-- wp:template-part {"slug":"footer-nav"} /-->
@@ -187,5 +187,5 @@
         <!-- wp:paragraph --> <p>©Crown Copyright</p> <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->
-</footer>
+</div>
 <!-- /wp:group -->

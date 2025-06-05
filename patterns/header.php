@@ -12,8 +12,8 @@
  */
 ?>
 
-<!-- wp:group {"tagName":"header","align":"full","layout":{"type":"default"}} -->
-<header class="wp-block-group alignfull col-start-2">
+<!-- wp:group {"tagName":"div","align":"full","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull col-start-2">
 	<!-- wp:site-title /-->
-</header>
+</div>
 <!-- /wp:group -->

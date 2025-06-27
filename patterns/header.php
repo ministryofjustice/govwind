@@ -12,8 +12,9 @@
  */
 ?>
 
-<!-- wp:group {"tagName":"div","align":"full","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull col-start-2">
+<!-- wp:group {"align":"full","className":"col-start-2 py-3","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group alignfull col-start-2 py-3">
+	<!-- wp:site-logo {"width":145,"shouldSyncIcon":false} /-->
 	<!-- wp:site-title /-->
 </div>
 <!-- /wp:group -->

@@ -5,8 +5,8 @@
 	"settings": {
 		"appearanceTools": true,
 		"layout": {
-			"contentSize": "800px",
-			"wideSize": "1200px"
+			"contentSize": "1280px",
+			"wideSize": "1536px"
 		},
 		"color": {
 			"palette": [
@@ -32,6 +32,24 @@
 					"name": "PT Sans",
 					"fontFamily": "PT Sans, sans-serif"
 				}
+			]
+		},
+		"spacing": {
+			"customPadding": true,
+			"customMargin": true,
+			"units": ["px", "rem", "%", "vh", "vw"],
+			"spacingPresets": [
+				{ "name": "0", "slug": "0", "size": "0rem" },
+				{ "name": "xs", "slug": "xs", "size": "0.25rem" },
+				{ "name": "sm", "slug": "sm", "size": "0.5rem" },
+				{ "name": "md", "slug": "md", "size": "0.75rem" },
+				{ "name": "lg", "slug": "lg", "size": "1rem" },
+				{ "name": "xl", "slug": "xl", "size": "1.5rem" },
+				{ "name": "2xl", "slug": "2xl", "size": "2rem" },
+				{ "name": "3xl", "slug": "3xl", "size": "2.5rem" },
+				{ "name": "4xl", "slug": "4xl", "size": "3rem" },
+				{ "name": "5xl", "slug": "5xl", "size": "4rem" },
+				{ "name": "6xl", "slug": "6xl", "size": "5rem" }
 			]
 		},
 		"useRootPaddingAwareAlignments": true

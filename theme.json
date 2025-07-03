@@ -104,7 +104,7 @@
 					"name": "PT Sans",
 					"fontFamily": "\"PT Sans\", ui-sans-serif, system-ui, sans-serif"
 				}
-			],
+			]
 		},
 		"border": {
 			"customRadius": true,

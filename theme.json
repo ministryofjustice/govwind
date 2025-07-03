@@ -105,30 +105,6 @@
 					"fontFamily": "\"PT Sans\", ui-sans-serif, system-ui, sans-serif"
 				}
 			],
-			"fontWeights": [
-				{ "slug": "light", "fontWeight": "300", "name": "Light" },
-				{ "slug": "normal", "fontWeight": "400", "name": "Normal" },
-				{ "slug": "medium", "fontWeight": "500", "name": "Medium" },
-				{ "slug": "semibold", "fontWeight": "600", "name": "Semi Bold" },
-				{ "slug": "bold", "fontWeight": "700", "name": "Bold" },
-				{ "slug": "extrabold", "fontWeight": "800", "name": "Extra Bold" }
-			],
-			"lineHeight": [
-				{ "slug": "none", "lineHeight": "1" },
-				{ "slug": "tight", "lineHeight": "1.25" },
-				{ "slug": "snug", "lineHeight": "1.375" },
-				{ "slug": "normal", "lineHeight": "1.5" },
-				{ "slug": "relaxed", "lineHeight": "1.625" },
-				{ "slug": "loose", "lineHeight": "2" }
-			],
-			"letterSpacing": [
-				{ "slug": "tighter", "value": "-0.05em" },
-				{ "slug": "tight", "value": "-0.025em" },
-				{ "slug": "normal", "value": "0em" },
-				{ "slug": "wide", "value": "0.025em" },
-				{ "slug": "wider", "value": "0.05em" },
-				{ "slug": "widest", "value": "0.1em" }
-			]
 		},
 		"border": {
 			"customRadius": true,

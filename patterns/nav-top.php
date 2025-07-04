@@ -13,6 +13,7 @@
 ?>
 
 <?php
+/*
 $show_header_menu = get_theme_mod('show_header_menu', 'yes');
 if ($show_header_menu == 'yes') {
     $show_more_button = get_theme_mod('show_header_menu_more_button', 'yes');
@@ -58,8 +59,10 @@ if ($show_header_menu == 'yes') {
         wp_nav_menu($topmenu_args);
         ?>
     </nav>
+    
 <?php
 
     //var_dump($navigation_array);
 
 }
+/**/

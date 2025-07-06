@@ -1,0 +1,18 @@
+// Import all theme tokens using modern Sass (must be first)
+@use "./theme" as *;
+
+// Custom utilities and components
+@layer utilities {
+	.wp-block-gap {
+		gap: var(--wp-block-gap);
+	}
+	.wp-container-padding {
+		padding-inline: var(--wp-container-padding);
+	}
+	.wp-content-width {
+		max-width: var(--size-content);
+	}
+	.wp-wide-width {
+		max-width: var(--size-wide);
+	}
+}

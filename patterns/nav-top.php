@@ -48,9 +48,9 @@ if ($show_header_menu == 'yes') {
     ?>
     <!-- wp:navigation {"orientation":"horizontal","className":"gw-top-nav flex flex-row justify-between is-layout-flex wp-block-navigation-is-layout-flex"} -->
         <?php
-            foreach($navigation_array as $nav_item) {
-               echo '<!-- wp:navigation-link {"label":"'.$nav_item->title.'","url":"'.$nav_item->url.'","className":"flex-none bg-blue-400"} /-->';
-            }
+            //foreach($navigation_array as $nav_item) {
+               //echo '<!-- wp:navigation-link {"label":"'.$nav_item->title.'","url":"'.$nav_item->url.'","className":"flex-none bg-blue-400"} /-->';
+            //}
             ?>
     <!-- /wp:navigation -->
     <nav class="wp-block-group col-start-2" id="header-navigation" role="navigation" aria-label="Primary navigation" data-more-text="<?php echo $more_text ?>">

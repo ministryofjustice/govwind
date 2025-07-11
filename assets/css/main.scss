@@ -1,5 +1,5 @@
 // Import all theme tokens using modern Sass (must be first)
-@use "./theme" as *;
+@use "./globals" as *;
 
 // Custom utilities and components
 @layer utilities {

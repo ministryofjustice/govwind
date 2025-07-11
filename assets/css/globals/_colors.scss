@@ -48,15 +48,3 @@
 	--color-input: #ffffff;
 	--color-ring: var(--color-blue-500);
 }
-
-/* Dark mode color overrides */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-background: var(--color-slate-900);
-		--color-foreground: var(--color-slate-50);
-		--color-muted: var(--color-slate-800);
-		--color-muted-foreground: var(--color-slate-400);
-		--color-border: var(--color-slate-700);
-		--color-input: var(--color-slate-800);
-	}
-}

@@ -3,6 +3,11 @@
 @use "./style-variations" as *;
 
 // Custom utilities and components
+//This is a CSS Cascade Layers feature that ensures these utilities have the
+//right specificity and load order. Utilities in the utilities layer will
+//override base styles but can be overridden by component styles.
+// TODO: test this further
+
 @layer utilities {
 	.wp-block-gap {
 		gap: var(--wp-block-gap);

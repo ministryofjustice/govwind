@@ -1,36 +1,43 @@
 <?php
+
 /**
  * Govwind theme functions
  */
 // Prevent direct access
-if (!defined('ABSPATH')) exit;
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 // Theme setup
 add_action('after_setup_theme', function () {
     // Add theme support for editor styles
     add_theme_support('editor-styles');
-    
-    // Enqueue editor styles (for block editor)
-    add_editor_style('dist/style.css');
-    
+
+    // Check if CSS file exists before adding editor styles
+    $css_file = get_template_directory() . '/dist/style.css';
+    if (file_exists($css_file)) {
+        add_editor_style('dist/style.css');
+    }
+
     // Remove core block patterns
     remove_theme_support('core-block-patterns');
 });
 
 // Enqueue scripts and styles for frontend
-function govwind_enqueue_assets() {
+function govwind_enqueue_assets()
+{
     // Get file modification time for cache busting
     $css_file = get_template_directory() . '/dist/style.css';
     $css_version = file_exists($css_file) ? filemtime($css_file) : '1.0.0';
-    
+
     // Enqueue main stylesheet
     wp_enqueue_style(
-        'govwind-style', 
-        get_template_directory_uri() . '/dist/style.css', 
-        [], 
+        'govwind-style',
+        get_template_directory_uri() . '/dist/style.css',
+        [],
         $css_version
     );
-    
+
     // Handle JavaScript
     if (defined('WP_ENV') && WP_ENV === 'development') {
         // Load Vite dev server assets in development
@@ -40,10 +47,10 @@ function govwind_enqueue_assets() {
         if (file_exists($js_file)) {
             $js_version = filemtime($js_file);
             wp_enqueue_script(
-                'govwind-script', 
-                get_template_directory_uri() . '/dist/main.js', 
-                [], 
-                $js_version, 
+                'govwind-script',
+                get_template_directory_uri() . '/dist/main.js',
+                [],
+                $js_version,
                 true // Load in footer
             );
         }
@@ -51,21 +58,9 @@ function govwind_enqueue_assets() {
 }
 add_action('wp_enqueue_scripts', 'govwind_enqueue_assets');
 
-// Enhanced editor styles support
-add_action('enqueue_block_editor_assets', function() {
-    $css_file = get_template_directory() . '/dist/style.css';
-    $css_version = file_exists($css_file) ? filemtime($css_file) : '1.0.0';
-    
-    wp_enqueue_style(
-        'govwind-editor-style',
-        get_template_directory_uri() . '/dist/style.css',
-        [],
-        $css_version
-    );
-});
-
 // Register custom block categories
-function govwind_register_block_categories($categories) {
+function govwind_register_block_categories($categories)
+{
     return array_merge($categories, [
         [
             'slug'  => 'govwind',
@@ -76,8 +71,9 @@ function govwind_register_block_categories($categories) {
 add_filter('block_categories_all', 'govwind_register_block_categories');
 
 // Add custom class to nav menu items
-function govwind_add_additional_class_on_list_item($classes, $item, $args) {
-    if(isset($args->item_class)) {
+function govwind_add_additional_class_on_list_item($classes, $item, $args)
+{
+    if (isset($args->item_class)) {
         $classes[] = $args->item_class;
     }
     return $classes;

@@ -1,0 +1,6 @@
+{
+    "name": "ministryofjustice/govwind",
+    "description": "Govwind theme",
+    "type": "wordpress-theme",
+    "require": {}
+}

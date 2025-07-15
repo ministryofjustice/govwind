@@ -2,21 +2,67 @@
 /**
  * Govwind theme functions
  */
-
 // Prevent direct access
 if (!defined('ABSPATH')) exit;
 
-// Enqueue scripts and styles
-function govwind_enqueue_assets() {
-    wp_enqueue_style('theme-style', get_template_directory_uri() . '/dist/tailwind.css', [], '1.0');
+// Theme setup
+add_action('after_setup_theme', function () {
+    // Add theme support for editor styles
+    add_theme_support('editor-styles');
+    
+    // Enqueue editor styles (for block editor)
+    add_editor_style('dist/style.css');
+    
+    // Remove core block patterns
+    remove_theme_support('core-block-patterns');
+});
 
+// Enqueue scripts and styles for frontend
+function govwind_enqueue_assets() {
+    // Get file modification time for cache busting
+    $css_file = get_template_directory() . '/dist/style.css';
+    $css_version = file_exists($css_file) ? filemtime($css_file) : '1.0.0';
+    
+    // Enqueue main stylesheet
+    wp_enqueue_style(
+        'govwind-style', 
+        get_template_directory_uri() . '/dist/style.css', 
+        [], 
+        $css_version
+    );
+    
+    // Handle JavaScript
     if (defined('WP_ENV') && WP_ENV === 'development') {
         // Load Vite dev server assets in development
     } else {
-        wp_enqueue_script('theme-script', get_template_directory_uri() . '/dist/main.js', [], '1.0', true);
+        // Only load JS if file exists
+        $js_file = get_template_directory() . '/dist/main.js';
+        if (file_exists($js_file)) {
+            $js_version = filemtime($js_file);
+            wp_enqueue_script(
+                'govwind-script', 
+                get_template_directory_uri() . '/dist/main.js', 
+                [], 
+                $js_version, 
+                true // Load in footer
+            );
+        }
     }
 }
 add_action('wp_enqueue_scripts', 'govwind_enqueue_assets');
+
+// Enhanced editor styles support
+add_action('enqueue_block_editor_assets', function() {
+    $css_file = get_template_directory() . '/dist/style.css';
+    $css_version = file_exists($css_file) ? filemtime($css_file) : '1.0.0';
+    
+    wp_enqueue_style(
+        'govwind-editor-style',
+        get_template_directory_uri() . '/dist/style.css',
+        [],
+        $css_version
+    );
+});
 
 // Register custom block categories
 function govwind_register_block_categories($categories) {
@@ -29,15 +75,11 @@ function govwind_register_block_categories($categories) {
 }
 add_filter('block_categories_all', 'govwind_register_block_categories');
 
-function add_additional_class_on_list_item($classes, $item, $args) {
+// Add custom class to nav menu items
+function govwind_add_additional_class_on_list_item($classes, $item, $args) {
     if(isset($args->item_class)) {
         $classes[] = $args->item_class;
     }
     return $classes;
 }
-add_filter('nav_menu_css_class', 'add_additional_class_on_list_item', 1, 3);
-
-add_action('after_setup_theme', function () {
-    ///   remove_theme_support('core-block-patterns');
-});
-
+add_filter('nav_menu_css_class', 'govwind_add_additional_class_on_list_item', 1, 3);

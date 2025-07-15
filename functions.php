@@ -58,6 +58,19 @@ function govwind_enqueue_assets()
 }
 add_action('wp_enqueue_scripts', 'govwind_enqueue_assets');
 
+// Enhanced editor styles support
+add_action('enqueue_block_editor_assets', function() {
+    $css_file = get_template_directory() . '/dist/style.css';
+    $css_version = file_exists($css_file) ? filemtime($css_file) : '1.0.0';
+    
+    wp_enqueue_style(
+        'govwind-editor-style',
+        get_template_directory_uri() . '/dist/style.css',
+        [],
+        $css_version
+    );
+});
+
 // Register custom block categories
 function govwind_register_block_categories($categories)
 {

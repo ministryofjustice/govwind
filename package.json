@@ -7,15 +7,17 @@
 		"build:tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./dist/style.css --minify",
 		"build": "npm run build:theme && npm run build:tailwind",
 		"production": "npm run build",
+		"release": "npm run build && npm run format",
 		"watch:theme": "sass assets/css/main.scss:dist/theme.css --watch",
 		"watch:tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./dist/style.css --watch",
 		"watch": "npm-run-all --parallel watch:theme watch:tailwind",
 		"start": "npm run watch",
 		"dev": "npm run clean && npm run watch",
-		"format": "npx prettier --write \"**/*.{js,ts,jsx,tsx,html,css,scss,json,php}\"",
+		"format": "npx prettier --write \"**/*.{js,ts,jsx,tsx,html,css,scss,json}\"",
 		"check": "npx prettier --check .",
 		"clean": "rm -rf dist/*",
 		"debug:tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./dist/debug.css --verbose",
+		"debug": "npm run debug:tailwind",
 		"test:utilities": "echo 'Testing utilities...' && grep -o '\\.text-' dist/style.css | head -5 || echo 'No text utilities found!'"
 	},
 	"dependencies": {

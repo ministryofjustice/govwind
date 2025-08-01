@@ -4,3 +4,8 @@
 		background-color: hotpink;
 	}
 }
+/*
+	This is overridden by the has- classes and will need an !important suffix 
+	to work when background colours are set.  We were using this for the header, 
+	which all have a has- class to declare their background colour at the moment.
+*/

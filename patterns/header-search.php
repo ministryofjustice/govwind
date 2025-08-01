@@ -14,7 +14,7 @@
 
 ?>
 <!-- wp:group {"metadata":{"categories":["header"],"patternName":"govwind/header","name":"Header"},"align":"full","className":"has-white-color has-text-color col-start-2 py-3 helloCCRC","backgroundColor":"luminous-vivid-orange","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-<div class="wp-block-group alignfull col-start-2 py-3 helloCCRC has-white-color has-text-color has-luminous-vivid-orange-background-color has-background"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group alignfull col-start-2 py-3 has-white-color has-text-color has-luminous-vivid-orange-background-color has-background"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:site-logo {"width":145,"shouldSyncIcon":false} /-->
 
 <!-- wp:site-title /--></div>

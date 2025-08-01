@@ -12,8 +12,8 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"categories":["header"],"patternName":"govwind/header","name":"Header"},"align":"full","className":"col-start-2 py-3 helloCCRC has-white-color has-text-color ","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"backgroundColor":"vivid-purple","textColor":"white"} -->
-<div class="wp-block-group alignfull col-start-2 py-3 helloCCRC has-white-color has-vivid-purple-background-color has-text-color has-background has-link-color"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+<!-- wp:group {"metadata":{"categories":["header"],"patternName":"govwind/header","name":"Header"},"align":"full","className":"col-start-2 py-3 has-white-color has-text-color ","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"backgroundColor":"vivid-purple","textColor":"white"} -->
+<div class="wp-block-group alignfull col-start-2 py-3 has-white-color has-vivid-purple-background-color has-text-color has-background has-link-color"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:site-logo {"width":145,"shouldSyncIcon":false} /-->
 

@@ -1,11 +1,55 @@
 // Base HTML element styles
-/*
+
+$supported-colours: 
+	vivid-green-cyan, 
+	vivid-purple, 
+	luminous-vivid-orange,
+	luminous-vivid-amber,
+	cyan-bluish-gray,
+	black,
+	primary,
+;
+
+//mixins
+@mixin govwind-extend-background($colour-name) {
+	&:has(.has-#{$colour-name}-background-color) {
+		background-color:var(--wp--preset--color--#{$colour-name});
+	}
+}
+@mixin govwind-extend-backgrounds($colour-names) {
+	@each $colour in $colour-names {
+		@include govwind-extend-background($colour-name: $colour);
+	}
+} 
+
+@mixin govwind-extend-html-background($colour-names) {
+	@each $colour-name in $colour-names {
+		&:has(footer .has-#{$colour-name}-background-color) {
+			background-color:var(--wp--preset--color--#{$colour-name});
+		}
+	}
+}
+
+@mixin govwind-extend-footer-border($colour-names) {
+	@each $colour-name in $colour-names {
+		&:has(.has-#{$colour-name}-border-color) {
+			border-color:var(--wp--preset--color--#{$colour-name});
+			.has-#{$colour-name}-border-color {
+				border:none;
+			}
+		}
+	}
+}
+
+header,
+footer {
+	@include govwind-extend-backgrounds($colour-names: $supported-colours);
+}
+
+footer {
+	@include govwind-extend-footer-border($colour-names: $supported-colours)
+}
+
 html {
-	background-image: repeating-linear-gradient(
-		-45deg,
-		purple,
-		purple 200px,
-		yellow 200px,
-		yellow 400px
-	);
-}*/
+	@include govwind-extend-html-background($supported-colours)
+}

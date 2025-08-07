@@ -12,8 +12,8 @@
  */
 ?>
 
-<!-- wp:group {"align":"full","className":"col-start-2 py-3 has-white-color has-text-color ","backgroundColor":"vivid-green-cyan","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group alignfull col-start-2 py-3 has-white-color has-text-color has-vivid-green-cyan-background-color has-background">
+<!-- wp:group {"align":"full","className":"govwind-header py-3 has-white-color has-text-color ","backgroundColor":"vivid-green-cyan","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="govwind-header wp-block-group alignfull py-3 has-white-color has-text-color has-vivid-green-cyan-background-color has-background">
 	<!-- wp:site-logo {"width":145,"shouldSyncIcon":false} /-->
 	<!-- wp:site-title /-->
 </div>

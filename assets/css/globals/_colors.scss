@@ -1,4 +1,30 @@
 :root {
+	--geryscale-a: #eee;
+	--geryscale-b: #bbb;
+	--geryscale-c: #888;
+	--geryscale-d: #444;
+	
+	--brand-1: rgb(61,80,158);
+	--brand-1a: lch(from var(--brand-1) 80 c h);
+	--brand-1b: lch(from var(--brand-1) 65 c h);
+	--brand-1c: lch(from var(--brand-1) 45 c h);
+	--brand-1d: lch(from var(--brand-1) 25 c h);
+	--brand-1e: lch(from var(--brand-1) 05 c h);
+	
+	--brand-2: rgb(113,192,196);
+	--brand-2a: lch(from var(--brand-2) 80 c h);
+	--brand-2b: lch(from var(--brand-2) 65 c h);
+	--brand-2c: lch(from var(--brand-2) 45 c h);
+	--brand-2d: lch(from var(--brand-2) 25 c h);
+	--brand-2e: lch(from var(--brand-2) 05 c h);
+
+	--brand-3: rgb(130,60,125);
+	--brand-3a: lch(from var(--brand-3) 80 c h);
+	--brand-3b: lch(from var(--brand-3) 65 c h);
+	--brand-3c: lch(from var(--brand-3) 45 c h);
+	--brand-3d: lch(from var(--brand-3) 25 c h);
+	--brand-3e: lch(from var(--brand-3) 05 c h);
+
 	/* Base Color Scales */
 	--color-blue-50: #eff6ff;
 	--color-blue-100: #dbeafe;

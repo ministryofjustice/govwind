@@ -11,9 +11,124 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "primary",
-					"color": "var(--color-primary)",
-					"name": "Primary"
+					"slug": "greyscale",
+					"color": "#FFF",
+					"name": "White"
+				},
+				{
+					"slug": "greyscale-a",
+					"color": "var(--greyscale-a)",
+					"name": "Lightest grey"
+				},
+				{
+					"slug": "greyscale-b",
+					"color": "var(--greyscale-b)",
+					"name": "Light grey"
+				},
+				{
+					"slug": "greyscale-c",
+					"color": "var(--greyscale-c)",
+					"name": "Dark grey"
+				},
+				{
+					"slug": "greyscale-d",
+					"color": "var(--greyscale-d)",
+					"name": "Darkest grey"
+				},
+				{
+					"slug": "greyscale-e",
+					"color": "#000",
+					"name": "Black"
+				},
+				{
+					"slug": "brand-1",
+					"color": "var(--brand-1)",
+					"name": "Brand colour 1"
+				},
+				{
+					"slug": "brand-1a",
+					"color": "var(--brand-1a)",
+					"name": "Brand 1 lightest"
+				},
+				{
+					"slug": "brand-1b",
+					"color": "var(--brand-1b)",
+					"name": "Brand 1 light"
+				},
+				{
+					"slug": "brand-1c",
+					"color": "var(--brand-1c)",
+					"name": "Brand 1 mid"
+				},
+				{
+					"slug": "brand-1d",
+					"color": "var(--brand-1d)",
+					"name": "Brand 1 dark"
+				},
+				{
+					"slug": "brand-1e",
+					"color": "var(--brand-1e)",
+					"name": "Brand 1 darkest"
+				},
+				{
+					"slug": "brand-2",
+					"color": "var(--brand-2)",
+					"name": "Brand colour 2"
+				},
+				{
+					"slug": "brand-2a",
+					"color": "var(--brand-2a)",
+					"name": "Brand 2 lightest"
+				},
+				{
+					"slug": "brand-2b",
+					"color": "var(--brand-2b)",
+					"name": "Brand 2 light"
+				},
+				{
+					"slug": "brand-2c",
+					"color": "var(--brand-2c)",
+					"name": "Brand 2 mid"
+				},
+				{
+					"slug": "brand-2d",
+					"color": "var(--brand-2d)",
+					"name": "Brand 2 dark"
+				},
+				{
+					"slug": "brand-2e",
+					"color": "var(--brand-2e)",
+					"name": "Brand 2 darkest"
+				},
+				{
+					"slug": "brand-3",
+					"color": "var(--brand-3)",
+					"name": "Brand colour 3"
+				},
+				{
+					"slug": "brand-3a",
+					"color": "var(--brand-3a)",
+					"name": "Brand 3 lightest"
+				},
+				{
+					"slug": "brand-3b",
+					"color": "var(--brand-3b)",
+					"name": "Brand 3 light"
+				},
+				{
+					"slug": "brand-3c",
+					"color": "var(--brand-3c)",
+					"name": "Brand 3 mid"
+				},
+				{
+					"slug": "brand-3d",
+					"color": "var(--brand-3d)",
+					"name": "Brand 3 dark"
+				},
+				{
+					"slug": "brand-3e",
+					"color": "var(--brand-3e)",
+					"name": "Brand 3 darkest"
 				},
 				{
 					"slug": "secondary",

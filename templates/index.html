@@ -1,11 +1,18 @@
 <!-- wp:template-part {"slug":"header","className":""} /-->
 
 <!-- wp:group {"tagName":"main"} -->
-<main
-	class="gw-main-content-area wp-block-group"
->
-	<!-- wp:pattern {"slug":"govwind/title-single"} /-->
-	<!-- wp:post-content /-->
+<main class="gw-main-content-area wp-block-group">
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+	<div
+		class="wp-block-group alignfull"
+		style="
+			padding-top: var(--wp--preset--spacing--60);
+			padding-bottom: var(--wp--preset--spacing--60);
+		"
+	>
+		<!-- wp:post-title {"level":1} /-->
+		<!-- wp:post-content {"align":"full","layout":{"type":"constrained"}} /-->
+	</div>
 </main>
 <!-- /wp:group -->
 

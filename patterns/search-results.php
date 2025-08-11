@@ -11,8 +11,8 @@
  */
 ?>
 
-<!-- wp:group {"tagName":"main","className":"gw-main-content-area","layout":{"type":"constrained"}} -->
-<main class="wp-block-group gw-main-content-area"><!-- wp:query-title {"type":"search"} /-->
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group gw-main-content-area" style="margin-top: 0"><!-- wp:query-title {"type":"search"} /-->
 
 	<!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search"} /-->
 	

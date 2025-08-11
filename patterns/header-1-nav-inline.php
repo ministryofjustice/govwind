@@ -11,26 +11,15 @@
  * @since Govwind 0.1.0
  */
 ?>
-<<<<<<< HEAD
 <!-- wp:group {"metadata":{"categories":["header"],"patternName":"govwind/header-search-nav","name":"Header"},"align":"full","className":"has-white-color has-text-color is-style-default","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"backgroundColor":"vivid-purple","textColor":"white"} -->
 <div class="wp-block-group alignfull has-white-color has-text-color is-style-default has-vivid-purple-background-color has-background has-link-color"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-=======
-
-<!-- wp:group {"metadata":{"categories":["header"],"patternName":"govwind/header-test","name":"Header"},"align":"full","className":"col-start-2 py-3 has-white-color has-text-color ","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"backgroundColor":"luminous-vivid-amber","textColor":"white"} -->
-<div class="wp-block-group alignfull col-start-2 py-3 has-white-color has-text-color has-luminous-vivid-amber-background-color has-background has-link-color"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
->>>>>>> main
 <div class="wp-block-group"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:site-logo {"width":145,"shouldSyncIcon":false} /-->
 
 <!-- wp:site-title /--></div>
 <!-- /wp:group -->
-<<<<<<< HEAD
 <!-- wp:navigation {"ref":1552} /--></div>
 <!-- /wp:group --></div>
-=======
-
-<!-- wp:navigation {"ref":1552,"layout":{"type":"flex","orientation":"horizontal","justifyContent":"left"}} /--></div>
->>>>>>> main
 <!-- /wp:group --></div>
 <!-- /wp:group -->

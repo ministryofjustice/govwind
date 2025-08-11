@@ -37,7 +37,11 @@
 					"color": "var(--color-muted-foreground)",
 					"name": "Muted Foreground"
 				},
-				{ "slug": "gw-border", "color": "var(--color-border)", "name": "Border" },
+				{
+					"slug": "gw-border",
+					"color": "var(--color-border)",
+					"name": "Border"
+				},
 				{ "slug": "input", "color": "var(--color-input)", "name": "Input" },
 				{ "slug": "ring", "color": "var(--color-ring)", "name": "Ring" }
 			]

@@ -1,65 +1,57 @@
 {
 	"version": 3,
-	"title": "IMB palette",
+	"title": "VC palette",
 	"settings": {
 		"color": {
 			"palette": [
 				{
 					"slug": "header-bg",
-					"color": "var(--imb-header-bg)",
+					"color": "var(--vc-header-bg)",
 					"name": "Header background"
 				},
 				{
 					"slug": "header-text",
-					"color": "var(--imb-header-txt)",
+					"color": "var(--vc-header-txt)",
 					"name": "Header text"
 				},
 				{
 					"slug": "primary",
-					"color": "var(--imb-primary)",
+					"color": "var(--vc-primary)",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "var(--imb-secondary)",
+					"color": "var(--vc-secondary)",
 					"name": "Secondary"
 				},
 				{
 					"slug": "accent",
-					"color": "var(--imb-accent)",
+					"color": "var(--vc-accent)",
 					"name": "Accent"
 				},
 				{
 					"slug": "background",
-					"color": "var(--imb-background)",
+					"color": "var(--vc-background)",
 					"name": "Background"
 				},
 				{
 					"slug": "foreground",
-					"color": "var(--imb-foreground)",
+					"color": "var(--vc-foreground)",
 					"name": "Foreground"
 				},
-				{
-					"slug": "muted",
-					"color": "var(--imb-muted)",
-					"name": "Muted"
-				},
+				{ "slug": "muted", "color": "var(--vc-muted)", "name": "Muted" },
 				{
 					"slug": "muted-foreground",
-					"color": "var(--imb-muted-foreground)",
+					"color": "var(--vc-muted-foreground)",
 					"name": "Muted Foreground"
 				},
 				{
 					"slug": "gw-border",
-					"color": "var(--imb-border)",
+					"color": "var(--vc-border)",
 					"name": "Border"
 				},
-				{
-					"slug": "input",
-					"color": "var(--imb-input)",
-					"name": "Input"
-				},
-				{ "slug": "ring", "color": "var(--imb-ring)", "name": "Ring" }
+				{ "slug": "input", "color": "var(--vc-input)", "name": "Input" },
+				{ "slug": "ring", "color": "var(--vc-ring)", "name": "Ring" }
 			]
 		}
 	},

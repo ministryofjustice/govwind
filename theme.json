@@ -9,6 +9,7 @@
 			"wideSize": "var(--size-wide)"
 		},
 		"color": {
+			"defaultPalette": false,
 			"palette": [
 				{
 					"slug": "header-bg",

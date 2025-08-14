@@ -1,26 +1,54 @@
 // Forward all theme modules
-@forward "ccrc";
-@forward "imb";
-@forward "lay-observers";
+@forward "palettes/defaults";
+@forward "palettes/ccrc";
+@forward "palettes/vc";
+@forward "palettes/imb";
+@forward "palettes/lay-observers";
+@forward "palettes/playground";
 
 :root {
-	--brand-header-bg--dark: #fd0;
-	--brand-header-bg--light: #0b0c0c;
-	--brand-header-txt--dark: #06f;
-	--brand-header-txt--light: #fff;
-	--brand-bg-dark: #082336;
-	--brand-bg-light: #fff;
-	--brand-txt-dark: #fd0;
-	--brand-txt-light: #000;
-
-	--colour-header-bg: var(--brand-header-bg--dark);
-	--colour-header-txt: var(--brand-header-txt--dark);
-	--colour-background: var(--brand-bg-dark);
-	--colour-foreground: var(--brand-txt-dark);
+	--header-bg: var(--brand-header-bg--dark);
+	--header-txt: var(--brand-header-txt--dark);
+	--background: var(--brand-bg-dark);
+	--foreground: var(--brand-txt-dark);
 	@media (prefers-color-scheme: light) {
-		--colour-header-txt: var(--brand-header-txt--light);
-		--colour-header-bg: var(--brand-header-bg--light);
-		--colour-background: var(--brand-bg-light);
-		--colour-foreground: var(--brand-txt-light);
+		--header-txt: var(--brand-header-txt--light);
+		--header-bg: var(--brand-header-bg--light);
+		--background: var(--brand-bg-light);
+		--foreground: var(--brand-txt-light);
 	}
 }
+
+//goes through the $sites and summons forth their colour palettes.
+@mixin gw-summon-palette($prefixes) {
+	@each $prefix in $prefixes {
+		:root {
+			--#{$prefix}-header-bg: var(--#{$prefix}-header-bg-dark);
+			--#{$prefix}-header-txt: var(--#{$prefix}-header-txt-dark);
+			--#{$prefix}-primary: var(--#{$prefix}-primary-dark);
+			--#{$prefix}-secondary: var(--#{$prefix}-secondary-dark);
+			--#{$prefix}-accent: var(--#{$prefix}-accent-dark);
+			--#{$prefix}-muted: var(--#{$prefix}-muted-dark);
+			--#{$prefix}-muted-foreground: var(--#{$prefix}-muted-foreground-dark);
+			--#{$prefix}-border: var(--#{$prefix}-border-dark);
+			--#{$prefix}-input: var(--#{$prefix}-input-dark);
+			--#{$prefix}-ring: var(--#{$prefix}-ring-dark);
+
+			@media (prefers-color-scheme: light) {
+				--#{$prefix}-header-bg: var(--#{$prefix}-header-bg-light);
+				--#{$prefix}-header-txt: var(--#{$prefix}-header-txt-light);
+				--#{$prefix}-primary: var(--#{$prefix}-primary-light);
+				--#{$prefix}-secondary: var(--#{$prefix}-secondary-light);
+				--#{$prefix}-accent: var(--#{$prefix}-accent-light);
+				--#{$prefix}-muted: var(--#{$prefix}-muted-light);
+				--#{$prefix}-muted-foreground: var(--#{$prefix}-muted-foreground-light);
+				--#{$prefix}-border: var(--#{$prefix}-border-light);
+				--#{$prefix}-input: var(--#{$prefix}-input-light);
+				--#{$prefix}-ring: var(--#{$prefix}-ring-light);
+			}
+		}
+	}
+}
+$sites: ccrc, vc, imb, lay-observers, playground;
+
+@include gw-summon-palette($prefixes: $sites);

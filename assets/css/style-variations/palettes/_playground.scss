@@ -1,0 +1,27 @@
+:root {
+	// Dark mode colours
+	--playground-header-bg-dark: #0b0c0c;
+	--playground-header-txt-dark: #fff;
+	--playground-header-bg-dark: #efe;
+	--playground-header-txt-dark: #0a0;
+	--playground-primary-dark: #f00;
+	--playground-secondary-dark: #f00;
+	--playground-accent-dark: #f00;
+	--playground-muted-dark: #f00;
+	--playground-muted-foreground-dark: #f00;
+	--playground-border-dark: #f00;
+	--playground-input-dark: #f00;
+	--playground-ring-dark: #f00;
+
+	// Light mode colours
+	--playground-header-bg-light: var(--playground-header-bg-dark);
+	--playground-header-txt-light: var(--playground-header-txt-dark);
+	--playground-primary-light: var(--playground-primary-dark);
+	--playground-secondary-light: var(--playground-secondary-dark);
+	--playground-accent-light: var(--playground-accent-dark);
+	--playground-muted-light: var(--playground-muted-dark);
+	--playground-muted-foreground-light: var(--playground-muted-foreground-dark);
+	--playground-border-light: var(--playground-border-dark);
+	--playground-input-light: var(--playground-input-dark);
+	--playground-ring-light: var(--playground-ring-dark);
+}

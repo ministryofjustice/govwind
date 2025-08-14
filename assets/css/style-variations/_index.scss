@@ -6,6 +6,9 @@
 @forward "palettes/lay-observers";
 @forward "palettes/playground";
 $sites: ccrc, vc, imb, lay-observers, playground;
+$colours:
+	header-bg, header-txt, primary, secondary, accent, muted, muted-foreground,
+	border, input, ring;
 
 :root {
 	--header-bg: var(--brand-header-bg--dark);
@@ -20,69 +23,19 @@ $sites: ccrc, vc, imb, lay-observers, playground;
 	}
 }
 
-//gets the different shades for the specified colours
-$colours: header-bg, header-txt, primary;
-@mixin gw-shade-colours($colours, $site) {
-	@each $colour in $colours {
-		--#{$site}-#{$colour}-dark-x: lch(
-			from var(--#{$site}-#{$colour}-dark) 80 c h
-		);
-		--#{$site}-#{$colour}-light-x: lch(
-			from var(--#{$site}-#{$colour}-light) 80 c h
-		);
-		--#{$site}-#{$colour}-dark-y: lch(
-			from var(--#{$site}-#{$colour}-dark) 40 c h
-		);
-		--#{$site}-#{$colour}-light-y: lch(
-			from var(--#{$site}-#{$colour}-light) 40 c h
-		);
-		--#{$site}-#{$colour}-dark-z: lch(
-			from var(--#{$site}-#{$colour}-dark) 20 c h
-		);
-		--#{$site}-#{$colour}-light-z: lch(
-			from var(--#{$site}-#{$colour}-light) 20 c h
-		);
-		/*
-		--brand-1b: lch(from var(--brand-1) 65 c h);
-		--brand-1c: lch(from var(--brand-1) 45 c h);
-		--brand-1d: lch(from var(--brand-1) 25 c h);
-		--brand-1e: lch(from var(--brand-1) 05 c h);
-		*/
-		
-	}
-}
-
 //goes through the $sites and summons forth their colour palettes.
-@mixin gw-summon-palette($sites) {
-	@each $site in $sites {
-		:root {
-			--#{$site}-header-bg: var(--#{$site}-header-bg-dark);
-			--#{$site}-header-txt: var(--#{$site}-header-txt-dark);
-			--#{$site}-primary: var(--#{$site}-primary-dark);
-			--#{$site}-secondary: var(--#{$site}-secondary-dark);
-			--#{$site}-accent: var(--#{$site}-accent-dark);
-			--#{$site}-muted: var(--#{$site}-muted-dark);
-			--#{$site}-muted-foreground: var(--#{$site}-muted-foreground-dark);
-			--#{$site}-border: var(--#{$site}-border-dark);
-			--#{$site}-input: var(--#{$site}-input-dark);
-			--#{$site}-ring: var(--#{$site}-ring-dark);
+@mixin gw-summon-palette($sites, $colours) {
+	:root {
+		@each $site in $sites {
+			@each $colour in $colours {
+				--#{$site}-#{$colour}: var(--#{$site}-#{$colour}-dark);
 
-			@include gw-shade-colours($colours, $site);
-
-			@media (prefers-color-scheme: light) {
-				--#{$site}-header-bg: var(--#{$site}-header-bg-light);
-				--#{$site}-header-txt: var(--#{$site}-header-txt-light);
-				--#{$site}-primary: var(--#{$site}-primary-light);
-				--#{$site}-secondary: var(--#{$site}-secondary-light);
-				--#{$site}-accent: var(--#{$site}-accent-light);
-				--#{$site}-muted: var(--#{$site}-muted-light);
-				--#{$site}-muted-foreground: var(--#{$site}-muted-foreground-light);
-				--#{$site}-border: var(--#{$site}-border-light);
-				--#{$site}-input: var(--#{$site}-input-light);
-				--#{$site}-ring: var(--#{$site}-ring-light);
+				@media (prefers-color-scheme: light) {
+					--#{$site}-#{$colour}: var(--#{$site}-#{$colour}-light);
+				}
 			}
 		}
 	}
 }
 
-@include gw-summon-palette($sites: $sites);
+@include gw-summon-palette($sites: $sites, $colours: $colours);

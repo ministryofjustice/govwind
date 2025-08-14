@@ -1,0 +1,54 @@
+{
+	"version": 3,
+	"title": "IMB theme",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "header-bg",
+					"color": "var(--imb-header-bg)",
+					"name": "Header background"
+				},
+				{
+					"slug": "header-text",
+					"color": "var(--imb-header-txt)",
+					"name": "Header text"
+				},
+				{
+					"slug": "primary",
+					"color": "var(--color-primary)",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "var(--color-secondary)",
+					"name": "Secondary"
+				},
+				{ "slug": "accent", "color": "var(--color-accent)", "name": "Accent" },
+				{
+					"slug": "background",
+					"color": "var(--color-background)",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "var(--color-foreground)",
+					"name": "Foreground"
+				},
+				{ "slug": "muted", "color": "var(--color-muted)", "name": "Muted" },
+				{
+					"slug": "muted-foreground",
+					"color": "var(--color-muted-foreground)",
+					"name": "Muted Foreground"
+				},
+				{
+					"slug": "gw-border",
+					"color": "var(--color-border)",
+					"name": "Border"
+				},
+				{ "slug": "input", "color": "var(--color-input)", "name": "Input" },
+				{ "slug": "ring", "color": "var(--color-ring)", "name": "Ring" }
+			]
+		}
+	}
+}

@@ -1,0 +1,101 @@
+{
+	"version": 3,
+	"title": "Lay Observers light mode",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "header-bg",
+					"color": "#fff",
+					"name": "Header background"
+				},
+				{
+					"slug": "header-text",
+					"color": "#230489",
+					"name": "Header text"
+				},
+				{
+					"slug": "primary",
+					"color": "var(--color-primary)",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "var(--color-secondary)",
+					"name": "Secondary"
+				},
+				{ "slug": "accent", "color": "var(--color-accent)", "name": "Accent" },
+				{
+					"slug": "background",
+					"color": "var(--color-background)",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "var(--color-foreground)",
+					"name": "Foreground"
+				},
+				{ "slug": "muted", "color": "var(--color-muted)", "name": "Muted" },
+				{
+					"slug": "muted-foreground",
+					"color": "var(--color-muted-foreground)",
+					"name": "Muted Foreground"
+				},
+				{
+					"slug": "gw-border",
+					"color": "var(--color-border)",
+					"name": "Border"
+				},
+				{ "slug": "input", "color": "var(--color-input)", "name": "Input" },
+				{ "slug": "ring", "color": "var(--color-ring)", "name": "Ring" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--color-background)",
+			"text": "var(--color-foreground)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "#3b82f6"
+				},
+				":hover": {
+					"color": {
+						"text": "#60a5fa"
+					}
+				}
+			},
+			"button": {
+				"color": {
+					"background": "#3b82f6",
+					"text": "#f8fafc"
+				},
+				":hover": {
+					"color": {
+						"background": "#2563eb"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/code": {
+				"color": {
+					"background": "#1e293b",
+					"text": "#f8fafc"
+				}
+			},
+			"core/separator": {
+				"color": {
+					"background": "#334155"
+				}
+			},
+			"core/quote": {
+				"border": {
+					"color": "#334155"
+				}
+			}
+		}
+	}
+}

@@ -1,9 +1,19 @@
 {
 	"version": 3,
-	"title": "CCRC style variation",
+	"title": "Lay Observers dark mode",
 	"settings": {
 		"color": {
 			"palette": [
+				{
+					"slug": "header-bg",
+					"color": "#230489",
+					"name": "Header background"
+				},
+				{
+					"slug": "header-text",
+					"color": "#fff",
+					"name": "Header text"
+				},
 				{
 					"slug": "primary",
 					"color": "#3b82f6",

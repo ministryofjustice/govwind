@@ -1,2 +1,26 @@
 // Forward all theme modules
 @forward "ccrc";
+@forward "imb";
+@forward "lay-observers";
+
+:root {
+	--brand-header-bg--dark: #fd0;
+	--brand-header-bg--light: #0b0c0c;
+	--brand-header-txt--dark: #06f;
+	--brand-header-txt--light: #fff;
+	--brand-bg-dark: #082336;
+	--brand-bg-light: #fff;
+	--brand-txt-dark: #fd0;
+	--brand-txt-light: #000;
+
+	--colour-header-bg: var(--brand-header-bg--dark);
+	--colour-header-txt: var(--brand-header-txt--dark);
+	--colour-background: var(--brand-bg-dark);
+	--colour-foreground: var(--brand-txt-dark);
+	@media (prefers-color-scheme: light) {
+		--colour-header-txt: var(--brand-header-txt--light);
+		--colour-header-bg: var(--brand-header-bg--light);
+		--colour-background: var(--brand-bg-light);
+		--colour-foreground: var(--brand-txt-light);
+	}
+}

@@ -11,6 +11,16 @@
 		"color": {
 			"palette": [
 				{
+					"slug": "header-bg",
+					"color": "var(--colour-header-bg)",
+					"name": "Header background"
+				},
+				{
+					"slug": "header-text",
+					"color": "var(--colour-header-txt)",
+					"name": "Header text"
+				},
+				{
 					"slug": "primary",
 					"color": "var(--color-primary)",
 					"name": "Primary"
@@ -150,8 +160,8 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--color-background)",
-			"text": "var(--color-foreground)"
+			"background": "var(--colour-background)",
+			"text": "var(--colour-foreground)"
 		},
 		"spacing": {
 			"blockGap": "var(--wp-block-gap)",

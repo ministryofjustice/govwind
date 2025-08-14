@@ -92,3 +92,14 @@ function govwind_add_additional_class_on_list_item($classes, $item, $args)
     return $classes;
 }
 add_filter('nav_menu_css_class', 'govwind_add_additional_class_on_list_item', 1, 3);
+
+function gw_add_body_class( $classes ) {
+
+    $site_name = preg_replace("/[^A-Za-z0-9 ]/", '', get_bloginfo("name"));
+    $site_name = str_replace(" ","-",strtolower($site_name));
+    if(is_page()) {
+      $classes[] = 'site-'.$site_name;
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'gw_add_body_class' );

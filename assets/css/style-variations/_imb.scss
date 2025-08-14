@@ -1,0 +1,8 @@
+:root {
+	--imb-header-bg: #8d0a0a;
+	--imb-header-txt: #fff;
+	@media (prefers-color-scheme: light) {
+		--imb-header-bg: #fff;
+		--imb-header-txt: #8d0a0a;
+	}
+}

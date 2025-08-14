@@ -193,7 +193,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var(--color-blue-700)"
+						"text": "var(--color-primary-accent)"
 					},
 					"typography": {
 						"textDecoration": "none"

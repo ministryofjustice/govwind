@@ -59,6 +59,24 @@
 		"color": {
 			"background": "var(--colour-background)",
 			"text": "var(--colour-foreground)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--vc-primary)"
+				},
+				"typography": {
+					"textDecoration": "underline"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--vc-accent)"
+					},
+					"typography": {
+						"textDecoration": "none"
+					}
+				}
+			}
 		}
 	}
 }

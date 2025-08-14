@@ -5,37 +5,32 @@
 @forward "palettes/imb";
 @forward "palettes/lay-observers";
 @forward "palettes/playground";
-$sites: ccrc, vc, imb, lay-observers, playground;
-$colours:
+$site-list: ccrc, vc, imb, lay-observers, playground;
+$colour-list:
 	header-bg, header-txt, primary, secondary, accent, muted, muted-foreground,
 	border, input, ring;
 
-:root {
-	--header-bg: var(--brand-header-bg--dark);
-	--header-txt: var(--brand-header-txt--dark);
-	--background: var(--brand-bg-dark);
-	--foreground: var(--brand-txt-dark);
-	@media (prefers-color-scheme: light) {
-		--header-txt: var(--brand-header-txt--light);
-		--header-bg: var(--brand-header-bg--light);
-		--background: var(--brand-bg-light);
-		--foreground: var(--brand-txt-light);
-	}
-}
-
-//goes through the $sites and summons forth their colour palettes.
-@mixin gw-summon-palette($sites, $colours) {
-	:root {
-		@each $site in $sites {
-			@each $colour in $colours {
-				--#{$site}-#{$colour}: var(--#{$site}-#{$colour}-dark);
-
-				@media (prefers-color-scheme: light) {
-					--#{$site}-#{$colour}: var(--#{$site}-#{$colour}-light);
-				}
-			}
+//goes through the $site-list and $colour-list
+@mixin gw-summon-palette($sites, $colours, $mode) {
+	@each $site in $sites {
+		@each $colour in $colours {
+			--#{$site}-#{$colour}: var(--#{$site}-#{$colour}-#{$mode});
 		}
 	}
 }
 
-@include gw-summon-palette($sites: $sites, $colours: $colours);
+:root {
+	@include gw-summon-palette(
+		$sites: $site-list,
+		$colours: $colour-list,
+		$mode: dark
+	);
+
+	@media (prefers-color-scheme: light) {
+		@include gw-summon-palette(
+			$sites: $site-list,
+			$colours: $colour-list,
+			$mode: light
+		);
+	}
+}

@@ -11,6 +11,7 @@ $colour-list:
 	border, input, ring;
 
 //goes through the $site-list and $colour-list
+//do not change the below, only add to the lists above
 @mixin gw-summon-palette($sites, $colours, $mode) {
 	@each $site in $sites {
 		@each $colour in $colours {

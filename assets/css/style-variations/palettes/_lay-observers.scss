@@ -1,0 +1,27 @@
+:root {
+	// Dark mode colours
+	--lay-observers-header-bg-dark: #0b0c0c;
+	--lay-observers-header-txt-dark: #fff;
+	--lay-observers-primary-dark: #f00;
+	--lay-observers-secondary-dark: #f00;
+	--lay-observers-accent-dark: #f00;
+	--lay-observers-muted-dark: #f00;
+	--lay-observers-muted-foreground-dark: #f00;
+	--lay-observers-border-dark: #f00;
+	--lay-observers-input-dark: #f00;
+	--lay-observers-ring-dark: #f00;
+
+	// Light mode colours
+	--lay-observers-header-bg-light: var(--lay-observers-header-bg-dark);
+	--lay-observers-header-txt-light: var(--lay-observers-header-txt-dark);
+	--lay-observers-primary-light: var(--lay-observers-primary-dark);
+	--lay-observers-secondary-light: var(--lay-observers-secondary-dark);
+	--lay-observers-accent-light: var(--lay-observers-accent-dark);
+	--lay-observers-muted-light: var(--lay-observers-muted-dark);
+	--lay-observers-muted-foreground-light: var(
+		--lay-observers-muted-foreground-dark
+	);
+	--lay-observers-border-light: var(--lay-observers-border-dark);
+	--lay-observers-input-light: var(--lay-observers-input-dark);
+	--lay-observers-ring-light: var(--lay-observers-ring-dark);
+}

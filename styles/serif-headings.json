@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"title": "Serif headings",
+	"styles": {
+		"typography": {
+			"fontFamily": "var(--font-family-pt-sans)"
+		},
+		"blocks": {
+			"core/heading": {
+				"typography": {
+					"fontFamily": "var(--font-family-serif)"
+				}
+			}
+		}
+	}
+}

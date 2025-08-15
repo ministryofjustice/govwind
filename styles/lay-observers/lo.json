@@ -1,0 +1,72 @@
+{
+	"version": 3,
+	"title": "Lay Observers palette",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "header-bg",
+					"color": "var(--lay-observers-header-bg)",
+					"name": "Header background"
+				},
+				{
+					"slug": "header-text",
+					"color": "var(--lay-observers-header-txt)",
+					"name": "Header text"
+				},
+				{
+					"slug": "primary",
+					"color": "var(--lay-observers-primary)",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "var(--lay-observers-secondary)",
+					"name": "Secondary"
+				},
+				{
+					"slug": "accent",
+					"color": "var(--lay-observers-accent)",
+					"name": "Accent"
+				},
+				{
+					"slug": "background",
+					"color": "var(--lay-observers-background)",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "var(--lay-observers-foreground)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "muted",
+					"color": "var(--lay-observers-muted)",
+					"name": "Muted"
+				},
+				{
+					"slug": "muted-foreground",
+					"color": "var(--lay-observers-muted-foreground)",
+					"name": "Muted Foreground"
+				},
+				{
+					"slug": "gw-border",
+					"color": "var(--lay-observers-border)",
+					"name": "Border"
+				},
+				{
+					"slug": "input",
+					"color": "var(--lay-observers-input)",
+					"name": "Input"
+				},
+				{ "slug": "ring", "color": "var(--lay-observers-ring)", "name": "Ring" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--colour-background)",
+			"text": "var(--colour-foreground)"
+		}
+	}
+}

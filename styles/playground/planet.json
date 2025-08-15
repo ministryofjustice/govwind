@@ -1,0 +1,72 @@
+{
+	"version": 3,
+	"title": "Playground palette",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "header-bg",
+					"color": "var(--playground-header-bg)",
+					"name": "Header background"
+				},
+				{
+					"slug": "header-text",
+					"color": "var(--playground-header-txt)",
+					"name": "Header text"
+				},
+				{
+					"slug": "primary",
+					"color": "var(--playground-primary)",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "var(--playground-secondary)",
+					"name": "Secondary"
+				},
+				{
+					"slug": "accent",
+					"color": "var(--playground-accent)",
+					"name": "Accent"
+				},
+				{
+					"slug": "background",
+					"color": "var(--playground-background)",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "var(--playground-foreground)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "muted",
+					"color": "var(--playground-muted)",
+					"name": "Muted"
+				},
+				{
+					"slug": "muted-foreground",
+					"color": "var(--playground-muted-foreground)",
+					"name": "Muted Foreground"
+				},
+				{
+					"slug": "gw-border",
+					"color": "var(--playground-border)",
+					"name": "Border"
+				},
+				{
+					"slug": "input",
+					"color": "var(--playground-input)",
+					"name": "Input"
+				},
+				{ "slug": "ring", "color": "var(--playground-ring)", "name": "Ring" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--colour-background)",
+			"text": "var(--colour-foreground)"
+		}
+	}
+}

@@ -1,2 +1,37 @@
 // Forward all theme modules
-@forward "ccrc";
+@forward "palettes/defaults";
+@forward "palettes/ccrc";
+@forward "palettes/vc";
+@forward "palettes/imb";
+@forward "palettes/lay-observers";
+@forward "palettes/playground";
+$site-list: ccrc, vc, imb, lay-observers, playground;
+$colour-list:
+	header-bg, header-txt, primary, secondary, accent, muted, muted-foreground,
+	border, input, ring;
+
+//goes through the $site-list and $colour-list
+//do not change the below, only add to the lists above
+@mixin gw-summon-palette($sites, $colours, $mode) {
+	@each $site in $sites {
+		@each $colour in $colours {
+			--#{$site}-#{$colour}: var(--#{$site}-#{$colour}-#{$mode});
+		}
+	}
+}
+
+:root {
+	@include gw-summon-palette(
+		$sites: $site-list,
+		$colours: $colour-list,
+		$mode: dark
+	);
+
+	@media (prefers-color-scheme: light) {
+		@include gw-summon-palette(
+			$sites: $site-list,
+			$colours: $colour-list,
+			$mode: light
+		);
+	}
+}

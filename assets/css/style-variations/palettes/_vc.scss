@@ -1,0 +1,46 @@
+// mixin to shade a colour
+/**
+ * For example:
+ *
+	@include gw-shade-colour(
+		$from: --vc-primary-dark,
+		$to: --vc-accent-dark,
+		$degree: 80
+	);
+ *
+ *  Output would be:
+	--vc-accent-dark: lch(from var(--vc-primary-dark)80 c h)
+ *
+ **/
+@mixin gw-shade-colour($from, $to, $degree) {
+	#{$to}: lch(from var(#{$from}) #{$degree} c h);
+}
+
+:root {
+	--vc-header-bg-dark: #0f0228;
+	--vc-header-txt-dark: #fff;
+	--vc-primary-dark: #b51058;
+	--vc-secondary-dark: #f8e7ee;
+	@include gw-shade-colour(
+		$from: --vc-primary-dark,
+		$to: --vc-accent-dark,
+		$degree: 80
+	);
+	//--vc-accent-dark: #ff91bf;
+	--vc-muted-dark: #f8e7ee;
+	--vc-muted-foreground-dark: #f00;
+	--vc-border-dark: #f00;
+	--vc-input-dark: #f00;
+	--vc-ring-dark: var(--vc-primary-dark);
+
+	--vc-header-bg-light: var(--vc-header-bg-dark);
+	--vc-header-txt-light: var(--vc-header-txt-dark);
+	--vc-primary-light: var(--vc-primary-dark);
+	--vc-secondary-light: var(--vc-secondary-dark);
+	--vc-accent-light: var(--vc-accent-dark);
+	--vc-muted-light: var(--vc-muted-dark);
+	--vc-muted-foreground-light: var(--vc-muted-foreground-dark);
+	--vc-border-light: var(--vc-border-dark);
+	--vc-input-light: var(--vc-input-dark);
+	--vc-ring-light: var(--vc-ring-dark);
+}

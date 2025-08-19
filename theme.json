@@ -361,13 +361,27 @@
 	"templateParts": [
 		{
 			"area": "header",
-			"name": "header",
-			"title": "Header"
+			"name": "header-default",
+			"title": "Default Header",
+			"description": "Standard header with navigation and logo used by most pages."
+		},
+		{
+			"area": "header",
+			"name": "header-minimal",
+			"title": "Minimal Header",
+			"description": "Simple header with only logo and site title - no navigation."
+		},
+		{
+			"area": "header",
+			"name": "header-no-search",
+			"title": "No Search Bar Header",
+			"description": "Header without search functionality - ideal for search result pages."
 		},
 		{
 			"area": "footer",
 			"name": "footer",
-			"title": "Footer"
+			"title": "Default Footer",
+			"description": "Standard site footer with links and information."
 		}
 	]
 }

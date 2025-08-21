@@ -59,10 +59,10 @@ function govwind_enqueue_assets()
 add_action('wp_enqueue_scripts', 'govwind_enqueue_assets');
 
 // Enhanced editor styles support
-add_action('enqueue_block_editor_assets', function() {
+add_action('enqueue_block_editor_assets', function () {
     $css_file = get_template_directory() . '/dist/style.css';
     $css_version = file_exists($css_file) ? filemtime($css_file) : '1.0.0';
-    
+
     wp_enqueue_style(
         'govwind-editor-style',
         get_template_directory_uri() . '/dist/style.css',
@@ -93,29 +93,15 @@ function govwind_add_additional_class_on_list_item($classes, $item, $args)
 }
 add_filter('nav_menu_css_class', 'govwind_add_additional_class_on_list_item', 1, 3);
 
-function gw_add_body_class( $classes ) {
+function gw_add_body_class($classes)
+{
 
     $site_name = preg_replace("/[^A-Za-z0-9 ]/", '', get_bloginfo("name"));
-    $site_name = str_replace(" ","-",strtolower($site_name));
-    if(is_page()) {
-      $classes[] = 'site-'.$site_name;
+    $site_name = str_replace(" ", "-", strtolower($site_name));
+    if (is_page()) {
+        $classes[] = 'site-'.$site_name;
     }
     return $classes;
 }
-add_filter( 'body_class', 'gw_add_body_class' );
+add_filter('body_class', 'gw_add_body_class');
 
-
-/*
-add_filter('wp_theme_json_data_theme', function($theme_json) {
-    $data = $theme_json->get_data();
-    if (isset($data['settings']['color']['palette']['theme'])) {
-        $data['settings']['color']['palette']['theme'] = array_filter(
-            $data['settings']['color']['palette']['theme'],
-            function($color) {
-                return !in_array(substr($color['slug'], 0, 7), ['hidden-', 'utility', 'system-']);
-            }
-        );
-    }
-    return new WP_Theme_JSON($data, 'theme');
-});
- */

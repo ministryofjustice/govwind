@@ -103,3 +103,19 @@ function gw_add_body_class( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'gw_add_body_class' );
+
+
+/*
+add_filter('wp_theme_json_data_theme', function($theme_json) {
+    $data = $theme_json->get_data();
+    if (isset($data['settings']['color']['palette']['theme'])) {
+        $data['settings']['color']['palette']['theme'] = array_filter(
+            $data['settings']['color']['palette']['theme'],
+            function($color) {
+                return !in_array(substr($color['slug'], 0, 7), ['hidden-', 'utility', 'system-']);
+            }
+        );
+    }
+    return new WP_Theme_JSON($data, 'theme');
+});
+ */

@@ -1,8 +1,12 @@
 :root {
-	--imb-header-bg-dark: #8d0a0a;
-	--imb-header-txt-dark: #fff;
-	--imb-primary-dark: #f50;
-
+	//palette colours
+	--imb-primary: #B52D2D;
+	--imb-background: #fff;
+	--imb-background-pink: #FFaaFF;
+	--imb-foreground: rgb(19, 19, 189);
+	
+	//hidden colours
+	
 	--imb-header-bg-light: var(--imb-header-bg-dark);
 	--imb-header-txt-light: var(--imb-header-txt-dark);
 	--imb-primary-light: #0a0;

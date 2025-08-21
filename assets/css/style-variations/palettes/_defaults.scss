@@ -1,4 +1,10 @@
 :root {
-	--colour-background: #fff;
-	--colour-foreground: #0b0c0c;
+	//palette
+	--default-primary: #1447E6;
+	--default-background: #FFFFFF;
+	--default-foreground: #0A0A0A;
+
+	//hidden
+	--default-primary-accent:#193CB8;
+	--default-muted: #F5F5F5;
 }

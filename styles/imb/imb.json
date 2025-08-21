@@ -22,6 +22,11 @@
 					"slug": "foreground",
 					"color": "var(--imb-foreground)",
 					"name": "Dark blue"
+				},
+				{
+					"slug": "green",
+					"color": "var(--imb-green)",
+					"name": "Green"
 				}
 			]
 		}
@@ -32,6 +37,16 @@
 			"text": "var(--imb-foreground)"
 		},
 		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--imb-green)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--default-primary-accent)"
+					}
+				}
+			},
 			"button": {
 				"color": {
 					"background": "var(--imb-primary)",

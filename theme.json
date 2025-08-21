@@ -17,14 +17,19 @@
 					"name": "Primary"
 				},
 				{
+					"slug": "primary-accent",
+					"color": "var(--default-primary-accent)",
+					"name": "Primary (accent)"
+				},
+				{
 					"slug": "background",
 					"color": "var(--default-background)",
-					"name": "White"
+					"name": "Background"
 				},
 				{
 					"slug": "foreground",
 					"color": "var(--default-foreground)",
-					"name": "Black"
+					"name": "Foreground"
 				}
 			]
 		},

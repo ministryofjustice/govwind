@@ -5,10 +5,9 @@
 @forward "palettes/imb";
 @forward "palettes/lay-observers";
 @forward "palettes/playground";
-$site-list: ccrc, vc, imb, lay-observers, playground;
-$colour-list:
-	header-bg, header-txt, primary, secondary, accent, muted, muted-foreground,
-	border, input, ring;
+$site-list: default, ccrc, vc, lay-observers, playground;
+$colour-list: primary, primary-accent, background, foreground, muted;
+	
 
 //goes through the $site-list and $colour-list
 //do not change the below, only add to the lists above

@@ -1,4 +1,30 @@
 :root {
-	--colour-background: #fff;
-	--colour-foreground: #0b0c0c;
+	//palette
+	--default-primary-light: #1447E6;
+	--default-primary-accent-light:#193CB8;
+	--default-background-light: #FFFFFF;
+	--default-foreground-light: #0A0A0A;
+
+	//hidden
+	--default-muted-light: #F5F5F5;
+
+	//palette
+	--default-primary-dark: #b3bfe6;
+	--default-primary-accent-dark: #9db0ef;
+	--default-background-dark: #383838;
+	--default-foreground-dark: beige;
+
+	//hidden
+	--default-muted-dark: #545454;
+/*
+	//palette
+	--default-primary-dark: var(--default-primary-light);
+	--default-primary-accent-dark: var(--default-primary-accent-light);
+	--default-background-dark: var(--default-background-light);
+	--default-foreground-dark: var(--default-foreground-light);
+
+	//hidden
+	--default-muted-dark: var(--default-muted-light);
+
+*/
 }

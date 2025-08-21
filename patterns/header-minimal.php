@@ -14,9 +14,9 @@
 <!-- wp:group {"metadata":{"categories":["header"],"patternName":"govwind/header-default","name":"Simple Header"},
      "align":"full","className":"has-header-text-color has-text-color is-style-default",
      "style":{"elements":{"link":{"color":{"text":"var:preset|color|header-text"}}}},
-     "backgroundColor":"header-bg","textColor":"header-text"} -->
+     "backgroundColor":"primary","textColor":"header-text"} -->
 <div class="wp-block-group alignfull has-header-text-color has-text-color is-style-default 
-           has-header-bg-background-color has-background has-link-color">
+           has-primary-background-color has-background has-link-color">
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
         <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->

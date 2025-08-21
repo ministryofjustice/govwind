@@ -5,68 +5,59 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "header-bg",
-					"color": "var(--imb-header-bg)",
-					"name": "Header background"
-				},
-				{
-					"slug": "header-text",
-					"color": "var(--imb-header-txt)",
-					"name": "Header text"
-				},
-				{
 					"slug": "primary",
 					"color": "var(--imb-primary)",
 					"name": "Primary"
-				},
-				{
-					"slug": "secondary",
-					"color": "var(--imb-secondary)",
-					"name": "Secondary"
-				},
-				{
-					"slug": "accent",
-					"color": "var(--imb-accent)",
-					"name": "Accent"
-				},
-				{
+				},				{
 					"slug": "background",
 					"color": "var(--imb-background)",
-					"name": "Background"
+					"name": "White"
+				},
+				{
+					"slug": "background-pink",
+					"color": "var(--imb-background-pink)",
+					"name": "Background pink"
 				},
 				{
 					"slug": "foreground",
 					"color": "var(--imb-foreground)",
-					"name": "Foreground"
+					"name": "Dark blue"
 				},
 				{
-					"slug": "muted",
-					"color": "var(--imb-muted)",
-					"name": "Muted"
-				},
-				{
-					"slug": "muted-foreground",
-					"color": "var(--imb-muted-foreground)",
-					"name": "Muted Foreground"
-				},
-				{
-					"slug": "gw-border",
-					"color": "var(--imb-border)",
-					"name": "Border"
-				},
-				{
-					"slug": "input",
-					"color": "var(--imb-input)",
-					"name": "Input"
-				},
-				{ "slug": "ring", "color": "var(--imb-ring)", "name": "Ring" }
+					"slug": "green",
+					"color": "var(--imb-green)",
+					"name": "Green"
+				}
 			]
 		}
 	},
 	"styles": {
 		"color": {
-			"background": "var(--colour-background)",
-			"text": "var(--colour-foreground)"
+			"background": "var(--imb-background)",
+			"text": "var(--imb-foreground)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--imb-green)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--default-primary-accent)"
+					}
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--imb-primary)",
+					"text": "var(--imb-background)"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--default-primary-accent)"
+					}
+				}
+			}
 		}
 	}
 }

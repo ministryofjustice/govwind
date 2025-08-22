@@ -1,0 +1,36 @@
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+	// Only apply if theme supports dark mode
+	:root[data-theme="auto"],
+	:root:not([data-theme]) {
+		// Reduce brightness of images to prevent eye strain
+		img,
+		video,
+		iframe,
+		.wp-block-image img,
+		.wp-block-video video {
+			opacity: 0.9;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		// Dim bright backgrounds
+		[style*="background-color: white"],
+		[style*="background-color:#fff"],
+		[style*="background-color: #ffffff"] {
+			filter: brightness(0.85);
+		}
+	}
+}
+
+// Inverted colors support
+@media (inverted-colors: inverted) {
+	img,
+	video,
+	iframe,
+	picture {
+		filter: invert(1) hue-rotate(180deg);
+	}
+}

@@ -8,7 +8,8 @@
 					"slug": "primary",
 					"color": "var(--imb-primary)",
 					"name": "Primary"
-				},				{
+				},
+				{
 					"slug": "background",
 					"color": "var(--imb-background)",
 					"name": "White"

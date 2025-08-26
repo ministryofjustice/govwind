@@ -34,7 +34,7 @@
 			]
 		},
 		"typography": {
-			"fluid": true,
+			"fluid": false,
 			"fontSizes": [
 				{ "slug": "xs", "size": "var(--font-size-xs)", "name": "Extra Small" },
 				{ "slug": "sm", "size": "var(--font-size-sm)", "name": "Small" },

@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "A WP FSE theme built with a Tailwind frontend",
 	"scripts": {
-		"build:theme": "sass assets/css/main.scss:dist/theme.css --style=compressed",
+		"build:theme": "mkdir -p dist/fonts && cp -r assets/fonts/* dist/fonts/ && sass assets/css/main.scss:dist/theme.css --style=compressed",
 		"build:tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./dist/style.css --minify",
 		"build": "npm run build:theme && npm run build:tailwind",
 		"production": "npm run build",

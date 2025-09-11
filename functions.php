@@ -105,3 +105,8 @@ function gw_add_body_class($classes)
 }
 add_filter('body_class', 'gw_add_body_class');
 
+
+/**
+ * ACF
+ */
+require get_template_directory() . '/inc/acf/acf.php';

@@ -38,6 +38,13 @@ function govwind_enqueue_assets()
         $css_version
     );
 
+    wp_enqueue_style(
+        'google-material-symbols',
+        'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
+        array(),
+        null
+    );
+
     // Handle JavaScript
     if (defined('WP_ENV') && WP_ENV === 'development') {
         // Load Vite dev server assets in development

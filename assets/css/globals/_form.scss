@@ -5,52 +5,27 @@
 
 // border border-solid border-current/33 rounded-[8px] w-[438px] max-w-full px-[16px] py-[10px] bg-(--default-background) text-(--default-foreground) focus:outline-2 focus:outline-(--temp-focus) focus:outline-solid focus:border-current disabled:border disabled:border-solid disabled:border-current/33 disabled:opacity-50 disabled:cursor-not-allowed [&_option]:px-[0px] [&_option]:py-[8px] &[multiple]:overflow-auto [&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-track]:bg-current/10 [&::-webkit-scrollbar-track]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:bg-current/33
 // border border-solid border-current/33 rounded-[8px] w-[438px] max-w-full px-[16px] py-[10px] bg-(--default-background) text-(--default-foreground) focus:outline-2 focus:outline-(--temp-focus) focus:outline-solid focus:border-current disabled:border disabled:border-solid disabled:border-current/33 disabled:opacity-50 disabled:cursor-not-allowed [&_option]:px-[0px] [&_option]:py-[8px] &[multiple]:overflow-auto [&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-track]:bg-current/10 [&::-webkit-scrollbar-track]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:bg-current/33
-//
+/*
 .wb-form-field {
-	@apply w-[438px] max-w-full rounded-[8px] border border-solid border-current/33 bg-(--default-background) px-[16px] py-[10px] text-(--default-foreground) focus:border-current focus:outline-2 focus:outline-(--temp-focus) focus:outline-solid disabled:cursor-not-allowed disabled:border disabled:border-solid disabled:border-current/33 disabled:opacity-50 [&_option]:px-[0px] [&_option]:py-[8px];
-
+	@apply &:focus w-[438px] max-w-full rounded-[8px] border border-solid border-current/33 bg-(--default-background) px-[16px] py-[10px] text-(--default-foreground) {
+		@apply focus:border-current focus:outline-2 focus:outline-(--temp-focus) focus:outline-solid;
+	}
+	&:disabled {
+		@apply disabled:cursor-not-allowed disabled:border disabled:border-solid disabled:bg-current/33 disabled:opacity-50;
+	}
 	&.error {
 		@apply text-(--temp-error) focus:outline-2 focus:outline-(--temp-error) focus:outline-solid;
 	}
 	&[multiple] {
 		@apply overflow-auto [&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-thumb]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:bg-current/33 [&::-webkit-scrollbar-track]:rounded-r-[7px] [&::-webkit-scrollbar-track]:bg-current/10;
 	}
+	option {
+		@apply [&_option]:px-[0px] [&_option]:py-[8px];
+	}
 }
-/*
-.wb-form-field {
-	@extend border;
-	@extend border-solid;
-	@extend border-current\/33;
-	@extend rounded-\[\8px\];
-	@extend w-\[438px\];
-	@extend max-w-full;
-	@extend px-\[16px\];
-	@extend py-\[10px\];
-	@extend bg-\(--default-background\);
-	@extend text-\(--default-foreground\);
-	@extend focus:outline-2;
-	@extend focus:outline-(--temp-focus);
-	@extend focus:outline-solid;
-	@extend focus:border-current;
-	@extend disabled:border;
-	@extend disabled:border-solid;
-	@extend disabled:border-current\/33;
-	@extend disabled:opacity-50;
-	@extend disabled:cursor-not-allowed;
-	@extend [\&_option]:px-\[0px\];
-	@extend [\&_option]:py-\[8px\];
-	@extend &[multiple]:overflow-auto;
-	@extend [\&\:\:-webkit-scrollbar]:w-\[8px\];
-	@extend [\&\:\:-webkit-scrollbar-track]:bg-current\/10;
-	@extend [\&\:\:-webkit-scrollbar-track]:rounded-r-\[7px\];
-	@extend [\&\:\:-webkit-scrollbar-thumb]:rounded-r-\[7px\];
-	@extend [\&\:\:-webkit-scrollbar-thumb]:bg-current\/33;
-}
-
-/*
+/**/
 .wb-form-field {
 	border: 1px solid color-mix(in srgb, currentColor 33%, transparent); //border border-solid border-current/33
-	border-radius: 8px; //rounded-[8px]
 	width: 438px; //w-[438px]
 	max-width: 100%; //max-w-full
 	padding: 10px 16px; //px-[16px] py-[10px]
@@ -71,7 +46,11 @@
 	&:disabled {
 		border: 1px solid color-mix(in srgb, currentColor 10%, transparent); //disabled:border disabled:border-solid disabled:border-current/33
 		opacity: 0.5; //disabled:opacity-50
-		background-color: color-mix(in srgb, currentColor 10%, transparent);
+		background-color: color-mix(
+			in srgb,
+			currentColor 10%,
+			transparent
+		); //disabled:bg-current/33
 		//background-image: url("data:image/svg+xml,%3Csvg%20class%3D%22wb-search-icon%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%3E%0A%09%3Cpath%20d%3D%22M19.71%2018.29l-4.11-4.1a7%207%200%201%200-1.41%201.41l4.1%204.11a1%201%200%200%200%201.42%200%201%201%200%200%200%200-1.42zM5%2010a5%205%200%201%201%205%205%205%205%200%200%201-5-5z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E");
 		//background-repeat: no-repeat;
 		cursor: not-allowed; //disabled:cursor-not-allowed
@@ -84,17 +63,14 @@
 
 		// scrollbar
 		&::-webkit-scrollbar {
-			width: 8px; //[&::-webkit-scrollbar]:w-[8px]
 			&-track {
 				background: color-mix(
 					in srgb,
 					currentColor 10%,
 					transparent
 				); //[&::-webkit-scrollbar-track]:bg-current/10
-				border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-track]:rounded-r-[7px]
 			}
 			&-thumb {
-				border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-thumb]:rounded-r-[7px]
 				background: color-mix(
 					in srgb,
 					currentColor 33%,
@@ -103,5 +79,32 @@
 			}
 		}
 	}
+	&:is(.rounded-corners *) {
+		border-radius: 8px; //rounded-[8px]
+		&[multiple]::-webkit-scrollbar {
+			width: 8px; //[&::-webkit-scrollbar]:w-[8px]
+			&-track {
+				border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-track]:rounded-r-[7px]
+			}
+			&-thumb {
+				border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-thumb]:rounded-r-[7px]
+			}
+		}
+	}
+	&:is(.very-rounded-corners *) {
+		border-radius: 50px; //rounded-[50px]
+		&[multiple][size] {
+			border-radius: 50px 8px 8px 50px;
+			&::-webkit-scrollbar {
+				width: 8px; //[&::-webkit-scrollbar]:w-[8px]
+				&-track {
+					border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-track]:rounded-r-[7px]
+				}
+				&-thumb {
+					border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-thumb]:rounded-r-[7px]
+				}
+			}
+		}
+	}
 }
-*/
+/**/

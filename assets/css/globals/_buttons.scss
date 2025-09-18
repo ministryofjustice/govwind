@@ -1,6 +1,8 @@
-@use "sass:color";
+// Define layer order
+@layer wp-defaults, wp-components, theme-overrides, utilities;
+//@layer global, elements, components, utilities;
 
-// Custom properties that need to be defined in CSS (since they're not able to be defined in theme.json)
+// This contains custom properties that are not supported in the theme.json schema
 :root {
 	--btn-width: 12rem;
 	--btn-height: auto;
@@ -11,96 +13,211 @@
 	--btn-border-width: 2px;
 }
 
-// Button block override - Fill style (default)
-.wp-block-button {
-	.wp-block-button__link {
-		// theme.json handles: background-color, font-size, line-height, padding, border-radius, color
-		min-width: var(--btn-width);
-		height: var(--btn-height);
-		gap: var(--btn-gap);
-		opacity: 1;
-		border: none;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		text-decoration: none;
-		transition:
-			background-color 0.3s ease,
-			color 0.3s ease,
-			border-color 0.3s ease;
-		// Performance hint - tells browser to optimize transititons/animations in advance
-		will-change: background-color, color, border-color;
+@layer theme-overrides {
+	// Fill button styles (default)
+	.wp-block-button {
+		.wp-block-button__link {
+			// theme.json handles: background-color, font-size, line-height, padding, border-radius, color
+			@apply h-auto min-w-[var(--btn-width)] gap-[10px];
+			@apply inline-flex items-center justify-center no-underline;
+			@apply transition-all duration-200 ease-in-out;
+			@apply will-change-[background-color,color,border-color];
 
-		// Hover state
-		&:hover {
-			background-color: var(--default-primary-accent) !important;
+			// Ensure transitions work everywhere
+			transition:
+				background-color 0.2s ease,
+				color 0.3s ease,
+				border-color 0.2s ease,
+				transform 0.1s ease;
+
+			// Hover state
+			&:hover {
+				background-color: var(--default-primary-accent);
+			}
+
+			// Focus state (keyboard users)
+			&:focus,
+			&:focus-visible {
+				@apply outline-[3px] outline-offset-2 outline-solid;
+				outline-color: #ffb900;
+			}
+
+			// Active (pressed) feedback
+			&:active {
+				@apply scale-[0.97];
+			}
+
+			// Disabled state
+			&[aria-disabled="true"] {
+				@apply pointer-events-none opacity-60;
+			}
 		}
 
-		// Focus state (keyboard users)
-		&:focus,
-		&:focus-visible {
-			outline: 3px solid var(--default-primary-accent);
-			outline-offset: 2px;
-		}
+		// Outline button style override
+		&.is-style-outline .wp-block-button__link {
+			@apply border-solid bg-transparent opacity-100;
+			@apply h-[var(--outline-btn-height)] w-[var(--outline-btn-width)] gap-[var(--outline-btn-gap)];
+			@apply transition-all duration-300 ease-in-out;
+			@apply will-change-[background-color,color,border-color];
 
-		// Active (pressed) feedback
-		&:active {
-			transform: scale(0.97);
-		}
+			background-color: transparent;
+			border: var(--btn-border-width) solid #ffb900;
+			color: var(--default-primary);
 
-		// Disabled state
-		&[aria-disabled="true"] {
-			opacity: 0.6;
-			pointer-events: none;
+			// Override theme.json padding for outline buttons
+			padding: var(--spacing-3-5) var(--spacing-6);
+			transition:
+				background-color 0.3s ease,
+				color 0.3s ease,
+				border-color 0.3s ease,
+				transform 0.15s ease;
+
+			&:hover {
+				background-color: var(--default-primary);
+				color: var(--default-background);
+				border-color: var(--default-primary-accent);
+			}
+
+			&:focus,
+			&:focus-visible {
+				@apply outline-[3px] outline-offset-2 outline-solid;
+				outline-color: #ffb900;
+			}
+
+			&:active {
+				@apply scale-[0.97];
+			}
+
+			&[aria-disabled="true"] {
+				@apply pointer-events-none opacity-60;
+			}
 		}
 	}
 
-	// Outline button style override
-	&.is-style-outline .wp-block-button__link {
-		background-color: transparent !important;
-		border: var(--btn-border-width) solid var(--default-primary);
-		color: var(--default-primary) !important;
-		width: var(--outline-btn-width);
-		height: var(--outline-btn-height);
-		gap: var(--outline-btn-gap);
-		opacity: 1;
-		// Override theme.json padding for outline buttons
-		padding: var(--spacing-3-5) var(--spacing-6) !important;
-		transition:
-			background-color 0.3s ease,
-			color 0.3s ease,
-			border-color 0.3s ease;
-		will-change: background-color, color, border-color;
+	// Editor-specific styles
+	.editor-styles-wrapper .wp-block-button {
+		.wp-block-button__link {
+			// Ensure editor styles match frontend
+			@apply h-auto min-w-[var(--btn-width)] gap-[10px];
+			@apply transition-all duration-300 ease-in-out;
 
-		&:hover {
-			background-color: var(--default-primary) !important;
-			color: var(--default-background) !important;
-			border-color: var(--default-primary-accent);
+			&:hover {
+				background-color: var(--default-primary-accent);
+			}
+
+			&:active {
+				@apply scale-[0.97];
+			}
 		}
 
-		&:focus,
-		&:focus-visible {
-			outline: 3px solid var(--default-primary-accent);
-			outline-offset: 2px;
-		}
+		&.is-style-outline .wp-block-button__link {
+			@apply bg-transparent;
+			background-color: transparent;
+			border: var(--btn-border-width) solid var(--default-primary);
+			color: var(--default-primary);
 
-		&:active {
-			transform: scale(0.97);
+			&:hover {
+				background-color: var(--default-primary);
+				color: var(--default-background);
+			}
 		}
+	}
 
-		&[aria-disabled="true"] {
-			opacity: 0.6;
-			pointer-events: none;
+	// Block editor specific styles
+	.block-editor-block-list__layout .wp-block-button {
+		.wp-block-button__link {
+			@apply transition-all duration-300 ease-in-out;
+
+			&:hover {
+				background-color: var(--default-primary-accent);
+			}
 		}
 	}
 }
 
+@layer utilities {
+	.btn-no-animation {
+		@apply transition-none;
+		transform: none !important;
+	}
+
+	.btn-full-width {
+		@apply w-full;
+		width: 100%;
+	}
+}
+
 // Accessibility: High-contrast support (Windows forced-colors)
+// This stays outside layers as it's a media query override
 @media (forced-colors: active) {
 	.wp-block-button__link,
 	.wp-block-button.is-style-outline .wp-block-button__link {
-		border: 1px solid ButtonText;
-		color: ButtonText !important;
-		background: ButtonFace !important;
+		@apply border border-solid;
+		border-color: ButtonText !important;
+		color: ButtonText;
+		background: ButtonFace;
+	}
+}
+
+// Print styles
+@media print {
+	.wp-block-button__link {
+		@apply border border-solid border-black bg-transparent text-black;
+		@apply no-underline;
+
+		&::after {
+			content: " (" attr(href) ")";
+			@apply text-xs text-gray-600;
+		}
+	}
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-button__link {
+		@apply transition-none;
+		transition: none;
+
+		&:active {
+			@apply scale-100; // No scale animation for reduced motion
+		}
+	}
+}
+
+// Fallback for browsers that don't support @layer
+@supports not (selector(layer())) {
+	// High specificity fallback styles
+	.wp-site-blocks .wp-block-button .wp-block-button__link,
+	.editor-styles-wrapper .wp-block-button .wp-block-button__link {
+		min-width: var(--btn-width);
+		height: auto;
+		gap: 10px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: var(--default-primary-accent);
+		}
+
+		&:active {
+			transform: scale(0.97);
+		}
+	}
+
+	.wp-site-blocks .wp-block-button.is-style-outline .wp-block-button__link,
+	.editor-styles-wrapper
+		.wp-block-button.is-style-outline
+		.wp-block-button__link {
+		background-color: transparent;
+		border: var(--btn-border-width) solid var(--default-primary);
+		color: var(--default-primary);
+
+		&:hover {
+			background-color: var(--default-primary);
+			color: var(--default-background);
+		}
 	}
 }

@@ -63,7 +63,7 @@
 		"elements": {
 			"link": {
 				"color": {
-					"text": "var(--vc-primary)"
+					"text": "var(--vc-something-else)"
 				},
 				"typography": {
 					"textDecoration": "underline"

@@ -21,6 +21,7 @@
 	--vc-header-txt-dark: #fff;
 	--vc-primary-dark: #b51058;
 	--vc-secondary-dark: #f8e7ee;
+	--vc-something-else: #f00;
 	@include gw-shade-colour(
 		$from: --vc-primary-dark,
 		$to: --vc-accent-dark,

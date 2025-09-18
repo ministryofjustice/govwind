@@ -67,6 +67,16 @@
 		"color": {
 			"background": "var(--colour-background)",
 			"text": "var(--colour-foreground)"
+		},
+		"typography": {
+			"fontFamily": "var(--font-family-pt-sans)"
+		},
+		"blocks": {
+			"core/heading": {
+				"typography": {
+					"fontFamily": "var(--font-family-serif)"
+				}
+			}
 		}
 	}
 }

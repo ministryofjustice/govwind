@@ -6,7 +6,8 @@
 @forward "palettes/lay-observers";
 @forward "palettes/playground";
 $site-list: default, ccrc, vc, lay-observers, playground;
-$colour-list: primary, primary-accent, background, foreground, muted;
+$colour-list:
+	primary, primary-accent, background, foreground, muted, focus, error;
 
 //goes through the $site-list and $colour-list
 //do not change the below, only add to the lists above

@@ -1,110 +1,39 @@
-:root {
-	--temp-error: #f00;
-	--temp-focus: #fd0;
-}
-
-// border border-solid border-current/33 rounded-[8px] w-[438px] max-w-full px-[16px] py-[10px] bg-(--default-background) text-(--default-foreground) focus:outline-2 focus:outline-(--temp-focus) focus:outline-solid focus:border-current disabled:border disabled:border-solid disabled:border-current/33 disabled:opacity-50 disabled:cursor-not-allowed [&_option]:px-[0px] [&_option]:py-[8px] &[multiple]:overflow-auto [&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-track]:bg-current/10 [&::-webkit-scrollbar-track]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:bg-current/33
-// border border-solid border-current/33 rounded-[8px] w-[438px] max-w-full px-[16px] py-[10px] bg-(--default-background) text-(--default-foreground) focus:outline-2 focus:outline-(--temp-focus) focus:outline-solid focus:border-current disabled:border disabled:border-solid disabled:border-current/33 disabled:opacity-50 disabled:cursor-not-allowed [&_option]:px-[0px] [&_option]:py-[8px] &[multiple]:overflow-auto [&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-track]:bg-current/10 [&::-webkit-scrollbar-track]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:bg-current/33
-/*
+input,
+select,
+textarea,
 .wb-form-field {
-	@apply &:focus w-[438px] max-w-full rounded-[8px] border border-solid border-current/33 bg-(--default-background) px-[16px] py-[10px] text-(--default-foreground) {
-		@apply focus:border-current focus:outline-2 focus:outline-(--temp-focus) focus:outline-solid;
-	}
-	&:disabled {
-		@apply disabled:cursor-not-allowed disabled:border disabled:border-solid disabled:bg-current/33 disabled:opacity-50;
-	}
-	&.error {
-		@apply text-(--temp-error) focus:outline-2 focus:outline-(--temp-error) focus:outline-solid;
-	}
-	&[multiple] {
-		@apply overflow-auto [&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-thumb]:rounded-r-[7px] [&::-webkit-scrollbar-thumb]:bg-current/33 [&::-webkit-scrollbar-track]:rounded-r-[7px] [&::-webkit-scrollbar-track]:bg-current/10;
-	}
-	option {
-		@apply [&_option]:px-[0px] [&_option]:py-[8px];
-	}
-}
-/**/
-.wb-form-field {
-	border: 1px solid color-mix(in srgb, currentColor 33%, transparent); //border border-solid border-current/33
-	width: 438px; //w-[438px]
-	max-width: 100%; //max-w-full
-	padding: 10px 16px; //px-[16px] py-[10px]
-	background-color: var(--default-background); //bg-(--default-background)
-	color: var(--default-foreground); //text-(--default-foreground)
-
-	&:focus {
-		outline: 2px solid var(--temp-focus); //focus:outline-2 focus:outline-(--temp-focus) focus:outline-solid
-		border-color: currentColor; //focus:border-current
-	}
-	&.error {
-		color: var(--temp-error); //text-(--temp-error)
-		&:focus {
-			outline: 2px solid var(--temp-error); //focus:outline-2 focus:outline-(--temp-error) focus:outline-solid
-		}
-	}
-
-	&:disabled {
-		border: 1px solid color-mix(in srgb, currentColor 10%, transparent); //disabled:border disabled:border-solid disabled:border-current/33
-		opacity: 0.5; //disabled:opacity-50
-		background-color: color-mix(
-			in srgb,
-			currentColor 10%,
-			transparent
-		); //disabled:bg-current/33
-		//background-image: url("data:image/svg+xml,%3Csvg%20class%3D%22wb-search-icon%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%3E%0A%09%3Cpath%20d%3D%22M19.71%2018.29l-4.11-4.1a7%207%200%201%200-1.41%201.41l4.1%204.11a1%201%200%200%200%201.42%200%201%201%200%200%200%200-1.42zM5%2010a5%205%200%201%201%205%205%205%205%200%200%201-5-5z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E");
-		//background-repeat: no-repeat;
-		cursor: not-allowed; //disabled:cursor-not-allowed
-	}
-	option {
-		padding: 8px 0; //[&_option]:px-[0px] [&_option]:py-[8px]
-	}
-	&[multiple] {
-		overflow: auto; //???
-
-		// scrollbar
-		&::-webkit-scrollbar {
-			&-track {
-				background: color-mix(
-					in srgb,
-					currentColor 10%,
-					transparent
-				); //[&::-webkit-scrollbar-track]:bg-current/10
-			}
-			&-thumb {
-				background: color-mix(
-					in srgb,
-					currentColor 33%,
-					transparent
-				); //[&::-webkit-scrollbar-thumb]:bg-current/33
-			}
-		}
-	}
+	@apply w-[438px] max-w-full border-2 border-solid border-current/33 bg-(--default-background) px-[16px] py-[10px] text-(--default-foreground);
 	&:is(.rounded-corners *) {
-		border-radius: 8px; //rounded-[8px]
-		&[multiple]::-webkit-scrollbar {
-			width: 8px; //[&::-webkit-scrollbar]:w-[8px]
-			&-track {
-				border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-track]:rounded-r-[7px]
-			}
-			&-thumb {
-				border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-thumb]:rounded-r-[7px]
-			}
-		}
+		@apply rounded-[8px];
 	}
 	&:is(.very-rounded-corners *) {
-		border-radius: 50px; //rounded-[50px]
-		&[multiple][size] {
-			border-radius: 50px 8px 8px 50px;
-			&::-webkit-scrollbar {
-				width: 8px; //[&::-webkit-scrollbar]:w-[8px]
-				&-track {
-					border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-track]:rounded-r-[7px]
-				}
-				&-thumb {
-					border-radius: 0 7px 7px 0; //[&::-webkit-scrollbar-thumb]:rounded-r-[7px]
-				}
+		@apply rounded-[50px];
+	}
+	&:focus {
+		@apply border-current outline-2 outline-(--default-focus) outline-solid;
+	}
+	&:disabled {
+		@apply cursor-not-allowed bg-current/33 opacity-50;
+	}
+	&.error {
+		color: var(--default-error);
+		@apply focus:outline-2 focus:outline-(--default-error) focus:outline-solid;
+	}
+	option {
+		@apply px-[0px] py-[8px];
+	}
+	&[multiple] {
+		@apply overflow-auto;
+		&[size] {
+			@apply [&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-thumb]:rounded-[4px] [&::-webkit-scrollbar-thumb]:bg-current/33 [&::-webkit-scrollbar-track]:bg-current/10;
+
+			&:is(.rounded-corners *),
+			&:is(.very-rounded-corners *) {
+				@apply [&::-webkit-scrollbar-thumb]:rounded-r-[7px] [&::-webkit-scrollbar-track]:rounded-r-[7px];
+			}
+			&:is(.very-rounded-corners *) {
+				@apply rounded-r-[7px];
 			}
 		}
 	}
 }
-/**/

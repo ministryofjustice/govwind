@@ -65,8 +65,8 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--colour-background)",
-			"text": "var(--colour-foreground)"
+			"background": "var(--default-background)",
+			"text": "var(--default-foreground)"
 		}
 	}
 }

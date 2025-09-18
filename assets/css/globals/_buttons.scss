@@ -1,0 +1,96 @@
+@use "sass:color";
+
+// Custom properties that need to be defined in CSS (since they're not able to be defined in theme.json)
+:root {
+	--btn-width: 12rem;
+	--btn-height: auto;
+	--btn-gap: 10px;
+	--outline-btn-width: 208px;
+	--outline-btn-height: 56px;
+	--outline-btn-gap: 16px;
+	--btn-border-width: 2px;
+}
+
+// Button block override - Fill style (default)
+.wp-block-button {
+	.wp-block-button__link {
+		// theme.json handles: background-color, font-size, line-height, padding, border-radius, color
+		min-width: var(--btn-width);
+		height: var(--btn-height);
+		gap: var(--btn-gap);
+		opacity: 1;
+		border: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease,
+			border-color 0.3s ease;
+		// Performance hint - tells browser to optimize transititons/animations in advance
+		will-change: background-color, color, border-color;
+
+		// Hover state
+		&:hover {
+			background-color: var(--default-primary-accent) !important;
+		}
+
+		// Focus state (keyboard users)
+		&:focus,
+		&:focus-visible {
+			outline: 3px solid var(--default-primary-accent);
+			outline-offset: 2px;
+		}
+
+		// Active (pressed) feedback
+		&:active {
+			transform: scale(0.97);
+		}
+
+		// Disabled state
+		&[aria-disabled="true"] {
+			opacity: 0.6;
+			pointer-events: none;
+		}
+	}
+
+	// Outline button style override
+	&.is-style-outline .wp-block-button__link {
+		background-color: transparent !important;
+		border: var(--btn-border-width) solid var(--default-primary);
+		color: var(--default-primary) !important;
+		width: var(--outline-btn-width);
+		height: var(--outline-btn-height);
+		gap: var(--outline-btn-gap);
+		opacity: 1;
+		// Override theme.json padding for outline buttons
+		padding: var(--spacing-3-5) var(--spacing-6) !important;
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease,
+			border-color 0.3s ease;
+		will-change: background-color, color, border-color;
+
+		&:hover {
+			background-color: var(--default-primary) !important;
+			color: var(--default-background) !important;
+			border-color: var(--default-primary-accent);
+		}
+
+		&:focus,
+		&:focus-visible {
+			outline: 3px solid var(--default-primary-accent);
+			outline-offset: 2px;
+		}
+
+		&:active {
+			transform: scale(0.97);
+		}
+
+		&[aria-disabled="true"] {
+			opacity: 0.6;
+			pointer-events: none;
+		}
+	}
+}

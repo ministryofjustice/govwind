@@ -223,18 +223,19 @@
 					"text": "var(--default-background)"
 				},
 				"border": {
-					"radius": "var(--radius-md)"
+					"radius": "var(--radius-sm)"
 				},
 				"spacing": {
 					"padding": {
-						"top": "var(--spacing-2)",
-						"bottom": "var(--spacing-2)",
+						"top": "var(--spacing-2-5)",
+						"bottom": "var(--spacing-2-5)",
 						"left": "var(--spacing-4)",
 						"right": "var(--spacing-4)"
 					}
 				},
 				"typography": {
-					"fontSize": "var(--font-size-sm)"
+					"fontSize": "var(--font-size-lg)",
+					"lineHeight": "1.75"
 				},
 				":hover": {
 					"color": {
@@ -310,6 +311,32 @@
 				"typography": {
 					"fontFamily": "var(--font-family-mono)",
 					"fontSize": "var(--font-size-sm)"
+				}
+			},
+			"core/button": {
+				"color": {
+					"background": "var(--default-primary)",
+					"text": "var(--default-background)"
+				},
+				"border": {
+					"radius": "var(--radius-md)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "var(--spacing-2-5)",
+						"bottom": "var(--spacing-2-5)",
+						"left": "var(--spacing-4)",
+						"right": "var(--spacing-4)"
+					}
+				},
+				"typography": {
+					"fontSize": "var(--font-size-lg)",
+					"lineHeight": "1.75"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--default-primary-accent)"
+					}
 				}
 			}
 		}

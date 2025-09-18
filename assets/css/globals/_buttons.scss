@@ -94,3 +94,13 @@
 		}
 	}
 }
+
+// Accessibility: High-contrast support (Windows forced-colors)
+@media (forced-colors: active) {
+	.wp-block-button__link,
+	.wp-block-button.is-style-outline .wp-block-button__link {
+		border: 1px solid ButtonText;
+		color: ButtonText !important;
+		background: ButtonFace !important;
+	}
+}

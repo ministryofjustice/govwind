@@ -244,6 +244,15 @@
 			}
 		},
 		"blocks": {
+			"core/search": {
+				"elements": {
+					"button": {
+						"border": {
+							"radius": "var(--radius-md)"
+						}
+					}
+				}
+			},
 			"core/paragraph": {
 				"spacing": {
 					"margin": {

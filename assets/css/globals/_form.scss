@@ -1,0 +1,49 @@
+input,
+select,
+textarea,
+.wb-form-field,
+.wp-block-search__inside-wrapper //search block
+{
+	@apply w-[438px] max-w-full border-2 border-solid border-current/33 bg-(--default-background) px-[16px] py-[10px] text-(--default-foreground);
+	&:is(.rounded-corners *) {
+		@apply rounded-[8px];
+	}
+	&:is(.very-rounded-corners *) {
+		@apply rounded-[50px];
+	}
+	&:focus {
+		@apply border-current outline-2 outline-(--default-focus) outline-solid;
+	}
+	&:disabled {
+		@apply cursor-not-allowed bg-current/33 opacity-50;
+	}
+	&.error {
+		color: var(--default-error);
+		@apply focus:outline-2 focus:outline-(--default-error) focus:outline-solid;
+	}
+	option {
+		@apply px-[0px] py-[8px];
+	}
+	&[multiple] {
+		@apply overflow-auto;
+		&[size] {
+			@apply [&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-thumb]:rounded-[4px] [&::-webkit-scrollbar-thumb]:bg-current/33 [&::-webkit-scrollbar-track]:bg-current/10;
+
+			&:is(.rounded-corners *),
+			&:is(.very-rounded-corners *) {
+				@apply [&::-webkit-scrollbar-thumb]:rounded-r-[7px] [&::-webkit-scrollbar-track]:rounded-r-[7px];
+			}
+			&:is(.very-rounded-corners *) {
+				@apply rounded-r-[7px];
+			}
+		}
+	}
+}
+
+//search block differences
+.wp-block-search__inside-wrapper {
+	@apply pe-[10px];
+	input {
+		@apply p-[0];
+	}
+}

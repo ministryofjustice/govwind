@@ -7,6 +7,8 @@
 
 	//hidden
 	--default-muted-light: #f5f5f5;
+	--default-error-light: #c10007;
+	--default-focus-light: #ffb900;
 
 	//palette
 	--default-primary-dark: #b3bfe6;
@@ -16,6 +18,8 @@
 
 	//hidden
 	--default-muted-dark: #545454;
+	--default-error-dark: #f00;
+	--default-focus-dark: #ffb900;
 	/*
 	//palette
 	--default-primary-dark: var(--default-primary-light);
@@ -25,6 +29,8 @@
 
 	//hidden
 	--default-muted-dark: var(--default-muted-light);
-
+	--default-error-dark: var(--default-error-light);
+	--default-focus-dark: var(--default-focus-light);
+	
 */
 }

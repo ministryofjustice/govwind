@@ -18,7 +18,7 @@
 	.wp-block-button {
 		.wp-block-button__link {
 			// theme.json handles: background-color, font-size, line-height, padding, border-radius, color
-			@apply h-auto min-w-[var(--btn-width)] gap-[10px];
+			@apply h-auto min-w-(--btn-width) gap-[10px];
 			@apply inline-flex items-center justify-center no-underline;
 			@apply transition-all duration-200 ease-in-out;
 			@apply will-change-[background-color,color,border-color];
@@ -56,7 +56,7 @@
 		// Outline button style override
 		&.is-style-outline .wp-block-button__link {
 			@apply border-solid bg-transparent opacity-100;
-			@apply h-[var(--outline-btn-height)] w-[var(--outline-btn-width)] gap-[var(--outline-btn-gap)];
+			@apply h-(--outline-btn-height) w-(--outline-btn-width) gap-(--outline-btn-gap);
 			@apply transition-all duration-300 ease-in-out;
 			@apply will-change-[background-color,color,border-color];
 
@@ -98,7 +98,7 @@
 	.editor-styles-wrapper .wp-block-button {
 		.wp-block-button__link {
 			// Ensure editor styles match frontend
-			@apply h-auto min-w-[var(--btn-width)] gap-[10px];
+			@apply h-auto min-w-(--btn-width) gap-[10px];
 			@apply transition-all duration-300 ease-in-out;
 
 			&:hover {

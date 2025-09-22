@@ -69,6 +69,7 @@
 		@apply bg-transparent;
 		border-width: var(--btn-border-width);
 		border-color: transparent;
+		color: var(--default-primary);
 
 		&:hover {
 			background-color: var(--ghost-hover-bg);

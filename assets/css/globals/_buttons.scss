@@ -5,10 +5,10 @@
 // This contains custom properties that are not supported in the theme.json schema
 :root {
 	--btn-width: 12rem;
-	--btn-height: auto;
+	--btn-height: 56px;
 	--btn-gap: 10px;
 	--outline-btn-width: 12rem;
-	--outline-btn-height: auto;
+	--outline-btn-height: 56px;
 	--outline-btn-gap: 10px;
 	--btn-border-width: 2px;
 }
@@ -190,7 +190,7 @@
 	.wp-site-blocks .wp-block-button .wp-block-button__link,
 	.editor-styles-wrapper .wp-block-button .wp-block-button__link {
 		min-width: var(--btn-width);
-		height: auto;
+		height: var(--btn-height);
 		gap: 10px;
 		display: inline-flex;
 		align-items: center;

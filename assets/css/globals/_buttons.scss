@@ -1,154 +1,132 @@
-// Define layer order
-@layer wp-defaults, wp-components, theme-overrides, utilities;
-//@layer global, elements, components, utilities;
-
-// This contains custom properties that are not supported in the theme.json schema
 :root {
+	/* Sizes */
 	--btn-width: 12rem;
 	--btn-height: 56px;
 	--btn-gap: 10px;
-	--outline-btn-width: 12rem;
-	--outline-btn-height: 56px;
-	--outline-btn-gap: 10px;
+
+	/* Borders */
 	--btn-border-width: 2px;
+	--btn-border-highlight: #ffb900;
+
+	/* Colors */
+	--default-primary: #ffb900;
+	--default-primary-accent: #ffd633;
+	--default-background: #ffffff;
+
+	--ghost-hover-bg: #f5f5f5;
 }
 
-@layer theme-overrides {
-	// Fill button styles (default)
-	.wp-block-button {
-		.wp-block-button__link {
-			// theme.json handles: background-color, font-size, line-height, padding, border-radius, color
-			@apply h-auto min-w-(--btn-width) gap-[10px];
-			@apply inline-flex items-center justify-center no-underline;
-			@apply transition-all duration-200 ease-in-out;
-			@apply will-change-[background-color,color,border-color];
+/* Base button */
+.wp-block-button {
+	.wp-block-button__link {
+		@apply h-(--btn-height) min-w-(--btn-width) gap-(--btn-gap);
+		@apply inline-flex items-center justify-center no-underline;
+		@apply transition-all duration-200 ease-in-out;
+		@apply will-change-[background-color,color,border-color];
+		@apply scale-100;
+		@apply border border-solid border-transparent; /* default transparent border for layout spacing */
 
-			// Ensure transitions work everywhere
-			transition:
-				background-color 0.2s ease,
-				color 0.3s ease,
-				border-color 0.2s ease,
-				transform 0.1s ease;
-
-			// Hover state
-			&:hover {
-				background-color: var(--default-primary-accent);
-			}
-
-			// Focus state (keyboard users)
-			&:focus,
-			&:focus-visible {
-				@apply outline-[3px] outline-offset-2 outline-solid;
-				outline-color: #ffb900;
-			}
-
-			// Active (pressed) feedback
-			&:active {
-				@apply scale-[0.97];
-			}
-
-			// Disabled state
-			&[aria-disabled="true"] {
-				@apply pointer-events-none opacity-60;
-			}
+		&:active {
+			@apply scale-[0.97];
 		}
 
-		// Outline button style override
-		&.is-style-outline .wp-block-button__link {
-			@apply border-solid bg-transparent opacity-100;
-			@apply h-(--outline-btn-height) w-(--outline-btn-width) gap-(--outline-btn-gap);
-			@apply transition-all duration-300 ease-in-out;
-			@apply will-change-[background-color,color,border-color];
+		&:focus,
+		&:focus-visible,
+		&.is-active {
+			@apply outline-[3px] outline-offset-2 outline-solid;
+			outline-color: var(--btn-border-highlight);
+		}
 
-			background-color: transparent;
-			border: var(--btn-border-width) solid #ffb900;
-			color: var(--default-primary);
-
-			// Override theme.json padding for outline buttons
-			padding: var(--spacing-3-5) var(--spacing-6);
-			transition:
-				background-color 0.3s ease,
-				color 0.3s ease,
-				border-color 0.3s ease,
-				transform 0.15s ease;
-
-			&:hover {
-				background-color: var(--default-primary);
-				color: var(--default-background);
-				border-color: var(--default-primary-accent);
-			}
-
-			&:focus,
-			&:focus-visible {
-				@apply outline-[3px] outline-offset-2 outline-solid;
-				outline-color: #ffb900;
-			}
-
-			&:active {
-				@apply scale-[0.97];
-			}
-
-			&[aria-disabled="true"] {
-				@apply pointer-events-none opacity-60;
-			}
+		&[aria-disabled="true"] {
+			@apply pointer-events-none opacity-60;
 		}
 	}
 
-	// Editor-specific styles
-	.editor-styles-wrapper .wp-block-button {
-		.wp-block-button__link {
-			// Ensure editor styles match frontend
-			@apply h-auto min-w-(--btn-width) gap-[10px];
-			@apply transition-all duration-300 ease-in-out;
+	/* Fill button */
+	&.is-style-fill .wp-block-button__link {
+		@apply bg-(--default-primary) text-(--default-background);
 
-			&:hover {
-				background-color: var(--default-primary-accent);
-			}
-
-			&:active {
-				@apply scale-[0.97];
-			}
-		}
-
-		&.is-style-outline .wp-block-button__link {
-			@apply bg-transparent;
-			background-color: transparent;
-			border: var(--btn-border-width) solid var(--default-primary);
-			color: var(--default-primary);
-
-			&:hover {
-				background-color: var(--default-primary);
-				color: var(--default-background);
-			}
+		&:hover {
+			background-color: var(--default-primary-accent);
 		}
 	}
 
-	// Block editor specific styles
-	.block-editor-block-list__layout .wp-block-button {
-		.wp-block-button__link {
-			@apply transition-all duration-300 ease-in-out;
+	/* Outline button */
+	&.is-style-outline .wp-block-button__link {
+		@apply bg-transparent text-(--default-primary);
+		border-width: var(--btn-border-width);
+		border-color: var(--default-primary);
 
-			&:hover {
-				background-color: var(--default-primary-accent);
-			}
+		&:hover {
+			border-color: var(--default-primary-accent);
+			background-color: var(--default-primary);
+			color: var(--default-background);
+		}
+	}
+
+	/* Ghost button */
+	&.is-style-ghost .wp-block-button__link {
+		@apply bg-transparent;
+		border-width: var(--btn-border-width);
+		border-color: transparent;
+
+		&:hover {
+			background-color: var(--ghost-hover-bg);
+			border-color: transparent;
 		}
 	}
 }
 
-@layer utilities {
-	.btn-no-animation {
-		@apply transition-none;
-		transform: none !important;
-	}
+/* Dark mode / prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+	.wp-block-button.is-style-ghost .wp-block-button__link {
+		color: var(--default-primary);
 
-	.btn-full-width {
-		@apply w-full;
-		width: 100%;
+		&:hover {
+			color: var(--default-background);
+		}
 	}
 }
 
-// Accessibility: High-contrast support (Windows forced-colors)
-// This stays outside layers as it's a media query override
+/* Editor-specific styles */
+.editor-styles-wrapper .wp-block-button {
+	.wp-block-button__link {
+		@apply h-(--btn-height) min-w-(--btn-width) gap-(--btn-gap);
+		@apply transition-all duration-300 ease-in-out;
+
+		&:hover {
+			background-color: var(--default-primary-accent);
+		}
+
+		&:active {
+			@apply scale-[0.97];
+		}
+	}
+}
+
+/* Block editor */
+.block-editor-block-list__layout .wp-block-button {
+	.wp-block-button__link {
+		@apply transition-all duration-300 ease-in-out;
+
+		&:hover {
+			background-color: var(--default-primary-accent);
+		}
+	}
+}
+
+/* Utilities */
+.btn-no-animation {
+	@apply transition-none;
+	transform: none !important;
+}
+
+.btn-full-width {
+	@apply w-full;
+	width: 100%;
+}
+
+/* High-contrast (Windows forced-colors) */
 @media (forced-colors: active) {
 	.wp-block-button__link,
 	.wp-block-button.is-style-outline .wp-block-button__link {
@@ -159,7 +137,7 @@
 	}
 }
 
-// Print styles
+/* Print */
 @media print {
 	.wp-block-button__link {
 		@apply border border-solid border-black bg-transparent text-black;
@@ -172,52 +150,14 @@
 	}
 }
 
-// Reduced motion support
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
 	.wp-block-button__link {
 		@apply transition-none;
 		transition: none;
 
 		&:active {
-			@apply scale-100; // No scale animation for reduced motion
-		}
-	}
-}
-
-// Fallback for browsers that don't support @layer
-@supports not (selector(layer())) {
-	// High specificity fallback styles
-	.wp-site-blocks .wp-block-button .wp-block-button__link,
-	.editor-styles-wrapper .wp-block-button .wp-block-button__link {
-		min-width: var(--btn-width);
-		height: var(--btn-height);
-		gap: 10px;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		text-decoration: none;
-		transition: all 0.3s ease;
-
-		&:hover {
-			background-color: var(--default-primary-accent);
-		}
-
-		&:active {
-			transform: scale(0.97);
-		}
-	}
-
-	.wp-site-blocks .wp-block-button.is-style-outline .wp-block-button__link,
-	.editor-styles-wrapper
-		.wp-block-button.is-style-outline
-		.wp-block-button__link {
-		background-color: transparent;
-		border: var(--btn-border-width) solid var(--default-primary);
-		color: var(--default-primary);
-
-		&:hover {
-			background-color: var(--default-primary);
-			color: var(--default-background);
+			@apply scale-100;
 		}
 	}
 }

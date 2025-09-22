@@ -117,3 +117,18 @@ add_filter('body_class', 'gw_add_body_class');
  * ACF
  */
 require get_template_directory() . '/inc/acf/acf.php';
+
+/**
+ * Register additional custom button styles for Govwind theme
+ */
+function govwind_register_button_styles()
+{
+    register_block_style(
+        'core/button',
+        array(
+            'name'  => 'ghost',
+            'label' => __('Ghost', 'govwind'),
+        )
+    );
+}
+add_action('init', 'govwind_register_button_styles');

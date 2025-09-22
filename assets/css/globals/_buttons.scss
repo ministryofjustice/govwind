@@ -24,7 +24,7 @@
 		@apply transition-all duration-200 ease-in-out;
 		@apply will-change-[background-color,color,border-color];
 		@apply scale-100;
-		@apply border border-solid border-transparent; /* default transparent border for layout spacing */
+		@apply border border-solid border-transparent;
 
 		&:active {
 			@apply scale-[0.97];

@@ -92,8 +92,10 @@
 /* Editor-specific styles */
 .editor-styles-wrapper .wp-block-button {
 	.wp-block-button__link {
-		@apply h-(--btn-height) min-w-(--btn-width) gap-(--btn-gap);
 		@apply transition-all duration-300 ease-in-out;
+		height: var(--btn-height);
+		min-width: var(--btn-width);
+		gap: var(--btn-gap);
 
 		&:hover {
 			background-color: var(--default-primary-accent);
@@ -103,15 +105,31 @@
 			@apply scale-[0.97];
 		}
 	}
+
+	/* Ghost style override */
+	&.is-style-ghost .wp-block-button__link {
+		&:hover {
+			background-color: var(--ghost-hover-bg);
+			border-color: transparent;
+		}
+	}
 }
 
-/* Block editor */
+/* Block editor preview */
 .block-editor-block-list__layout .wp-block-button {
 	.wp-block-button__link {
 		@apply transition-all duration-300 ease-in-out;
 
 		&:hover {
 			background-color: var(--default-primary-accent);
+		}
+	}
+
+	/* Ghost style override */
+	&.is-style-ghost .wp-block-button__link {
+		&:hover {
+			background-color: var(--ghost-hover-bg);
+			border-color: transparent;
 		}
 	}
 }

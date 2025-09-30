@@ -21,15 +21,15 @@
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
 
-        <!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
-        <div class="wp-block-group">
-            <!-- wp:navigation {"className":"wp-block-navigation","ariaLabel":"Language Switcher"} -->
-                <!-- wp:navigation-link {"label":"English","url":"#"} /-->
-                <!-- wp:navigation-link {"label":"Cymraeg","url":"#"} /-->
+        <!-- wp:group {"layout":{"type":"flex","justifyContent":"right"},"className":"nav-switcher"} -->
+        <div class="wp-block-group nav-switcher">
+            <!-- wp:navigation {"label":"Nav Switcher","className":"wp-block-navigation"} -->
+            <!-- wp:navigation-link {"label":"English","url":"#","className":"nav-link"} /-->
+            <!-- wp:navigation-link {"label":"Cymraeg","url":"#","className":"nav-link"} /-->
             <!-- /wp:navigation -->
         </div>
-
         <!-- /wp:group -->
+
         <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
         <div class="wp-block-group">
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->

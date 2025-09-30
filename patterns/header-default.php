@@ -32,8 +32,8 @@
                  "buttonUseIcon":true,"style":{"layout":{"selfStretch":"fit","flexSize":null}}} /-->
         </div>
         <!-- /wp:group -->
-        
-        <!-- wp:navigation {"ref":1552} /-->
+
+        <!-- wp:navigation {"layout":{"type":"flex","justifyContent":"left"}} /-->
     </div>
     <!-- /wp:group -->
 </div>

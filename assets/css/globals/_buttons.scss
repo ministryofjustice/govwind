@@ -14,6 +14,9 @@
 	--default-background: #ffffff;
 
 	--ghost-hover-bg: #f5f5f5;
+
+	/* Divider for header CTA button */
+	--header-cta-divider: #d1d5db;
 }
 
 /* Base button */
@@ -74,6 +77,61 @@
 		&:hover {
 			background-color: var(--ghost-hover-bg);
 			border-color: transparent;
+		}
+	}
+}
+
+/* Header CTA button variation */
+.govwind-cta-header-container {
+	.wp-block-buttons {
+		@apply relative flex;
+		margin-left: 28px;
+
+		&::before {
+			content: "";
+			@apply absolute top-[10%] bottom-[10%] left-[-9%] w-px bg-gray-300;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.govwind-cta-header-container .wp-block-buttons::before {
+		display: none; /* remove divider */
+	}
+
+	.govwind-cta-header-container {
+		@apply flex w-full flex-col items-stretch;
+
+		.wp-block-buttons {
+			margin-left: 0;
+		}
+	}
+
+	.is-layout-flex > :is(*, div) {
+		margin-left: 0; /* remove left spacing on mobile */
+	}
+
+	/* Search wrapper full width */
+	.wp-block-search__inside-wrapper {
+		width: 100% !important;
+	}
+
+	.wp-block-search__input {
+		@apply w-full;
+		box-sizing: border-box;
+	}
+
+	/* Make buttons full width and stacked */
+	.wp-block-buttons {
+		@apply flex w-full flex-col items-stretch;
+
+		.wp-block-button {
+			@apply w-full;
+
+			.wp-block-button__link {
+				@apply w-full;
+				min-width: 0; /* override the --btn-width */
+			}
 		}
 	}
 }
@@ -177,6 +235,22 @@
 
 		&:active {
 			@apply scale-100;
+		}
+	}
+}
+
+/* Mobile full-width buttons */
+@media (max-width: 768px) {
+	.wp-block-buttons {
+		@apply flex w-full flex-col;
+
+		.wp-block-button {
+			@apply w-full;
+
+			.wp-block-button__link {
+				@apply w-full;
+				min-width: 0; /* override the --btn-width */
+			}
 		}
 	}
 }

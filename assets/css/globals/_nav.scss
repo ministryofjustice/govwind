@@ -1,3 +1,7 @@
+:root {
+	--color-primary: #3b82f6;
+}
+
 .nav-switcher {
 	@apply pt-2;
 
@@ -5,7 +9,8 @@
 		@apply flex gap-0;
 
 		.nav-link {
-			@apply inline-flex;
+			display: inline-flex;
+			align-items: center;
 
 			&:not(:last-child) {
 				@apply border-r border-gray-100 pr-2;
@@ -16,7 +21,14 @@
 			}
 
 			a {
-				@apply focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none;
+				@apply focus:ring-2 focus:ring-offset-2 focus:outline-none;
+				@apply hover:text-(--color-primary);
+
+				&.current-menu-item,
+				&.current_page_item {
+					color: var(--color-primary);
+					@apply font-semibold;
+				}
 			}
 		}
 	}

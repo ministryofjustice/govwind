@@ -17,8 +17,10 @@
      "backgroundColor":"header-bg","textColor":"header-text"} -->
 <div class="wp-block-group alignfull has-header-text-color has-text-color is-style-default 
            has-header-bg-background-color has-background has-link-color">
+
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
+
         <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
         <div class="wp-block-group">
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -32,8 +34,8 @@
                  "buttonUseIcon":true,"style":{"layout":{"selfStretch":"fit","flexSize":null}}} /-->
         </div>
         <!-- /wp:group -->
-        
-        <!-- wp:navigation {"ref":1552} /-->
+
+        <!-- wp:navigation {"layout":{"type":"flex","justifyContent":"left"}} /-->
     </div>
     <!-- /wp:group -->
 </div>

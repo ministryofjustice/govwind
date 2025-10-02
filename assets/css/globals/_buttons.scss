@@ -19,7 +19,7 @@
 /* Base button */
 .wp-block-button {
 	.wp-block-button__link {
-		@apply h-(--btn-height) min-w-(--btn-width) gap-(--btn-gap);
+		@apply h-[var(--btn-height)] min-w-[var(--btn-width)] gap-[var(--btn-gap)];
 		@apply inline-flex items-center justify-center no-underline;
 		@apply transition-all duration-200 ease-in-out;
 		@apply will-change-[background-color,color,border-color];
@@ -33,7 +33,7 @@
 		&:focus,
 		&:focus-visible,
 		&.is-active {
-			@apply outline-[3px] outline-offset-2 outline-solid;
+			@apply outline outline-[3px] outline-offset-2;
 			outline-color: var(--btn-border-highlight);
 		}
 
@@ -44,7 +44,7 @@
 
 	/* Fill button */
 	&.is-style-fill .wp-block-button__link {
-		@apply bg-(--default-primary) text-(--default-background);
+		@apply bg-[var(--default-primary)] text-[var(--default-background)];
 
 		&:hover {
 			background-color: var(--default-primary-accent);
@@ -53,7 +53,7 @@
 
 	/* Outline button */
 	&.is-style-outline .wp-block-button__link {
-		@apply bg-transparent text-(--default-primary);
+		@apply bg-transparent text-[var(--default-primary)];
 		border-width: var(--btn-border-width);
 		border-color: var(--default-primary);
 
@@ -93,29 +93,29 @@
 
 @media (max-width: 768px) {
 	.govwind-cta-header-container .wp-block-buttons::before {
-		display: none; /* remove divider */
+		@apply hidden;
 	}
 
 	.govwind-cta-header-container {
 		@apply flex w-full flex-col items-stretch;
 
 		.wp-block-buttons {
-			margin-left: 0;
+			@apply ml-0;
 		}
 	}
 
 	.is-layout-flex > :is(*, div) {
-		margin-left: 0;
+		@apply ml-0;
 	}
 
 	/* Search wrapper full width */
 	.wp-block-search__inside-wrapper {
+		@apply w-full;
 		width: 100% !important;
 	}
 
 	.wp-block-search__input {
-		@apply w-full;
-		box-sizing: border-box;
+		@apply box-border w-full;
 	}
 
 	/* Make buttons full width and stacked */
@@ -126,8 +126,7 @@
 			@apply w-full;
 
 			.wp-block-button__link {
-				@apply w-full;
-				min-width: 0;
+				@apply w-full min-w-0;
 			}
 		}
 	}
@@ -197,7 +196,6 @@
 
 .btn-full-width {
 	@apply w-full;
-	width: 100%;
 }
 
 /* High-contrast (Windows forced-colors) */
@@ -214,8 +212,7 @@
 /* Print */
 @media print {
 	.wp-block-button__link {
-		@apply border border-solid border-black bg-transparent text-black;
-		@apply no-underline;
+		@apply border border-solid border-black bg-transparent text-black no-underline;
 
 		&::after {
 			content: " (" attr(href) ")";
@@ -228,7 +225,6 @@
 @media (prefers-reduced-motion: reduce) {
 	.wp-block-button__link {
 		@apply transition-none;
-		transition: none;
 
 		&:active {
 			@apply scale-100;
@@ -245,8 +241,7 @@
 			@apply w-full;
 
 			.wp-block-button__link {
-				@apply w-full;
-				min-width: 0;
+				@apply w-full min-w-0;
 			}
 		}
 	}

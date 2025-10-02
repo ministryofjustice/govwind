@@ -33,7 +33,7 @@
 		&:focus,
 		&:focus-visible,
 		&.is-active {
-			@apply outline-[3px] outline-offset-2 outline-solid;
+			@apply outline outline-[3px] outline-offset-2;
 			outline-color: var(--btn-border-highlight);
 		}
 
@@ -74,6 +74,60 @@
 		&:hover {
 			background-color: var(--ghost-hover-bg);
 			border-color: transparent;
+		}
+	}
+}
+
+/* Header CTA button variation */
+.govwind-cta-header-container {
+	.wp-block-buttons {
+		@apply relative flex;
+		margin-left: 28px;
+
+		&::before {
+			content: "";
+			@apply absolute top-[10%] bottom-[10%] left-[-9%] w-px bg-gray-300;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.govwind-cta-header-container .wp-block-buttons::before {
+		@apply hidden;
+	}
+
+	.govwind-cta-header-container {
+		@apply flex w-full flex-col items-stretch;
+
+		.wp-block-buttons {
+			@apply ml-0;
+		}
+	}
+
+	.is-layout-flex > :is(*, div) {
+		@apply ml-0;
+	}
+
+	/* Search wrapper full width */
+	.wp-block-search__inside-wrapper {
+		@apply w-full;
+		width: 100% !important;
+	}
+
+	.wp-block-search__input {
+		@apply box-border w-full;
+	}
+
+	/* Make buttons full width and stacked */
+	.wp-block-buttons {
+		@apply flex w-full flex-col items-stretch;
+
+		.wp-block-button {
+			@apply w-full;
+
+			.wp-block-button__link {
+				@apply w-full min-w-0;
+			}
 		}
 	}
 }
@@ -142,7 +196,6 @@
 
 .btn-full-width {
 	@apply w-full;
-	width: 100%;
 }
 
 /* High-contrast (Windows forced-colors) */
@@ -159,8 +212,7 @@
 /* Print */
 @media print {
 	.wp-block-button__link {
-		@apply border border-solid border-black bg-transparent text-black;
-		@apply no-underline;
+		@apply border border-solid border-black bg-transparent text-black no-underline;
 
 		&::after {
 			content: " (" attr(href) ")";
@@ -173,10 +225,24 @@
 @media (prefers-reduced-motion: reduce) {
 	.wp-block-button__link {
 		@apply transition-none;
-		transition: none;
 
 		&:active {
 			@apply scale-100;
+		}
+	}
+}
+
+/* Mobile full-width buttons */
+@media (max-width: 768px) {
+	.wp-block-buttons {
+		@apply flex w-full flex-col;
+
+		.wp-block-button {
+			@apply w-full;
+
+			.wp-block-button__link {
+				@apply w-full min-w-0;
+			}
 		}
 	}
 }

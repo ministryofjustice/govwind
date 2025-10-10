@@ -13,10 +13,6 @@ add_action('after_setup_theme', function () {
     // Add theme support for editor styles
     add_theme_support('editor-styles');
 
-    // Enable block templates and block patterns
-    add_theme_support('block-templates');
-    add_theme_support('block-patterns');
-
     // Check if CSS file exists before adding editor styles
     $css_file = get_template_directory() . '/dist/style.css';
     if (file_exists($css_file)) {
@@ -136,3 +132,49 @@ function govwind_register_button_styles()
     );
 }
 add_action('init', 'govwind_register_button_styles');
+
+/**
+ * Auto register block patterns in /patterns folder 
+ */
+function govwind_register_all_block_patterns()
+{
+    if (! function_exists('register_block_pattern')) {
+        return;
+    }
+
+    $patterns_dir = get_template_directory() . '/patterns/';
+    $pattern_files = glob($patterns_dir . '*.php'); // Get all PHP files
+
+    foreach ($pattern_files as $file) {
+        // Extract the pattern metadata from the file header
+        $pattern_data = get_file_data($file, array(
+            'title'       => 'Title',
+            'slug'        => 'Slug',
+            'categories'  => 'Categories',
+            'description' => 'Description',
+        ));
+
+        if (empty($pattern_data['slug']) || empty($pattern_data['title'])) {
+            continue; // Skip if slug or title is missing
+        }
+
+        // Categories as array
+        $categories = ! empty($pattern_data['categories']) ? array_map('trim', explode(',', $pattern_data['categories'])) : array( 'uncategorized' );
+
+        // Read the PHP content of the pattern
+        $content = file_get_contents($file);
+
+        register_block_pattern(
+            'govwind/' . sanitize_title($pattern_data['slug']),
+            array(
+                'title'       => esc_html__($pattern_data['title'], 'govwind'),
+                'description' => esc_html__($pattern_data['description'], 'govwind'),
+                'categories'  => $categories,
+                'content'     => $content,
+            )
+        );
+    }
+}
+add_action('init', 'govwind_register_all_block_patterns');
+
+

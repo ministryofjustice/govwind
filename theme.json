@@ -369,7 +369,8 @@
 	],
 	"patterns": [
 		"fullscreen-cover-image-gallery",
-		"hero-banner-with-overlap-images"
+		"hero-banner-with-overlap-images",
+		"govwind/cta-section"
 	],
 	"templateParts": [
 		{

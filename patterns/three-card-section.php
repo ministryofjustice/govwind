@@ -51,7 +51,7 @@
 				class="wp-block-group has-border-color has-tertiary-border-color has-surface-background-color has-background"
 				style="
 					border-width: 1px;
-					border-radius: 16px;
+                    border-radius: var(--radius-xl);
 					padding-top: var(--wp--preset--spacing--40);
 					padding-right: var(--wp--preset--spacing--40);
 					padding-bottom: var(--wp--preset--spacing--40);
@@ -90,7 +90,7 @@
 				class="wp-block-group has-border-color has-tertiary-border-color has-surface-background-color has-background"
 				style="
 					border-width: 1px;
-					border-radius: 16px;
+					border-radius: var(--radius-xl);
 					padding-top: var(--wp--preset--spacing--40);
 					padding-right: var(--wp--preset--spacing--40);
 					padding-bottom: var(--wp--preset--spacing--40);
@@ -128,7 +128,7 @@
 				class="wp-block-group has-border-color has-tertiary-border-color has-surface-background-color has-background"
 				style="
 					border-width: 1px;
-					border-radius: 16px;
+					border-radius: var(--radius-xl);
 					padding-top: var(--wp--preset--spacing--40);
 					padding-right: var(--wp--preset--spacing--40);
 					padding-bottom: var(--wp--preset--spacing--40);

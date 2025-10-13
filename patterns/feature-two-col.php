@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Feature Section
- * Slug: govwind/feature-section
+ * Title: Feature section two columns
+ * Slug: govwind/feature-two-col
  * Categories: features
  * Description: A full-width feature section highlighting key aspects of your product or service with text and an image.
  * Keywords: feature, section, full width, product, service

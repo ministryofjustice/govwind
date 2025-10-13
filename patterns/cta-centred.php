@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Full Width CTA Section
- * Slug: govwind/cta-section
+ * Title: CTA Centered
+ * Slug: govwind/cta-centered
  * Categories: call-to-action
  * Description: A full-width call to action section with centered text and button.
- * Keywords: cta, call to action, full width
+ * Keywords: cta, call to action, homepage
  *
  * @package WordPress
  * @subpackage Govwind

@@ -3,13 +3,9 @@
  * Title: Feature section two columns
  * Slug: govwind/feature-two-col
  * Categories: features
- * Description: A full-width feature section highlighting key aspects of your product or service with text and an image.
+ * Description: A full-width feature section highlighting service with text and an image.
  * Keywords: feature, section, full width, product, service
- *
- * @package WordPress
- * @subpackage Govwind
- * @since 2025
- */
+*/
 ?>
 
 <!-- wp:group {"align":"full","className":"has-background-background-color has-background","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->

@@ -370,7 +370,9 @@
 	"patterns": [
 		"fullscreen-cover-image-gallery",
 		"hero-banner-with-overlap-images",
-		"govwind/cta-section"
+		"govwind/cta-centered",
+		"govwind/three-cards",
+		"govwind/feature-two-col"
 	],
 	"templateParts": [
 		{

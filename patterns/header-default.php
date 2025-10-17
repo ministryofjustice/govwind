@@ -30,8 +30,15 @@
             <!-- /wp:group -->
 
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"flex-end","flexGrow":1}} -->
-            <div class="wp-block-group govwind-cta-header-container">
+            <div class="wp-block-group">
                 <!-- wp:search {"label":"Search this site","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"width":450,"widthUnit":"px"} /-->
+
+            <!-- wp:button -->
+            <div class="wp-block-button">
+                <a class="wp-block-button__link wp-element-button" href="#">Click Me CTA</a>
+            </div>
+            <!-- /wp:button -->
+                    
             </div>
             <!-- /wp:group -->
         

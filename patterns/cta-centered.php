@@ -6,9 +6,6 @@
  * Description: A full-width call to action section with centered text and button.
  * Keywords: cta, call to action, homepage
  *
- * @package WordPress
- * @subpackage Govwind
- * @since 2025
  */
 ?>
 

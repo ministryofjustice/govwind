@@ -13,10 +13,6 @@ add_action('after_setup_theme', function () {
     // Add theme support for editor styles
     add_theme_support('editor-styles');
 
-    // Enable block templates and block patterns
-    add_theme_support('block-templates');
-    add_theme_support('block-patterns');
-
     // Check if CSS file exists before adding editor styles
     $css_file = get_template_directory() . '/dist/style.css';
     if (file_exists($css_file)) {

@@ -1,16 +1,75 @@
-<!-- wp:template-part {"slug":"header-default","className":""} /-->
+<!-- wp:template-part {"slug":"header-no-search","theme":"govwind"} /-->
 
-<!-- wp:group {"tagName":"main","className":"gw-main-content-area","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|50","right":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <main
-	class="wp-block-group gw-main-content-area"
+	class="wp-block-group"
 	style="
 		margin-top: 0;
-		padding-top: var(--wp--preset--spacing--40);
-		padding-bottom: var(--wp--preset--spacing--40);
+		margin-bottom: 0;
+		padding-top: var(--wp--preset--spacing--70);
+		padding-right: var(--wp--preset--spacing--50);
+		padding-bottom: var(--wp--preset--spacing--70);
+		padding-left: var(--wp--preset--spacing--50);
 	"
 >
-	<!-- wp:pattern {"slug":"govwind/404"} /-->
+	<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"6rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
+	<h1
+		class="wp-block-heading has-text-align-center"
+		style="
+			margin-bottom: var(--wp--preset--spacing--30);
+			font-size: 6rem;
+			font-weight: 700;
+		"
+	>
+		404
+	</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:heading {"textAlign":"center","level":2,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} -->
+	<h2
+		class="wp-block-heading has-text-align-center"
+		style="margin-bottom: var(--wp--preset--spacing--40)"
+	>
+		Page Not Found
+	</h2>
+	<!-- /wp:heading -->
+
+	<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} -->
+	<p
+		class="has-text-align-center"
+		style="margin-bottom: var(--wp--preset--spacing--50)"
+	>
+		Sorry, we couldn't find the page you're looking for. It may have been moved
+		or deleted.
+	</p>
+	<!-- /wp:paragraph -->
+
+	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} -->
+	<div
+		class="wp-block-buttons"
+		style="margin-bottom: var(--wp--preset--spacing--50)"
+	>
+		<!-- wp:button {"style":{"spacing":{"padding":{"left":"var:preset|spacing|50","right":"var:preset|spacing|50","top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} -->
+		<div class="wp-block-button">
+			<a
+				class="wp-block-button__link wp-element-button"
+				href="/"
+				style="
+					padding-top: var(--wp--preset--spacing--30);
+					padding-right: var(--wp--preset--spacing--50);
+					padding-bottom: var(--wp--preset--spacing--30);
+					padding-left: var(--wp--preset--spacing--50);
+				"
+			>
+				Return to Homepage
+			</a>
+		</div>
+		<!-- /wp:button -->
+	</div>
+	<!-- /wp:buttons -->
+
+	<!-- wp:search {"label":"Or search for what you need","showLabel":false,"buttonText":"Search","align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} /-->
 </main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","className":""} /-->
+<!-- wp:template-part {"slug":"footer","theme":"govwind"} /-->

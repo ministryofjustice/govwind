@@ -372,7 +372,8 @@
 		"hero-banner-with-overlap-images",
 		"govwind/cta-centered",
 		"govwind/three-cards",
-		"govwind/feature-two-col"
+		"govwind/feature-two-col",
+		"govwind/about"
 	],
 	"templateParts": [
 		{

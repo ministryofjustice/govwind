@@ -12,7 +12,7 @@ textarea,
 		@apply rounded-[50px];
 	}
 	&:focus {
-		@apply border-current outline-2 outline-(--default-focus) outline-solid;
+		@apply border-current outline-2 outline-(--default-focus-text) outline-solid;
 	}
 	&:disabled {
 		@apply cursor-not-allowed bg-current/33 opacity-50;

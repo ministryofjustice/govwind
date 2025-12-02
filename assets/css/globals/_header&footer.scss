@@ -1,0 +1,56 @@
+header {
+	background-color: var(--default-header-background);
+	color: var(--default-header-foreground);
+
+	nav {
+		background-color: var(--default-header-nav-background);
+
+		// The box shadows here extend the nav background colour to the edge of the screen
+		box-shadow:
+			0 0 0 0 var(--default-header-nav-background-overflow),
+			300px 0 0 0 var(--default-header-nav-background-overflow),
+			-300px 0 0 0 var(--default-header-nav-background-overflow),
+			600px 0 0 0 var(--default-header-nav-background-overflow),
+			-600px 0 0 0 var(--default-header-nav-background-overflow),
+			900px 0 0 0 var(--default-header-nav-background-overflow),
+			-900px 0 0 0 var(--default-header-nav-background-overflow),
+			1200px 0 0 0 var(--default-header-nav-background-overflow),
+			-1200px 0 0 0 var(--default-header-nav-background-overflow),
+			1500px 0 0 0 var(--default-header-nav-background-overflow),
+			-1500px 0 0 0 var(--default-header-nav-background-overflow),
+			1800px 0 0 0 var(--default-header-nav-background-overflow),
+			-1800px 0 0 0 var(--default-header-nav-background-overflow),
+			2100px 0 0 0 var(--default-header-nav-background-overflow),
+			-2100px 0 0 0 var(--default-header-nav-background-overflow);
+		a {
+			> span {
+				color: var(--default-header-nav-links);
+			}
+			&:focus {
+				background-color: var(--default-focus-background);
+				> span {
+					color: var(--default-focus-text);
+					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
+				}
+			}
+		}
+
+		button {
+			outline: var(--default-header-button-outline);
+		}
+	}
+}
+
+/**
+	* Footer colours are dealt with in the frontend, with colours chosen from the palette
+	* These styles just need to deal with the identifying of links & hover states 
+	* (colours and hover colours are dealt with in WordPress, hover states are the same as elsewhere)
+*/
+footer {
+	a {
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

@@ -1,11 +1,9 @@
 // Forward all theme modules
-@forward "base";
-@forward "buttons";
-@forward "colors";
 @forward "typography";
 @forward "form";
 @forward "spacing";
-@forward "nav";
 @forward "layout";
-@forward "wordpress";
+//@forward "wordpress";
 @forward "accessibility";
+
+@forward "header&footer";

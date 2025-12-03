@@ -1,66 +1,79 @@
-:root.playsground {
+:root.playground {
 	//palette
 	//put them in "colour" order, so they make sense when chosen from the palette
-	--default-primary--light: #1447e6;
-	--default-primary-accent--light: #193cb8;
-	--default-background--light: #ffffff;
-	--default-background-secondary--light: #e5e5e5;
-	--default-foreground-secondary--light: #404040;
-	--default-foreground--light: #0a0a0a;
+	--primary--light: #2366a3;
+	--primary-accent--light: #143859;
+	--background--light: #ffffff;
+	--background-secondary--light: #e5e5e5;
+	--foreground-secondary--light: #404040;
+	--foreground--light: #0a0a0a;
 
 	//hidden
 	//these colours are not available for selecting in the palette
-	--default-foreground-hint--light: #737373;
-	--default-disabled--light: #a1a1a1;
-	--default-muted--light: #f5f5f5;
-	--default-subtle--light: #fafafa;
-	--default-strong--light: #525252;
-	--default-error--light: #c10007;
-	--default-error-muted--light: #ffa2a2;
-	--default-focus--light: #ffb900;
-	--default-focus-accent--light: #ffd633;
-	--default-focus-outline--light: #2b7fff;
+	--foreground-hint--light: #737373;
+	--disabled--light: #a1a1a1;
+	--muted--light: #f5f5f5;
+	--subtle--light: #fafafa;
+	--strong--light: #525252;
+	--error--light: #c10007;
+	--error-muted--light: #ffa2a2;
+	--focus-text--light: #000;
+	--focus-background--light: #f8f4e4;
+	--focus-accent--light: #dac777;
+	--focus-outline--light: #2366a3;
 
 	//header colours
-	--default-header-background--light: #efd;
-	--default-header-foreground--light: #fff;
-	--default-header-nav-background--light: #193cb8;
-	--default-header-nav-links--light: #e5e5e5;
-	--default-header-button-outline: 2px solid #e5e5e5; // Use especially if button colour matches header colour
+	--header-background--light: #143859;
+	--header-foreground--light: #fff;
+	--header-nav-background--light: #143859;
+	--header-nav-background-overflow--light: #193cb8;
+	--header-nav-links--light: #e5e5e5;
+	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
 
 	//DARK MODE
 
 	//palette
-	--default-primary--dark: #b3bfe6;
-	--default-primary-accent--dark: #9db0ef;
-	--default-background--dark: #383838;
-	--default-background-secondary--dark: #525252;
-	--default-foreground-secondary--dark: #e5e5e5;
-	--default-foreground--dark: #ffffff;
+	--primary--dark: #b3bfe6;
+	--primary-accent--dark: #9db0ef;
+	--background--dark: #383838;
+	--background-secondary--dark: #525252;
+	--foreground-secondary--dark: #e5e5e5;
+	--foreground--dark: #ffffff;
 
 	//hidden
-	--default-foreground-hint--dark: #737373;
-	--default-disabled--dark: #525252;
-	--default-muted--dark: #545454;
-	--default-subtle--dark: #737373;
-	--default-strong--dark: #fafafa;
-	--default-error--dark: #f00;
-	--default-error-muted--dark: #c10007;
-	--default-focus--dark: #c26a06;
-	--default-focus-accent--dark: #ffb900;
-	--default-focus-outline--light: #193cb8;
+	--foreground-hint--dark: #737373;
+	--disabled--dark: #525252;
+	--muted--dark: #545454;
+	--subtle--dark: #737373;
+	--strong--dark: #fafafa;
+	--error--dark: #f00;
+	--error-muted--dark: #c10007;
+	--focus-text--dark: #000;
+	--focus-background--dark: #ffb900;
+	--focus-accent--dark: #ffd633;
+	--focus-outline--dark: #193cb8;
+
+	//header colours
+	--header-background--dark: var(--header-background--light);
+	--header-foreground--dark: var(--header-foreground--light);
+	--header-nav-background--dark: var(--header-nav-background--light);
+	--header-nav-background-overflow--dark: var(
+		--header-nav-background-overflow--light
+	);
+	--header-nav-links--dark: var(--header-nav-links--light);
+	--header-button-outline--dark: var(--header-button-outline--light);
 
 	/*
 	//palette
-	--default-primary-dark: var(--default-primary-light);
-	--default-primary-accent-dark: var(--default-primary-accent-light);
-	--default-background-dark: var(--default-background-light);
-	--default-foreground-dark: var(--default-foreground-light);
+	--primary-dark: var(--primary-light);
+	--primary-accent-dark: var(--primary-accent-light);
+	--background-dark: var(--background-light);
+	--foreground-dark: var(--foreground-light);
 
 	//hidden
-	--default-muted-dark: var(--default-muted-light);
-	--default-error-dark: var(--default-error-light);
-	--default-focus-dark: var(--default-focus-light);
+	--muted-dark: var(--muted-light);
+	--error-dark: var(--error-light);
+	--focus-dark: var(--focus-light);
 	
 */
 }

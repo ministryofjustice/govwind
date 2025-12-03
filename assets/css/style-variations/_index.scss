@@ -5,36 +5,26 @@
 @forward "palettes/imb";
 @forward "palettes/lay-observers";
 @forward "palettes/playground";
-$site-list: default;
+
 $colour-list:
 	primary, primary-accent, background, background-secondary, foreground,
 	foreground-secondary, foreground-hint, disabled, muted, subtle, strong, error,
 	error-muted, focus-text, focus-background, focus-outline, header-background,
 	header-foreground, header-nav-background, header-nav-background-overflow,
-	header-nav-links;
+	header-nav-links, header-button-outline;
 
 //goes through the $site-list and $colour-list
 //do not change the below, only add to the lists above
-@mixin gw-summon-palette($sites, $colours, $mode) {
-	@each $site in $sites {
-		@each $colour in $colours {
-			--#{$site}-#{$colour}: var(--#{$site}-#{$colour}--#{$mode});
-		}
+@mixin gw-summon-palette($colours, $mode) {
+	@each $colour in $colours {
+		--colour-#{$colour}: var(--#{$colour}--#{$mode});
 	}
 }
 
 :root {
-	@include gw-summon-palette(
-		$sites: $site-list,
-		$colours: $colour-list,
-		$mode: dark
-	);
+	@include gw-summon-palette($colours: $colour-list, $mode: dark);
 
 	@media (prefers-color-scheme: light) {
-		@include gw-summon-palette(
-			$sites: $site-list,
-			$colours: $colour-list,
-			$mode: light
-		);
+		@include gw-summon-palette($colours: $colour-list, $mode: light);
 	}
 }

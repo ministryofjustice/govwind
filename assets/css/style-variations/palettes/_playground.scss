@@ -1,4 +1,4 @@
-:root.playground {
+:root.playsground {
 	//palette
 	//put them in "colour" order, so they make sense when chosen from the palette
 	--primary--light: #2366a3;
@@ -26,7 +26,7 @@
 	--header-background--light: #143859;
 	--header-foreground--light: #fff;
 	--header-nav-background--light: #143859;
-	--header-nav-background-overflow--light: #193cb8;
+	--header-nav-background-overflow--light: #143859;
 	--header-nav-links--light: #e5e5e5;
 	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
 
@@ -39,19 +39,6 @@
 	--background-secondary--dark: #525252;
 	--foreground-secondary--dark: #e5e5e5;
 	--foreground--dark: #ffffff;
-
-	//hidden
-	--foreground-hint--dark: #737373;
-	--disabled--dark: #525252;
-	--muted--dark: #545454;
-	--subtle--dark: #737373;
-	--strong--dark: #fafafa;
-	--error--dark: #f00;
-	--error-muted--dark: #c10007;
-	--focus-text--dark: #000;
-	--focus-background--dark: #ffb900;
-	--focus-accent--dark: #ffd633;
-	--focus-outline--dark: #193cb8;
 
 	//header colours
 	--header-background--dark: var(--header-background--light);

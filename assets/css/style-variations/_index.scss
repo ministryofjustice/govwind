@@ -1,11 +1,13 @@
 // Forward all theme modules
 @forward "palettes/defaults";
+@forward "palettes/playground";
+/*
+Add site-specific stylesheets thus:
 @forward "palettes/ccrc";
 @forward "palettes/vc";
 @forward "palettes/imb";
 @forward "palettes/lay-observers";
-@forward "palettes/playground";
-
+*/
 $colour-list:
 	primary, primary-accent, background, background-secondary, foreground,
 	foreground-secondary, foreground-hint, disabled, muted, subtle, strong, error,
@@ -27,4 +29,22 @@ $colour-list:
 	@media (prefers-color-scheme: light) {
 		@include gw-summon-palette($colours: $colour-list, $mode: light);
 	}
+}
+
+// mixin to shade a colour
+/**
+ * For example:
+ *
+	@include gw-shade-colour(
+		$from: --vc-primary-dark,
+		$to: --vc-accent-dark,
+		$degree: 80
+	);
+ *
+ *  Output would be:
+	--vc-accent-dark: lch(from var(--vc-primary-dark)80 c h)
+ *
+ **/
+ @mixin gw-shade-colour($from, $to, $degree) {
+	#{$to}: lch(from var(#{$from}) #{$degree} c h);
 }

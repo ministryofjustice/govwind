@@ -1,9 +1,17 @@
-:root.playsground {
+:root.playground {
+	//header colours
+	--header-background--light: #143859;
+	--header-foreground--light: #fff;
+	--header-nav-background--light: #143859;
+	--header-nav-background-overflow--light: #193cb8;
+	--header-nav-links--light: #e5e5e5;
+	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
+
 	//palette
-	//put them in "colour" order, so they make sense when chosen from the palette
-	--primary--light: #2366a3;
-	--primary-accent--light: #143859;
-	--background--light: #ffffff;
+	// these are the colours that are pickable in the colour palette - see theme.json
+	--primary--light: #2366a3; //used for buttons and links
+	--primary-accent--light: #143859; // Used for button and link hover states
+	--background--light: #ffffff; // Both the page background, and text on things with a dark background such as buttons
 	--background-secondary--light: #e5e5e5;
 	--foreground-secondary--light: #404040;
 	--foreground--light: #0a0a0a;
@@ -22,23 +30,8 @@
 	--focus-accent--light: #dac777;
 	--focus-outline--light: #2366a3;
 
-	//header colours
-	--header-background--light: #143859;
-	--header-foreground--light: #fff;
-	--header-nav-background--light: #143859;
-	--header-nav-background-overflow--light: #143859;
-	--header-nav-links--light: #e5e5e5;
-	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
 
 	//DARK MODE
-
-	//palette
-	--primary--dark: #b3bfe6;
-	--primary-accent--dark: #9db0ef;
-	--background--dark: #383838;
-	--background-secondary--dark: #525252;
-	--foreground-secondary--dark: #e5e5e5;
-	--foreground--dark: #ffffff;
 
 	//header colours
 	--header-background--dark: var(--header-background--light);
@@ -49,6 +42,27 @@
 	);
 	--header-nav-links--dark: var(--header-nav-links--light);
 	--header-button-outline--dark: var(--header-button-outline--light);
+
+	//palette
+	--primary--dark: #b3bfe6;
+	--primary-accent--dark: #9db0ef;
+	--background--dark: #383838;
+	--background-secondary--dark: #525252;
+	--foreground-secondary--dark: #e5e5e5;
+	--foreground--dark: #ffffff;
+
+	//hidden
+	--foreground-hint--dark: #737373;
+	--disabled--dark: #525252;
+	--muted--dark: #545454;
+	--subtle--dark: #737373;
+	--strong--dark: #fafafa;
+	--error--dark: #f00;
+	--error-muted--dark: #c10007;
+	--focus-text--dark: var(--focus-text--light);
+	--focus-background--dark: var(--focus-background--light);
+	--focus-accent--dark: var(--focus-accent--light);
+	--focus-outline--dark: var(--focus-outline--light);
 
 	/*
 	//palette

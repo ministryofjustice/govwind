@@ -22,7 +22,7 @@
 					"name": "Primary (accent)"
 				},
 				{
-					"slug": "background",
+					"slug": "site-background",
 					"color": "var(--colour-background)",
 					"name": "Background"
 				},
@@ -148,7 +148,6 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--colour-background)",
 			"text": "var(--colour-foreground)"
 		},
 		"spacing": {

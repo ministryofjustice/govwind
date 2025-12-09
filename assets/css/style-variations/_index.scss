@@ -46,6 +46,6 @@ $colour-list:
 	--vc-accent-dark: lch(from var(--vc-primary-dark)80 c h)
  *
  **/
- @mixin gw-shade-colour($from, $to, $degree) {
+@mixin gw-shade-colour($from, $to, $degree) {
 	#{$to}: lch(from var(#{$from}) #{$degree} c h);
 }

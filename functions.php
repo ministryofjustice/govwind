@@ -139,7 +139,32 @@ add_action('init', 'govwind_register_button_styles');
  */
 
 add_filter( 'language_attributes', function( $attrs ) {
-	$site_name = preg_replace("/[^A-Za-z0-9 ]/", '', get_bloginfo("name"));
-	$site_name = str_replace(" ", "-", strtolower($site_name));
+	$site_name = sanitize_title( get_bloginfo('name') );
 	return "$attrs class='$site_name'";
+});
+
+/**
+ * This actions calls a JS file which adds a class to the editor iFrame 
+ * HTML element which allows the site-specific colours to be used. 
+ * 
+ * Outputs for the JS file:
+ * - siteData, which only has "name" which the sanitized site name.  
+ */
+add_action('enqueue_block_editor_assets', function () {
+	wp_enqueue_script(
+        'editor-iframe-class',
+        get_template_directory_uri() . '/assets/js/editor-iframe-class.js',
+        [ 'wp-dom-ready', 'wp-edit-post' ],
+        false,
+        true
+    );
+
+    // Pass blog name into JS safely
+    wp_localize_script(
+        'editor-iframe-class',
+        'siteData',
+        [
+            'name' => sanitize_title( get_bloginfo('name') ) // convert to safe CSS class
+        ]
+    );
 });

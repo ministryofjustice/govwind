@@ -188,7 +188,7 @@
 				},
 				":focus": {
 					"color": {
-						"text": "var(--colour-focus-text)",
+						"text": "var(--colour-focus-text)!important",
 						"background": "var(--colour-focus-background)"
 					},
 					"shadow": "0 0 0 2px var(--colour-focus-background)",

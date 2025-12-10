@@ -11,6 +11,7 @@
 	--header-nav-background-overflow--light: var(--header-nav-background--light);
 	--header-nav-links--light: #e5e5e5;
 	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
+	--header-logo-focus-filter--light: none;
 
 	//palette
 	//put them in "colour" order, so they make sense when chosen from the palette
@@ -45,6 +46,7 @@
 	--header-nav-background-overflow--dark: var(--header-nav-background--dark);
 	--header-nav-links--dark: #e5e5e5;
 	--header-button-outline: 2px solid #e5e5e5; // Use especially if button colour matches header colour
+	--header-logo-focus-filter--dark: none;
 
 	//palette
 	--primary--dark: #b3bfe6;

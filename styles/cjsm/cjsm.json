@@ -16,8 +16,13 @@
 				},
 				{
 					"slug": "cjsm-gold",
-					"color": "#dac777",
+					"color": "var(--colour-secondary)",
 					"name": "Secondary"
+				},
+				{
+					"slug": "cjsm-gold-muted",
+					"color": "var(--colour-secondary-accent)",
+					"name": "Secondary (accent)"
 				},
 				{
 					"slug": "site-background",

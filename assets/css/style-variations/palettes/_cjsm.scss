@@ -1,10 +1,17 @@
 :root.criminal-justice-secure-mail {
+	//brand unique colours
+	--secondary--light: #dac777;
+	--secondary-accent--light: #f8f4e4;
+	--secondary--dark: #4c4215;
+	--secondary-accent--dark: #47453e;
+
 	//header colours
 	--header-background--light: #143859;
 	--header-foreground--light: #fff;
 	--header-nav-background--light: #143859;
 	--header-nav-links--light: #e5e5e5;
 	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
+	--header-logo-focus-filter--light: invert(1) hue-rotate(180deg);
 
 	//palette
 	// these are the colours that are pickable in the colour palette - see theme.json
@@ -40,6 +47,7 @@
 	);
 	--header-nav-links--dark: var(--header-nav-links--light);
 	--header-button-outline--dark: var(--header-button-outline--light);
+	--header-logo-focus-filter--dark: invert(1) hue-rotate(180deg);
 
 	//palette
 	--primary--dark: #b3bfe6;

@@ -147,10 +147,21 @@ add_filter( 'language_attributes', function( $attrs ) {
  * This actions calls a JS file which adds a class to the editor iFrame 
  * HTML element which allows the site-specific colours to be used. 
  * 
+ * It also adds the same class to the editor page top, so the colours in
+ * the colour-picker palette are correct for the site.
+ *
  * Outputs for the JS file:
  * - siteData, which only has "name" which the sanitized site name.  
  */
 add_action('enqueue_block_editor_assets', function () {
+	$site_name = sanitize_title( get_bloginfo('name') ); // convert to safe CSS class
+
+	// Only affects the block editor pages (and only really affects the colour picker palette)
+	$screen = get_current_screen();
+	if ($screen && $screen->is_block_editor()) {
+		echo "<script>document.documentElement.classList.add('$site_name');</script>";
+	}
+
 	wp_enqueue_script(
         'editor-iframe-class',
         get_template_directory_uri() . '/assets/js/editor-iframe-class.js',
@@ -164,7 +175,7 @@ add_action('enqueue_block_editor_assets', function () {
         'editor-iframe-class',
         'siteData',
         [
-            'name' => sanitize_title( get_bloginfo('name') ) // convert to safe CSS class
+            'name' =>  $site_name
         ]
     );
 });

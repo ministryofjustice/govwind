@@ -3,6 +3,12 @@ header {
 	background-color: var(--colour-header-background);
 	color: var(--colour-header-foreground);
 
+	a:focus {
+		img.custom-logo {
+			filter: var(--colour-header-logo-focus-filter);
+		}
+	}
+
 	nav {
 		background-color: var(--colour-header-nav-background);
 

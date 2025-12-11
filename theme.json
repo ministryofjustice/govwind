@@ -13,32 +13,32 @@
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "var(--default-primary)",
+					"color": "var(--colour-primary)",
 					"name": "Primary"
 				},
 				{
 					"slug": "primary-accent",
-					"color": "var(--default-primary-accent)",
+					"color": "var(--colour-primary-accent)",
 					"name": "Primary (accent)"
 				},
 				{
-					"slug": "background",
-					"color": "var(--default-background)",
+					"slug": "site-background",
+					"color": "var(--colour-background)",
 					"name": "Background"
 				},
 				{
 					"slug": "background-secondary",
-					"color": "var(--default-background-secondary)",
+					"color": "var(--colour-background-secondary)",
 					"name": "Background (secondary)"
 				},
 				{
 					"slug": "foreground-secondary",
-					"color": "var(--default-foreground-secondary)",
+					"color": "var(--colour-foreground-secondary)",
 					"name": "Foreground (secondary)"
 				},
 				{
 					"slug": "foreground",
-					"color": "var(--default-foreground)",
+					"color": "var(--colour-foreground)",
 					"name": "Foreground"
 				}
 			]
@@ -148,8 +148,7 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--default-background)",
-			"text": "var(--default-foreground)"
+			"text": "var(--colour-foreground)"
 		},
 		"spacing": {
 			"blockGap": "var(--wp-block-gap)",
@@ -174,14 +173,14 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--default-primary)"
+					"text": "var(--colour-primary)"
 				},
 				"typography": {
 					"textDecoration": "underline"
 				},
 				":hover": {
 					"color": {
-						"text": "var(--default-primary-accent)"
+						"text": "var(--colour-primary-accent)"
 					},
 					"typography": {
 						"textDecoration": "none"
@@ -189,10 +188,10 @@
 				},
 				":focus": {
 					"color": {
-						"text": "var(--default-focus-text)",
-						"background": "var(--default-focus-background)"
+						"text": "var(--colour-focus-text)!important",
+						"background": "var(--colour-focus-background)"
 					},
-					"shadow": "0 0 0 2px var(--default-focus-background)",
+					"shadow": "0 0 0 2px var(--colour-focus-background)",
 					"typography": {
 						"textDecoration": "underline"
 					},
@@ -202,7 +201,7 @@
 				},
 				":focus-visible": {
 					"outline": {
-						"color": "var(--default-focus-outline)"
+						"color": "var(--colour-focus-outline)"
 					}
 				}
 			},
@@ -248,8 +247,8 @@
 			},
 			"button": {
 				"color": {
-					"background": "var(--default-primary)",
-					"text": "var(--default-background)"
+					"background": "var(--colour-primary)",
+					"text": "var(--colour-background)"
 				},
 				"border": {
 					"radius": "var(--radius-md)"
@@ -268,16 +267,16 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--default-primary-accent)"
+						"background": "var(--colour-primary-accent)"
 					}
 				},
 				":focus": {
 					"color": {
-						"text": "var(--default-focus-text)",
-						"background": "var(--default-focus-background)"
+						"text": "var(--colour-focus-text)",
+						"background": "var(--colour-focus-background)"
 					},
 					"outline": {
-						"color": "var(--default-foreground)",
+						"color": "var(--colour-foreground)",
 						"width": "3px",
 						"style": "solid",
 						"offset": "0px"
@@ -285,7 +284,7 @@
 				},
 				":focus-visible": {
 					"outline": {
-						"color": "var(--default-focus-outline)"
+						"color": "var(--colour-focus-outline)"
 					}
 				}
 			}
@@ -342,7 +341,7 @@
 			},
 			"core/separator": {
 				"color": {
-					"background": "var(--default-primary)"
+					"background": "var(--colour-primary)"
 				},
 				"spacing": {
 					"margin": {
@@ -353,7 +352,7 @@
 			},
 			"core/quote": {
 				"border": {
-					"color": "var(--default-primary)",
+					"color": "var(--colour-primary)",
 					"style": "solid",
 					"width": "0 0 0 4px"
 				},
@@ -372,8 +371,8 @@
 			},
 			"core/code": {
 				"color": {
-					"background": "var(--default-muted)",
-					"text": "var(--default-foreground)"
+					"background": "var(--colour-muted)",
+					"text": "var(--colour-foreground)"
 				},
 				"border": {
 					"radius": "var(--radius-sm)"

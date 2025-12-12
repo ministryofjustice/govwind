@@ -5,6 +5,8 @@
 	--header-nav-background--light: #193cb8;
 	--header-nav-background-overflow--light: #193cb8;
 	--header-nav-links--light: #e5e5e5;
+	--header-subnav-background--light: #e5e5e5;
+	--header-subnav-links--light: #0a0a0a;
 	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
 
 	//palette
@@ -26,7 +28,7 @@
 	--error--light: #c10007;
 	--error-muted--light: #ffa2a2;
 	--focus-text--light: #000;
-	--focus-background--light: #f8f4e4;
+	--focus-background--light: #fd0;
 	--focus-accent--light: #dac777;
 	--focus-outline--light: #2366a3;
 
@@ -40,6 +42,8 @@
 		--header-nav-background-overflow--light
 	);
 	--header-nav-links--dark: var(--header-nav-links--light);
+	--header-subnav-background--dark: var(--header-subnav-background--light);
+	--header-subnav-links--dark: var(--header-subnav-links--light);
 	--header-button-outline--dark: var(--header-button-outline--light);
 
 	//palette

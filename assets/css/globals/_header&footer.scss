@@ -9,8 +9,42 @@ header {
 		}
 	}
 
-	nav {
+	nav.wp-block-navigation { // LAYOUT
+		height: 72px;
+		@media (min-width:600px) {
+			a.wp-block-navigation-item__content {
+				padding: 5px 0;
+			}
+			// media query to match the mobile button's media query
+			.wp-block-navigation__submenu-icon {
+				padding: 5px 0;
+				height:unset;
+				line-height: 1.5;
+				&:not(:focus) {
+					outline: none;
+				}
+				svg {
+					stroke: #fff;
+					position: relative;
+					top: -3px;
+
+					path {
+						stroke-width:2.5px
+					}
+				}
+				&[aria-expanded=true] svg {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	nav.wp-block-navigation:not(.has-background-color) { // COLOURS
 		background-color: var(--colour-header-nav-background);
+
+		.wp-block-navigation-submenu {
+			background-color: var(--colour-header-nav-background);
+		}
 
 		// The box shadows here extend the nav background colour to the edge of the screen
 		box-shadow:
@@ -29,17 +63,39 @@ header {
 			-1800px 0 0 0 var(--colour-header-nav-background-overflow),
 			2100px 0 0 0 var(--colour-header-nav-background-overflow),
 			-2100px 0 0 0 var(--colour-header-nav-background-overflow);
-		a {
-			> span {
+
+		.wp-block-navigation__submenu-icon,
+		.wp-block-navigation-item__content {
+			> span,
+			> svg {
 				color: var(--colour-header-nav-links);
 			}
+
 			&:focus {
+				outline: none;
+				box-shadow: 0 4px 0 0 var(--colour-focus-text), 0 -4px 0 0 var(--colour-focus-background), 4px 4px 0 0 var(--colour-focus-background), -4px 4px 0 0 var(--colour-focus-background), -4px -4px 0 0 var(--colour-focus-background), 4px -4px 0 0 var(--colour-focus-background);
 				background-color: var(--colour-focus-background);
-				> span {
+				> span,
+				> svg {
+					stroke: var(--colour-focus-text);
 					color: var(--colour-focus-text);
 					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
 				}
 			}
+		}
+		&:is(.wp-block-navigation__submenu-container *) {
+			&:focus {
+				outline: none;
+				box-shadow: 0 4px 0 0 var(--colour-focus-text);
+				background-color: var(--colour-focus-background);
+			}
+		}
+		.current-menu-item:not(.has-background-color) {
+			background-color: var(--colour-header-subnav-background);
+			> a > span {
+				color: var(--colour-header-subnav-links);
+			}
+
 		}
 
 		button {

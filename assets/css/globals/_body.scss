@@ -1,3 +1,7 @@
+:root {
+    --page-background: var(--colour-background);
+}
+
 body {
-	background-color: var(--colour-background);
+    background-color: var(--page-background);
 }

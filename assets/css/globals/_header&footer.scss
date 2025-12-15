@@ -9,16 +9,17 @@ header {
 		}
 	}
 
-	nav.wp-block-navigation { // LAYOUT
+	nav.wp-block-navigation {
+		// LAYOUT
 		height: 72px;
-		@media (min-width:600px) {
+		@media (min-width: 600px) {
 			a.wp-block-navigation-item__content {
 				padding: 5px 0;
 			}
 			// media query to match the mobile button's media query
 			.wp-block-navigation__submenu-icon {
 				padding: 5px 0;
-				height:unset;
+				height: unset;
 				line-height: 1.5;
 				&:not(:focus) {
 					outline: none;
@@ -29,17 +30,18 @@ header {
 					top: -3px;
 
 					path {
-						stroke-width:2.5px
+						stroke-width: 2.5px;
 					}
 				}
-				&[aria-expanded=true] svg {
+				&[aria-expanded="true"] svg {
 					transform: rotate(180deg);
 				}
 			}
 		}
 	}
 
-	nav.wp-block-navigation:not(.has-background-color) { // COLOURS
+	nav.wp-block-navigation:not(.has-background-color) {
+		// COLOURS
 		background-color: var(--colour-header-nav-background);
 
 		.wp-block-navigation-submenu {
@@ -73,7 +75,13 @@ header {
 
 			&:focus {
 				outline: none;
-				box-shadow: 0 4px 0 0 var(--colour-focus-text), 0 -4px 0 0 var(--colour-focus-background), 4px 4px 0 0 var(--colour-focus-background), -4px 4px 0 0 var(--colour-focus-background), -4px -4px 0 0 var(--colour-focus-background), 4px -4px 0 0 var(--colour-focus-background);
+				box-shadow:
+					0 4px 0 0 var(--colour-focus-text),
+					0 -4px 0 0 var(--colour-focus-background),
+					4px 4px 0 0 var(--colour-focus-background),
+					-4px 4px 0 0 var(--colour-focus-background),
+					-4px -4px 0 0 var(--colour-focus-background),
+					4px -4px 0 0 var(--colour-focus-background);
 				background-color: var(--colour-focus-background);
 				> span,
 				> svg {
@@ -95,7 +103,6 @@ header {
 			> a > span {
 				color: var(--colour-header-subnav-links);
 			}
-
 		}
 
 		button {

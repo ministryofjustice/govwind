@@ -11,7 +11,7 @@ header {
 
 	nav.wp-block-navigation {
 		// LAYOUT
-		height: 72px;
+		min-height: 72px;
 		@media (min-width: 600px) {
 			a.wp-block-navigation-item__content {
 				padding: 5px 0;
@@ -38,13 +38,18 @@ header {
 				}
 			}
 		}
+
+		.wp-block-navigation__responsive-container {
+			width: 100%;
+			position: relative;
+		}
 	}
 
 	nav.wp-block-navigation:not(.has-background-color) {
 		// COLOURS
 		background-color: var(--colour-header-nav-background);
 
-		.wp-block-navigation-submenu {
+		.wp-block-navigation__responsive-container.is-menu-open {
 			background-color: var(--colour-header-nav-background);
 		}
 

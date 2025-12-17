@@ -1,3 +1,9 @@
+.playground nav.wp-block-navigation .wp-block-navigation__responsive-container {
+	width: 100%;
+	position: relative;
+}
+
+
 header {
 	//background-color: var(--colour-header-background);
 	background-color: var(--colour-header-background);
@@ -37,11 +43,6 @@ header {
 					transform: rotate(180deg);
 				}
 			}
-		}
-
-		.wp-block-navigation__responsive-container {
-			width: 100%;
-			position: relative;
 		}
 	}
 

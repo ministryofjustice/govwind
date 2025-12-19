@@ -15,7 +15,20 @@ header {
 		}
 	}
 
-	nav.wp-block-navigation {
+	nav.wp-block-navigation.drawer {
+		.wp-block-navigation-submenu__toggle[aria-expanded=true]~.wp-block-navigation__submenu-container {
+			width: 100vw;
+			justify-content: space-around;
+			min-height: 100px;
+			background: #0b0;
+			flex-direction: row;
+		}
+		&:has(.wp-block-navigation-submenu__toggle[aria-expanded=true]) {
+			margin-bottom: 100px; //not good enough - can't be sure it is 100px or any specific value
+		}
+	}
+
+	nav.wp-block-navigation.basic {
 		// LAYOUT
 		min-height: 72px;
 		@media (min-width: 600px) {
@@ -31,7 +44,6 @@ header {
 					outline: none;
 				}
 				svg {
-					stroke: #fff;
 					position: relative;
 					top: -3px;
 
@@ -50,6 +62,7 @@ header {
 		// COLOURS
 		background-color: var(--colour-header-nav-background);
 
+		.wp-block-navigation__submenu-container,
 		.wp-block-navigation__responsive-container.is-menu-open {
 			background-color: var(--colour-header-nav-background);
 		}
@@ -73,10 +86,13 @@ header {
 			-2100px 0 0 0 var(--colour-header-nav-background-overflow);
 
 		.wp-block-navigation__submenu-icon,
+		.wp-block-navigation-submenu__toggle,
 		.wp-block-navigation-item__content {
 			> span,
+			+ span > svg,
 			> svg {
 				color: var(--colour-header-nav-links);
+				stroke: var(--colour-header-nav-links);
 			}
 
 			&:focus {
@@ -90,6 +106,7 @@ header {
 					4px -4px 0 0 var(--colour-focus-background);
 				background-color: var(--colour-focus-background);
 				> span,
+				+ span > svg,
 				> svg {
 					stroke: var(--colour-focus-text);
 					color: var(--colour-focus-text);
@@ -108,6 +125,9 @@ header {
 			background-color: var(--colour-header-subnav-background);
 			> a > span {
 				color: var(--colour-header-subnav-links);
+			}
+			> button > svg {
+				stroke: var(--colour-header-subnav-links);
 			}
 		}
 

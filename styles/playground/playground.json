@@ -1,0 +1,36 @@
+{
+	"version": 3,
+	"title": "Playground palette",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "palette-colour-1",
+					"color": "#ff0",
+					"name": "Header background"
+				},
+				{
+					"slug": "palette-colour-2",
+					"color": "#0ff",
+					"name": "Green"
+				},
+				{
+					"slug": "palette-colour-3",
+					"color": "var(--colour-error-muted)",
+					"name": "Red"
+				},
+				{
+					"slug": "palette-colour-4",
+					"color": "#00f",
+					"name": "Blue"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--playground-background)",
+			"text": "var(--playground-foreground)"
+		}
+	}
+}

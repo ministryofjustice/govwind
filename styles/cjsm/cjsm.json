@@ -1,0 +1,50 @@
+{
+	"version": 3,
+	"title": "CJSM palette",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "var(--colour-primary)",
+					"name": "Primary"
+				},
+				{
+					"slug": "primary-accent",
+					"color": "var(--colour-primary-accent)",
+					"name": "Primary (accent)"
+				},
+				{
+					"slug": "cjsm-gold",
+					"color": "var(--colour-secondary)",
+					"name": "Secondary"
+				},
+				{
+					"slug": "cjsm-gold-muted",
+					"color": "var(--colour-secondary-accent)",
+					"name": "Secondary (accent)"
+				},
+				{
+					"slug": "site-background",
+					"color": "var(--colour-background)",
+					"name": "Background"
+				},
+				{
+					"slug": "background-secondary",
+					"color": "var(--colour-background-secondary)",
+					"name": "Background (secondary)"
+				},
+				{
+					"slug": "foreground-secondary",
+					"color": "var(--colour-foreground-secondary)",
+					"name": "Foreground (secondary)"
+				},
+				{
+					"slug": "foreground",
+					"color": "var(--colour-foreground)",
+					"name": "Foreground"
+				}
+			]
+		}
+	}
+}

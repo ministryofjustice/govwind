@@ -1,42 +1,49 @@
 header {
-	background-color: var(--default-header-background);
-	color: var(--default-header-foreground);
+	//background-color: var(--colour-header-background);
+	background-color: var(--colour-header-background);
+	color: var(--colour-header-foreground);
+
+	a:focus {
+		img.custom-logo {
+			filter: var(--colour-header-logo-focus-filter);
+		}
+	}
 
 	nav {
-		background-color: var(--default-header-nav-background);
+		background-color: var(--colour-header-nav-background);
 
 		// The box shadows here extend the nav background colour to the edge of the screen
 		box-shadow:
-			0 0 0 0 var(--default-header-nav-background-overflow),
-			300px 0 0 0 var(--default-header-nav-background-overflow),
-			-300px 0 0 0 var(--default-header-nav-background-overflow),
-			600px 0 0 0 var(--default-header-nav-background-overflow),
-			-600px 0 0 0 var(--default-header-nav-background-overflow),
-			900px 0 0 0 var(--default-header-nav-background-overflow),
-			-900px 0 0 0 var(--default-header-nav-background-overflow),
-			1200px 0 0 0 var(--default-header-nav-background-overflow),
-			-1200px 0 0 0 var(--default-header-nav-background-overflow),
-			1500px 0 0 0 var(--default-header-nav-background-overflow),
-			-1500px 0 0 0 var(--default-header-nav-background-overflow),
-			1800px 0 0 0 var(--default-header-nav-background-overflow),
-			-1800px 0 0 0 var(--default-header-nav-background-overflow),
-			2100px 0 0 0 var(--default-header-nav-background-overflow),
-			-2100px 0 0 0 var(--default-header-nav-background-overflow);
+			0 0 0 0 var(--colour-header-nav-background-overflow),
+			300px 0 0 0 var(--colour-header-nav-background-overflow),
+			-300px 0 0 0 var(--colour-header-nav-background-overflow),
+			600px 0 0 0 var(--colour-header-nav-background-overflow),
+			-600px 0 0 0 var(--colour-header-nav-background-overflow),
+			900px 0 0 0 var(--colour-header-nav-background-overflow),
+			-900px 0 0 0 var(--colour-header-nav-background-overflow),
+			1200px 0 0 0 var(--colour-header-nav-background-overflow),
+			-1200px 0 0 0 var(--colour-header-nav-background-overflow),
+			1500px 0 0 0 var(--colour-header-nav-background-overflow),
+			-1500px 0 0 0 var(--colour-header-nav-background-overflow),
+			1800px 0 0 0 var(--colour-header-nav-background-overflow),
+			-1800px 0 0 0 var(--colour-header-nav-background-overflow),
+			2100px 0 0 0 var(--colour-header-nav-background-overflow),
+			-2100px 0 0 0 var(--colour-header-nav-background-overflow);
 		a {
 			> span {
-				color: var(--default-header-nav-links);
+				color: var(--colour-header-nav-links);
 			}
 			&:focus {
-				background-color: var(--default-focus-background);
+				background-color: var(--colour-focus-background);
 				> span {
-					color: var(--default-focus-text);
+					color: var(--colour-focus-text);
 					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
 				}
 			}
 		}
 
 		button {
-			outline: var(--default-header-button-outline);
+			outline: var(--colour-header-button-outline);
 		}
 	}
 }

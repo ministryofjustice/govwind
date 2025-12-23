@@ -84,7 +84,7 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","orientation":"horizontal","verticalAlignment":"bottom"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"fontSize":"sm","layout":{"type":"flex","orientation":"vertical","justifyContent":"left","flexWrap":"wrap"}} -->
 <div class="wp-block-group has-sm-font-size"><!-- wp:wb-blocks/hmg-svg {"logo":"ogl"} /-->
 

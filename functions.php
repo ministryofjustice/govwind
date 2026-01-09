@@ -139,8 +139,8 @@ add_action('init', 'govwind_register_button_styles');
  */
 
 add_filter( 'language_attributes', function( $attrs ) {
-	$site_name = sanitize_title( get_bloginfo('name') );
-	return "$attrs class='$site_name'";
+	$site_id = get_current_blog_id();
+	return "$attrs class='website-$site_id'";
 });
 
 /**

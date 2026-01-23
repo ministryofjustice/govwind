@@ -1,0 +1,28 @@
+/**
+The Drawer nav - an extension style to the core navigation block.
+**/
+
+nav.is-style-drawer {
+	/**
+	* This file contains all the required additional colour declarations for the drawer nav
+	*/
+
+	.has-child .wp-block-navigation-submenu__toggle[aria-expanded=true]~ul.wp-block-navigation__submenu-container {
+		box-shadow:
+			0 0 0 0 var(--colour-header-subnav-background),
+			300px 0 0 0 var(--colour-header-subnav-background),
+			-300px 0 0 0 var(--colour-header-subnav-background),
+			600px 0 0 0 var(--colour-header-subnav-background),
+			-600px 0 0 0 var(--colour-header-subnav-background),
+			900px 0 0 0 var(--colour-header-subnav-background),
+			-900px 0 0 0 var(--colour-header-subnav-background),
+			1200px 0 0 0 var(--colour-header-subnav-background),
+			-1200px 0 0 0 var(--colour-header-subnav-background),
+			1500px 0 0 0 var(--colour-header-subnav-background),
+			-1500px 0 0 0 var(--colour-header-subnav-background),
+			1800px 0 0 0 var(--colour-header-subnav-background),
+			-1800px 0 0 0 var(--colour-header-subnav-background),
+			2100px 0 0 0 var(--colour-header-subnav-background),
+			-2100px 0 0 0 var(--colour-header-subnav-background);
+	}
+}

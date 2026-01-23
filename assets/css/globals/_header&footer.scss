@@ -9,7 +9,8 @@ header {
 		}
 	}
 
-	nav {
+	.wp-block-navigation:not(.has-background),
+	.wp-block-navigation.has-background {
 		background-color: var(--colour-header-nav-background);
 
 		// The box shadows here extend the nav background colour to the edge of the screen
@@ -42,8 +43,21 @@ header {
 			}
 		}
 
-		button {
+		.wp-element-button {
 			outline: var(--colour-header-button-outline);
+		}
+
+		.wp-block-navigation:not(.has-background),
+		.wp-block-navigation.has-background {
+			.wp-block-navigation__submenu-container {
+				background-color: var(--colour-header-subnav-background);
+
+				a {
+					> span {
+						color: var(--colour-header-subnav-links);
+					}
+				}
+			}
 		}
 	}
 }

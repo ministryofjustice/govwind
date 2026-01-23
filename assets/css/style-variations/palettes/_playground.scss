@@ -4,6 +4,8 @@
 	--header-foreground--light: #fff;
 	--header-nav-background--light: #193cb8;
 	--header-nav-background-overflow--light: #193cb8;
+	--header-subnav-background--light: green;
+	--header-subnav-links--light: #fd0;
 	--header-nav-links--light: #e5e5e5;
 	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
 
@@ -39,6 +41,8 @@
 	--header-nav-background-overflow--dark: var(
 		--header-nav-background-overflow--light
 	);
+	--header-subnav-background--dark: #525252;
+	--header-subnav-links--dark: #ffffff;
 	--header-nav-links--dark: var(--header-nav-links--light);
 	--header-button-outline--dark: var(--header-button-outline--light);
 

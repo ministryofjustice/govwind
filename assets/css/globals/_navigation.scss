@@ -7,7 +7,9 @@ nav.is-style-drawer {
 	* This file contains all the required additional colour declarations for the drawer nav
 	*/
 
-	.has-child .wp-block-navigation-submenu__toggle[aria-expanded=true]~ul.wp-block-navigation__submenu-container {
+	.has-child
+		.wp-block-navigation-submenu__toggle[aria-expanded="true"]
+		~ ul.wp-block-navigation__submenu-container {
 		box-shadow:
 			0 0 0 0 var(--colour-header-subnav-background),
 			300px 0 0 0 var(--colour-header-subnav-background),

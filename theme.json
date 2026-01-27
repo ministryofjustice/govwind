@@ -415,6 +415,17 @@
 						}
 					}
 				]
+			},
+			"core/list": {
+				"spacing": {
+					"padding": {
+						"left": "var(--spacing-7)"
+					},
+					"margin": {
+						"left": "0"
+					}
+				},
+				"css": "list-style-type: revert;"
 			}
 		}
 	},

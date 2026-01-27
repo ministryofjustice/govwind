@@ -1,8 +1,0 @@
-@layer components {
-	// Tailwind and website-builder-blocks set `ul, ol { list-style: none }`.
-	// Revert the style here, and add spacing.
-	.wp-block-list {
-		list-style-type: revert;
-		margin-left: var(--spacing-6);
-	}
-}

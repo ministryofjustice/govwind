@@ -1,6 +1,6 @@
 {
 	"title": "JSON schema for WordPress block theme Govwind, settings and styles",
-	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
 	"version": 3,
 	"settings": {
 		"appearanceTools": true,
@@ -297,11 +297,13 @@
 			},
 			"core/paragraph": {
 				"spacing": {
+					"padding": {
+						"right": "var(--prose-max-width-padding)"
+					},
 					"margin": {
 						"bottom": "var(--spacing-4)"
 					}
-				},
-				"css": "padding-right:min(calc(100% - var(--max-paragraph-width)),calc(var(--wp--style--global--content-size) - var(--max-paragraph-width)))"
+				}
 			},
 			"core/navigation": {
 				"spacing": {
@@ -337,6 +339,15 @@
 			"core/image": {
 				"border": {
 					"radius": "var(--radius-lg)"
+				},
+				"elements": {
+					"caption": {
+						"spacing": {
+							"padding": {
+								"right": "var(--prose-max-width-padding)"
+							}
+						}
+					}
 				}
 			},
 			"core/separator": {
@@ -419,13 +430,21 @@
 			"core/list": {
 				"spacing": {
 					"padding": {
-						"left": "1.1em /* Use rel units so that indent scales with font size */"
+						"left": "1.1em /* Use rel units so that indent scales with font size */",
+						"right": "var(--prose-max-width-padding)"
 					},
 					"margin": {
 						"left": "0"
 					}
 				},
 				"css": "list-style-type: revert; /* Browser defaults */ &:is(ol) { padding-left: 1.4em; /* Extra space for ol numbers */ }"
+			},
+			"core/accordion": {
+				"spacing": {
+					"padding": {
+						"right": "var(--prose-max-width-padding)"
+					}
+				}
 			}
 		}
 	},

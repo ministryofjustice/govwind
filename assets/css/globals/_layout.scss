@@ -9,7 +9,13 @@
 	--size-screen-2xl: 1536px;
 
 	/* Readable text */
-	--max-paragraph-width: 700px;
+	--max-prose-width: 789px;
+	/* Intended for use on prose elements like `p, ul, ol`. e.g. `p { padding-right: var(--prose-max-width-padding) }` */
+	/* Similar to `max-width: var(--max-prose-width)` except the block width is not modified. */
+	--prose-max-width-padding: min(
+		calc(100% - var(--max-prose-width)),
+		calc(var(--wp--style--global--content-size) - var(--max-prose-width))
+	);
 
 	/* Z-Index Scale */
 	--z-index-auto: auto;

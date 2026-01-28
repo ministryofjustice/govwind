@@ -415,6 +415,17 @@
 						}
 					}
 				]
+			},
+			"core/list": {
+				"spacing": {
+					"padding": {
+						"left": "1.1em /* Use rel units so that indent scales with font size */"
+					},
+					"margin": {
+						"left": "0"
+					}
+				},
+				"css": "list-style-type: revert; /* Browser defaults */ &:is(ol) { padding-left: 1.4em; /* Extra space for ol numbers */ }"
 			}
 		}
 	},

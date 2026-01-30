@@ -9,6 +9,97 @@ header {
 		}
 	}
 
+	.wb-search-block-wrapper{
+		.wb-search-toggle {
+			//No options to change colours on toggle for now
+			.wp-block-search-toggle-button{
+				background-color: var(--colour-header-search-toggle-background);
+
+				.wb-search-icon {	
+					fill: var(--colour-header-search-toggle-icon-fill);
+				}
+
+				.wb-close-icon{
+					fill: var(--colour-header-search-toggle-icon-fill);
+				}
+
+				&:hover {
+					background-color: var(--colour-header-search-toggle-hover-background);
+
+					.wb-search-icon {
+						fill: var(--colour-header-search-toggle-hover-icon-fill);
+					}
+
+					.wb-close-icon{
+					
+						fill: var(--colour-header-search-toggle-hover-icon-fill);
+					}
+
+				}
+			}
+		}
+
+		.wb-search-form-wrapper {
+			background-color: var(--colour-header-search-form-background);
+			color: var(--colour-header-search-form-text);
+
+			.wp-block-search__button {
+
+				background-color: var(--colour-header-search-button-background);
+
+				.wb-search-icon {
+					fill: var(--colour-header-search-button-icon-fill);
+				}
+
+				&:hover {
+					background-color: var(--colour-header-search-button-hover-background);
+
+					.wb-search-icon {
+						fill: var(--colour-header-search-button-hover-icon-fill);
+					}
+				}
+			}
+		}
+
+		&.search-drawer-open {
+			.wp-block-search__label {
+				color: var(--colour-header-search-drawer-label);
+			}
+			.wb-search-form-wrapper {
+				background-color: var(--colour-header-search-drawer-background);
+				
+				.wp-block-search__input{
+					background-color: var(--colour-header-search-drawer-input-background);
+					color: var(--colour-header-search-drawer-input-text);
+					border-color: var(--colour-header-search-drawer-input-border);
+				}
+
+				.wp-block-search__button {
+
+					background-color: var(--colour-header-search-drawer-button-background);
+
+					.wb-search-icon {
+						fill: var(--colour-header-search-drawer-button-icon-fill);
+					}
+
+					&:hover {
+						background-color: var(--colour-header-search-drawer-button-hover-background);
+
+						.wb-search-icon {
+							fill: var(--colour-header-search-drawer-button-hover-icon-fill);
+						}
+					}
+				}
+			}
+
+		
+		}
+
+		
+	}
+
+
+
 	.wp-block-navigation:not(.has-background),
 	.wp-block-navigation.has-background {
 		background-color: var(--colour-header-nav-background);

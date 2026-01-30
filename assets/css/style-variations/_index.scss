@@ -15,6 +15,15 @@ $colour-list:
 	error-muted, focus-text, focus-background, focus-outline, header-background,
 	header-foreground, header-nav-background, header-nav-background-overflow,
 	header-nav-links, header-subnav-background, header-subnav-links,
+	header-search-toggle-background, header-search-toggle-icon-fill, 
+	header-search-toggle-hover-background, header-search-toggle-hover-icon-fill,
+	header-search-form-background, header-search-form-text, 
+	header-search-button-background, header-search-button-icon-fill,
+	header-search-button-hover-background, header-search-button-hover-icon-fill,
+	header-search-drawer-label, header-search-drawer-background,
+	header-search-drawer-input-background, header-search-drawer-input-text, header-search-drawer-input-border,
+	header-search-drawer-button-background, header-search-drawer-button-icon-fill, 
+	header-search-drawer-button-hover-background, header-search-drawer-button-hover-icon-fill,
 	header-button-outline, header-logo-focus-filter, secondary, secondary-accent;
 
 //goes through the $site-list and $colour-list

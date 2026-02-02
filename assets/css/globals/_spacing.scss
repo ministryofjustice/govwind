@@ -103,3 +103,57 @@
 		--space-section-lg: var(--spacing-40);
 	}
 }
+
+// ============================================
+// Typography Spacing Overrides
+// ============================================
+// Override WordPress default spacing for proper typographic hierarchy
+// Headings should be closer to content they introduce than content above
+
+// Specific heading overrides for proper hierarchy
+:root :where(h1),
+:root :where(.wp-block-heading.has-h-1-font-size) {
+	margin-block-start: var(--space-section-md) !important;
+	margin-block-end: var(--space-heading-sm) !important;
+}
+
+:root :where(h2),
+:root :where(.wp-block-heading.has-h-2-font-size) {
+	margin-block-start: var(--space-section-sm) !important;
+	margin-block-end: var(--space-heading-sm) !important;
+}
+
+:root :where(h3),
+:root :where(.wp-block-heading.has-h-3-font-size) {
+	margin-block-start: var(--space-heading-lg) !important;
+	margin-block-end: var(--space-heading-sm) !important;
+}
+
+:root :where(h4),
+:root :where(.wp-block-heading.has-h-4-font-size) {
+	margin-block-start: var(--space-heading-md) !important;
+	margin-block-end: var(--space-heading-sm) !important;
+}
+
+:root :where(h5),
+:root :where(.wp-block-heading.has-h-5-font-size) {
+	margin-block-start: var(--space-heading-md) !important;
+	margin-block-end: var(--space-heading-sm) !important;
+}
+
+:root :where(h6),
+:root :where(.wp-block-heading.has-h-6-font-size) {
+	margin-block-start: var(--space-heading-md) !important;
+	margin-block-end: var(--space-heading-sm) !important;
+}
+
+// Override last-child resets that WordPress applies
+:root :where(.is-layout-constrained) > :last-child {
+	&.wp-block-paragraph {
+		margin-block-end: var(--space-text) !important;
+	}
+
+	&.wp-block-heading {
+		margin-block-end: var(--space-heading-sm) !important;
+	}
+}

@@ -85,3 +85,18 @@
 		--font-size-5-xl: 3rem;
 	}
 }
+
+// Headings throughout the site have a margin
+// we don't want our site title however to inherit
+// this margin. Target when the heading itself has the site-title class
+// Using :where() to keep specificity low so we can override later
+:where(h1.wp-block-site-title),
+:where(h2.wp-block-site-title),
+:where(h3.wp-block-site-title),
+:where(h4.wp-block-site-title),
+:where(h5.wp-block-site-title),
+:where(h6.wp-block-site-title) {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin: 0;
+}

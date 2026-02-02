@@ -209,11 +209,12 @@
 				"typography": {
 					"fontSize": "var(--font-size-6-xl)",
 					"lineHeight": "1.2",
-					"fontWeight": "600"
+					"fontWeight": "400"
 				},
 				"spacing": {
 					"margin": {
-						"bottom": "var(--space-heading-lg)"
+						"top": "var(--space-section-md)",
+						"bottom": "var(--space-heading-sm)"
 					}
 				}
 			},
@@ -221,11 +222,12 @@
 				"typography": {
 					"fontSize": "var(--font-size-5-xl)",
 					"lineHeight": "1.3",
-					"fontWeight": "500"
+					"fontWeight": "400"
 				},
 				"spacing": {
 					"margin": {
-						"bottom": "var(--space-heading-md)"
+						"top": "var(--space-section-sm)",
+						"bottom": "var(--space-heading-sm)"
 					}
 				}
 			},
@@ -237,6 +239,7 @@
 				},
 				"spacing": {
 					"margin": {
+						"top": "var(--space-heading-lg)",
 						"bottom": "var(--space-heading-sm)"
 					}
 				}
@@ -250,6 +253,7 @@
 				},
 				"spacing": {
 					"margin": {
+						"top": "var(--space-heading-md)",
 						"bottom": "var(--space-heading-sm)"
 					}
 				}
@@ -262,6 +266,7 @@
 				},
 				"spacing": {
 					"margin": {
+						"top": "var(--space-heading-md)",
 						"bottom": "var(--space-heading-sm)"
 					}
 				}
@@ -275,6 +280,7 @@
 				},
 				"spacing": {
 					"margin": {
+						"top": "var(--space-heading-md)",
 						"bottom": "var(--space-heading-sm)"
 					}
 				}
@@ -329,6 +335,19 @@
 					"text": "red"
 				}
 			},
+			"core/site-title": {
+				"spacing": {
+					"margin": {
+						"top": "0",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
+					}
+				},
+				"typography": {
+					"fontSize": "var(--font-size-3-xl)"
+				}
+			},
 			"core/paragraph": {
 				"spacing": {
 					"padding": {
@@ -340,8 +359,7 @@
 						"bottom": "var(--space-text)",
 						"left": "0"
 					}
-				},
-				"css": "margin-block-end: var(--space-text) !important;"
+				}
 			},
 			"core/navigation": {
 				"spacing": {
@@ -372,7 +390,8 @@
 			"core/heading": {
 				"spacing": {
 					"margin": {
-						"bottom": "var(--space-heading-md)"
+						"top": "var(--space-section-sm)",
+						"bottom": "var(--space-heading-sm)"
 					}
 				},
 				"typography": {

@@ -1,0 +1,24 @@
+/*
+For info:
+--size-content: 1280px;
+--size-wide: 1536px;
+--size-screen-sm: 640px;
+--size-screen-md: 768px;
+--size-screen-lg: 1024px;
+--size-screen-xl: 1280px;
+--size-screen-2xl: 1536px;
+
+Mobile nav starts at 600px - no variable as far as I can see - hard coded
+
+*/
+
+@media (width <= 600px) {
+	.wb-hide-on-mobile {
+		display:none;
+	}
+}
+@media (width > 600px) {
+	.wb-hide-on-desktop {
+		display:none;
+	}
+}

@@ -14,11 +14,11 @@ Mobile nav starts at 600px - no variable as far as I can see - hard coded
 
 @media (width <= 600px) {
 	.wb-hide-on-mobile {
-		display: none;
+		display: none !important;
 	}
 }
 @media (width > 600px) {
 	.wb-hide-on-desktop {
-		display: none;
+		display: none !important;
 	}
 }

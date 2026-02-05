@@ -276,7 +276,7 @@
 					"margin": {
 						"top": "0",
 						"right": "0",
-						"bottom": "var(--space-text)",
+						"bottom": "var(--spacing-4)",
 						"left": "0"
 					}
 				}

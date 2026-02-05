@@ -92,7 +92,6 @@
 	&:is(h4) {
 		font-size: var(--font-size-3-xl);
 		line-height: 1.4;
-		letter-spacing: 0.01em;
 		margin-block-start: var(--space-heading-md);
 		margin-block-end: var(--space-heading-sm);
 	}
@@ -107,7 +106,6 @@
 	&:is(h6) {
 		font-size: var(--font-size-xl);
 		line-height: 1.4;
-		letter-spacing: 0.02em;
 		margin-block-start: var(--space-heading-md);
 		margin-block-end: var(--space-heading-sm);
 	}

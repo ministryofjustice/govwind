@@ -39,29 +39,13 @@
 	--spacing-96: 24rem;
 
 	/* ------------------------- */
-	/* Semantic Heading Spacing  */
+	/* Heading Spacing  */
 	/* ------------------------- */
-	--space-section-md: clamp(2rem, 5vw, 3rem); /* Mobile: 2rem → Desktop: 3rem */
-	--space-section-sm: clamp(
-		1.5rem,
-		4vw,
-		2rem
-	); /* Mobile: 1.5rem → Desktop: 2rem */
-	--space-heading-lg: clamp(
-		1.75rem,
-		4vw,
-		2.5rem
-	); /* Mobile: 1.75rem → Desktop: 2.5rem */
-	--space-heading-md: clamp(
-		1rem,
-		3vw,
-		1.5rem
-	); /* Mobile: 1rem → Desktop: 1.5rem */
-	--space-heading-sm: clamp(
-		0.75rem,
-		2vw,
-		1rem
-	); /* Mobile: 0.75rem → Desktop: 1rem */
+	--space-section-md: clamp(2rem, 5vw, 3rem);
+	--space-section-sm: clamp(1.5rem, 4vw, 2rem);
+	--space-heading-lg: clamp(1.75rem, 4vw, 2.5rem);
+	--space-heading-md: clamp(1rem, 3vw, 1.5rem);
+	--space-heading-sm: clamp(0.75rem, 2vw, 1rem);
 
 	/* ------------------------- */
 	/* Border Radius             */

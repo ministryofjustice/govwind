@@ -331,8 +331,8 @@
 				},
 				"spacing": {
 					"margin": {
-						"top": "var(--space-section-sm)",
-						"bottom": "var(--space-section-sm)"
+						"top": "var(--spacing-8)",
+						"bottom": "var(--spacing-8)"
 					}
 				}
 			},
@@ -347,7 +347,7 @@
 						"left": "var(--spacing-4)"
 					},
 					"margin": {
-						"bottom": "var(--space-heading-md)"
+						"bottom": "var(--spacing-6)"
 					}
 				},
 				"typography": {

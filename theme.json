@@ -205,46 +205,6 @@
 					}
 				}
 			},
-			"h1": {
-				"typography": {
-					"fontSize": "var(--font-size-4-xl)"
-				},
-				"spacing": {
-					"margin": {
-						"bottom": "var(--spacing-6)"
-					}
-				}
-			},
-			"h2": {
-				"typography": {
-					"fontSize": "var(--font-size-3-xl)"
-				},
-				"spacing": {
-					"margin": {
-						"bottom": "var(--spacing-4)"
-					}
-				}
-			},
-			"h3": {
-				"typography": {
-					"fontSize": "var(--font-size-2-xl)"
-				}
-			},
-			"h4": {
-				"typography": {
-					"fontSize": "var(--font-size-xl)"
-				}
-			},
-			"h5": {
-				"typography": {
-					"fontSize": "var(--font-size-lg)"
-				}
-			},
-			"h6": {
-				"typography": {
-					"fontSize": "var(--font-size-base)"
-				}
-			},
 			"button": {
 				"color": {
 					"background": "var(--colour-primary)",
@@ -295,13 +255,28 @@
 					"text": "red"
 				}
 			},
+			"core/site-title": {
+				"spacing": {
+					"margin": {
+						"top": "0",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
+					}
+				},
+				"typography": {
+					"fontSize": "var(--font-size-3-xl)"
+				}
+			},
 			"core/paragraph": {
 				"spacing": {
 					"padding": {
 						"right": "var(--prose-max-width-padding)"
 					},
 					"margin": {
-						"bottom": "var(--spacing-4)"
+						"top": "0",
+						"right": "0",
+						"left": "0"
 					}
 				}
 			},
@@ -430,14 +405,14 @@
 			"core/list": {
 				"spacing": {
 					"padding": {
-						"left": "1.1em /* Use rel units so that indent scales with font size */",
+						"left": "1.1em",
 						"right": "var(--prose-max-width-padding)"
 					},
 					"margin": {
 						"left": "0"
 					}
 				},
-				"css": "list-style-type: revert; /* Browser defaults */ &:is(ol) { padding-left: 1.4em; /* Extra space for ol numbers */ }"
+				"css": "list-style-type: revert; &:is(ol) { padding-left: 1.4em; }"
 			},
 			"core/accordion": {
 				"spacing": {

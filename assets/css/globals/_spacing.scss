@@ -1,6 +1,6 @@
 :root {
 	/* ------------------------- */
-	/* Spacing Scale    */
+	/* Spacing Scale             */
 	/* ------------------------- */
 	--spacing-0: 0px;
 	--spacing-px: 1px;
@@ -39,6 +39,31 @@
 	--spacing-96: 24rem;
 
 	/* ------------------------- */
+	/* Semantic Heading Spacing  */
+	/* ------------------------- */
+	--space-section-md: clamp(2rem, 5vw, 3rem); /* Mobile: 2rem → Desktop: 3rem */
+	--space-section-sm: clamp(
+		1.5rem,
+		4vw,
+		2rem
+	); /* Mobile: 1.5rem → Desktop: 2rem */
+	--space-heading-lg: clamp(
+		1.75rem,
+		4vw,
+		2.5rem
+	); /* Mobile: 1.75rem → Desktop: 2.5rem */
+	--space-heading-md: clamp(
+		1rem,
+		3vw,
+		1.5rem
+	); /* Mobile: 1rem → Desktop: 1.5rem */
+	--space-heading-sm: clamp(
+		0.75rem,
+		2vw,
+		1rem
+	); /* Mobile: 0.75rem → Desktop: 1rem */
+
+	/* ------------------------- */
 	/* Border Radius             */
 	/* ------------------------- */
 	--radius-none: 0px;
@@ -50,110 +75,4 @@
 	--radius-2-xl: 1rem;
 	--radius-3-xl: 1.5rem;
 	--radius-full: 9999px;
-
-	/* ------------------------- */
-	/* Semantic spacing (vertical) */
-	/* ------------------------- */
-	--space-text: var(--spacing-4);
-
-	--space-heading-sm: var(--spacing-3);
-	--space-heading-md: var(--spacing-4);
-	--space-heading-lg: var(--spacing-6);
-
-	--space-section-sm: var(--spacing-8);
-	--space-section-md: var(--spacing-12);
-	--space-section-lg: var(--spacing-20);
-}
-
-/* ------------------------- */
-/* Responsive spacing overrides (desktop/larger screens) */
-/* ------------------------- */
-@media (min-width: 768px) {
-	:root {
-		--space-heading-sm: var(--spacing-4);
-		--space-heading-md: var(--spacing-6);
-		--space-heading-lg: var(--spacing-8);
-
-		--space-section-sm: var(--spacing-12);
-		--space-section-md: var(--spacing-16);
-		--space-section-lg: var(--spacing-24);
-	}
-}
-
-@media (min-width: 1024px) {
-	:root {
-		--space-heading-sm: var(--spacing-5);
-		--space-heading-md: var(--spacing-8);
-		--space-heading-lg: var(--spacing-10);
-
-		--space-section-sm: var(--spacing-16);
-		--space-section-md: var(--spacing-20);
-		--space-section-lg: var(--spacing-32);
-	}
-}
-
-@media (min-width: 1280px) {
-	:root {
-		--space-heading-sm: var(--spacing-6);
-		--space-heading-md: var(--spacing-10);
-		--space-heading-lg: var(--spacing-12);
-
-		--space-section-sm: var(--spacing-20);
-		--space-section-md: var(--spacing-24);
-		--space-section-lg: var(--spacing-40);
-	}
-}
-
-// ============================================
-// Typography Spacing Overrides
-// ============================================
-// Override WordPress default spacing for proper typographic hierarchy
-// Headings should be closer to content they introduce than content above
-
-// Specific heading overrides for proper hierarchy
-:root :where(h1),
-:root :where(.wp-block-heading.has-h-1-font-size) {
-	margin-block-start: var(--space-section-md) !important;
-	margin-block-end: var(--space-heading-sm) !important;
-}
-
-:root :where(h2),
-:root :where(.wp-block-heading.has-h-2-font-size) {
-	margin-block-start: var(--space-section-sm) !important;
-	margin-block-end: var(--space-heading-sm) !important;
-}
-
-:root :where(h3),
-:root :where(.wp-block-heading.has-h-3-font-size) {
-	margin-block-start: var(--space-heading-lg) !important;
-	margin-block-end: var(--space-heading-sm) !important;
-}
-
-:root :where(h4),
-:root :where(.wp-block-heading.has-h-4-font-size) {
-	margin-block-start: var(--space-heading-md) !important;
-	margin-block-end: var(--space-heading-sm) !important;
-}
-
-:root :where(h5),
-:root :where(.wp-block-heading.has-h-5-font-size) {
-	margin-block-start: var(--space-heading-md) !important;
-	margin-block-end: var(--space-heading-sm) !important;
-}
-
-:root :where(h6),
-:root :where(.wp-block-heading.has-h-6-font-size) {
-	margin-block-start: var(--space-heading-md) !important;
-	margin-block-end: var(--space-heading-sm) !important;
-}
-
-// Override last-child resets that WordPress applies
-:root :where(.is-layout-constrained) > :last-child {
-	&.wp-block-paragraph {
-		margin-block-end: var(--space-text) !important;
-	}
-
-	&.wp-block-heading {
-		margin-block-end: var(--space-heading-sm) !important;
-	}
 }

@@ -12,35 +12,55 @@ Mobile nav starts at 600px - no variable as far as I can see - hard coded
 
 */
 
-@mixin hidden-element($text) {
+@mixin visible-element($class, $colour, $text) {
 	//styles for editor screens, so hidden elements aren't missed whilst editing
-	outline: solid 6px #ffbf47;
+	.editor-editor-interface,
+	.block-editor-iframe__html {
+		.#{$class} {
+			border: dashed 6px $colour;
+			&:not(.is-hovered):not(:hover):after {
+				// the native is-hovered class in WordPress uses its own :after pseudo element
+				content: " #{$text} ";
+				font-size: 80%;
+				color: #000;
+				position: absolute;
+				background: $colour;
+			}
+		}
+	}
+}
+
+@mixin hidden-element($colour, $text) {
+	//styles for editor screens, so hidden elements aren't missed whilst editing
 	opacity: 0.7;
+	border: dashed 6px $colour;
 	&:not(.is-hovered):not(:hover):after {
 		// the native is-hovered class in WordPress uses its own :after pseudo element
 		content: " #{$text} ";
 		font-size: 80%;
 		color: #000;
 		position: absolute;
-		background: #ffbf47;
+		background: $colour;
 	}
 }
 
-@mixin hide-element($class, $text: "Hidden component") {
+@mixin hide-element($class, $colour, $text: "Hidden component") {
 	.#{$class}:not(.editor-editor-interface *):not(.block-editor-iframe__html *) {
 		display: none !important;
 	}
 	.editor-editor-interface,
 	.block-editor-iframe__html {
 		.#{$class} {
-			@include hidden-element($text);
+			@include hidden-element($colour, $text);
 		}
 	}
 }
 
 @media (width <= 600px) {
-	@include hide-element(wb-hide-on-mobile, Desktop only);
+	@include hide-element(wb-desktop-only, #a6dbf7, Desktop only);
+	@include visible-element(wb-mobile-only, #ffbf47, Mobile only);
 }
 @media (width > 600px) {
-	@include hide-element(wb-hide-on-desktop, Mobile only);
+	@include hide-element(wb-mobile-only, #ffbf47, Mobile only);
+	@include visible-element(wb-desktop-only, #a6dbf7, Desktop only);
 }

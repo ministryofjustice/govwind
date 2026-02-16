@@ -1,0 +1,51 @@
+/*
+For info:
+--size-content: 1280px;
+--size-wide: 1536px;
+--size-screen-sm: 640px;
+--size-screen-md: 768px;
+--size-screen-lg: 1024px;
+--size-screen-xl: 1280px;
+--size-screen-2xl: 1536px;
+
+Mobile nav starts at 600px - no variable as far as I can see - hard coded
+
+*/
+
+@mixin editor-visibility($class, $colour, $text) {
+	//styles for editor screens, so hidden elements aren't missed whilst editing
+	.editor-editor-interface,
+	.block-editor-iframe__html {
+		.#{$class} {
+			border: dashed 6px $colour;
+			&:not(.is-hovered):not(:hover):after {
+				// the native is-hovered class in WordPress uses its own :after pseudo element
+				content: " #{$text} ";
+				font-size: 80%;
+				color: #000;
+				position: absolute;
+				background: $colour;
+			}
+		}
+	}
+}
+
+@mixin hide-element($class) {
+	.#{$class} {
+		opacity: 0.65;
+	}
+	.#{$class}:not(.editor-editor-interface *):not(.block-editor-iframe__html *) {
+		display: none !important;
+	}
+}
+
+//editor interface
+@include editor-visibility(wb-mobile-only, #fcd48a, Mobile only);
+@include editor-visibility(wb-desktop-only, #a6dbf7, Desktop only);
+
+@media (width <= 600px) {
+	@include hide-element(wb-desktop-only);
+}
+@media (width > 600px) {
+	@include hide-element(wb-mobile-only);
+}

@@ -1,5 +1,4 @@
 header {
-	//background-color: var(--colour-header-background);
 	background-color: var(--colour-header-background);
 	color: var(--colour-header-foreground);
 
@@ -9,55 +8,14 @@ header {
 		}
 	}
 
-	.wp-block-navigation:not(.has-background),
-	.wp-block-navigation.has-background {
-		background-color: var(--colour-header-nav-background);
+	.wp-element-button {
+		color: var(--colour-header-button-foreground);
+		background-color: var(--colour-header-button-background);
 
-		// The box shadows here extend the nav background colour to the edge of the screen
-		box-shadow:
-			0 0 0 0 var(--colour-header-nav-background-overflow),
-			300px 0 0 0 var(--colour-header-nav-background-overflow),
-			-300px 0 0 0 var(--colour-header-nav-background-overflow),
-			600px 0 0 0 var(--colour-header-nav-background-overflow),
-			-600px 0 0 0 var(--colour-header-nav-background-overflow),
-			900px 0 0 0 var(--colour-header-nav-background-overflow),
-			-900px 0 0 0 var(--colour-header-nav-background-overflow),
-			1200px 0 0 0 var(--colour-header-nav-background-overflow),
-			-1200px 0 0 0 var(--colour-header-nav-background-overflow),
-			1500px 0 0 0 var(--colour-header-nav-background-overflow),
-			-1500px 0 0 0 var(--colour-header-nav-background-overflow),
-			1800px 0 0 0 var(--colour-header-nav-background-overflow),
-			-1800px 0 0 0 var(--colour-header-nav-background-overflow),
-			2100px 0 0 0 var(--colour-header-nav-background-overflow),
-			-2100px 0 0 0 var(--colour-header-nav-background-overflow);
-		a {
-			> span {
-				color: var(--colour-header-nav-links);
-			}
-			&:focus {
-				background-color: var(--colour-focus-background);
-				> span {
-					color: var(--colour-focus-text);
-					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
-				}
-			}
-		}
-
-		.wp-element-button {
+		&:not(.wb-no-outline *) {
+			// We apply the outline styles if they aren't turned off
+			// This value is the entire outline style, not just the colour
 			outline: var(--colour-header-button-outline);
-		}
-
-		.wp-block-navigation:not(.has-background),
-		.wp-block-navigation.has-background {
-			.wp-block-navigation__submenu-container {
-				background-color: var(--colour-header-subnav-background);
-
-				a {
-					> span {
-						color: var(--colour-header-subnav-links);
-					}
-				}
-			}
 		}
 	}
 }

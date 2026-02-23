@@ -28,3 +28,18 @@ nav.is-style-drawer {
 			-2100px 0 0 0 var(--colour-header-subnav-background);
 	}
 }
+
+.breadcrumb_desktop {
+	.sep svg {
+		fill: var(--colour-foreground);
+	}
+}
+.breadcrumb_mobile {
+	.breadcrumb_back {
+
+		float: left;
+		svg {
+			fill: black;
+		}
+	}
+}

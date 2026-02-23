@@ -2,6 +2,7 @@
 
 //Admin 
 require get_template_directory() . '/inc/acf/admin/cpt-settings.php';
+require get_template_directory() . '/inc/acf/admin/cpt-display-settings.php';
 require get_template_directory() . '/inc/acf/disable-json.php';
 
 //fields 

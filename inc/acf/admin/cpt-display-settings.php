@@ -43,7 +43,15 @@ add_action('acf/post_type/render_settings_tab/display-settings', function ($acf_
 add_filter( 'acf/post_type/registration_args', function( $args, $post_type ) {
 
     if ( isset( $post_type['breadcrumb_parent_page'] ) ) {
-        $args['breadcrumb_parent_page'] = $post_type['breadcrumb_parent_page'];
+        $parent_page = $post_type['breadcrumb_parent_page'];
+
+        if ( $parent_page === '' || $parent_page === null ) {
+            // Normalize "Home" / no parent selection to integer 0.
+            $args['breadcrumb_parent_page'] = 0;
+        } else {
+            // Ensure a numeric page ID is stored.
+            $args['breadcrumb_parent_page'] = absint( $parent_page );
+        }
     }
 
     return $args;

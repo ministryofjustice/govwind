@@ -1,6 +1,4 @@
-
 <?php
-
 
 add_filter( 'breadcrumb_block_get_breadcrumb_trail', function ( $markup, $args, $breadcrumbs_instance ) {
   
@@ -33,12 +31,7 @@ add_filter( 'breadcrumb_block_get_breadcrumb_trail', function ( $markup, $args, 
     }
 
 	$back_svg = '<div class="breadcrumb_back"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<mask id="mask0_1322_7753" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-	<rect width="20" height="20"/>
-	</mask>
-	<g mask="url(#mask0_1322_7753)">
 	<path d="M6.49833 10.5417L10.766 14.8094L10 15.5833L4.41667 10L10 4.41666L10.766 5.19062L6.49833 9.45833H15.5833V10.5417H6.49833Z" />
-	</g>
 	</svg></div>';
 
 

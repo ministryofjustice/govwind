@@ -18,6 +18,15 @@
 	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
 	--header-logo-focus-filter--light: none;
 
+	//header search
+	--header-search-form-background--light: #fff;
+	--header-search-form-text--light: #0a0a0a;
+	--header-search-drawer-label--light: #0a0a0a;
+	--header-search-drawer-background--light: #fff;
+	--header-search-drawer-input-background--light: #fff;
+	--header-search-drawer-input-text--light: #0a0a0a;
+	--header-search-drawer-input-border--light: #0a0a0a;
+
 	//palette
 	//put them in "colour" order, so they make sense when chosen from the palette
 	// these are the colours that are pickable in the colour palette - see theme.json
@@ -57,6 +66,15 @@
 	--header-button-foreground--dark: #ffffff;
 	--header-button-outline: 2px solid #e5e5e5; // Use especially if button colour matches header colour
 	--header-logo-focus-filter--dark: none;
+
+	//header search
+	--header-search-form-background--dark: #fff;
+	--header-search-form-text--dark: #0a0a0a;
+	--header-search-drawer-label--dark: #0a0a0a;
+	--header-search-drawer-background--dark: #fff;
+	--header-search-drawer-input-background--dark: #fff;
+	--header-search-drawer-input-text--dark: #0a0a0a;
+	--header-search-drawer-input-border--dark: #0a0a0a;
 
 	//palette
 	--primary--dark: #b3bfe6;

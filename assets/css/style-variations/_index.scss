@@ -16,7 +16,11 @@ $colour-list:
 	header-foreground, header-nav-background, header-nav-background-overflow,
 	header-nav-links, header-nav-drawer-background, header-nav-drawer-links,
 	header-nav-separator-line, header-button-background, header-button-foreground,
-	header-button-outline, header-logo-focus-filter, secondary, secondary-accent;
+	header-button-outline, header-search-form-background, header-search-form-text,
+	header-search-drawer-label, header-search-drawer-background,
+	header-search-drawer-input-background, header-search-drawer-input-text,
+	header-search-drawer-input-border, header-button-outline,
+	header-logo-focus-filter, secondary, secondary-accent;
 
 //goes through the $site-list and $colour-list
 //do not change the below, only add to the lists above

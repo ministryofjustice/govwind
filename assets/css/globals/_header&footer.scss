@@ -8,6 +8,44 @@ header {
 		}
 	}
 
+	.wb-search-block-wrapper {
+		.wb-search-toggle {
+			// Search button should inherit button colour
+			.wp-block-search-toggle-button {
+				.wb-search-icon,
+				.wb-close-icon {
+					fill: currentColor;
+				}
+			}
+		}
+
+		.wb-search-form-wrapper {
+			background-color: var(--colour-header-search-form-background);
+			color: var(--colour-header-search-form-text);
+
+			.wp-block-search__button {
+				.wb-search-icon {
+					fill: currentColor;
+				}
+			}
+		}
+
+		&.search-drawer-open {
+			.wp-block-search__label {
+				color: var(--colour-header-search-drawer-label);
+			}
+			.wb-search-form-wrapper {
+				background-color: var(--colour-header-search-drawer-background);
+
+				.wp-block-search__input {
+					background-color: var(--colour-header-search-drawer-input-background);
+					color: var(--colour-header-search-drawer-input-text);
+					border-color: var(--colour-header-search-drawer-input-border);
+				}
+			}
+		}
+	}
+
 	.wp-element-button {
 		color: var(--colour-header-button-foreground);
 		background-color: var(--colour-header-button-background);

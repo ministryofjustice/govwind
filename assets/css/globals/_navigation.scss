@@ -7,12 +7,11 @@ nav.is-style-drawer {
 	* This file contains all the required additional colour declarations for the drawer nav
 	*/
 
-	a.wp-block-navigation-item__content,
 	.wp-block-navigation-item.has-child {
 		.wp-block-navigation-item__label {
 			color: var(--colour-header-nav-links);
 		}
-		a,
+		a.wp-block-navigation-item__content,
 		button {
 			&:focus,
 			&:focus-visible {

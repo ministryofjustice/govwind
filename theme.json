@@ -193,7 +193,7 @@
 					},
 					"shadow": "0 -0.075em var(--colour-focus-background), 0 0.15em var(--colour-focus-outline)",
 					"typography": {
-						"textDecoration": "underline"
+						"textDecoration": "none"
 					}
 				},
 				":focus-visible": {
@@ -257,7 +257,7 @@
 		"blocks": {
 			"wb-blocks/reveal": {
 				"color": {
-					"text": "red"
+					"text": "var(--colour-primary)"
 				}
 			},
 			"core/site-title": {

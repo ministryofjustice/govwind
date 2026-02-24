@@ -44,12 +44,7 @@ add_filter( 'breadcrumb_block_get_breadcrumb_trail', function ( $markup, $args, 
 add_filter( 'breadcrumb_block_get_args', function ( $args ) {
     // For example, change separator.
     $args['separator'] = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="mask0_1125_14993" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-    <rect width="20" height="20"/>
-    </mask>
-    <g mask="url(#mask0_1125_14993)">
     <path d="M11.1635 10L7.22604 6.0625L8 5.28854L12.7115 10L8 14.7115L7.22604 13.9375L11.1635 10Z"/>
-    </g>
     </svg>
     ';
     return $args;

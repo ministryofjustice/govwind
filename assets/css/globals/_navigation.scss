@@ -31,7 +31,7 @@ nav.is-style-drawer {
 
 .breadcrumb_desktop {
 	.sep svg {
-		fill: var(--colour-foreground);
+		fill: currentColor;
 	}
 }
 .breadcrumb_mobile {
@@ -39,7 +39,7 @@ nav.is-style-drawer {
 
 		float: left;
 		svg {
-			fill: black;
+			fill: currentColor;
 		}
 	}
 }

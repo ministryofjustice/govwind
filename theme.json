@@ -224,7 +224,7 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var(--font-size-lg)",
+					"fontSize": "var(--font-size-base)",
 					"lineHeight": "1.75"
 				},
 				":hover": {

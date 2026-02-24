@@ -266,7 +266,8 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var(--font-size-3-xl)"
+					"fontSize": "var(--font-size-3-xl)",
+					"lineHeight": "var(--line-height-tight)"
 				}
 			},
 			"core/paragraph": {
@@ -279,6 +280,9 @@
 						"right": "0",
 						"left": "0"
 					}
+				},
+				"typography": {
+					"lineHeight": "var(--line-height-relaxed)"
 				}
 			},
 			"core/navigation": {
@@ -291,6 +295,9 @@
 						"right": "auto",
 						"left": "auto"
 					}
+				},
+				"typography": {
+					"lineHeight": "var(--line-height-normal)"
 				}
 			},
 			"core/search": {
@@ -307,7 +314,11 @@
 					"text": "red"
 				}
 			},
-			"core/heading": {},
+			"core/heading": {
+				"typography": {
+					"lineHeight": "var(--line-height-tight)"
+				}
+			},
 			"core/image": {
 				"border": {
 					"radius": "var(--radius-lg)"
@@ -318,6 +329,9 @@
 							"padding": {
 								"right": "var(--prose-max-width-padding)"
 							}
+						},
+						"typography": {
+							"lineHeight": "var(--line-height-normal)"
 						}
 					}
 				}
@@ -349,7 +363,8 @@
 				},
 				"typography": {
 					"fontSize": "var(--font-size-lg)",
-					"fontStyle": "italic"
+					"fontStyle": "italic",
+					"lineHeight": "var(--line-height-relaxed)"
 				}
 			},
 			"core/code": {
@@ -370,7 +385,8 @@
 				},
 				"typography": {
 					"fontFamily": "var(--font-family-mono)",
-					"fontSize": "var(--font-size-sm)"
+					"fontSize": "var(--font-size-sm)",
+					"lineHeight": "var(--line-height-relaxed)"
 				}
 			},
 			"core/button": {
@@ -387,6 +403,9 @@
 				]
 			},
 			"core/media-text": {
+				"typography": {
+					"lineHeight": "var(--line-height-normal)"
+				},
 				"styleVariations": [
 					{
 						"name": "dark-text",
@@ -409,6 +428,9 @@
 						"left": "0"
 					}
 				},
+				"typography": {
+					"lineHeight": "var(--line-height-relaxed)"
+				},
 				"css": "list-style-type: revert; &:is(ol) { padding-left: 1.4em; }"
 			},
 			"core/accordion": {
@@ -416,6 +438,9 @@
 					"padding": {
 						"right": "var(--prose-max-width-padding)"
 					}
+				},
+				"typography": {
+					"lineHeight": "var(--line-height-normal)"
 				}
 			}
 		}

@@ -162,6 +162,7 @@
 		"typography": {
 			"fontFamily": "var(--font-family-pt-sans)",
 			"fontSize": "var(--font-size-base)",
+			"lineHeight": "var(--line-height-normal)",
 			"textAlign": "left"
 		},
 		"elements": {
@@ -297,6 +298,8 @@
 					}
 				},
 				"typography": {
+					"fontFamily": "var(--font-family-pt-sans)",
+					"fontSize": "var(--font-size-base)",
 					"lineHeight": "var(--line-height-normal)"
 				}
 			},
@@ -316,6 +319,8 @@
 			},
 			"core/heading": {
 				"typography": {
+					"fontFamily": "var(--font-family-pt-sans)",
+					"fontWeight": "700",
 					"lineHeight": "var(--line-height-tight)"
 				}
 			},
@@ -331,6 +336,7 @@
 							}
 						},
 						"typography": {
+							"fontSize": "var(--font-size-sm)",
 							"lineHeight": "var(--line-height-normal)"
 						}
 					}

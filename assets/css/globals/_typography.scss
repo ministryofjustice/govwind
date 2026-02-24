@@ -65,7 +65,8 @@
 /* ------------------------------------------------------------------
    WordPress Heading Block Styles
 ------------------------------------------------------------------- */
-.wp-block-heading {
+.wp-block-heading,
+.wp-block-post-title {
 	font-weight: 700;
 
 	&:is(h1) {

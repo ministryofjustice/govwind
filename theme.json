@@ -307,11 +307,7 @@
 					"text": "red"
 				}
 			},
-			"core/heading": {
-				"typography": {
-					"fontFamily": "var(--font-family-pt-sans)"
-				}
-			},
+			"core/heading": {},
 			"core/image": {
 				"border": {
 					"radius": "var(--radius-lg)"

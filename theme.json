@@ -168,7 +168,8 @@
 			"body": {
 				"typography": {
 					"fontSize": "var(--font-size-base)",
-					"fontFamily": "var(--font-family-pt-sans)"
+					"fontFamily": "var(--font-family-pt-sans)",
+					"lineHeight": "var(--line-height-normal)"
 				}
 			},
 			"link": {

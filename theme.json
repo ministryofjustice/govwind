@@ -189,26 +189,24 @@
 				":focus": {
 					"color": {
 						"text": "var(--colour-focus-text)!important",
-						"background": "var(--colour-focus-background)"
+						"background": "var(--colour-focus-background)!important"
 					},
-					"shadow": "0 0 0 2px var(--colour-focus-background)",
+					"shadow": "0 -0.075em var(--colour-focus-background), 0 0.15em var(--colour-focus-outline)",
 					"typography": {
 						"textDecoration": "underline"
-					},
-					"outline": {
-						"offset": "2px"
 					}
 				},
 				":focus-visible": {
 					"outline": {
-						"color": "var(--colour-focus-outline)"
+						"style": "solid",
+						"color": "transparent"
 					}
 				}
 			},
 			"button": {
 				"color": {
-					"background": "var(--colour-primary)",
-					"text": "var(--colour-background)"
+					"background": "var(--colour-button-background)",
+					"text": "var(--colour-button-text)"
 				},
 				"border": {
 					"radius": "var(--radius-md)"
@@ -219,6 +217,12 @@
 						"bottom": "var(--spacing-2-5)",
 						"left": "var(--spacing-4)",
 						"right": "var(--spacing-4)"
+					},
+					"margin": {
+						"top": "3px",
+						"bottom": "3px",
+						"left": "0",
+						"right": "3px"
 					}
 				},
 				"typography": {
@@ -236,7 +240,7 @@
 						"background": "var(--colour-focus-background)"
 					},
 					"outline": {
-						"color": "var(--colour-foreground)",
+						"color": "var(--colour-focus-outline)",
 						"width": "3px",
 						"style": "solid",
 						"offset": "0px"
@@ -244,7 +248,8 @@
 				},
 				":focus-visible": {
 					"outline": {
-						"color": "var(--colour-focus-outline)"
+						"color": "var(--colour-focus-outline)",
+						"style": "solid"
 					}
 				}
 			}

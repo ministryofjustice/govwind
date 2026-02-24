@@ -55,6 +55,13 @@ header {
 			// This value is the entire outline style, not just the colour
 			outline: var(--colour-header-button-outline);
 		}
+		&:focus,
+		&:focus-visible {
+			color: var(--colour-focus-text);
+			background-color: var(--colour-focus-background);
+			outline: 3px solid var(--colour-focus-outline);
+			outline-offset: 0;
+		}
 	}
 }
 

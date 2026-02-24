@@ -12,11 +12,25 @@ nav.is-style-drawer {
 		.wp-block-navigation-item__label {
 			color: var(--colour-header-nav-links);
 		}
-		&:focus {
-			background-color: var(--colour-focus-background);
-			.wp-block-navigation-item__label {
-				color: var(--colour-focus-text);
-				text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
+		a,
+		button {
+			&:focus,
+			&:focus-visible {
+				background-color: var(--colour-focus-background);
+				box-shadow:
+					0 -0.075em var(--colour-focus-background),
+					0 0.15em var(--colour-focus-outline);
+				outline: none;
+				.wp-block-navigation-item__label {
+					color: var(--colour-focus-text);
+					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
+				}
+				+ .wp-block-navigation__submenu-icon {
+					z-index: 1;
+					svg {
+						stroke: var(--colour-focus-text);
+					}
+				}
 			}
 		}
 	}

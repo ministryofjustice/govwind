@@ -49,7 +49,9 @@
 	--focus-text--light: #000;
 	--focus-background--light: #ffb900;
 	--focus-accent--light: #ffd633;
-	--focus-outline--light: #2b7fff;
+	--focus-outline--light: var(--focus-text--light);
+	--button-background--light: var(--primary--light);
+	--button-text--light: var(--background--light);
 
 	//DARK MODE
 
@@ -95,7 +97,9 @@
 	--focus-text--dark: #000;
 	--focus-background--dark: #ffb900;
 	--focus-accent--dark: #ffd633;
-	--focus-outline--dark: #193cb8;
+	--focus-outline--light: var(--focus-text--dark);
+	--button-background--dark: var(--primary--dark);
+	--button-text--dark: var(--background--dark);
 
 	/*
 	//palette

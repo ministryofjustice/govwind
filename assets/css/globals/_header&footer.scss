@@ -55,13 +55,20 @@ header {
 			// This value is the entire outline style, not just the colour
 			outline: var(--colour-header-button-outline);
 		}
-		&:focus,
-		&:focus-visible {
+		&:focus {
+			background-color: var(--colour-focus-background-muted);
 			color: var(--colour-focus-text);
-			background-color: var(--colour-focus-background);
 			outline: 3px solid var(--colour-focus-outline);
 			outline-offset: 0;
 		}
+		&:focus-visible {
+			background-color: var(--colour-focus-background);
+		}
+	}
+	.search-drawer-open .wp-block-search-toggle-button.wp-element-button {
+		// Inverse colours for control when search menu is open
+		color: var(--colour-header-button-background);
+		background-color: var(--colour-header-button-foreground);
 	}
 }
 

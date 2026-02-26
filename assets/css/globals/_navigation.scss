@@ -144,3 +144,17 @@ nav.is-style-detached {
 			-2100px 0 0 0 var(--colour-header-nav-drawer-background);
 	}
 }
+
+.breadcrumb_desktop {
+	.sep svg {
+		fill: currentColor;
+	}
+}
+.breadcrumb_mobile {
+	.breadcrumb_back {
+		float: left;
+		svg {
+			fill: currentColor;
+		}
+	}
+}

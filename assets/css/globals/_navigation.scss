@@ -7,16 +7,34 @@ nav.is-style-drawer {
 	* This file contains all the required additional colour declarations for the drawer nav
 	*/
 
-	a.wp-block-navigation-item__content,
 	.wp-block-navigation-item.has-child {
 		.wp-block-navigation-item__label {
 			color: var(--colour-header-nav-links);
 		}
-		&:focus {
-			background-color: var(--colour-focus-background);
-			.wp-block-navigation-item__label {
-				color: var(--colour-focus-text);
-				text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
+		a.wp-block-navigation-item__content,
+		button {
+			&:focus {
+				background-color: var(--colour-focus-background-muted);
+				box-shadow:
+					0 -0.075em var(--colour-focus-background-muted),
+					0 0.15em var(--colour-focus-outline);
+				.wp-block-navigation-item__label {
+					color: var(--colour-focus-text);
+					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
+				}
+				+ .wp-block-navigation__submenu-icon {
+					z-index: 1; //the focus background will otherwise obscure this.
+					svg {
+						stroke: var(--colour-focus-text);
+					}
+				}
+			}
+			&:focus-visible {
+				background-color: var(--colour-focus-background);
+				box-shadow:
+					0 -0.075em var(--colour-focus-background),
+					0 0.15em var(--colour-focus-outline);
+				outline: none;
 			}
 		}
 	}
@@ -30,7 +48,7 @@ nav.is-style-drawer {
 			stroke: var(--colour-header-nav-background);
 		}
 		&:has(:focus) {
-			background-color: var(--colour-focus-background);
+			background-color: var(--colour-focus-background-muted);
 			button .wp-block-navigation-item__label {
 				color: var(--colour-focus-text);
 				text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
@@ -38,6 +56,9 @@ nav.is-style-drawer {
 			.wp-block-navigation__submenu-icon > svg {
 				stroke: var(--colour-focus-text);
 			}
+		}
+		&:has(:focus-visible) {
+			background-color: var(--colour-focus-background);
 		}
 	}
 
@@ -112,12 +133,15 @@ nav.is-style-detached {
 				color: var(--colour-header-nav-drawer-links);
 			}
 			&:focus {
-				background-color: var(--colour-focus-background);
+				background-color: var(--colour-focus-background-muted);
 				> span,
 				&:after {
 					color: var(--colour-focus-text);
 					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
 				}
+			}
+			&:focus-visible {
+				background-color: var(--colour-focus-background);
 			}
 		}
 

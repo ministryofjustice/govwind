@@ -11,8 +11,8 @@
 
 	//palette
 	// these are the colours that are pickable in the colour palette - see theme.json
-	--primary--light: red; //used for buttons and links
-	--primary-accent--light: yellow; // Used for button and link hover states
+	--primary--light: #193cb8; //used for buttons and links
+	--primary-accent--light: #00f; // Used for button and link hover states
 	--background--light: pink; // Both the page background, and text on things with a dark background such as buttons
 	--background-secondary--light: green;
 	--foreground-secondary--light: #404040;
@@ -28,9 +28,10 @@
 	--error--light: #c10007;
 	--error-muted--light: #ffa2a2;
 	--focus-text--light: #000;
-	--focus-background--light: #f8f4e4;
+	--focus-background--light: #fd0;
 	--focus-accent--light: #dac777;
-	--focus-outline--light: #2366a3;
+	--button-background--light: green;
+	--button-text--light: yellow;
 
 	//DARK MODE
 
@@ -66,18 +67,4 @@
 	--focus-background--dark: var(--focus-background--light);
 	--focus-accent--dark: var(--focus-accent--light);
 	--focus-outline--dark: var(--focus-outline--light);
-
-	/*
-	//palette
-	--primary-dark: var(--primary-light);
-	--primary-accent-dark: var(--primary-accent-light);
-	--background-dark: var(--background-light);
-	--foreground-dark: var(--foreground-light);
-
-	//hidden
-	--muted-dark: var(--muted-light);
-	--error-dark: var(--error-light);
-	--focus-dark: var(--focus-light);
-	
-*/
 }

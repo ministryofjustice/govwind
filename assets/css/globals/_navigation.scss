@@ -23,7 +23,7 @@ nav.is-style-drawer {
 					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
 				}
 				+ .wp-block-navigation__submenu-icon {
-					z-index: 1;
+					z-index: 1; //the focus background will otherwise obscure this.
 					svg {
 						stroke: var(--colour-focus-text);
 					}

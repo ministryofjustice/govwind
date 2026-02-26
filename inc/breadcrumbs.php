@@ -2,14 +2,15 @@
 
 add_filter( 'breadcrumb_block_get_breadcrumb_trail', function ( $markup, $args, $breadcrumbs_instance ) {
   
+    global $post;
+
 	$mobile_title = 'Back to Home';
 	$mobile_url = get_home_url();
 
     $markup = '<div class="breadcrumb_desktop wb-desktop-only">'. $markup . '</div>';
 
 	if ( is_page() ) {
-        global $post;
-
+    
         if ( $post->post_parent ) {
 
             $parent_id    = $post->post_parent;

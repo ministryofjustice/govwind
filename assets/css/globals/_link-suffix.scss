@@ -1,0 +1,17 @@
+:root {
+	--new-tab-link-suffix: "opens in a new tab";
+}
+
+*[lang="cy"],
+*[lang="cy-GB"],
+*[lang="cy-AR"] {
+	--new-tab-link-suffix: "yn agor mewn tab newydd";
+}
+
+:root.website-2 {
+	--new-tab-link-suffix: "opens in a new window";
+}
+
+a[target="_blank"]:after {
+	content: " (" var(--new-tab-link-suffix) ")";
+}

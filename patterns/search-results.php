@@ -77,7 +77,7 @@
 
 			<!-- wp:query-pagination-previous {"label":"Previous"} /-->
 
-			<!-- wp:query-pagination-numbers {"className":"is-style-bold-numbers"} /-->
+			<!-- wp:query-pagination-numbers {"displayType":"current-of-total","className":"is-style-bold-numbers"} /-->
 
 			<!-- wp:query-pagination-next {"label":"Next"} /-->
 			<!-- /wp:query-pagination -->

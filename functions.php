@@ -112,6 +112,10 @@ function gw_add_body_class($classes)
 }
 add_filter('body_class', 'gw_add_body_class');
 
+/**
+ * Breadcrumbs
+ */
+require get_template_directory() . '/inc/breadcrumbs.php';
 
 /**
  * ACF

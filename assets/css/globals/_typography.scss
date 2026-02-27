@@ -2,9 +2,9 @@
 	/* Fluid Font Sizes - Mobile first */
 	--font-size-xs: clamp(0.625rem, 2vw, 0.75rem);
 	--font-size-sm: clamp(0.75rem, 2.5vw, 0.875rem);
-	--font-size-base: clamp(0.875rem, 3vw, 1rem);
+	--font-size-base: clamp(1rem, 3vw, 1.1875rem);
 	--font-size-lg: clamp(1rem, 3.5vw, 1.25rem);
-	--font-size-xl: clamp(1.125rem, 4vw, 1.25rem);
+	--font-size-xl: clamp(1.125rem, 4vw, 1.5rem);
 	--font-size-2-xl: clamp(1.25rem, 4.5vw, 1.5rem);
 	--font-size-3-xl: clamp(1.5rem, 5vw, 1.875rem);
 	--font-size-4-xl: clamp(1.875rem, 6vw, 2.25rem);
@@ -72,6 +72,7 @@
 	&:is(h1) {
 		font-size: var(--font-size-6-xl);
 		line-height: 1.2;
+		letter-spacing: var(--letter-spacing-tight);
 		margin-block-start: var(--space-heading-md);
 		margin-block-end: var(--space-heading-sm);
 	}
@@ -79,6 +80,7 @@
 	&:is(h2) {
 		font-size: var(--font-size-5-xl);
 		line-height: 1.3;
+		letter-spacing: var(--letter-spacing-tight);
 		margin-block-start: var(--space-heading-md);
 		margin-block-end: var(--space-heading-sm);
 	}

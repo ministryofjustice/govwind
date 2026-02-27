@@ -1,0 +1,27 @@
+a {
+	text-underline-offset: 10%;
+	&:hover {
+		text-decoration-thickness: 3px;
+	}
+}
+
+summary {
+	&:hover {
+		color: var(--colour-primary-accent);
+	}
+	&:focus {
+		color: var(--colour-focus-text);
+		background: var(--colour-focus-background-muted);
+		box-shadow:
+			0 -0.075em var(--colour-focus-background-muted),
+			0 0.15em var(--colour-focus-outline);
+	}
+	&:focus-visible {
+		background: var(--colour-focus-background);
+		box-shadow:
+			0 -0.075em var(--colour-focus-background-muted),
+			0 0.15em var(--colour-focus-outline);
+		outline-style: solid;
+		outline-color: transparent;
+	}
+}

@@ -12,10 +12,17 @@ Add site-specific stylesheets thus:
 $colour-list:
 	primary, primary-accent, background, background-secondary, foreground,
 	foreground-secondary, foreground-hint, disabled, muted, subtle, strong, error,
-	error-muted, focus-text, focus-background, focus-outline, header-background,
-	header-foreground, header-nav-background, header-nav-background-overflow,
-	header-nav-links, header-subnav-background, header-subnav-links,
-	header-button-outline, header-logo-focus-filter, secondary, secondary-accent;
+	error-muted, focus-text, focus-background, focus-background-muted,
+	focus-outline, header-background, header-foreground, header-nav-background,
+	header-nav-background-overflow, header-nav-links,
+	header-nav-drawer-background, header-nav-drawer-links,
+	header-nav-separator-line, header-button-background, header-button-foreground,
+	header-button-outline, header-search-form-background, header-search-form-text,
+	header-search-drawer-label, header-search-drawer-background,
+	header-search-drawer-input-background, header-search-drawer-input-text,
+	header-search-drawer-input-border, header-button-outline,
+	header-logo-focus-filter, secondary, secondary-accent, button-background,
+	button-text;
 
 //goes through the $site-list and $colour-list
 //do not change the below, only add to the lists above

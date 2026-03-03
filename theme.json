@@ -485,7 +485,8 @@
 		"govwind/cta-centered",
 		"govwind/three-cards",
 		"govwind/feature-two-col",
-		"govwind/about"
+		"govwind/about",
+		"govwind/page-heading-hero"
 	],
 	"templateParts": [
 		{

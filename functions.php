@@ -147,6 +147,22 @@ add_filter( 'language_attributes', function( $attrs ) {
 	return "$attrs class='website-$site_id'";
 });
 
+// Add a custom class to the block editor <body>
+add_filter( 'admin_body_class', 'govwind_add_block_editor_class' );
+
+function govwind_add_block_editor_class( $classes ) {
+	// Get current admin screen
+	$screen = get_current_screen();
+
+	// Only add class for block editor (post/page editor)
+	if ( $screen && $screen->is_block_editor ) {
+		$site_id = get_current_blog_id();
+		$classes .= " website-$site_id";
+	}
+
+	return $classes;
+}
+
 /**
  * This actions calls a JS file which adds a class to the editor iFrame 
  * HTML element which allows the site-specific colours to be used. 
@@ -167,19 +183,19 @@ add_action('enqueue_block_editor_assets', function () {
 	}
 
 	wp_enqueue_script(
-        'editor-iframe-class',
-        get_template_directory_uri() . '/assets/js/editor-iframe-class.js',
-        [ 'wp-dom-ready', 'wp-edit-post' ],
-        false,
-        true
-    );
+		'editor-iframe-class',
+		get_template_directory_uri() . '/assets/js/editor-iframe-class.js',
+		[ 'wp-dom-ready', 'wp-edit-post' ],
+		false,
+		true
+	);
 
-    // Pass blog name into JS safely
-    wp_localize_script(
-        'editor-iframe-class',
-        'siteData',
-        [
-            'name' =>  $site_name
-        ]
-    );
+	// Pass blog name into JS safely
+	wp_localize_script(
+		'editor-iframe-class',
+		'siteData',
+		[
+			'name' =>  $site_name
+		]
+	);
 });

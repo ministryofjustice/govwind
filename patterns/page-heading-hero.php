@@ -32,7 +32,7 @@
                 <!-- wp:post-title {"level":1} /-->
 
                 <!-- wp:paragraph {"className":"is-style-default"} -->
-                <p class="is-style-default"><?php esc_html_e( 'Smaller Images, Faster Sites, Happier Visitors. Comprehensive image optimization that doesn\'t require a degree in rocket science.', 'govwind' ); ?></p>
+                <p class="is-style-default"><?php esc_html_e( 'Delivering clear, accessible, and reliable digital services built to meet the needs of citizens and communities.', 'govwind' ); ?></p>
                 <!-- /wp:paragraph -->
 
                 <!-- wp:spacer {"height":"30px"} -->

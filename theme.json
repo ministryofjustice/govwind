@@ -486,7 +486,8 @@
 		"govwind/three-cards",
 		"govwind/hero-cta-full-width",
 		"govwind/feature-two-col",
-		"govwind/about"
+		"govwind/about",
+		"govwind/page-heading-hero"
 	],
 	"templateParts": [
 		{

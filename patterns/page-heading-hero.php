@@ -7,8 +7,8 @@
  * Keywords: hero, page header, page heading, breadcrumb, title
  */
 ?>
-<!-- wp:group {"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|foreground-secondary"},":hover":{"color":{"text":"var:preset|color|foreground"}}}}},"backgroundColor":"primary","textColor":"foreground-secondary","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-foreground-secondary-color has-primary-background-color has-text-color has-background has-link-color">
+<!-- wp:group {"align":"full","style":{"color":{"background":"var(--colour-primary)"},"elements":{"link":{"color":{"text":"var:preset|color|background"},":hover":{"color":{"text":"var:preset|color|background"}}}}},"textColor":"background","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-background-color has-text-color has-background has-link-color" style="background-color:var(--colour-primary)">
 
     <!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
     <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
@@ -45,11 +45,11 @@
             <!-- wp:column {"width":"33.33%"} -->
             <div class="wp-block-column" style="flex-basis:33.33%">
 
-                <!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"hidden md:block!"} -->
-                <figure class="wp-block-image size-full hidden md:block!">
-                    <img src="https://placehold.co/600x600?text=feature+image" alt=""/>
-                </figure>
-                <!-- /wp:image -->
+            <!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":{"topLeft":"0px","topRight":"0px","bottomLeft":"0px","bottomRight":"0px"}}},"className":"hidden md:block!"} -->
+            <figure class="wp-block-image size-full has-custom-border hidden md:block!">
+                <img src="https://placehold.co/600x600?text=feature+image" alt="" style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px"/>
+            </figure>
+            <!-- /wp:image -->
 
             </div>
             <!-- /wp:column -->

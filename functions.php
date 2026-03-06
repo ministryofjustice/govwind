@@ -199,3 +199,7 @@ add_action('enqueue_block_editor_assets', function () {
 		]
 	);
 });
+
+function wb_placeholder_image(int $w = 500, int $h = 300) {
+	echo get_template_directory_uri()."/assets/images/placeholder.php?w=$w&h=$h";
+}

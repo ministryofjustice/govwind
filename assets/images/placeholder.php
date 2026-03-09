@@ -1,12 +1,12 @@
 <?php
 header('Content-Type: image/svg+xml');
 
-$width = (int)$_GET['w'] ;
+$width = (int)$_GET['w'];
 $height = (int)$_GET['h'];
 
 //fallbacks for false/null/empty
-$width = $width ? $width : 500 ;
-$height = $height ? $height : 300 ;
+$width = $width ? $width : 500;
+$height = $height ? $height : 300;
 $font = $width / 10;
 
 echo "<?xml version='1.0' encoding='UTF-8'?>

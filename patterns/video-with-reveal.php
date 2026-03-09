@@ -1,10 +1,10 @@
 <?php
 /**
  * Title: Video with reveal
- * Slug: govwind/video
+ * Slug: govwind/video-with-reveal
  * Categories: page
  * Inserter: yes
- * Description: Video with reveal that can be used for transcript
+ * Description: Video with reveal that can be used for transcripts
  */
 ?>
 <!-- wp:embed {"url":"https://www.youtube.com/watch?v=ih7DZk-9US8","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} -->

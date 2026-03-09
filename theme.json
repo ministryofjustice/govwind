@@ -336,9 +336,6 @@
 				}
 			},
 			"core/image": {
-				"border": {
-					"radius": "var(--radius-lg)"
-				},
 				"elements": {
 					"caption": {
 						"spacing": {
@@ -485,6 +482,7 @@
 		"govwind/cta-centered",
 		"govwind/three-cards",
 		"govwind/hero-cta-full-width",
+		"govwind/icon-info-card",
 		"govwind/feature-two-col",
 		"govwind/about"
 	],

@@ -22,8 +22,3 @@ https://www.youtube.com/watch?v=ih7DZk-9US8
 <p>Providing transcripts also improves usability for a wider audience. They make it easier to search for specific information within a video, support translation into other languages, and help people with cognitive or learning differences follow along at their own pace.</p>
 <!-- /wp:paragraph -->
 <!-- /wp:wb-blocks/reveal -->
-
-<!-- wp:paragraph -->
-<p></p>
-<!-- /wp:paragraph -->
-

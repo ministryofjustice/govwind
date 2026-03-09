@@ -485,6 +485,7 @@
 		"govwind/cta-centered",
 		"govwind/three-cards",
 		"govwind/video-with-reveal",
+		"govwind/hero-cta-full-width",
 		"govwind/feature-two-col",
 		"govwind/about"
 	],

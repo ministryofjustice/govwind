@@ -69,7 +69,3 @@
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:paragraph -->
-<p></p>
-<!-- /wp:paragraph -->
-

@@ -3,8 +3,10 @@
  * the body class is for the page editor interface
  */
 
-:root.website-56,
-body.website-56 {
+:root.website-66, //66 = Rob's CJSM
+:root:has(body.website-66),
+:root.website-56, //56 = CJSM
+:root:has(body.website-56) {
 	//brand unique colours
 	--secondary--light: #dac777;
 	--secondary-accent--light: #f8f4e4;

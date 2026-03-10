@@ -22,3 +22,19 @@
 		max-width: var(--size-wide);
 	}
 }
+
+//button outline spike
+
+//method 1 - apply subtle border when background detected
+.has-background .wp-block-button__link {
+	outline: 1px solid var(--colour-button-background);
+}
+
+//method 2 - bespoke for each site/background
+:root.website-2,
+body.website-2 {
+	.has-background-secondary-background-color .wp-block-button__link {
+		outline: 2px dashed white;
+	}
+}
+

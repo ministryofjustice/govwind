@@ -479,6 +479,7 @@
 	"patterns": [
 		"fullscreen-cover-image-gallery",
 		"hero-banner-with-overlap-images",
+		"govwind/tip",
 		"govwind/cta-centered",
 		"govwind/three-cards",
 		"govwind/video-with-reveal",

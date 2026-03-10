@@ -3,6 +3,7 @@
  * Title: Feature section two columns
  * Slug: govwind/feature-two-col
  * Categories: features
+ * Inserter: yes
  * Description: A full-width feature section highlighting service with text and an image.
  * Keywords: feature, section, full width, product, service
  */

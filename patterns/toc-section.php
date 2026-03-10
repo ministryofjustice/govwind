@@ -3,7 +3,7 @@
  * Title: Table of Contents Section
  * Slug: govwind/toc-section
  * Categories: page
- * Description: A section with 2 columns one with TOC navigation and the other with the content
+ * Description: A section with 2 columns one with TOC navigation and the other with content
  * Keywords: toc, table
  *
  */
@@ -15,9 +15,7 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"66.66%"} -->
-<div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:spacer {"height":"20px"} -->
-<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
+<div class="wp-block-column" style="flex-basis:66.66%">
 
 <!-- wp:heading -->
 <h2 class="wp-block-heading"><?php esc_html_e( 'Heading One', 'govwind' ); ?></h2>
@@ -65,7 +63,7 @@
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|50"}}}} -->
 <p style="margin-top:0;margin-bottom:var(--wp--preset--spacing--50)"><?php esc_html_e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non orci vitae nibh luctus fermentum. Integer feugiat, nibh sit amet tristique volutpat, neque elit convallis lacus, at pretium mi nisi sit amet lorem. Curabitur at lacus ac velit suscipit ultrices vitae vel arcu.', 'govwind' ); ?></p>
-<!-- /wp:paragraph -->
+<!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 

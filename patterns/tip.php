@@ -3,7 +3,7 @@
  * Title: Tip
  * Slug: govwind/tip
  * Categories: page
- * Description: A tip or impportant piece of content
+ * Description: A tip or important piece of content
  * Keywords: tip
  *
  */
@@ -14,7 +14,7 @@
 <!-- wp:image {"width":"48px","height":"48px","scale":"contain","sizeSlug":"large","className":"is-style-default","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} -->
 
 <!-- wp:heading {"style":{"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"}}},"fontSize":"lg"} -->
-    <h2 class="wp-block-heading has-lg-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">TIP</h2>
+    <h2 class="wp-block-heading has-lg-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><?php esc_html_e( 'TIP', 'govwind' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->

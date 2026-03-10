@@ -27,14 +27,28 @@
 
 //method 1 - apply subtle border when background detected
 .has-background .wp-block-button__link {
-	outline: 1px solid var(--colour-button-background);
+	box-shadow: 0 0 0 2px var(--colour-button-background);
 }
 
 //method 2 - bespoke for each site/background
 :root.website-2,
 body.website-2 {
 	.has-background-secondary-background-color .wp-block-button__link {
-		outline: 2px dashed white;
+		box-shadow: 0 0 0 2px white;
+	}
+	.has-primary-accent-background-color .wp-block-button__link:hover {
+		box-shadow: 0 0 0 2px white;
+	}
+}
+
+//method 2 - bespoke for each site/background
+:root.website-56,
+body.website-56 {
+	.has-primary-accent-background-color .wp-block-button__link:hover {
+		box-shadow: 0 0 0 2px white;
+	}
+	.has-primary-background-color .wp-block-button__link:hover {
+		box-shadow: 0 0 0 2px yellow;
 	}
 }
 

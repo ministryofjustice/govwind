@@ -3,7 +3,7 @@
  * Title: Table of Contents Section
  * Slug: govwind/toc-section
  * Categories: page
- * Description: A section with 2 coloumns one with TOC and another with content
+ * Description: A section with 2 coloumns one with TOC navigation and the other with the content
  * Keywords: toc, table
  *
  */

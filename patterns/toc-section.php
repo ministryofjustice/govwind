@@ -8,10 +8,10 @@
  *
  */
 ?>
-
 <!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:wb-blocks/table-of-contents /--></div>
+<div class="wp-block-columns">
+<!-- wp:column {"width":"33.33%"} -->
+    <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:wb-blocks/table-of-contents /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"66.66%"} -->

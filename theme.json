@@ -265,7 +265,7 @@
 		"blocks": {
 			"wb-blocks/reveal": {
 				"color": {
-					"text": "var(--colour-primary)"
+					"text": "var(--colour-foreground)"
 				}
 			},
 			"core/site-title": {
@@ -336,9 +336,6 @@
 				}
 			},
 			"core/image": {
-				"border": {
-					"radius": "var(--radius-lg)"
-				},
 				"elements": {
 					"caption": {
 						"spacing": {
@@ -484,9 +481,13 @@
 		"hero-banner-with-overlap-images",
 		"govwind/cta-centered",
 		"govwind/three-cards",
+		"govwind/video-with-reveal",
+		"govwind/hero-cta-full-width",
+		"govwind/icon-info-card",
 		"govwind/feature-two-col",
 		"govwind/cta",
-		"govwind/about"
+		"govwind/about",
+		"govwind/page-heading-hero"
 	],
 	"templateParts": [
 		{

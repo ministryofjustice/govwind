@@ -199,3 +199,14 @@ add_action('enqueue_block_editor_assets', function () {
 		]
 	);
 });
+
+/**
+ * function echos out the path for the image only
+ * $w = width in pixels (int only)
+ * $h = height in pixels (int only)
+ * int only protection here and in the placeholder file
+ */
+function wb_placeholder_image(int $w = 500, int $h = 300, $t = "") {
+	$t = htmlspecialchars($t, ENT_QUOTES | ENT_XML1, 'UTF-8');
+	echo get_template_directory_uri()."/assets/images/placeholder.php?w=$w&h=$h&t=$t";
+}

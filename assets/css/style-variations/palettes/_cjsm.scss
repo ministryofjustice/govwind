@@ -2,9 +2,12 @@
  * the :root class is for the public facing website
  * the body class is for the page editor interface
  */
- 
-:root.website-56,
-body.website-56 {
+
+:root.website-66, //66 = Rob's CJSM
+:root:has(body.website-66),
+:root.website-56, //56 = CJSM
+:root:has(body.website-56) {
+
 	//brand unique colours
 	--secondary--light: #dac777;
 	--secondary-accent--light: #f8f4e4;
@@ -21,7 +24,7 @@ body.website-56 {
 
 	//palette
 	// these are the colours that are pickable in the colour palette - see theme.json
-	--primary--light: #2366a3; //used for buttons and links
+	--primary--light: #12314e; //used for buttons and links
 	--primary-accent--light: #143859; // Used for button and link hover states
 	--background--light: #ffffff; // Both the page background, and text on things with a dark background such as buttons
 	--background-secondary--light: #e5e5e5;

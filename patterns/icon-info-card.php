@@ -20,12 +20,12 @@
     <figure class="wp-block-image size-large is-resized is-style-default" style="margin-bottom:var(--wp--preset--spacing--50)"><img src="<?php wb_placeholder_image(96, 96); ?>" alt="" style="object-fit:contain;width:48px;height:48px" /></figure>
     <!-- /wp:image -->
 
-    <!-- wp:heading {"level":3,"placeholder":"Add your heading here.","style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"base"} -->
-    <h3 class="wp-block-heading has-base-font-size" style="margin-top:0"></h3>
+    <!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"base"} -->
+    <h3 class="wp-block-heading has-base-font-size" style="margin-top:0">Add your heading here.</h3>
     <!-- /wp:heading -->
 
-    <!-- wp:paragraph {"placeholder":"Add your text here."} -->
-    <p></p>
+    <!-- wp:paragraph -->
+    <p>Add your text here.</p>
     <!-- /wp:paragraph -->
 
 </div>

@@ -265,7 +265,7 @@
 		"blocks": {
 			"wb-blocks/reveal": {
 				"color": {
-					"text": "var(--colour-primary)"
+					"text": "var(--colour-foreground)"
 				}
 			},
 			"core/site-title": {

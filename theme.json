@@ -486,6 +486,7 @@
 		"govwind/icon-info-card",
 		"govwind/feature-two-col",
 		"govwind/about",
+		"govwind/toc-section",
 		"govwind/page-heading-hero"
 	],
 	"templateParts": [

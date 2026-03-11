@@ -37,7 +37,10 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(80, 80); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
+    	80,
+    	80,
+    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Expert advice tailored to your organisation's specific needs and goals.</strong></p>
@@ -48,7 +51,10 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(80, 80); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
+    	80,
+    	80,
+    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Streamlined processes that save time and reduce operational costs.</strong></p>
@@ -59,7 +65,10 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(80, 80); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
+    	80,
+    	80,
+    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Robust digital solutions built for security, scale, and accessibility.</strong></p>
@@ -70,7 +79,10 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(80, 80); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
+    	80,
+    	80,
+    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Data-driven insights that inform better decisions and outcomes.</strong></p>
@@ -81,7 +93,10 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(80, 80); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
+    	80,
+    	80,
+    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Collaborative partnerships that deliver lasting community impact.</strong></p>
@@ -92,7 +107,10 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(80, 80); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
+    	80,
+    	80,
+    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Transparent reporting that builds trust and demonstrates accountability.</strong></p>
@@ -106,7 +124,10 @@
 		<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}},"layout":{"type":"flex","justifyContent":"left"}} -->
 		<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
 			<!-- wp:button -->
-			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e('Read more about us', 'govwind'); ?></a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e(
+   	"Read more about us",
+   	"govwind",
+   ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

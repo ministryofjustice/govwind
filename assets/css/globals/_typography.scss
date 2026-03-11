@@ -57,9 +57,9 @@
 /* ------------------------------------------------------------------
    Override WordPress FSE layout constraints for headings
 ------------------------------------------------------------------- */
-:root .is-layout-constrained > .wp-block-heading:first-child,
-:root .is-layout-constrained > .wp-block-heading {
-	margin-block-start: revert !important;
+
+:root .is-layout-constrained > .wp-block-heading:first-child {
+	margin-block-start: revert;
 }
 
 /* ------------------------------------------------------------------

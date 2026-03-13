@@ -12,12 +12,13 @@
 ?>
 
 <?php
-    $firstname = get_the_author_meta('first_name');
-    $surname = get_the_author_meta('last_name');
-    $fullname = $firstname . " " . $surname;
-    if (trim($fullname) == "") $fullname = get_the_author_meta('display_name');
-    if (trim($fullname) != "") {
-?>
+$firstname = get_the_author_meta("first_name");
+$surname = get_the_author_meta("last_name");
+$fullname = $firstname . " " . $surname;
+if (trim($fullname) == "") {
+	$fullname = get_the_author_meta("display_name");
+}
+if (trim($fullname) != "") { ?>
 
 <!-- wp:paragraph -->
 <p class="">
@@ -25,5 +26,5 @@
 </p>
 <!-- /wp:paragraph -->
 
-<?php
-    }
+<?php }
+

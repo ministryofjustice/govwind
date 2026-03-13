@@ -6,7 +6,6 @@
  * Block Types: core/navigation
  * Inserter: true
  */
-
 ?>
 <!-- wp:group {"layout":{"type":"flex","justifyContent":"right"},"className":"language-switcher"} -->
 <div class="wp-block-group language-switcher">

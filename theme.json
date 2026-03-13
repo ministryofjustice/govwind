@@ -487,13 +487,9 @@
 		"govwind/feature-two-col",
 		"govwind/cta",
 		"govwind/about",
-<<<<<<< icon-grid-cta-4674
 		"govwind/page-heading-hero",
-		"govwind/icon-grid-cta"
-=======
-		"govwind/toc-section",
-		"govwind/page-heading-hero"
->>>>>>> main
+		"govwind/icon-grid-cta",
+		"govwind/toc-section"
 	],
 	"templateParts": [
 		{

@@ -32,7 +32,10 @@
                 <!-- wp:post-title {"level":1} /-->
 
                 <!-- wp:paragraph {"className":"is-style-default"} -->
-                <p class="is-style-default"><?php esc_html_e( 'Delivering clear, accessible, and reliable digital services built to meet the needs of citizens and communities.', 'govwind' ); ?></p>
+                <p class="is-style-default"><?php esc_html_e(
+                	"Delivering clear, accessible, and reliable digital services built to meet the needs of citizens and communities.",
+                	"govwind",
+                ); ?></p>
                 <!-- /wp:paragraph -->
 
                 <!-- wp:spacer {"height":"30px"} -->
@@ -47,7 +50,10 @@
 
             <!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":{"topLeft":"0px","topRight":"0px","bottomLeft":"0px","bottomRight":"0px"}}},"className":"hidden md:block!"} -->
             <figure class="wp-block-image size-full has-custom-border hidden md:block!">
-                <img src="<?php gw_placeholder_image(600,600) ?>" alt="" style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px"/>
+                <img src="<?php gw_placeholder_image(
+                	600,
+                	600,
+                ); ?>" alt="" style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px"/>
             </figure>
             <!-- /wp:image -->
 

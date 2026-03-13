@@ -12,13 +12,13 @@
 ?>
 
 <?php
-	$summary = get_field('post_summary');
+$summary = get_field("post_summary");
 
-	if ( !empty($summary) ) :
-?>
+if (!empty($summary)): ?>
 	<div class="pb-10">
 		<?php echo wpautop($summary); ?>
 	</div>
-<?php
-	endif;
+<?php endif;
+
+
 ?>

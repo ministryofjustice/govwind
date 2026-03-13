@@ -485,8 +485,11 @@
 		"govwind/hero-cta-full-width",
 		"govwind/icon-info-card",
 		"govwind/feature-two-col",
+		"govwind/cta",
 		"govwind/about",
-		"govwind/page-heading-hero"
+		"govwind/page-heading-hero",
+		"govwind/icon-grid-cta",
+		"govwind/toc-section"
 	],
 	"templateParts": [
 		{

@@ -263,9 +263,21 @@
 			}
 		},
 		"blocks": {
+			"wb-blocks/accordion": {
+				"spacing": {
+					"padding": {
+						"right": "var(--prose-max-width-padding)"
+					}
+				}
+			},
 			"wb-blocks/reveal": {
 				"color": {
 					"text": "var(--colour-foreground)"
+				},
+				"spacing": {
+					"padding": {
+						"right": "var(--prose-max-width-padding)"
+					}
 				}
 			},
 			"core/site-title": {

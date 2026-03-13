@@ -18,7 +18,7 @@
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 		<div class="wp-block-group">
 			<!-- wp:heading {"align":"wide"} -->
-			<h2 class="wp-block-heading alignwide">Add your heading</h2>
+			<h4 class="wp-block-heading alignwide">Add your heading</h4>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:group -->

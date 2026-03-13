@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: 3 Icon Info Cards
  * Slug: govwind/icon-info-cards-three-col

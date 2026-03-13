@@ -6,7 +6,6 @@
  *
  * @package WordPress
  */
-
 ?>
 
 <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"","buttonText":"Search"} /-->

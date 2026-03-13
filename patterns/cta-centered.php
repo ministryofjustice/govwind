@@ -17,14 +17,20 @@
     <!-- /wp:heading -->
 
     <!-- wp:paragraph {"align":"center"} -->
-    <p class="has-text-align-center"><?php esc_html_e('Sign up today and start experiencing the benefits of working with us.', 'govwind'); ?></p>
+    <p class="has-text-align-center"><?php esc_html_e(
+    	"Sign up today and start experiencing the benefits of working with us.",
+    	"govwind",
+    ); ?></p>
     <!-- /wp:paragraph -->
 
     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
     <div class="wp-block-buttons">
         <!-- wp:button -->
         <div class="wp-block-button">
-            <a class="wp-block-button__link wp-element-button"><?php esc_html_e('Sign Up Now', 'govwind'); ?></a>
+            <a class="wp-block-button__link wp-element-button"><?php esc_html_e(
+            	"Sign Up Now",
+            	"govwind",
+            ); ?></a>
         </div>
         <!-- /wp:button -->
     </div>

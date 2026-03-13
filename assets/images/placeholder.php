@@ -1,14 +1,16 @@
 <?php
-header('Content-Type: image/svg+xml');
+header("Content-Type: image/svg+xml");
 
-$width = max(64, min((int)($_GET['w'] ?? 500), 2048));
-$height = max(64, min((int)($_GET['h'] ?? 300), 2048));
-$text = htmlspecialchars(($_GET['t'] ?? ''), ENT_QUOTES | ENT_XML1, 'UTF-8');
+$width = max(64, min((int) ($_GET["w"] ?? 500), 2048));
+$height = max(64, min((int) ($_GET["h"] ?? 300), 2048));
+$text = htmlspecialchars($_GET["t"] ?? "", ENT_QUOTES | ENT_XML1, "UTF-8");
 
 $font = $width / 10;
 
-if (empty($text)) $text = "$width × $height";
-$text = substr($text,0,11); //e.g. 1920 × 1080 = 11 characters
+if (empty($text)) {
+	$text = "$width × $height";
+}
+$text = substr($text, 0, 11); //e.g. 1920 × 1080 = 11 characters
 
 echo "<?xml version='1.0' encoding='UTF-8'?>
 

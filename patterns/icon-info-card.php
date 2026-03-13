@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Icon Info Card
  * Slug: govwind/icon-info-card
@@ -17,7 +16,10 @@
 <div class="wp-block-group has-background-secondary-background-color has-background" style="min-height:100px;padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem;font-size:1rem">
 
     <!-- wp:image {"width":"48px","height":"48px","scale":"contain","sizeSlug":"large","className":"is-style-default","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} -->
-    <figure class="wp-block-image size-large is-resized is-style-default" style="margin-bottom:var(--wp--preset--spacing--50)"><img src="<?php gw_placeholder_image(96, 96); ?>" alt="" style="object-fit:contain;width:48px;height:48px" /></figure>
+    <figure class="wp-block-image size-large is-resized is-style-default" style="margin-bottom:var(--wp--preset--spacing--50)"><img src="<?php gw_placeholder_image(
+    	96,
+    	96,
+    ); ?>" alt="" style="object-fit:contain;width:48px;height:48px" /></figure>
     <!-- /wp:image -->
 
     <!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"base"} -->

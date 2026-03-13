@@ -17,8 +17,8 @@
 
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 		<div class="wp-block-group">
-			<!-- wp:heading {"align":"wide"} -->
-			<h2 class="wp-block-heading alignwide">Add your heading</h2>
+			<!-- wp:heading {"align":"wide","level":4} -->
+			<h4 class="wp-block-heading alignwide">Add your heading</h4>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:group -->
@@ -26,7 +26,7 @@
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
 		<div class="wp-block-group">
 			<!-- wp:paragraph {"className":"!max-w-none"} -->
-            <p class="!max-w-none">Add in the supporting paragraph text here for this section.</p>
+			<p class="!max-w-none">Add in the supporting paragraph text here for this section.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -37,10 +37,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
-				    80,
-				    80,
-				); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(gw_placeholder_image(80, 80)); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
@@ -51,10 +48,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
-				    80,
-				    80,
-				); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(gw_placeholder_image(80, 80)); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
@@ -65,10 +59,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
-				    80,
-				    80,
-				); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(gw_placeholder_image(80, 80)); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
@@ -79,10 +70,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
-				    80,
-				    80,
-				); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(gw_placeholder_image(80, 80)); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
@@ -93,10 +81,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
-				    80,
-				    80,
-				); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(gw_placeholder_image(80, 80)); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
@@ -107,10 +92,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
-				    80,
-				    80,
-				); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
+				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(80, 80); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
@@ -124,10 +106,7 @@
 		<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}},"layout":{"type":"flex","justifyContent":"left"}} -->
 		<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
 			<!-- wp:button -->
-			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e(
-			    "Add button text",
-			    "govwind",
-			); ?></a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e('Add button text', 'govwind'); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

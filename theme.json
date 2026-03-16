@@ -175,14 +175,14 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--colour-primary)"
+					"text": "var(--link-text)"
 				},
 				"typography": {
 					"textDecoration": "underline"
 				},
 				":hover": {
 					"color": {
-						"text": "var(--colour-primary-accent)"
+						"text": "var(--link-text-hover)"
 					}
 				},
 				":focus": {
@@ -234,8 +234,8 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var(--colour-background)",
-						"background": "var(--colour-primary-accent)"
+						"background": "var(--colour-button-background-hover)",
+						"text": "var(--colour-button-text-hover)"
 					}
 				},
 				":focus": {
@@ -364,7 +364,7 @@
 			},
 			"core/separator": {
 				"color": {
-					"background": "var(--colour-primary)"
+					"background": "transparent"
 				},
 				"spacing": {
 					"margin": {
@@ -375,7 +375,7 @@
 			},
 			"core/quote": {
 				"border": {
-					"color": "var(--colour-primary)",
+					"color": "var(--colour-quote-border)",
 					"style": "solid",
 					"width": "0 0 0 4px"
 				},

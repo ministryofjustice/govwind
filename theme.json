@@ -175,14 +175,14 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--link-text)"
+					"text": "var(--colour-link-text)"
 				},
 				"typography": {
 					"textDecoration": "underline"
 				},
 				":hover": {
 					"color": {
-						"text": "var(--link-text-hover)"
+						"text": "var(--colour-link-text-hover)"
 					}
 				},
 				":focus": {
@@ -231,12 +231,6 @@
 				"typography": {
 					"fontSize": "var(--font-size-base)",
 					"lineHeight": "1.75"
-				},
-				":hover": {
-					"color": {
-						"background": "var(--colour-button-background-hover)",
-						"text": "var(--colour-button-text-hover)"
-					}
 				},
 				":focus": {
 					"color": {

@@ -5,47 +5,52 @@
 
 :root {
 	--brand-colour: 256; //degrees round the colour wheel
-	--preview: oklch(49% 0.3 256);
+	--brand-intensity-vivid: 0.3; //intensity mainly for light theme
+	--brand-intensity-subtle: 0.07; //intensity mainly for dark theme
 
 	//palette
 	//put them in "colour" order, so they make sense when chosen from the palette
 	// these are the colours that are pickable in the colour palette - see theme.json
 	--primary--light: oklch(
-		49% 0.3 var(--brand-colour)
-	); //used for buttons and links
+		49% var(--brand-intensity-vivid) var(--brand-colour)
+	);
 	--primary-accent--light: oklch(
-		30% 0.3 var(--brand-colour)
-	); // Used for button and link hover states
-	--background--light: oklch(
-		100% 0 0
-	); // Both the page background, and text on things with a dark background such as buttons
-	--background-secondary--light: oklch(90% 0 0);
-	--foreground-secondary--light: oklch(17% 0 0);
-	--foreground--light: oklch(1% 0 0);
+		30% var(--brand-intensity-vivid) var(--brand-colour)
+	);
+	--background--light: #ffffff; // Both the page background
+	--background-secondary--light: #e5e5e5;
+	--foreground-secondary--light: #404040;
+	--foreground--light: #0a0a0a; // Used for text
 
 	//HIDDEN FROM PALETTE - these colours are not available for selecting in the palette
 	//header colours
-	--header-background--light: oklch(49% 0.3 var(--brand-colour));
-	--header-foreground--light: oklch(100% 0 0);
-	--header-nav-background--light: oklch(30% 0.3 var(--brand-colour));
+	--header-background--light: oklch(
+		49% var(--brand-intensity-vivid) var(--brand-colour)
+	);
+	--header-foreground--light: #ffffff;
+	--header-nav-background--light: oklch(
+		30% var(--brand-intensity-vivid) var(--brand-colour)
+	);
 	--header-nav-background-overflow--light: var(--header-nav-background--light);
-	--header-nav-links--light: oklch(90% 0 0);
-	--header-nav-drawer-background--light: oklch(96% 0 0);
-	--header-nav-drawer-links--light: oklch(1% 0 0);
-	--header-nav-separator-line--light: oklch(87% 0 0);
-	--header-button-background--light: oklch(49% 0.3 var(--brand-colour));
-	--header-button-foreground--light: oklch(100% 0 0);
-	--header-button-outline--light: 2px solid oklch(90% 0 0); // Use especially if button colour matches header colour
+	--header-nav-links--light: #e5e5e5;
+	--header-nav-drawer-background--light: #f5f5f5;
+	--header-nav-drawer-links--light: #0a0a0a;
+	--header-nav-separator-line--light: #d9d9d9;
+	--header-button-background--light: oklch(
+		49% var(--brand-intensity-vivid) var(--brand-colour)
+	);
+	--header-button-foreground--light: #ffffff;
+	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
 	--header-logo-focus-filter--light: none;
 
 	//header search
-	--header-search-form-background--light: oklch(100% 0 0);
-	--header-search-form-text--light: oklch(1% 0 0);
-	--header-search-drawer-label--light: oklch(1% 0 0);
-	--header-search-drawer-background--light: oklch(100% 0 0);
-	--header-search-drawer-input-background--light: oklch(100% 0 0);
-	--header-search-drawer-input-text--light: oklch(1% 0 0);
-	--header-search-drawer-input-border--light: oklch(1% 0 0);
+	--header-search-form-background--light: #ffffff;
+	--header-search-form-text--light: #0a0a0a;
+	--header-search-drawer-label--light: #0a0a0a;
+	--header-search-drawer-background--light: #ffffff;
+	--header-search-drawer-input-background--light: #ffffff;
+	--header-search-drawer-input-text--light: #0a0a0a;
+	--header-search-drawer-input-border--light: #0a0a0a;
 
 	//these colours are not available for selecting in the palette
 	--foreground-hint--light: #737373;
@@ -55,53 +60,70 @@
 	--strong--light: #525252;
 	--error--light: #c10007;
 	--error-muted--light: #ffa2a2;
+
+	//focus colours - USED BY DARK THEME
 	--focus-text--light: #000;
 	--focus-background--light: #ffd230; //needs to contrast with focus-text
 	--focus-background-muted--light: #f5f5f5; //also needs to contrast with focus-text
 	--focus-accent--light: #ffd633;
 	--focus-outline--light: var(--focus-text--light);
 
-	//component colours (set in theme.json usually)
-	--button-background--light: var(--primary--light);
-	--button-background-hover--light: var(--primary-accent--light);
-	--button-text--light: var(--background--light);
-	--button-text-hover--light: var(--background--light);
-	--link-text--light: var(--primary--light);
-	--link-text-hover--light: var(--primary-accent--light);
-	--quote-border--light: oklch(42% 0 0);
+	// Component colours (set in theme.json usually)
+	// Hard coded colours so they aren't affected by brand colour changes
+	--button-background--light: oklch(49% 0.3 256);
+	--button-text--light: #ffffff;
+	--link-text--light: oklch(49% 0.3 256);
+	--quote-border--light: #737373;
 
 	//DARK MODE
 
 	//palette
-	--primary--dark: oklch(78% 0.07 256);
-	--primary-accent--dark: oklch(80% 0.2 256);
-	--background--dark: oklch(14% 0 0);
-	--background-secondary--dark: oklch(38% 0 0);
-	--foreground-secondary--dark: oklch(90% 0 0);
-	--foreground--dark: oklch(100% 0 0);
+	--primary--dark: oklch(80% var(--brand-intensity-subtle) var(--brand-colour));
+	--primary-accent--dark: oklch(
+		76% var(--brand-intensity-subtle) var(--brand-colour)
+	);
+	--background--dark: #383838;
+	--background-secondary--dark: #525252;
+	--foreground-secondary--dark: #e5e5e5;
+	--foreground--dark: #ffffff;
 
-	//header colours
-	--header-background--dark: oklch(49% 0.3 var(--brand-colour));
-	--header-foreground--dark: oklch(100% 0 0);
-	--header-nav-background--dark: oklch(30% 0.3 var(--brand-colour));
-	--header-nav-background-overflow--dark: var(--header-nav-background--dark);
-	--header-nav-drawer-background--dark: oklch(38% 0 0);
-	--header-nav-drawer-links--dark: oklch(100% 0 0);
-	--header-nav-separator-line--dark: oklch(95% 0 0);
-	--header-nav-links--dark: oklch(90% 0 0);
-	--header-button-background--dark: oklch(49% 0.3 var(--brand-colour));
-	--header-button-foreground--dark: oklch(100% 0 0);
-	--header-button-outline: 2px solid oklch(90% 0 0); // Use especially if button colour matches header colour
-	--header-logo-focus-filter--dark: none;
+	// Header colours
+	// WE USE LIGHT THEME COLOURS FOR THE HEADER BY DEFAULT
+	--header-background--dark: var(--header-background--light);
+	--header-foreground--dark: var(--header-foreground--light);
+	--header-nav-background--dark: var(--header-nav-background--light);
+	--header-nav-background-overflow--dark: var(
+		--header-nav-background-overflow--light
+	);
+	--header-nav-drawer-background--dark: var(
+		--header-nav-drawer-background--light
+	);
+	--header-nav-drawer-links--dark: var(--header-nav-drawer-links--light);
+	--header-nav-separator-line--dark: var(--header-nav-separator-line--light);
+	--header-nav-links--dark: var(--header-nav-links--light);
+	--header-button-background--dark: var(--header-button-background--light);
+	--header-button-foreground--dark: var(--header-button-foreground--light);
+	--header-button-outline--dark: var(--header-button-outline--light);
+	--header-logo-focus-filter--dark: var(--header-logo-focus-filter--light);
 
 	//header search
-	--header-search-form-background--dark: oklch(100% 0 0);
-	--header-search-form-text--dark: oklch(1% 0 0);
-	--header-search-drawer-label--dark: oklch(1% 0 0);
-	--header-search-drawer-background--dark: oklch(100% 0 0);
-	--header-search-drawer-input-background--dark: oklch(100% 0 0);
-	--header-search-drawer-input-text--dark: oklch(1% 0 0);
-	--header-search-drawer-input-border--dark: oklch(1% 0 0);
+	--header-search-form-background--dark: var(
+		--header-search-form-background--light
+	);
+	--header-search-form-text--dark: var(--header-search-form-text--light);
+	--header-search-drawer-label--dark: var(--header-search-drawer-label--light);
+	--header-search-drawer-background--dark: var(
+		--header-search-drawer-background--light
+	);
+	--header-search-drawer-input-background--dark: var(
+		--header-search-drawer-input-background--light
+	);
+	--header-search-drawer-input-text--dark: var(
+		--header-search-drawer-input-text--light
+	);
+	--header-search-drawer-input-border--dark: var(
+		--header-search-drawer-input-border--light
+	);
 
 	//general
 	--foreground-hint--dark: #737373;
@@ -111,18 +133,18 @@
 	--strong--dark: #fafafa;
 	--error--dark: #f00;
 	--error-muted--dark: #c10007;
-	--focus-text--dark: #000;
-	--focus-background--dark: #ffd230;
-	--focus-background-muted--dark: #bdb289;
-	--focus-accent--dark: #ffd633;
-	--focus-outline--light: var(--focus-text--dark);
 
-	//components
-	--button-background--dark: var(--primary--dark);
-	--button-background-hover--dark: var(--primary-accent--dark);
-	--button-text--dark: var(--background--dark);
-	--button-text-hover--dark: var(--background--dark);
-	--link-text--dark: var(--primary--dark);
-	--link-text-hover--dark: var(--primary-accent--dark);
-	--quote-border--dark: oklch(84% 0 0);
+	//focus colours - SAME AS LIGHT THEME
+	--focus-text--dark: var(--focus-text--light);
+	--focus-background--dark: var(--focus-background--light);
+	--focus-background-muted--dark: var(--focus-background-muted--light);
+	--focus-accent--dark: var(--focus-accent--light);
+	--focus-outline--dark: var(--focus-outline--light);
+
+	// Components
+	// DEFAULT TO PALETTE COLOURS IN THE MAIN (so redeclaration isn't needed)
+	--button-background--dark: oklch(80% 0.07 256);
+	--button-text--dark: #0a0a0a;
+	--link-text--dark: oklch(80% 0.07 256);
+	--quote-border--dark: #737373;
 }

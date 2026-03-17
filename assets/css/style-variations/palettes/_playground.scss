@@ -5,6 +5,15 @@
 
 :root.website-2,
 :root:has(body.website-2) {
+	//palette
+	// these are the colours that are pickable in the colour palette - see theme.json
+	--primary--light: #193cb8; //used for buttons and links
+	--primary-accent--light: #00f; // Used for button and link hover states
+	--background--light: pink; // Both the page background, and text on things with a dark background such as buttons
+	--background-secondary--light: green;
+	--foreground-secondary--light: #404040;
+	--foreground--light: #0a0a0a;
+
 	//header colours
 	--header-background--light: #143859;
 	--header-foreground--light: #fff;
@@ -14,15 +23,6 @@
 	--header-nav-drawer-links--light: #fd0;
 	--header-nav-links--light: #e5e5e5;
 	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
-
-	//palette
-	// these are the colours that are pickable in the colour palette - see theme.json
-	--primary--light: #193cb8; //used for buttons and links
-	--primary-accent--light: #00f; // Used for button and link hover states
-	--background--light: pink; // Both the page background, and text on things with a dark background such as buttons
-	--background-secondary--light: green;
-	--foreground-secondary--light: #404040;
-	--foreground--light: #0a0a0a;
 
 	//hidden
 	//these colours are not available for selecting in the palette

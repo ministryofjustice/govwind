@@ -8,87 +8,33 @@
 :root.website-56, //56 = CJSM
 :root:has(body.website-56) {
 	//brand unique colours
+	--brand-colour: 249; //degrees round the colour wheel
+	--preview: oklch(30.6% 0.064 249);
+
+	--brand-colour: 249; //degrees round the colour wheel
+	--brand-intensity-vivid: 0.064; //intensity mainly for light theme
+	--brand-intensity-subtle: 0.066; //intensity mainly for dark theme
+
+	// Extra colours for palette
 	--secondary--light: #dac777;
 	--secondary-accent--light: #f8f4e4;
 	--secondary--dark: #4c4215;
 	--secondary-accent--dark: #47453e;
 
 	//header colours
-	--header-background--light: #143859;
-	--header-foreground--light: #fff;
-	--header-nav-background--light: #143859;
-	--header-nav-links--light: #e5e5e5;
-	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
 	--header-logo-focus-filter--light: invert(1) hue-rotate(180deg);
 
-	//palette
-	// these are the colours that are pickable in the colour palette - see theme.json
-	--primary--light: #12314e; //used for buttons and links
-	--primary-accent--light: #143859; // Used for button and link hover states
-	--background--light: #ffffff; // Both the page background, and text on things with a dark background such as buttons
-	--background-secondary--light: #e5e5e5;
-	--foreground-secondary--light: #404040;
-	--foreground--light: #0a0a0a;
-
 	//hidden
-	//these colours are not available for selecting in the palette
-	--foreground-hint--light: #737373;
-	--disabled--light: #a1a1a1;
-	--muted--light: #f5f5f5;
-	--subtle--light: #fafafa;
-	--strong--light: #525252;
-	--error--light: #c10007;
-	--error-muted--light: #ffa2a2;
+	//focus colours
 	--focus-text--light: #000;
-	--focus-background--light: #f8f4e4;
+	--focus-background--light: #f8f4e4; //needs to contrast with focus-text
+	--focus-background-muted--light: #f8f4e4; //also needs to contrast with focus-text
 	--focus-accent--light: #dac777;
 	--focus-outline--light: #2366a3;
 
 	//DARK MODE
 
 	//header colours
-	--header-background--dark: var(--header-background--light);
-	--header-foreground--dark: var(--header-foreground--light);
-	--header-nav-background--dark: var(--header-nav-background--light);
-	--header-nav-background-overflow--dark: var(
-		--header-nav-background-overflow--light
-	);
-	--header-nav-links--dark: var(--header-nav-links--light);
-	--header-button-outline--dark: var(--header-button-outline--light);
 	--header-logo-focus-filter--dark: invert(1) hue-rotate(180deg);
 
-	//palette
-	--primary--dark: #b3bfe6;
-	--primary-accent--dark: #9db0ef;
-	--background--dark: #383838;
-	--background-secondary--dark: #525252;
-	--foreground-secondary--dark: #e5e5e5;
-	--foreground--dark: #ffffff;
-
-	//hidden
-	--foreground-hint--dark: #737373;
-	--disabled--dark: #525252;
-	--muted--dark: #545454;
-	--subtle--dark: #737373;
-	--strong--dark: #fafafa;
-	--error--dark: #f00;
-	--error-muted--dark: #c10007;
-	--focus-text--dark: var(--focus-text--light);
-	--focus-background--dark: var(--focus-background--light);
-	--focus-accent--dark: var(--focus-accent--light);
-	--focus-outline--dark: var(--focus-outline--light);
-
-	/*
-	//palette
-	--primary-dark: var(--primary-light);
-	--primary-accent-dark: var(--primary-accent-light);
-	--background-dark: var(--background-light);
-	--foreground-dark: var(--foreground-light);
-
-	//hidden
-	--muted-dark: var(--muted-light);
-	--error-dark: var(--error-light);
-	--focus-dark: var(--focus-light);
-	
-*/
 }

@@ -22,7 +22,7 @@
 	--secondary-accent--dark: #47453e;
 
 	//header colours
-	--header-logo-focus-filter--light: invert(1) hue-rotate(180deg);
+	--header-logo-focus-filter--light: invert(1) hue-rotate(180deg); // we invert the logo on focus
 
 	//hidden
 	//focus colours
@@ -35,6 +35,5 @@
 	//DARK MODE
 
 	//header colours
-	--header-logo-focus-filter--dark: invert(1) hue-rotate(180deg);
-
+	--header-logo-focus-filter--dark: invert(1) hue-rotate(180deg); // we invert the logo on focus
 }

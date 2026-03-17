@@ -4,31 +4,36 @@
 */
 
 :root {
-
 	--brand-colour: 256; //degrees round the colour wheel
-	--preview: oklch(49% 0.30 256);
+	--preview: oklch(49% 0.3 256);
 
 	//palette
 	//put them in "colour" order, so they make sense when chosen from the palette
 	// these are the colours that are pickable in the colour palette - see theme.json
-	--primary--light: oklch(49% 0.30 var(--brand-colour)); //used for buttons and links
-	--primary-accent--light: oklch(30% 0.30 var(--brand-colour)); // Used for button and link hover states
-	--background--light: oklch(100% 0 0); // Both the page background, and text on things with a dark background such as buttons
+	--primary--light: oklch(
+		49% 0.3 var(--brand-colour)
+	); //used for buttons and links
+	--primary-accent--light: oklch(
+		30% 0.3 var(--brand-colour)
+	); // Used for button and link hover states
+	--background--light: oklch(
+		100% 0 0
+	); // Both the page background, and text on things with a dark background such as buttons
 	--background-secondary--light: oklch(90% 0 0);
 	--foreground-secondary--light: oklch(17% 0 0);
 	--foreground--light: oklch(1% 0 0);
 
 	//HIDDEN FROM PALETTE - these colours are not available for selecting in the palette
 	//header colours
-	--header-background--light: oklch(49% 0.30 var(--brand-colour));
+	--header-background--light: oklch(49% 0.3 var(--brand-colour));
 	--header-foreground--light: oklch(100% 0 0);
-	--header-nav-background--light: oklch(30% 0.30 var(--brand-colour));
+	--header-nav-background--light: oklch(30% 0.3 var(--brand-colour));
 	--header-nav-background-overflow--light: var(--header-nav-background--light);
 	--header-nav-links--light: oklch(90% 0 0);
 	--header-nav-drawer-background--light: oklch(96% 0 0);
 	--header-nav-drawer-links--light: oklch(1% 0 0);
 	--header-nav-separator-line--light: oklch(87% 0 0);
-	--header-button-background--light: oklch(49% 0.30 var(--brand-colour));
+	--header-button-background--light: oklch(49% 0.3 var(--brand-colour));
 	--header-button-foreground--light: oklch(100% 0 0);
 	--header-button-outline--light: 2px solid oklch(90% 0 0); // Use especially if button colour matches header colour
 	--header-logo-focus-filter--light: none;
@@ -71,20 +76,20 @@
 	--primary--dark: oklch(78% 0.07 256);
 	--primary-accent--dark: oklch(80% 0.2 256);
 	--background--dark: oklch(14% 0 0);
-	--background-secondary--dark: oklch(38% 0 0);;
+	--background-secondary--dark: oklch(38% 0 0);
 	--foreground-secondary--dark: oklch(90% 0 0);
 	--foreground--dark: oklch(100% 0 0);
 
 	//header colours
-	--header-background--dark: oklch(49% 0.30 var(--brand-colour));
+	--header-background--dark: oklch(49% 0.3 var(--brand-colour));
 	--header-foreground--dark: oklch(100% 0 0);
-	--header-nav-background--dark: oklch(30% 0.30 var(--brand-colour));
+	--header-nav-background--dark: oklch(30% 0.3 var(--brand-colour));
 	--header-nav-background-overflow--dark: var(--header-nav-background--dark);
 	--header-nav-drawer-background--dark: oklch(38% 0 0);
 	--header-nav-drawer-links--dark: oklch(100% 0 0);
 	--header-nav-separator-line--dark: oklch(95% 0 0);
 	--header-nav-links--dark: oklch(90% 0 0);
-	--header-button-background--dark: oklch(49% 0.30 var(--brand-colour));
+	--header-button-background--dark: oklch(49% 0.3 var(--brand-colour));
 	--header-button-foreground--dark: oklch(100% 0 0);
 	--header-button-outline: 2px solid oklch(90% 0 0); // Use especially if button colour matches header colour
 	--header-logo-focus-filter--dark: none;
@@ -120,5 +125,4 @@
 	--link-text--dark: var(--primary--dark);
 	--link-text-hover--dark: var(--primary-accent--dark);
 	--quote-border--dark: oklch(84% 0 0);
-
 }

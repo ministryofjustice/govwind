@@ -12,34 +12,34 @@
 			"defaultPalette": false,
 			"palette": [
 				{
-					"slug": "primary",
+					"slug": "colour-1",
 					"color": "var(--colour-primary)",
-					"name": "Primary"
+					"name": "Colour 1"
 				},
 				{
-					"slug": "primary-accent",
+					"slug": "colour-2",
 					"color": "var(--colour-primary-accent)",
-					"name": "Primary (accent)"
+					"name": "Colour 2"
 				},
 				{
-					"slug": "site-background",
+					"slug": "greyscale-a",
 					"color": "var(--colour-background)",
-					"name": "Background"
+					"name": "Greyscale A"
 				},
 				{
-					"slug": "background-secondary",
+					"slug": "greyscale-h",
 					"color": "var(--colour-background-secondary)",
-					"name": "Background (secondary)"
+					"name": "Greyscale H"
 				},
 				{
-					"slug": "foreground-secondary",
+					"slug": "greyscale-q",
 					"color": "var(--colour-foreground-secondary)",
-					"name": "Foreground (secondary)"
+					"name": "Greyscale Q"
 				},
 				{
-					"slug": "foreground",
+					"slug": "greyscale-z",
 					"color": "var(--colour-foreground)",
-					"name": "Foreground"
+					"name": "Greyscale Z"
 				}
 			]
 		},

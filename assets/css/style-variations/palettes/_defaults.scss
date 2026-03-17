@@ -11,9 +11,7 @@
 	//palette
 	//put them in "colour" order, so they make sense when chosen from the palette
 	// these are the colours that are pickable in the colour palette - see theme.json
-	--primary--light: oklch(
-		49% var(--brand-intensity-vivid) var(--brand-colour)
-	);
+	--primary--light: oklch(49% var(--brand-intensity-vivid) var(--brand-colour));
 	--primary-accent--light: oklch(
 		30% var(--brand-intensity-vivid) var(--brand-colour)
 	);
@@ -73,6 +71,7 @@
 	--button-background--light: oklch(49% 0.3 256);
 	--button-text--light: #ffffff;
 	--link-text--light: oklch(49% 0.3 256);
+	--link-text-hover--light: oklch(30% 0.3 256);
 	--quote-border--light: #737373;
 
 	//DARK MODE
@@ -146,5 +145,6 @@
 	--button-background--dark: oklch(80% 0.07 256);
 	--button-text--dark: #0a0a0a;
 	--link-text--dark: oklch(80% 0.07 256);
+	--link-text-hover--dark: oklch(83% 0.16 256);
 	--quote-border--dark: #737373;
 }

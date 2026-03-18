@@ -26,7 +26,7 @@
             <!-- /wp:image -->
             <!-- wp:heading {"fontSize":"lg"} -->
             <h2 class="wp-block-heading has-lg-font-size"><?php esc_html_e(
-            	"TIP",
+            	"Add tip heading",
             	"govwind",
             ); ?></h2>
             <!-- /wp:heading --></div>
@@ -34,7 +34,7 @@
 
         <!-- wp:paragraph -->
         <p><?php esc_html_e(
-        	"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non orci vitae nibh luctus fermentum. Integer feugiat, nibh sit amet tristique volutpat, neque elit convallis lacus, at pretium mi nisi sit amet lorem. Curabitur at lacus ac velit suscipit ultrices vitae vel arcu.",
+        	"Add paragraphy text",
         	"govwind",
         ); ?></p>
         <!-- /wp:paragraph -->

@@ -263,9 +263,21 @@
 			}
 		},
 		"blocks": {
+			"wb-blocks/accordion": {
+				"spacing": {
+					"padding": {
+						"right": "var(--prose-max-width-padding)"
+					}
+				}
+			},
 			"wb-blocks/reveal": {
 				"color": {
 					"text": "var(--colour-foreground)"
+				},
+				"spacing": {
+					"padding": {
+						"right": "var(--prose-max-width-padding)"
+					}
 				}
 			},
 			"core/site-title": {
@@ -486,8 +498,11 @@
 		"govwind/hero-cta-full-width",
 		"govwind/icon-info-card",
 		"govwind/feature-two-col",
+		"govwind/cta",
 		"govwind/about",
-		"govwind/page-heading-hero"
+		"govwind/page-heading-hero",
+		"govwind/icon-grid-cta",
+		"govwind/toc-section"
 	],
 	"templateParts": [
 		{

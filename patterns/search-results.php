@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Search results
  * Slug: govwind/search-results

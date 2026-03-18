@@ -18,16 +18,25 @@
         <div class="wp-block-group">
             <!-- wp:image {"width":"24px","height":"24px","scale":"contain","sizeSlug":"large","className":"is-style-default"} -->
             <figure class="wp-block-image size-large is-resized is-style-default">
-                <img src="<?php gw_placeholder_image(96, 96); ?>" alt="tip placeholder image" style="object-fit:contain;width:24px;height:24px" />
+                <img src="<?php gw_placeholder_image(
+                	96,
+                	96,
+                ); ?>" alt="tip placeholder image" style="object-fit:contain;width:24px;height:24px" />
             </figure>
             <!-- /wp:image -->
             <!-- wp:heading {"fontSize":"lg"} -->
-            <h2 class="wp-block-heading has-lg-font-size"><?php esc_html_e('TIP', 'govwind'); ?></h2>
+            <h2 class="wp-block-heading has-lg-font-size"><?php esc_html_e(
+            	"TIP",
+            	"govwind",
+            ); ?></h2>
             <!-- /wp:heading --></div>
         <!-- /wp:group -->
 
         <!-- wp:paragraph -->
-        <p><?php esc_html_e('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non orci vitae nibh luctus fermentum. Integer feugiat, nibh sit amet tristique volutpat, neque elit convallis lacus, at pretium mi nisi sit amet lorem. Curabitur at lacus ac velit suscipit ultrices vitae vel arcu.', 'govwind'); ?></p>
+        <p><?php esc_html_e(
+        	"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non orci vitae nibh luctus fermentum. Integer feugiat, nibh sit amet tristique volutpat, neque elit convallis lacus, at pretium mi nisi sit amet lorem. Curabitur at lacus ac velit suscipit ultrices vitae vel arcu.",
+        	"govwind",
+        ); ?></p>
         <!-- /wp:paragraph -->
 
     </div>

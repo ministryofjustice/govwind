@@ -28,7 +28,9 @@
 			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%">
 				<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
 				<figure class="wp-block-image size-large">
-					<img src="<?php echo esc_url(gw_placeholder_image(600, 400)); ?>" alt="Feature image" />
+					<img src="<?php echo esc_url(
+     	gw_placeholder_image(600, 400),
+     ); ?>" alt="Feature image" />
 				</figure>
 				<!-- /wp:image -->
 			</div>

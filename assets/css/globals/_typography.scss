@@ -112,4 +112,8 @@
 		margin-block-start: var(--space-heading-md);
 		margin-block-end: var(--space-heading-sm);
 	}
+
+	.has-background & {
+		margin-block-start: 0;
+	}
 }

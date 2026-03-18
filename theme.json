@@ -12,34 +12,34 @@
 			"defaultPalette": false,
 			"palette": [
 				{
-					"slug": "colour-1",
-					"color": "var(--colour-primary)",
-					"name": "Colour 1"
+					"slug": "colour-A",
+					"color": "var(--colour-palette-1)",
+					"name": "Primary"
 				},
 				{
-					"slug": "colour-2",
-					"color": "var(--colour-primary-accent)",
-					"name": "Colour 2"
+					"slug": "colour-B",
+					"color": "var(--colour-palette-2)",
+					"name": "Primary accent"
 				},
 				{
-					"slug": "greyscale-a",
-					"color": "var(--colour-background)",
-					"name": "Greyscale A"
+					"slug": "greyscale-A",
+					"color": "var(--colour-palette-greyscale-1)",
+					"name": "Greyscale 1"
 				},
 				{
-					"slug": "greyscale-h",
-					"color": "var(--colour-background-secondary)",
-					"name": "Greyscale H"
+					"slug": "greyscale-B",
+					"color": "var(--colour-palette-greyscale-2)",
+					"name": "Greyscale 2"
 				},
 				{
-					"slug": "greyscale-q",
-					"color": "var(--colour-foreground-secondary)",
-					"name": "Greyscale Q"
+					"slug": "greyscale-C",
+					"color": "var(--colour-palette-greyscale-3)",
+					"name": "Greyscale 3"
 				},
 				{
-					"slug": "greyscale-z",
-					"color": "var(--colour-foreground)",
-					"name": "Greyscale Z"
+					"slug": "greyscale-D",
+					"color": "var(--colour-palette-greyscale-4)",
+					"name": "Greyscale 4"
 				}
 			]
 		},
@@ -148,6 +148,7 @@
 	},
 	"styles": {
 		"color": {
+			"background": "var(--colour-page-background)",
 			"text": "var(--colour-foreground)"
 		},
 		"spacing": {

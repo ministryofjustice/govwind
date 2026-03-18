@@ -176,11 +176,12 @@ function govwind_add_block_editor_class($classes)
  */
 add_action("enqueue_block_editor_assets", function () {
 	$site_name = sanitize_title(get_bloginfo("name")); // convert to safe CSS class
+	$site_ID = get_current_blog_id();
 
 	// Only affects the block editor pages (and only really affects the colour picker palette)
 	$screen = get_current_screen();
 	if ($screen && $screen->is_block_editor()) {
-		echo "<script>document.documentElement.classList.add('$site_name');</script>";
+		echo "<script>document.documentElement.classList.add('website-$site_ID');</script>";
 	}
 
 	wp_enqueue_script(
@@ -191,9 +192,10 @@ add_action("enqueue_block_editor_assets", function () {
 		true,
 	);
 
-	// Pass blog name into JS safely
+	// Pass blog name & ID into JS safely
 	wp_localize_script("editor-iframe-class", "siteData", [
 		"name" => $site_name,
+		"id" => $site_ID,
 	]);
 });
 

@@ -7,33 +7,44 @@
 :root:has(body.website-66),
 :root.website-56, //56 = CJSM
 :root:has(body.website-56) {
-	//brand unique colours
+	// Brand unique colour variables
 	--brand-colour: 249; //degrees round the colour wheel
-	--preview: oklch(30.6% 0.064 249);
-
-	--brand-colour: 249; //degrees round the colour wheel
-	--brand-intensity-vivid: 0.064; //intensity mainly for light theme
+	--brand-intensity-vivid: 0.071; //intensity mainly for light theme
 	--brand-intensity-subtle: 0.066; //intensity mainly for dark theme
+	--brand-brightness-primary-light: 30%;
+	--brand-brightness-accent-light: 43%;
+	--brand-brightness-primary-dark: 80%;
+	--brand-brightness-accent-dark: 76%;
 
-	// Extra colours for palette
-	--secondary--light: #dac777;
-	--secondary-accent--light: #f8f4e4;
-	--secondary--dark: #4c4215;
-	--secondary-accent--dark: #47453e;
+	// Extra colours for palette - needs to be included in the list of colours in _index.scss
+	--palette-3--light-mode: #dac777;
+	--palette-4--light-mode: #f8f4e4;
 
-	//header colours
-	--header-logo-focus-filter--light: invert(1) hue-rotate(180deg); // we invert the logo on focus
+	// swap the light colours and dark colours in dark mode
+	--palette-1--dark-mode: #dac777;
+	--palette-2--dark-mode: #f8f4e4;
+	--palette-3--dark-mode: var(--palette-1--light-mode);
+	--palette-4--dark-mode: var(--palette-2--light-mode);
 
-	//hidden
-	//focus colours
-	--focus-text--light: #000;
-	--focus-background--light: #f8f4e4; //needs to contrast with focus-text
-	--focus-background-muted--light: #f8f4e4; //also needs to contrast with focus-text
-	--focus-accent--light: #dac777;
-	--focus-outline--light: #2366a3;
+	// Button colours
+	--button-background--light-mode: oklch(0.3 0.071 249);
+	--button-background--dark-mode: #dac777;
 
-	//DARK MODE
+	// Header colours
+	--header-nav-background--light-mode: var(
+		--header-background--light-mode
+	); //sets the nav background to match the rest of the header
+	--header-nav-background--dark-mode: var(
+		--header-background--dark-mode
+	); //sets the nav background to match the rest of the header
+	--header-logo-focus-filter--light-mode: invert(1) hue-rotate(180deg); // we invert the logo on focus
+	--header-logo-focus-filter--dark-mode: invert(1) hue-rotate(180deg); // we invert the logo on focus
 
-	//header colours
-	--header-logo-focus-filter--dark: invert(1) hue-rotate(180deg); // we invert the logo on focus
+	// Focus colours
+	// dark mode uses light mode colours by default
+	--focus-text--light-mode: #000;
+	--focus-background--light-mode: #f8f4e4; //needs to contrast with focus-text
+	--focus-background-muted--light-mode: #f8f4e4; //also needs to contrast with focus-text
+	--focus-accent--light-mode: #dac777;
+	--focus-outline--light-mode: #2366a3;
 }

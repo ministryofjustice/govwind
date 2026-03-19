@@ -19,10 +19,11 @@ wp.domReady(() => {
 
 		if (editHTML == null) return;
 
-		// Add the blog name as a class
-		if (typeof siteData !== "undefined" && siteData.name) {
-			editHTML.classList.add(siteData.name);
+		// Add the blog ID as a class
+		if (typeof siteData !== "undefined" && siteData.id) {
+			editHTML.classList.add("website-" + siteData.id);
 		}
+		// siteData also has the site name (siteData.name)
 	}
 
 	applyClass();

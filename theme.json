@@ -12,34 +12,34 @@
 			"defaultPalette": false,
 			"palette": [
 				{
-					"slug": "primary",
-					"color": "var(--colour-primary)",
+					"slug": "colour-A",
+					"color": "var(--colour-palette-1)",
 					"name": "Primary"
 				},
 				{
-					"slug": "primary-accent",
-					"color": "var(--colour-primary-accent)",
-					"name": "Primary (accent)"
+					"slug": "colour-B",
+					"color": "var(--colour-palette-2)",
+					"name": "Primary accent"
 				},
 				{
-					"slug": "site-background",
-					"color": "var(--colour-background)",
-					"name": "Background"
+					"slug": "greyscale-A",
+					"color": "var(--colour-palette-greyscale-1)",
+					"name": "Greyscale 1"
 				},
 				{
-					"slug": "background-secondary",
-					"color": "var(--colour-background-secondary)",
-					"name": "Background (secondary)"
+					"slug": "greyscale-B",
+					"color": "var(--colour-palette-greyscale-2)",
+					"name": "Greyscale 2"
 				},
 				{
-					"slug": "foreground-secondary",
-					"color": "var(--colour-foreground-secondary)",
-					"name": "Foreground (secondary)"
+					"slug": "greyscale-C",
+					"color": "var(--colour-palette-greyscale-3)",
+					"name": "Greyscale 3"
 				},
 				{
-					"slug": "foreground",
-					"color": "var(--colour-foreground)",
-					"name": "Foreground"
+					"slug": "greyscale-D",
+					"color": "var(--colour-palette-greyscale-4)",
+					"name": "Greyscale 4"
 				}
 			]
 		},
@@ -148,6 +148,7 @@
 	},
 	"styles": {
 		"color": {
+			"background": "var(--colour-page-background)",
 			"text": "var(--colour-foreground)"
 		},
 		"spacing": {
@@ -175,14 +176,14 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--colour-primary)"
+					"text": "var(--colour-link-text)"
 				},
 				"typography": {
 					"textDecoration": "underline"
 				},
 				":hover": {
 					"color": {
-						"text": "var(--colour-primary-accent)"
+						"text": "var(--colour-link-text-hover)"
 					}
 				},
 				":focus": {
@@ -231,12 +232,6 @@
 				"typography": {
 					"fontSize": "var(--font-size-base)",
 					"lineHeight": "1.75"
-				},
-				":hover": {
-					"color": {
-						"text": "var(--colour-background)",
-						"background": "var(--colour-primary-accent)"
-					}
 				},
 				":focus": {
 					"color": {
@@ -335,11 +330,6 @@
 					}
 				}
 			},
-			"core/file": {
-				"color": {
-					"text": "red"
-				}
-			},
 			"core/heading": {
 				"typography": {
 					"fontFamily": "var(--font-family-pt-sans)",
@@ -364,7 +354,7 @@
 			},
 			"core/separator": {
 				"color": {
-					"background": "var(--colour-primary)"
+					"background": "transparent"
 				},
 				"spacing": {
 					"margin": {
@@ -375,7 +365,7 @@
 			},
 			"core/quote": {
 				"border": {
-					"color": "var(--colour-primary)",
+					"color": "var(--colour-quote-border)",
 					"style": "solid",
 					"width": "0 0 0 4px"
 				},

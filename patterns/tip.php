@@ -33,10 +33,7 @@
         <!-- /wp:group -->
 
         <!-- wp:paragraph -->
-        <p><?php esc_html_e(
-        	"Add paragraphy text",
-        	"govwind",
-        ); ?></p>
+        <p><?php esc_html_e("Add paragraphy text", "govwind"); ?></p>
         <!-- /wp:paragraph -->
 
     </div>

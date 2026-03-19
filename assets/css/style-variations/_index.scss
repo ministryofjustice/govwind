@@ -9,10 +9,25 @@ Add site-specific stylesheets thus:
 @forward "palettes/imb";
 @forward "palettes/lay-observers";
 */
-$colour-list:
-	primary, primary-accent, background, background-secondary, foreground,
-	foreground-secondary, foreground-hint, disabled, muted, subtle, strong, error,
-	error-muted, focus-text, focus-background, focus-background-muted,
+$palette-colour-list:
+	//palette colours referenced in theme.json or any site.json - if a site has more colours, add them here
+	palette-1,
+	palette-2,
+	//palettes 3+ not used by all sites
+	palette-3,
+	palette-4,
+	palette-greyscale-1,
+	palette-greyscale-2,
+	palette-greyscale-3,
+	palette-greyscale-4,
+	//greyscale 5+ not used by all sites
+	palette-greyscale-5,
+	palette-greyscale-6;
+
+//other colours
+$other-colour-list:
+	page-background, foreground, foreground-hint, disabled, muted, subtle, strong,
+	error, error-muted, focus-text, focus-background, focus-background-muted,
 	focus-outline, header-background, header-foreground, header-nav-background,
 	header-nav-background-overflow, header-nav-links,
 	header-nav-drawer-background, header-nav-drawer-links,
@@ -21,39 +36,38 @@ $colour-list:
 	header-search-drawer-label, header-search-drawer-background,
 	header-search-drawer-input-background, header-search-drawer-input-text,
 	header-search-drawer-input-border, header-button-outline,
-	header-logo-focus-filter, secondary, secondary-accent, button-background,
-	button-text;
+	header-logo-focus-filter, button-background, button-text,
+	button-background-hover, button-text-hover, link-text, link-text-hover,
+	quote-border;
+
+$colour-list: join($palette-colour-list, $other-colour-list);
 
 //goes through the $site-list and $colour-list
 //do not change the below, only add to the lists above
-@mixin gw-summon-palette($colours, $mode) {
+@mixin wb-summon-palette($colours, $mode) {
 	@each $colour in $colours {
 		--colour-#{$colour}: var(--#{$colour}--#{$mode});
 	}
 }
 
 :root {
-	@include gw-summon-palette($colours: $colour-list, $mode: dark);
+	@include wb-summon-palette($colours: $colour-list, $mode: dark-mode);
 
 	@media (prefers-color-scheme: light) {
-		@include gw-summon-palette($colours: $colour-list, $mode: light);
+		@include wb-summon-palette($colours: $colour-list, $mode: light-mode);
 	}
 }
 
-// mixin to shade a colour
-/**
- * For example:
- *
-	@include gw-shade-colour(
-		$from: --vc-primary-dark,
-		$to: --vc-accent-dark,
-		$degree: 80
-	);
- *
- *  Output would be:
-	--vc-accent-dark: lch(from var(--vc-primary-dark)80 c h)
- *
- **/
-@mixin gw-shade-colour($from, $to, $degree) {
-	#{$to}: lch(from var(#{$from}) #{$degree} c h);
+// A bit of code to make ticks on the palette colours contrast better with the background colour in question
+@mixin wb-contrast-tick($colours) {
+	@each $colour in $colours {
+		$colour_var: var(--colour-#{$colour});
+		.components-circular-option-picker__option[style*="background-color: var(--colour-#{$colour})"]
+			+ svg {
+			filter: invert(1) hue-rotate(230deg) contrast(200%) brightness(150%);
+			fill: $colour_var;
+			stroke: $colour_var;
+		}
+	}
 }
+@include wb-contrast-tick($palette-colour-list);

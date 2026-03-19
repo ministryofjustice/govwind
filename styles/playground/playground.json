@@ -5,32 +5,46 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "palette-colour-1",
-					"color": "#ff0",
-					"name": "Header background"
+					"slug": "colour-A",
+					"color": "var(--colour-palette-1)",
+					"name": "Primary"
 				},
 				{
-					"slug": "palette-colour-2",
-					"color": "#0ff",
-					"name": "Green"
+					"slug": "colour-B",
+					"color": "var(--colour-palette-2)",
+					"name": "Primary accent"
 				},
 				{
-					"slug": "palette-colour-3",
-					"color": "var(--colour-error-muted)",
-					"name": "Red"
+					"slug": "colour-C",
+					"color": "var(--colour-palette-3)",
+					"name": "Primary"
 				},
 				{
-					"slug": "palette-colour-4",
-					"color": "#00f",
-					"name": "Blue"
+					"slug": "colour-D",
+					"color": "var(--colour-palette-4)",
+					"name": "Primary accent"
+				},
+				{
+					"slug": "greyscale-A",
+					"color": "var(--colour-palette-greyscale-1)",
+					"name": "Greyscale 1"
+				},
+				{
+					"slug": "greyscale-B",
+					"color": "var(--colour-palette-greyscale-2)",
+					"name": "Greyscale 2"
+				},
+				{
+					"slug": "greyscale-C",
+					"color": "var(--colour-palette-greyscale-3)",
+					"name": "Greyscale 3"
+				},
+				{
+					"slug": "greyscale-D",
+					"color": "var(--colour-palette-greyscale-4)",
+					"name": "Greyscale 4"
 				}
 			]
-		}
-	},
-	"styles": {
-		"color": {
-			"background": "var(--playground-background)",
-			"text": "var(--playground-foreground)"
 		}
 	}
 }

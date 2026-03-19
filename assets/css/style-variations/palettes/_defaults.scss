@@ -4,116 +4,189 @@
 */
 
 :root {
-	//header colours
-	--header-background--light: #1447e6;
-	--header-foreground--light: #fff;
-	--header-nav-background--light: #193cb8;
-	--header-nav-background-overflow--light: var(--header-nav-background--light);
-	--header-nav-links--light: #e5e5e5;
-	--header-nav-drawer-background--light: #f5f5f5;
-	--header-nav-drawer-links--light: #0a0a0a;
-	--header-nav-separator-line--light: #d9d9d9;
-	--header-button-background--light: #1447e6;
-	--header-button-foreground--light: #ffffff;
-	--header-button-outline--light: 2px solid #e5e5e5; // Use especially if button colour matches header colour
-	--header-logo-focus-filter--light: none;
-
-	//header search
-	--header-search-form-background--light: #fff;
-	--header-search-form-text--light: #0a0a0a;
-	--header-search-drawer-label--light: #0a0a0a;
-	--header-search-drawer-background--light: #fff;
-	--header-search-drawer-input-background--light: #fff;
-	--header-search-drawer-input-text--light: #0a0a0a;
-	--header-search-drawer-input-border--light: #0a0a0a;
+	--brand-colour: 256; //degrees round the colour wheel
+	--brand-intensity-vivid: 0.3; //intensity mainly for light mode
+	--brand-intensity-subtle: 0.07; //intensity mainly for dark mode
+	//sets the brightness for the primary & primary accent colour in the header and palette (light & dark mode)
+	--brand-brightness-primary-light: 49%;
+	--brand-brightness-accent-light: 30%;
+	--brand-brightness-primary-dark: 80%;
+	--brand-brightness-accent-dark: 76%;
 
 	//palette
-	//put them in "colour" order, so they make sense when chosen from the palette
 	// these are the colours that are pickable in the colour palette - see theme.json
-	--primary--light: #1447e6; //used for buttons and links
-	--primary-accent--light: #193cb8; // Used for button and link hover states
-	--background--light: #ffffff; // Both the page background, and text on things with a dark background such as buttons
-	--background-secondary--light: #e5e5e5;
-	--foreground-secondary--light: #404040;
-	--foreground--light: #0a0a0a;
+	--palette-1--light-mode: oklch(
+		var(--brand-brightness-primary-light) var(--brand-intensity-vivid)
+			var(--brand-colour)
+	);
+	--palette-2--light-mode: oklch(
+		var(--brand-brightness-accent-light) var(--brand-intensity-vivid)
+			var(--brand-colour)
+	);
+	--palette-greyscale-1--light-mode: #ffffff; // The page background
+	--palette-greyscale-2--light-mode: #e5e5e5;
+	--palette-greyscale-3--light-mode: #404040;
+	--palette-greyscale-4--light-mode: #0a0a0a; // Used for text
 
-	//hidden
-	//these colours are not available for selecting in the palette
-	--foreground-hint--light: #737373;
-	--disabled--light: #a1a1a1;
-	--muted--light: #f5f5f5;
-	--subtle--light: #fafafa;
-	--strong--light: #525252;
-	--error--light: #c10007;
-	--error-muted--light: #ffa2a2;
-	--focus-text--light: #000;
-	--focus-background--light: #ffd230; //needs to contrast with focus-text
-	--focus-background-muted--light: #f5f5f5; //also needs to contrast with focus-text
-	--focus-accent--light: #ffd633;
-	--focus-outline--light: var(--focus-text--light);
-	--button-background--light: var(--primary--light);
-	--button-text--light: var(--background--light);
+	// Basic colours
+	// these are defaulted to palette greyscale colours
+	--page-background--light-mode: var(--palette-greyscale-1--light-mode);
+	--foreground--light-mode: var(--palette-greyscale-4--light-mode);
+
+	//header colours
+	--header-background--light-mode: oklch(
+		var(--brand-brightness-primary-light) var(--brand-intensity-vivid)
+			var(--brand-colour)
+	);
+	--header-foreground--light-mode: #ffffff;
+	--header-nav-background--light-mode: oklch(
+		var(--brand-brightness-accent-light) var(--brand-intensity-vivid)
+			var(--brand-colour)
+	);
+	--header-nav-background-overflow--light-mode: var(
+		--header-nav-background--light-mode
+	);
+	--header-nav-links--light-mode: #e5e5e5;
+	--header-nav-drawer-background--light-mode: #f5f5f5;
+	--header-nav-drawer-links--light-mode: #0a0a0a;
+	--header-nav-separator-line--light-mode: #d9d9d9;
+	--header-button-background--light-mode: var(--header-background--light-mode);
+	--header-button-foreground--light-mode: var(--header-foreground--light-mode);
+	--header-button-outline--light-mode: 2px solid #e5e5e5; // Use especially if button colour matches header colour
+	--header-logo-focus-filter--light-mode: none;
+
+	//header search
+	--header-search-form-background--light-mode: #ffffff;
+	--header-search-form-text--light-mode: #0a0a0a;
+	--header-search-drawer-label--light-mode: #0a0a0a;
+	--header-search-drawer-background--light-mode: #ffffff;
+	--header-search-drawer-input-background--light-mode: #ffffff;
+	--header-search-drawer-input-text--light-mode: #0a0a0a;
+	--header-search-drawer-input-border--light-mode: #0a0a0a;
+
+	// Auxillary colours
+	// these colours are not available for selecting in the palette
+	// they are genral colours which could be used all over the place
+	--foreground-hint--light-mode: #737373;
+	--disabled--light-mode: #a1a1a1;
+	--muted--light-mode: #f5f5f5;
+	--subtle--light-mode: #fafafa;
+	--strong--light-mode: #525252;
+	--error--light-mode: #c10007;
+	--error-muted--light-mode: #ffa2a2;
+
+	// Focus colours
+	// Note that these light mode colours are also the defaults for dark mode, see below
+	--focus-text--light-mode: #000;
+	--focus-background--light-mode: #ffd230; //needs to contrast with focus-text
+	--focus-background-muted--light-mode: #f5f5f5; //also needs to contrast with focus-text
+	--focus-accent--light-mode: #ffd633;
+	--focus-outline--light-mode: var(--focus-text--light-mode);
+
+	// Component colours (set in theme.json usually)
+	// Hard coded colours so they aren't affected by brand colour changes
+	// e.g. links will probably still be blue even if the website colour is yellow
+	--button-background--light-mode: #1a65a6;
+	--button-text--light-mode: #ffffff;
+	--link-text--light-mode: #1a65a6;
+	--link-text-hover--light-mode: #0f385c;
+	--quote-border--light-mode: #737373; // At the moment, this block might be designed differently, so this might go
 
 	//DARK MODE
 
-	//header colours
-	--header-background--dark: #1447e6;
-	--header-foreground--dark: #fff;
-	--header-nav-background--dark: #193cb8;
-	--header-nav-background-overflow--dark: var(--header-nav-background--dark);
-	--header-nav-drawer-background--dark: #525252;
-	--header-nav-drawer-links--dark: #ffffff;
-	--header-nav-separator-line--dark: #f3f2f1;
-	--header-nav-links--dark: #e5e5e5;
-	--header-button-background--dark: #1447e6;
-	--header-button-foreground--dark: #ffffff;
-	--header-button-outline: 2px solid #e5e5e5; // Use especially if button colour matches header colour
-	--header-logo-focus-filter--dark: none;
+	//palette
+	--palette-1--dark-mode: oklch(
+		var(--brand-brightness-primary-dark) var(--brand-intensity-subtle)
+			var(--brand-colour)
+	);
+	--palette-2--dark-mode: oklch(
+		var(--brand-brightness-accent-dark) var(--brand-intensity-subtle)
+			var(--brand-colour)
+	);
+	--palette-greyscale-1--dark-mode: #383838;
+	--palette-greyscale-2--dark-mode: #525252;
+	--palette-greyscale-3--dark-mode: #e5e5e5;
+	--palette-greyscale-4--dark-mode: #ffffff;
+
+	//basic colours
+	// these are defaulted to palette greyscale colours
+	--page-background--dark-mode: var(--palette-greyscale-1--dark-mode);
+	--foreground--dark-mode: var(--palette-greyscale-4--dark-mode);
+
+	// Header colours
+	// WE USE LIGHT MODE COLOURS FOR THE HEADER BY DEFAULT
+	--header-background--dark-mode: var(--header-background--light-mode);
+	--header-foreground--dark-mode: var(--header-foreground--light-mode);
+	--header-nav-background--dark-mode: var(--header-nav-background--light-mode);
+	--header-nav-background-overflow--dark-mode: var(
+		--header-nav-background-overflow--light-mode
+	);
+	--header-nav-drawer-background--dark-mode: var(
+		--header-nav-drawer-background--light-mode
+	);
+	--header-nav-drawer-links--dark-mode: var(
+		--header-nav-drawer-links--light-mode
+	);
+	--header-nav-separator-line--dark-mode: var(
+		--header-nav-separator-line--light-mode
+	);
+	--header-nav-links--dark-mode: var(--header-nav-links--light-mode);
+	--header-button-background--dark-mode: var(
+		--header-button-background--light-mode
+	);
+	--header-button-foreground--dark-mode: var(
+		--header-button-foreground--light-mode
+	);
+	--header-button-outline--dark-mode: var(--header-button-outline--light-mode);
+	--header-logo-focus-filter--dark-mode: var(
+		--header-logo-focus-filter--light-mode
+	);
 
 	//header search
-	--header-search-form-background--dark: #fff;
-	--header-search-form-text--dark: #0a0a0a;
-	--header-search-drawer-label--dark: #0a0a0a;
-	--header-search-drawer-background--dark: #fff;
-	--header-search-drawer-input-background--dark: #fff;
-	--header-search-drawer-input-text--dark: #0a0a0a;
-	--header-search-drawer-input-border--dark: #0a0a0a;
+	--header-search-form-background--dark-mode: var(
+		--header-search-form-background--light-mode
+	);
+	--header-search-form-text--dark-mode: var(
+		--header-search-form-text--light-mode
+	);
+	--header-search-drawer-label--dark-mode: var(
+		--header-search-drawer-label--light-mode
+	);
+	--header-search-drawer-background--dark-mode: var(
+		--header-search-drawer-background--light-mode
+	);
+	--header-search-drawer-input-background--dark-mode: var(
+		--header-search-drawer-input-background--light-mode
+	);
+	--header-search-drawer-input-text--dark-mode: var(
+		--header-search-drawer-input-text--light-mode
+	);
+	--header-search-drawer-input-border--dark-mode: var(
+		--header-search-drawer-input-border--light-mode
+	);
 
-	//palette
-	--primary--dark: #b3bfe6;
-	--primary-accent--dark: #9db0ef;
-	--background--dark: #383838;
-	--background-secondary--dark: #525252;
-	--foreground-secondary--dark: #e5e5e5;
-	--foreground--dark: #ffffff;
+	// General
+	--foreground-hint--dark-mode: #8c8c8c;
+	--disabled--dark-mode: #525252;
+	--muted--dark-mode: #545454;
+	--subtle--dark-mode: #8c8c8c;
+	--strong--dark-mode: #fafafa;
+	--error--dark-mode: #f00;
+	--error-muted--dark-mode: #c10007;
 
-	//hidden
-	--foreground-hint--dark: #737373;
-	--disabled--dark: #525252;
-	--muted--dark: #545454;
-	--subtle--dark: #737373;
-	--strong--dark: #fafafa;
-	--error--dark: #f00;
-	--error-muted--dark: #c10007;
-	--focus-text--dark: #000;
-	--focus-background--dark: #ffd230;
-	--focus-background-muted--dark: #bdb289;
-	--focus-accent--dark: #ffd633;
-	--focus-outline--light: var(--focus-text--dark);
-	--button-background--dark: var(--primary--dark);
-	--button-text--dark: var(--background--dark);
+	// Focus colours - SAME AS LIGHT MODE
+	--focus-text--dark-mode: var(--focus-text--light-mode);
+	--focus-background--dark-mode: var(--focus-background--light-mode);
+	--focus-background-muted--dark-mode: var(
+		--focus-background-muted--light-mode
+	);
+	--focus-accent--dark-mode: var(--focus-accent--light-mode);
+	--focus-outline--dark-mode: var(--focus-outline--light-mode);
 
-	/*
-	//palette
-	--primary-dark: var(--primary-light);
-	--primary-accent-dark: var(--primary-accent-light);
-	--background-dark: var(--background-light);
-	--foreground-dark: var(--foreground-light);
-
-	//hidden
-	--muted-dark: var(--muted-light);
-	--error-dark: var(--error-light);
-	--focus-dark: var(--focus-light);
-	
-*/
+	// Components
+	--button-background--dark-mode: #6cb6ff;
+	--button-text--dark-mode: #0a0a0a;
+	--link-text--dark-mode: #6cb6ff;
+	--link-text-hover--dark-mode: #9fd0ff;
+	--quote-border--dark-mode: #8c8c8c; // At the moment, this block might be designed differently, so this might go
 }

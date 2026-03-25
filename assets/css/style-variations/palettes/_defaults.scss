@@ -74,6 +74,10 @@
 	--strong--light-mode: #525252;
 	--error--light-mode: #c10007;
 	--error-muted--light-mode: #ffa2a2;
+	// no context colours
+	--red--light-mode: #b10e1e;
+	--green--light-mode: #00703c;
+	--blue--light-mode: #1a65a6;
 
 	// Focus colours
 	// Note that these light mode colours are also the defaults for dark mode, see below
@@ -173,6 +177,10 @@
 	--strong--dark-mode: #fafafa;
 	--error--dark-mode: #f00;
 	--error-muted--dark-mode: #c10007;
+	// no context colours
+	--red--dark-mode: #F56B79;
+	--green--dark-mode: #4DFF30;
+	--blue--dark-mode: #6cb6ff;
 
 	// Focus colours - SAME AS LIGHT MODE
 	--focus-text--dark-mode: var(--focus-text--light-mode);

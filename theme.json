@@ -354,7 +354,7 @@
 			},
 			"core/separator": {
 				"color": {
-					"background": "transparent"
+					"background": "var(--colour-greyscale-2)"
 				},
 				"spacing": {
 					"margin": {

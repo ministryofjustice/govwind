@@ -41,7 +41,7 @@ $other-colour-list:
 	header-search-drawer-input-border, header-button-outline,
 	header-logo-focus-filter, button-background, button-text,
 	button-background-hover, button-text-hover, link-text, link-text-hover,
-	quote-border;
+	quote-border, red, green, blue;
 
 $colour-list: list.join($palette-colour-list, $other-colour-list);
 

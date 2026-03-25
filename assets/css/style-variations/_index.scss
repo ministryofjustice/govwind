@@ -9,6 +9,9 @@ Add site-specific stylesheets thus:
 @forward "palettes/imb";
 @forward "palettes/lay-observers";
 */
+
+@use "sass:list"; //used to join the below lists
+
 $palette-colour-list:
 	//palette colours referenced in theme.json or any site.json - if a site has more colours, add them here
 	palette-1,
@@ -40,7 +43,7 @@ $other-colour-list:
 	button-background-hover, button-text-hover, link-text, link-text-hover,
 	quote-border;
 
-$colour-list: join($palette-colour-list, $other-colour-list);
+$colour-list: list.join($palette-colour-list, $other-colour-list);
 
 //goes through the $site-list and $colour-list
 //do not change the below, only add to the lists above

@@ -32,12 +32,12 @@
 					"name": "Greyscale 2"
 				},
 				{
-					"slug": "greyscale-C",
+					"slug": "greyscale-Y",
 					"color": "var(--colour-palette-greyscale-3)",
 					"name": "Greyscale 3"
 				},
 				{
-					"slug": "greyscale-D",
+					"slug": "greyscale-Z",
 					"color": "var(--colour-palette-greyscale-4)",
 					"name": "Greyscale 4"
 				}

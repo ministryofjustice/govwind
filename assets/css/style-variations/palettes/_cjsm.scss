@@ -8,15 +8,16 @@
 :root.website-56, //56 = CJSM
 :root:has(body.website-56) {
 	// Brand unique colour variables
-	--brand-colour: 249; //degrees round the colour wheel
-	--brand-intensity-vivid: 0.071; //intensity mainly for light theme
+	--brand-colour: 249.67; //degrees round the colour wheel
+	--brand-intensity-vivid: 0.0711; //intensity mainly for light theme
 	--brand-intensity-subtle: 0.066; //intensity mainly for dark theme
-	--brand-brightness-primary-light: 30%;
+	--brand-brightness-primary-light: 33.29%;
 	--brand-brightness-accent-light: 43%;
 	--brand-brightness-primary-dark: 80%;
 	--brand-brightness-accent-dark: 76%;
 
 	// Extra colours for palette - needs to be included in the list of colours in _index.scss
+	--palette-2--light-mode: #12314e;
 	--palette-3--light-mode: #dac777;
 	--palette-4--light-mode: #f8f4e4;
 

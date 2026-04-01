@@ -5,24 +5,24 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "colour-A",
+					"slug": "colour-Y",
 					"color": "var(--colour-palette-1)",
 					"name": "Primary"
 				},
 				{
-					"slug": "colour-B",
+					"slug": "colour-Z",
 					"color": "var(--colour-palette-2)",
 					"name": "Primary accent"
 				},
 				{
-					"slug": "colour-C",
+					"slug": "site-colour-palette-3",
 					"color": "var(--colour-palette-3)",
-					"name": "Primary"
+					"name": "Secondary"
 				},
 				{
-					"slug": "colour-D",
+					"slug": "site-colour-palette-4",
 					"color": "var(--colour-palette-4)",
-					"name": "Primary accent"
+					"name": "Secondary accent"
 				},
 				{
 					"slug": "greyscale-A",
@@ -35,12 +35,12 @@
 					"name": "Greyscale 2"
 				},
 				{
-					"slug": "greyscale-C",
+					"slug": "greyscale-Y",
 					"color": "var(--colour-palette-greyscale-3)",
 					"name": "Greyscale 3"
 				},
 				{
-					"slug": "greyscale-D",
+					"slug": "greyscale-Z",
 					"color": "var(--colour-palette-greyscale-4)",
 					"name": "Greyscale 4"
 				}

@@ -28,7 +28,7 @@
 	--palette-4--dark-mode: var(--palette-2--light-mode);
 
 	// Button colours
-	--button-background--light-mode: oklch(0.43 0.071 249);
+	--button-background--light-mode: #2466a4;
 	--button-background--dark-mode: #dac777;
 
 	// Header colours
@@ -38,14 +38,11 @@
 	--header-nav-background--dark-mode: var(
 		--header-background--dark-mode
 	); //sets the nav background to match the rest of the header
-	--header-button-background--light-mode: oklch(0.43 0.071 249);
+	--header-button-background--light-mode: #2466a4;
 	--header-logo-focus-filter--light-mode: invert(1) hue-rotate(180deg); // we invert the logo on focus
 
 	// Focus colours
 	// dark mode uses light mode colours by default
-	--focus-text--light-mode: #000;
-	--focus-background--light-mode: #f8f4e4; //needs to contrast with focus-text
 	--focus-background-muted--light-mode: #f8f4e4; //also needs to contrast with focus-text
 	--focus-accent--light-mode: #dac777;
-	--focus-outline--light-mode: #2366a3;
 }

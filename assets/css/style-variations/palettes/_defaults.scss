@@ -84,7 +84,6 @@
 	--focus-text--light-mode: #000;
 	--focus-background--light-mode: #ffd230; //needs to contrast with focus-text
 	--focus-background-muted--light-mode: #f5f5f5; //also needs to contrast with focus-text
-	--focus-accent--light-mode: #ffd633;
 	--focus-outline--light-mode: var(--focus-text--light-mode);
 
 	// Component colours (set in theme.json usually)
@@ -188,7 +187,6 @@
 	--focus-background-muted--dark-mode: var(
 		--focus-background-muted--light-mode
 	);
-	--focus-accent--dark-mode: var(--focus-accent--light-mode);
 	--focus-outline--dark-mode: var(--focus-outline--light-mode);
 
 	// Components

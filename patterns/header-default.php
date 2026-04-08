@@ -33,6 +33,14 @@
             <div class="wp-block-group">
                 <!-- wp:search {"label":"Search this site","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"width":450,"widthUnit":"px"} /-->
 
+                <!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+                    <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"style":{"border":{"left":{"color":"var:preset|color|greyscale-B","style":"solid","width":"1px"},"right":{"color":"var:preset|color|greyscale-B","style":"solid","width":"1px"},"top":{},"bottom":{}},"spacing":{"blockGap":"0","padding":{"right":"0","left":"0"},"margin":{"top":"0","bottom":"0"}},"layout":{"selfStretch":"fixed","flexSize":""}},"layout":{"type":"constrained"}} -->
+                        <div class="wp-block-group" style="border-right-color:var(--wp--preset--color--greyscale-b);border-right-style:solid;border-right-width:1px;border-left-color:var(--wp--preset--color--greyscale-b);border-left-style:solid;border-left-width:1px;margin-top:0;margin-bottom:0;padding-right:0;padding-left:0"><!-- wp:spacer {"height":"1.5rem"} -->
+                            <div style="height:1.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+                        <!-- /wp:spacer --></div>
+                    <!-- /wp:group --></div>
+                <!-- /wp:group -->
+
             <!-- wp:button -->
             <div class="wp-block-button">
                 <a class="wp-block-button__link wp-element-button" href="#">Click Me CTA</a>

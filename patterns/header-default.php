@@ -53,7 +53,7 @@
         </div>
         <!-- /wp:group -->
         
-        <!-- wp:navigation {"layout":{"type":"flex","justifyContent":"left"}} /-->
+        <!-- wp:navigation {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","justifyContent":"left"}} /-->
     </div>
     <!-- /wp:group -->
 </div>

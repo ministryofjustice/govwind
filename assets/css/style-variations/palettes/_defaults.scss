@@ -84,7 +84,6 @@
 	--focus-text--light-mode: #000;
 	--focus-background--light-mode: #ffd230; //needs to contrast with focus-text
 	--focus-background-muted--light-mode: #f5f5f5; //also needs to contrast with focus-text
-	--focus-accent--light-mode: #ffd633;
 	--focus-outline--light-mode: var(--focus-text--light-mode);
 
 	// Component colours (set in theme.json usually)
@@ -94,6 +93,7 @@
 	--button-text--light-mode: #ffffff;
 	--link-text--light-mode: #1a65a6;
 	--link-text-hover--light-mode: #0f385c;
+	--link-text-visited--light-mode: #8200db;
 	--quote-border--light-mode: #737373; // At the moment, this block might be designed differently, so this might go
 
 	//DARK MODE
@@ -188,7 +188,6 @@
 	--focus-background-muted--dark-mode: var(
 		--focus-background-muted--light-mode
 	);
-	--focus-accent--dark-mode: var(--focus-accent--light-mode);
 	--focus-outline--dark-mode: var(--focus-outline--light-mode);
 
 	// Components
@@ -196,5 +195,6 @@
 	--button-text--dark-mode: #0a0a0a;
 	--link-text--dark-mode: #6cb6ff;
 	--link-text-hover--dark-mode: #9fd0ff;
+	--link-text-visited--dark-mode: #c4a2d1;
 	--quote-border--dark-mode: #8c8c8c; // At the moment, this block might be designed differently, so this might go
 }

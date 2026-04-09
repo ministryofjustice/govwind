@@ -186,6 +186,11 @@
 						"text": "var(--colour-link-text-hover)"
 					}
 				},
+				":visited": {
+					"color": {
+						"text": "var(--colour-link-text-visited)"
+					}
+				},
 				":focus": {
 					"color": {
 						"text": "var(--colour-focus-text)!important",

@@ -78,10 +78,12 @@ header {
 	* (colours and hover colours are dealt with in WordPress, hover states are the same as elsewhere)
 */
 footer {
-	a {
+	a,
+	.wp-block-navigation a {
 		text-decoration: underline;
+		text-underline-offset: 10%;
 		&:hover {
-			text-decoration: none;
+			text-decoration-thickness: 0.125em;
 		}
 	}
 }

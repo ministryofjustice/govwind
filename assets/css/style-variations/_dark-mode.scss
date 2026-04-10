@@ -1,0 +1,38 @@
+@layer importants {
+	@media (prefers-color-scheme: dark) {
+		// Forcing dark mode colours where the switch doesn't work, all colours are forced
+		// to dark background, light foreground (inc borders).
+		// Focussed elements exempt.
+
+		.force-dark {
+			&,
+			* {
+				&:not(:focus):not(:focus *) {
+					color: var(--forced-light-colour) !important;
+					border-color: var(--forced-light-colour) !important;
+					background-color: var(--forced-dark-colour) !important;
+				}
+			}
+			&.has-background,
+			*.has-background {
+				&:not(:focus):not(:focus *) {
+					background-color: var(--forced-dark-colour) !important;
+				}
+			}
+			&.has-text-color,
+			*.has-text-color {
+				&:not(:focus):not(:focus *) {
+					color: var(--forced-light-colour) !important;
+				}
+			}
+			:where(.wp-element-button, .wp-block-button__link) {
+				// buttons will need a border as their background will be forced to be the same as the page background.
+				&:not([style*="border-width"]),
+				&:is([style*="border-width:0"]) {
+					border-style: solid !important;
+					border-width: 2px !important;
+				}
+			}
+		}
+	}
+}

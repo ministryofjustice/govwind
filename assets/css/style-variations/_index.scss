@@ -9,6 +9,7 @@ Add site-specific stylesheets thus:
 @forward "palettes/imb";
 @forward "palettes/lay-observers";
 */
+@forward "dark-mode"; // for forcing a dark theme on certain elements
 
 @use "sass:list"; //used to join the below lists
 
@@ -54,10 +55,10 @@ $colour-list: list.join($palette-colour-list, $other-colour-list);
 }
 
 :root {
-	@include wb-summon-palette($colours: $colour-list, $mode: dark-mode);
+	@include wb-summon-palette($colours: $colour-list, $mode: light-mode);
 
-	@media (prefers-color-scheme: light) {
-		@include wb-summon-palette($colours: $colour-list, $mode: light-mode);
+	@media (prefers-color-scheme: dark) {
+		@include wb-summon-palette($colours: $colour-list, $mode: dark-mode);
 	}
 }
 

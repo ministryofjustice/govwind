@@ -8,6 +8,8 @@
 //override base styles but can be overridden by component styles.
 // TODO: test this further
 
+@layer utilities, importants;
+
 @layer utilities {
 	.wp-block-gap {
 		gap: var(--wp-block-gap);

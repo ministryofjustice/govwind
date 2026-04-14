@@ -12,6 +12,9 @@
 	--brand-brightness-accent-light: 30%;
 	--brand-brightness-primary-dark: 80%;
 	--brand-brightness-accent-dark: 76%;
+	// Forced dark mode handling
+	--forced-dark-colour: var(--page-background--dark-mode);
+	--forced-light-colour: var(--foreground--dark-mode);
 
 	//palette
 	// these are the colours that are pickable in the colour palette - see theme.json

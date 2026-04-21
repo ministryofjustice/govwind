@@ -16,8 +16,8 @@
 		<div class="wp-block-columns alignwide">
 			<!-- wp:column {"width":"60%","verticalAlignment":"top","style":{"spacing":{"padding":{"right":"var:preset|spacing|50"}}}} -->
 			<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:60%;padding-right:var(--wp--preset--spacing--50)">
-				<!-- wp:heading {"textAlign":"left","level":4} -->
-				<h4 class="wp-block-heading has-text-align-left">Feature pattern title</h4>
+				<!-- wp:heading {"textAlign":"left","level":2,"fontSize":"3-xl"} -->
+				<h2 class="wp-block-heading has-text-align-left has-3-xl-font-size">Feature pattern title</h2>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph -->
 				<p>Add your feature paragraph text in this section.</p>

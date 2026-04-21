@@ -11,8 +11,8 @@
  * @since Govwind 0.1.0
  */
 ?>
-<!-- wp:group {"tagName":"footer","metadata":{"categories":["footer"],"patternName":"govwind/footer-crown","name":"Footer (Crown copyright)"},"align":"full","style":{"spacing":{"padding":{"right":"0","left":"0","top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}},"border":{"top":{"color":"var:preset|color|black","width":"5px"},"right":{"width":"0px","color":"var:preset|color|black","style":"none"},"bottom":{"width":"0px","color":"var:preset|color|black","style":"none"},"left":{"width":"0px","color":"var:preset|color|black","style":"none"}}},"layout":{"type":"constrained"}} -->
-<footer class="wp-block-group alignfull" style="border-top-color:var(--wp--preset--color--black);border-top-width:5px;border-right-color:var(--wp--preset--color--black);border-right-style:none;border-right-width:0px;border-bottom-color:var(--wp--preset--color--black);border-bottom-style:none;border-bottom-width:0px;border-left-color:var(--wp--preset--color--black);border-left-style:none;border-left-width:0px;padding-top:var(--wp--preset--spacing--40);padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0">
+<!-- wp:group {"tagName":"footer","metadata":{"categories":["footer"],"patternName":"govwind/footer-crown","name":"Footer (Crown copyright)"},"align":"full","style":{"spacing":{"padding":{"right":"0","left":"0","top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}},"border":{"top":{"color":"var:preset|color|black","width":"5px"},"right":{"width":"0px","color":"var:preset|color|black","style":"none"},"bottom":{"width":"0px","color":"var:preset|color|black","style":"none"},"left":{"width":"0px","color":"var:preset|color|black","style":"none"}}},"layout":{"type":"constrained"}} -->
+<footer class="wp-block-group alignfull" style="border-top-color:var(--wp--preset--color--black);border-top-width:5px;border-right-color:var(--wp--preset--color--black);border-right-style:none;border-right-width:0px;border-bottom-color:var(--wp--preset--color--black);border-bottom-style:none;border-bottom-width:0px;border-left-color:var(--wp--preset--color--black);border-left-style:none;border-left-width:0px;padding-top:var(--wp--preset--spacing--60);padding-right:0;padding-bottom:var(--wp--preset--spacing--60);padding-left:0">
 	<!-- wp:columns -->
 	<div class="wp-block-columns">
 		<!-- wp:column {"width":"50%"} -->
@@ -96,7 +96,7 @@
 		<div class="wp-block-group has-sm-font-size">
 			<!-- wp:wb-blocks/hmg-svg {"logo":"ogl"} /-->
 			<!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|text"}}}},"textColor":"text"} -->
-			<p class="has-text-align-center has-text-color has-link-color">All content is available under the&nbsp;<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated</p>
+			<p class="has-text-align-center has-text-color has-link-color">All content2 is available under the&nbsp;<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->

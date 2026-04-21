@@ -78,6 +78,9 @@ header {
 	* (colours and hover colours are dealt with in WordPress, hover states are the same as elsewhere)
 */
 footer {
+
+	background-color: var(--colour-header-background);
+	color: var(--colour-header-foreground);
 	a,
 	.wp-block-navigation a {
 		text-decoration: underline;
@@ -85,5 +88,10 @@ footer {
 		&:hover {
 			text-decoration-thickness: 0.125em;
 		}
+	}
+
+	.wp-element-button {
+		color: var(--colour-header-background);
+		background-color: var(--colour-header-foreground);
 	}
 }

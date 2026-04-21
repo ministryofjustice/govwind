@@ -17,8 +17,8 @@
 
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 		<div class="wp-block-group">
-			<!-- wp:heading {"align":"wide","level":2} -->
-			<h2 class="wp-block-heading alignwide">Add your heading</h2>
+			<!-- wp:heading {"align":"wide","level":2,"fontSize":"3-xl"} -->
+			<h2 class="wp-block-heading alignwide has-3-xl-font-size">Add your heading</h2>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:group -->

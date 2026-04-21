@@ -26,8 +26,8 @@
             </figure>
             <!-- /wp:image -->
 
-            <!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"base"} -->
-            <h3 class="wp-block-heading has-base-font-size" style="margin-top:0">Add your heading here.</h3>
+            <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"base"} -->
+            <h2 class="wp-block-heading has-base-font-size" style="margin-top:0">Add your heading here.</h2>
             <!-- /wp:heading -->
 
             <!-- wp:paragraph -->
@@ -49,8 +49,8 @@
             </figure>
             <!-- /wp:image -->
 
-            <!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"base"} -->
-            <h3 class="wp-block-heading has-base-font-size" style="margin-top:0">Add your heading here.</h3>
+            <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"base"} -->
+            <h2 class="wp-block-heading has-base-font-size" style="margin-top:0">Add your heading here.</h2>
             <!-- /wp:heading -->
 
             <!-- wp:paragraph -->
@@ -72,8 +72,8 @@
             </figure>
             <!-- /wp:image -->
 
-            <!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"base"} -->
-            <h3 class="wp-block-heading has-base-font-size" style="margin-top:0">Add your heading here.</h3>
+            <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0"}}},"fontSize":"base"} -->
+            <h2 class="wp-block-heading has-base-font-size" style="margin-top:0">Add your heading here.</h2>
             <!-- /wp:heading -->
 
             <!-- wp:paragraph -->

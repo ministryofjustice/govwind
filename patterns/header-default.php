@@ -31,7 +31,7 @@
 
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"flex-end","flexGrow":1}} -->
             <div class="wp-block-group">
-                <!-- wp:search {"label":"Search this site","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"width":450,"widthUnit":"px"} /-->
+                <!-- wp:search {"label":"Search this site","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"width":320,"widthUnit":"px"} /-->
 
             <!-- wp:button -->
             <div class="wp-block-button">

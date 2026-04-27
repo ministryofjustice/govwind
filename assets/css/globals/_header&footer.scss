@@ -24,9 +24,22 @@ header {
 			color: var(--colour-header-search-form-text);
 
 			.wp-block-search__button {
+				padding: 8px;
+				margin: 0;
+
 				.wb-search-icon {
 					fill: currentColor;
+
+					height: 16px;
+					width: 16px;
+					min-height: 16px;
+					min-width: 16px;
 				}
+			}
+
+			.wp-block-search__inside-wrapper {
+				padding-block: 6px;
+				padding-inline: 6px;
 			}
 		}
 

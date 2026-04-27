@@ -300,8 +300,9 @@
 						"right": "var(--prose-max-width-padding)"
 					},
 					"margin": {
-						"top": "0",
+						"top": "var(--spacing-6)",
 						"right": "0",
+						"bottom": "0",
 						"left": "0"
 					}
 				},

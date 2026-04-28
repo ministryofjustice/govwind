@@ -40,6 +40,7 @@
 		--header-background--dark-mode
 	); //sets the nav background to match the rest of the header
 	--header-button-background--light-mode: #2466a4;
+	--header-button-outline--light-mode: none;
 	--header-logo-focus-filter--light-mode: invert(1) hue-rotate(180deg); // we invert the logo on focus
 
 	// Focus colours

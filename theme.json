@@ -85,7 +85,13 @@
 					"slug": "pt-sans",
 					"name": "PT Sans",
 					"fontFamily": "var(--font-family-pt-sans)"
+				},
+				{
+					"slug": "public-sans",
+					"name": "Public Sans",
+					"fontFamily": "var(--font-family-public-sans)"
 				}
+
 			]
 		},
 		"border": {
@@ -170,7 +176,6 @@
 			"body": {
 				"typography": {
 					"fontSize": "var(--font-size-base)",
-					"fontFamily": "var(--font-family-pt-sans)",
 					"lineHeight": "var(--line-height-normal)"
 				}
 			},
@@ -322,7 +327,6 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "var(--font-family-pt-sans)",
 					"fontSize": "var(--font-size-base)",
 					"lineHeight": "var(--line-height-normal)"
 				}
@@ -338,7 +342,6 @@
 			},
 			"core/heading": {
 				"typography": {
-					"fontFamily": "var(--font-family-pt-sans)",
 					"fontWeight": "700",
 					"lineHeight": "var(--line-height-tight)"
 				}

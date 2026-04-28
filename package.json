@@ -19,9 +19,9 @@
 		"debug:tailwind": "npx tailwindcss -i ./assets/css/tailwind.css -o ./dist/debug.css --verbose",
 		"debug": "npm run debug:tailwind",
 		"test:utilities": "echo 'Testing utilities...' && grep -o '\\.text-' dist/style.css | head -5 || echo 'No text utilities found!'",
-		"copy-fonts": "npm run copy-pt && npm run copy-public",
-		"copy-pt": "copyfiles -u 4 \"node_modules/@fontsource/pt-sans/files/**/*\" dist/files",
-		"copy-public": "copyfiles -u 4 \"node_modules/@fontsource/public-sans/files/**/*\" dist/files"
+		"copy-fonts": "npm run copy-font-pt-sans && npm run copy-font-public-sans",
+		"copy-font-pt-sans": "copyfiles -u 4 \"node_modules/@fontsource/pt-sans/files/**/*\" dist/files",
+		"copy-font-public-sans": "copyfiles -u 4 \"node_modules/@fontsource/public-sans/files/**/*\" dist/files"
 	},
 	"dependencies": {
 		"tailwindcss": "^4.1",

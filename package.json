@@ -26,7 +26,7 @@
 	"dependencies": {
 		"tailwindcss": "^4.1",
 		"@fontsource/public-sans": "^5.0.0",
-    	"@fontsource/pt-sans": "^5.0.0"
+		"@fontsource/pt-sans": "^5.0.0"
 	},
 	"devDependencies": {
 		"@prettier/plugin-php": "^0.24.0",

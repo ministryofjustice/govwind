@@ -1,12 +1,11 @@
 //We may narrow this down to just 400/700 though we need discuss option in wp
-@import "../../../node_modules/@fontsource/public-sans";
-
+@import "../../../node_modules/@fontsource/public-sans/index.css";
 
 //@import "~@fontsource/pt-sans/400.css";
 //@import "~@fontsource/pt-sans/700.css";
 
 //PT Sans is just 400 and 700 so import all.
-@import "../../../node_modules/@fontsource/pt-sans";
+@import "../../../node_modules/@fontsource/pt-sans/index.css";
 
 :root {
 	/* Fluid Font Sizes - Mobile first */

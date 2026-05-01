@@ -299,7 +299,7 @@
 			"core/site-title": {
 				"spacing": {
 					"margin": {
-						"top": "var(--spacing-6)",
+						"top": "0",
 						"right": "0",
 						"bottom": "0",
 						"left": "0"
@@ -360,14 +360,6 @@
 				}
 			},
 			"core/heading": {
-				"spacing": {
-					"margin": {
-						"top": "var(--spacing-6)",
-						"right": "0",
-						"bottom": "0",
-						"left": "0"
-					}
-				},
 				"typography": {
 					"fontWeight": "700",
 					"lineHeight": "var(--line-height-tight)"
@@ -402,10 +394,8 @@
 				},
 				"spacing": {
 					"margin": {
-						"top": "var(--spacing-6)",
-						"right": "0",
-						"bottom": "0",
-						"left": "0"
+						"top": "var(--spacing-8)",
+						"bottom": "var(--spacing-8)"
 					}
 				}
 			},
@@ -461,14 +451,6 @@
 				}
 			},
 			"core/button": {
-				"spacing": {
-					"margin": {
-						"top": "var(--spacing-6)",
-						"right": "0",
-						"bottom": "0",
-						"left": "0"
-					}
-				},
 				"styleVariations": [
 					{
 						"name": "ghost",

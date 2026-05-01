@@ -8,8 +8,8 @@
  *
  */
 ?>
-<!-- wp:columns -->
-<div class="wp-block-columns">
+<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}}} -->
+<div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
 <!-- wp:column {"width":"33.33%"} -->
     <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:wb-blocks/table-of-contents /--></div>
 <!-- /wp:column -->

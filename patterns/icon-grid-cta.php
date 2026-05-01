@@ -9,8 +9,8 @@
  */
 ?>
 
-<!-- wp:group {"metadata":{"categories":["features"],"patternName":"govwind/icon-grid-cta","name":"Icon Grid with CTA"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:group {"metadata":{"categories":["features"],"patternName":"govwind/icon-grid-cta","name":"Icon Grid with CTA"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6);padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">

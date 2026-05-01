@@ -7,8 +7,8 @@
  * Description: A structured About page suitable for public sector or arm's length government bodies.
  */
 ?>
-<!-- wp:group {"metadata":{"categories":["page"],"patternName":"govwind/about","name":"About Page"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"metadata":{"categories":["page"],"patternName":"govwind/about","name":"About Page"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}}} -->
+<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
 
 	<!-- wp:heading {"textAlign":"left"} -->
 	<h2 class="wp-block-heading has-text-align-left">Our mission and purpose</h2>

@@ -235,7 +235,7 @@
 						"top": "3px",
 						"bottom": "3px",
 						"left": "0",
-						"right": "3px"
+						"right": "0"
 					}
 				},
 				"typography": {
@@ -271,6 +271,12 @@
 				"spacing": {
 					"padding": {
 						"right": "var(--prose-max-width-padding)"
+					},
+					"margin": {
+						"top": "var(--spacing-6)",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
 					}
 				}
 			},
@@ -281,6 +287,12 @@
 				"spacing": {
 					"padding": {
 						"right": "var(--prose-max-width-padding)"
+					},
+					"margin": {
+						"top": "var(--spacing-6)",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
 					}
 				}
 			},
@@ -346,6 +358,14 @@
 				}
 			},
 			"core/image": {
+				"spacing": {
+					"margin": {
+						"top": "var(--spacing-6)",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
+					}
+				},
 				"elements": {
 					"caption": {
 						"spacing": {
@@ -382,7 +402,10 @@
 						"left": "var(--spacing-4)"
 					},
 					"margin": {
-						"bottom": "var(--spacing-6)"
+						"top": "var(--spacing-6)",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
 					}
 				},
 				"typography": {
@@ -405,6 +428,12 @@
 						"bottom": "var(--spacing-1)",
 						"left": "var(--spacing-2)",
 						"right": "var(--spacing-2)"
+					},
+					"margin": {
+						"top": "var(--spacing-6)",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
 					}
 				},
 				"typography": {
@@ -427,6 +456,14 @@
 				]
 			},
 			"core/media-text": {
+				"spacing": {
+					"margin": {
+						"top": "var(--spacing-6)",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
+					}
+				},
 				"typography": {
 					"lineHeight": "var(--line-height-normal)"
 				},
@@ -449,6 +486,9 @@
 						"right": "var(--prose-max-width-padding)"
 					},
 					"margin": {
+						"top": "var(--spacing-6)",
+						"right": "0",
+						"bottom": "0",
 						"left": "0"
 					}
 				},
@@ -461,6 +501,12 @@
 				"spacing": {
 					"padding": {
 						"right": "var(--prose-max-width-padding)"
+					},
+					"margin": {
+						"top": "var(--spacing-6)",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
 					}
 				},
 				"typography": {

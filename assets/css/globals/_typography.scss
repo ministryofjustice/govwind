@@ -1,12 +1,9 @@
 //We may narrow this down to just 400/700 though we need discuss option in wp
-@import "../../../node_modules/@fontsource/public-sans";
-@import "../../../node_modules/@fontsource/public-sans/700";
-
-//@import "~@fontsource/pt-sans/400.css";
-//@import "~@fontsource/pt-sans/700.css";
+@use "../../../node_modules/@fontsource/public-sans/index.css" as *;
+@use "../../../node_modules/@fontsource/public-sans/700.css" as PublicSans700;
 
 //PT Sans is just 400 and 700 so import all.
-@import "../../../node_modules/@fontsource/pt-sans";
+@use "../../../node_modules/@fontsource/pt-sans/index.css" as *;
 
 :root {
 	/* Fluid Font Sizes - Mobile first */
@@ -85,7 +82,7 @@
 		font-size: var(--font-size-6-xl);
 		line-height: 1.2;
 		letter-spacing: var(--letter-spacing-tight);
-		margin-block-start: var(--space-heading-md);
+		margin-block-start: var(--space-heading-h1);
 		margin-block-end: var(--space-heading-sm);
 	}
 
@@ -93,39 +90,35 @@
 		font-size: var(--font-size-5-xl);
 		line-height: 1.3;
 		letter-spacing: var(--letter-spacing-tight);
-		margin-block-start: var(--space-heading-md);
+		margin-block-start: var(--space-heading-h2);
 		margin-block-end: var(--space-heading-sm);
 	}
 
 	&:is(h3) {
 		font-size: var(--font-size-4-xl);
 		line-height: 1.35;
-		margin-block-start: var(--space-heading-lg);
+		margin-block-start: var(--space-heading-h3);
 		margin-block-end: var(--space-heading-sm);
 	}
 
 	&:is(h4) {
 		font-size: var(--font-size-3-xl);
 		line-height: 1.4;
-		margin-block-start: var(--space-heading-md);
+		margin-block-start: var(--space-heading-h4);
 		margin-block-end: var(--space-heading-sm);
 	}
 
 	&:is(h5) {
 		font-size: var(--font-size-2-xl);
 		line-height: 1.4;
-		margin-block-start: var(--space-heading-md);
+		margin-block-start: var(--space-heading-h5);
 		margin-block-end: var(--space-heading-sm);
 	}
 
 	&:is(h6) {
 		font-size: var(--font-size-xl);
 		line-height: 1.4;
-		margin-block-start: var(--space-heading-md);
+		margin-block-start: var(--space-heading-h6);
 		margin-block-end: var(--space-heading-sm);
-	}
-
-	.has-background & {
-		margin-block-start: 0;
 	}
 }

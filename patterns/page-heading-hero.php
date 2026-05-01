@@ -7,8 +7,8 @@
  * Keywords: hero, page header, page heading, breadcrumb, title
  */
 ?>
-<!-- wp:group {"align":"full","style":{"color":{"background":"var(--colour-primary)"},"elements":{"link":{"color":{"text":"var:preset|color|background"},":hover":{"color":{"text":"var:preset|color|background"}}}}},"textColor":"background","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-background-color has-text-color has-background has-link-color" style="background-color:var(--colour-primary)">
+<!-- wp:group {"align":"full","style":{"color":{"background":"var(--colour-primary)"},"elements":{"link":{"color":{"text":"var:preset|color|background"},":hover":{"color":{"text":"var:preset|color|background"}}}},"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"textColor":"background","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-background-color has-text-color has-background has-link-color" style="background-color:var(--colour-primary);margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
 
     <!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
     <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">

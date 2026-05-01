@@ -50,7 +50,9 @@ $colour-list: list.join($palette-colour-list, $other-colour-list);
 //do not change the below, only add to the lists above
 @mixin wb-summon-palette($colours, $mode) {
 	@each $colour in $colours {
-		--colour-#{$colour}: var(--#{$colour}--#{$mode});
+		--colour-#{"" + $colour}: var(
+			--#{$colour}--#{$mode}
+		); // "" + $colour is to prevent compiling warnings
 	}
 }
 

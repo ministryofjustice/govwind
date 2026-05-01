@@ -232,10 +232,10 @@
 						"right": "var(--spacing-4)"
 					},
 					"margin": {
-						"top": "3px",
-						"bottom": "3px",
+						"top": "auto",
+						"bottom": "auto",
 						"left": "0",
-						"right": "3px"
+						"right": "0"
 					}
 				},
 				"typography": {
@@ -343,14 +343,6 @@
 				}
 			},
 			"core/search": {
-				"spacing": {
-					"margin": {
-						"top": "var(--spacing-6)",
-						"right": "0",
-						"bottom": "0",
-						"left": "0"
-					}
-				},
 				"elements": {
 					"button": {
 						"border": {

@@ -1,6 +1,7 @@
 // Import all theme tokens using modern Sass (must be first)
 @use "./globals" as *;
 @use "./style-variations" as *;
+@use "./printing" as *;
 
 // Custom utilities and components
 //This is a CSS Cascade Layers feature that ensures these utilities have the
@@ -8,7 +9,7 @@
 //override base styles but can be overridden by component styles.
 // TODO: test this further
 
-@layer utilities, importants;
+@layer base, components, utilities, importants;
 
 @layer utilities {
 	.wp-block-gap {

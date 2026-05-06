@@ -50,132 +50,44 @@ $size-xxl: 1536px;
 	}
 }
 
-// hard coded size
-@include editor-visibility(wb-mobile-only, #fcd48a, "Narrow only (≤600px)");
-@include editor-visibility(wb-desktop-only, #a6dbf7, "Wide only (>600px)");
-@include editor-visibility(
-	wb-mobile-only-bg,
-	#f7a6a6,
-	"Background only at ≤600px"
+$breakpoints: (
+	"": "600px",
+	sm-: $size-sm,
+	md-: $size-md,
+	lg-: $size-lg,
+	xl-: $size-xl,
 );
-@include editor-visibility(
-	wb-desktop-only-bg,
-	#f7a6a6,
-	"Background only at >600px"
-);
-@media (width <= 600px) {
-	@include hide-element(wb-desktop-only);
-}
-@media (width > 600px) {
-	@include hide-element(wb-mobile-only);
-}
 
-// different sizes
-//--size-screen-sm: 640px;
-@include editor-visibility(
-	wb-sm-mobile-only,
-	#fcd48a,
-	"Narrow only (≤#{$size-sm})"
-);
-@include editor-visibility(
-	wb-sm-desktop-only,
-	#a6dbf7,
-	"Wide only (>#{$size-sm})"
-);
-@include editor-visibility(
-	wb-sm-mobile-only-bg,
-	#f7a6a6,
-	"Background only at ≤#{$size-sm}"
-);
-@include editor-visibility(
-	wb-sm-desktop-only-bg,
-	#f7a6a6,
-	"Background only at >#{$size-sm}"
-);
-@media (width <= #{$size-sm}) {
-	@include hide-element(wb-sm-desktop-only);
-}
-@media (width > #{$size-sm}) {
-	@include hide-element(wb-sm-mobile-only);
-}
-//--size-screen-md: 768px;
-@include editor-visibility(
-	wb-md-mobile-only,
-	#fcd48a,
-	"Narrow only (≤#{$size-md})"
-);
-@include editor-visibility(
-	wb-md-desktop-only,
-	#a6dbf7,
-	"Wide only (>#{$size-md})"
-);
-@include editor-visibility(
-	wb-md-mobile-only-bg,
-	#f7a6a6,
-	"Background only at ≤#{$size-md}"
-);
-@include editor-visibility(
-	wb-md-desktop-only-bg,
-	#f7a6a6,
-	"Background only at >#{$size-md}"
-);
-@media (width <= #{$size-md}) {
-	@include hide-element(wb-md-desktop-only);
-}
-@media (width > #{$size-md}) {
-	@include hide-element(wb-md-mobile-only);
-}
-//--size-screen-lg: 1024px;
-@include editor-visibility(
-	wb-lg-mobile-only,
-	#fcd48a,
-	"Narrow only (≤#{$size-lg})"
-);
-@include editor-visibility(
-	wb-lg-desktop-only,
-	#a6dbf7,
-	"Wide only (>#{$size-lg})"
-);
-@include editor-visibility(
-	wb-lg-mobile-only-bg,
-	#f7a6a6,
-	"Background only at ≤#{$size-lg}"
-);
-@include editor-visibility(
-	wb-lg-desktop-only-bg,
-	#f7a6a6,
-	"Background only at >#{$size-lg}"
-);
-@media (width <= #{$size-lg}) {
-	@include hide-element(wb-lg-desktop-only);
-}
-@media (width > #{$size-lg}) {
-	@include hide-element(wb-lg-mobile-only);
-}
-//--size-screen-xl: 1280px;
-@include editor-visibility(
-	wb-xl-mobile-only,
-	#fcd48a,
-	"Narrow only (≤#{$size-xl})"
-);
-@include editor-visibility(
-	wb-xl-desktop-only,
-	#a6dbf7,
-	"Wide only (>#{$size-xl})"
-);
-@include editor-visibility(
-	wb-xl-mobile-only-bg,
-	#f7a6a6,
-	"Background only at ≤#{$size-xl}"
-);
-@include editor-visibility(
-	wb-xl-desktop-only-bg,
-	#f7a6a6,
-	"Background only at >#{$size-xl}"
-);
-@media (width <= #{$size-xl}) {
-	@include hide-element(wb-xl-desktop-only);
-}
-@media (width > #{$size-xl}) {
-	@include hide-element(wb-xl-mobile-only);
+@each $name, $size in $breakpoints {
+	@include editor-visibility(
+		wb-#{$name}mobile-only,
+		#fcd48a,
+		"Narrow only (≤#{$size})"
+	);
+
+	@include editor-visibility(
+		wb-#{$name}desktop-only,
+		#a6dbf7,
+		"Wide only (>#{$size})"
+	);
+
+	@include editor-visibility(
+		wb-#{$name}mobile-only-bg,
+		#f7a6a6,
+		"Background only at ≤#{$size}"
+	);
+
+	@include editor-visibility(
+		wb-#{$name}desktop-only-bg,
+		#f7a6a6,
+		"Background only at >#{$size}"
+	);
+
+	@media (width <= #{$size}) {
+		@include hide-element(wb-#{$name}desktop-only);
+	}
+
+	@media (width > #{$size}) {
+		@include hide-element(wb-#{$name}mobile-only);
+	}
 }

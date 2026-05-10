@@ -7,20 +7,78 @@
 
 :root {
 	/* Fluid Font Sizes - Mobile first */
-	--font-size-xs: clamp(0.625rem, 2vw, 0.75rem);
-	--font-size-sm: clamp(0.75rem, 2.5vw, 0.875rem);
-	--font-size-base: clamp(1rem, 3vw, 1.1875rem);
-	--font-size-lg: clamp(1rem, 3.5vw, 1.25rem);
-	--font-size-xl: clamp(1.125rem, 4vw, 1.5rem);
-	--font-size-2-xl: clamp(1.25rem, 4.5vw, 1.75rem);
-	--font-size-3-xl: clamp(1.5rem, 5vw, 1.875rem);
-	--font-size-4-xl: clamp(1.875rem, 6vw, 2.25rem);
-	--font-size-5-xl: clamp(2.25rem, 7vw, 3rem);
-	--font-size-6-xl: clamp(2.75rem, 8vw, 3.75rem);
-	--font-size-7-xl: clamp(3.25rem, 9vw, 4.5rem);
-	--font-size-8-xl: clamp(4rem, 12vw, 6rem);
-	--font-size-9-xl: clamp(5rem, 15vw, 8rem);
+	--font-size-xs: 0.75rem;
+	--font-size-sm: 0.875rem;
+	--font-size-base: 1rem;
+	--font-size-lg: 1.125rem;
+	--font-size-xl: 1.25rem;
+	--font-size-2-xl: 1.25rem;
+	--font-size-3-xl: 1.5rem;
+	--font-size-4-xl: 1.5rem;
+	--font-size-5-xl: 1.875rem;
+	--font-size-6-xl: 2.25rem;
+	--font-size-7-xl: 3rem;
+	--font-size-8-xl: 3.75rem;
+	--font-size-9-xl: 4.5rem;
 
+	--line-height-xs: 16px;
+	--line-height-sm: 20px;
+	--line-height-base: 24px;
+	--line-height-lg: 28px;
+	--line-height-xl: 28px;
+	--line-height-2-xl: 28px;
+	--line-height-3-xl: 32px;
+	--line-height-4-xl: 32px;
+	--line-height-5-xl: 36px;
+	--line-height-6-xl: 40px;
+	--line-height-7-xl: 52px;
+	--line-height-8-xl: 64px;
+	--line-height-9-xl: 76px;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--font-size-2-xl: 1.5rem;
+		--font-size-3-xl: 1.5rem;
+		--font-size-4-xl: 1.875rem;
+		--font-size-5-xl: 2.25rem;
+		--font-size-6-xl: 3rem;
+		--font-size-7-xl: 3.75rem;
+		--font-size-8-xl: 4.5rem;
+		--font-size-9-xl: 6rem;
+
+		--line-height-2-xl: 32px;
+		--line-height-3-xl: 32px;
+		--line-height-4-xl: 36px;
+		--line-height-5-xl: 40px;
+		--line-height-6-xl: 52px;
+		--line-height-7-xl: 64px;
+		--line-height-8-xl: 76px;
+		--line-height-9-xl: 100px;
+	}
+}
+
+@media (min-width: 1024px) {
+	:root {
+		--font-size-3-xl: 1.875rem;
+		--font-size-4-xl: 2.25rem;
+		--font-size-5-xl: 3rem;
+		--font-size-6-xl: 3.75rem;
+		--font-size-7-xl: 4.5rem;
+		--font-size-8-xl: 6rem;
+		--font-size-9-xl: 8rem;
+
+		--line-height-3-xl: 36px;
+		--line-height-4-xl: 40px;
+		--line-height-5-xl: 52px;
+		--line-height-6-xl: 64px;
+		--line-height-7-xl: 76px;
+		--line-height-8-xl: 100px;
+		--line-height-9-xl: 132px;
+	}
+}
+
+:root {
 	/* Font Families */
 	--font-family-sans:
 		ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -80,49 +138,104 @@
 
 	&:is(h1) {
 		font-size: var(--font-size-6-xl);
-		line-height: 1.2;
-		letter-spacing: var(--letter-spacing-tight);
-		margin-block-start: var(--space-heading-h1);
 		margin-block-end: var(--space-heading-sm);
 	}
 
 	&:is(h2) {
 		font-size: var(--font-size-5-xl);
-		line-height: 1.3;
-		letter-spacing: var(--letter-spacing-tight);
-		margin-block-start: var(--space-heading-h2);
 		margin-block-end: var(--space-heading-sm);
 	}
 
 	&:is(h3) {
 		font-size: var(--font-size-4-xl);
-		line-height: 1.35;
-		margin-block-start: var(--space-heading-h3);
 		margin-block-end: var(--space-heading-sm);
 	}
 
 	&:is(h4) {
 		font-size: var(--font-size-3-xl);
-		line-height: 1.4;
-		margin-block-start: var(--space-heading-h4);
 		margin-block-end: var(--space-heading-sm);
 	}
 
 	&:is(h5) {
 		font-size: var(--font-size-2-xl);
-		line-height: 1.4;
-		margin-block-start: var(--space-heading-h5);
 		margin-block-end: var(--space-heading-sm);
 	}
 
 	&:is(h6) {
 		font-size: var(--font-size-xl);
-		line-height: 1.4;
-		margin-block-start: var(--space-heading-h6);
 		margin-block-end: var(--space-heading-sm);
 	}
 }
 
+h1.wp-block-heading,
+h1.wp-block-post-title,
+.has-6-xl-font-size {
+	line-height: var(--line-height-6-xl);   
+	letter-spacing: var(--letter-spacing-tight);
+	margin-block-start: var(--line-height-6-xl);  
+}
+
+h2.wp-block-heading,
+h2.wp-block-post-title,
+.has-5-xl-font-size {
+	line-height: var(--line-height-5-xl);   
+	letter-spacing: var(--letter-spacing-tight);
+	margin-block-start: var(--line-height-5-xl);  
+}
+
+h3.wp-block-heading,
+h3.wp-block-post-title,
+.has-4-xl-font-size {
+	line-height: var(--line-height-4-xl);   
+	letter-spacing: var(--letter-spacing-tight);
+	margin-block-start: var(--line-height-4-xl);  
+}
+
+h4.wp-block-heading,
+h4.wp-block-post-title,
+.has-3-xl-font-size {
+	line-height: var(--line-height-3-xl);   
+	letter-spacing: var(--letter-spacing-tight);
+	margin-block-start: var(--line-height-3-xl);  
+}
+
+h5.wp-block-heading,
+h5.wp-block-post-title,
+.has-2-xl-font-size {
+	line-height: var(--line-height-2-xl);   
+	letter-spacing: var(--letter-spacing-tight);
+	margin-block-start: var(--line-height-2-xl);  
+}
+
+h6.wp-block-heading,
+h6.wp-block-post-title,
+.has-xl-font-size {
+	line-height: var(--line-height-xl);   
+	letter-spacing: var(--letter-spacing-tight);
+	margin-block-start: var(--line-height-xl);  
+}
+
+.has-lg-font-size {
+	line-height: var(--line-height-lg);   
+	margin-block-start: var(--line-height-lg);  
+}
+
+.has-base-font-size {
+	line-height: var(--line-height-base);   
+	margin-block-start: var(--line-height-base);  
+}
+
+.has-sm-font-size {
+	line-height: var(--line-height-sm);   
+	margin-block-start: var(--line-height-sm);  
+}
+
+.has-xs-font-size {
+	line-height: var(--line-height-xs);   
+	margin-block-start: var(--line-height-xs);  
+}
+
+//Block font sizes
 .wb-table-of-contents {
 	&__heading {
 		font-size: var(--font-size-base);

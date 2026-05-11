@@ -5,78 +5,337 @@
 //PT Sans is just 400 and 700 so import all.
 @use "../../../node_modules/@fontsource/pt-sans/index.css" as *;
 
-:root {
-	/* Fluid Font Sizes - Mobile first */
-	--font-size-xs: 0.75rem;
-	--font-size-sm: 0.875rem;
-	--font-size-base: 1rem;
-	--font-size-lg: 1.125rem;
-	--font-size-xl: 1.25rem;
-	--font-size-2-xl: 1.25rem;
-	--font-size-3-xl: 1.5rem;
-	--font-size-4-xl: 1.5rem;
-	--font-size-5-xl: 1.875rem;
-	--font-size-6-xl: 2.25rem;
-	--font-size-7-xl: 3rem;
-	--font-size-8-xl: 3.75rem;
-	--font-size-9-xl: 4.5rem;
+@use "sass:map";
+@use "sass:list";
 
-	--line-height-xs: 16px;
-	--line-height-sm: 20px;
-	--line-height-base: 24px;
-	--line-height-lg: 28px;
-	--line-height-xl: 28px;
-	--line-height-2-xl: 28px;
-	--line-height-3-xl: 32px;
-	--line-height-4-xl: 32px;
-	--line-height-5-xl: 36px;
-	--line-height-6-xl: 40px;
-	--line-height-7-xl: 52px;
-	--line-height-8-xl: 64px;
-	--line-height-9-xl: 76px;
-}
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// TYPE SCALE MAP
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//
+// This is the single source of truth for all typography values.
+// Each key is a size name, with the following nested properties:
+//
+//   mobile / tablet / desktop  →  font-size values at each breakpoint.
+//                                  Set to null if the size doesn't
+//                                  change at that breakpoint — null
+//                                  entries are skipped and won't
+//                                  produce any output.
+//
+//   line-height                →  nested map with the same
+//                                  mobile/tablet/desktop structure,
+//                                  but for line-height values.
+//
+//   heading                    →  optional. If present, this size is
+//                                  associated with a heading tag
+//                                  (e.g. "h1"). This drives the
+//                                  .wp-block-heading rules below.
+//                                  Omit entirely for utility-only sizes.
+//
+//   tight-spacing              →  true/false. Controls whether
+//                                  letter-spacing: var(--letter-spacing-tight)
+//                                  is applied. Set to false for sizes
+//                                  where tight spacing is not required.
+//
+$type-scale: (
+	"xs": (
+		mobile: 0.75rem,
+		tablet: null,
+		desktop: null,
+		line-height: (
+			mobile: 1rem,
+			tablet: null,
+			desktop: null,
+		),
+		tight-spacing: false,
+	),
+	"sm": (
+		mobile: 0.875rem,
+		tablet: null,
+		desktop: null,
+		line-height: (
+			mobile: 1.25rem,
+			tablet: null,
+			desktop: null,
+		),
+		tight-spacing: false,
+	),
+	"base": (
+		mobile: 1rem,
+		tablet: null,
+		desktop: null,
+		line-height: (
+			mobile: 1.5rem,
+			tablet: null,
+			desktop: null,
+		),
+		tight-spacing: false,
+	),
+	"lg": (
+		mobile: 1.125rem,
+		tablet: null,
+		desktop: null,
+		line-height: (
+			mobile: 1.75rem,
+			tablet: null,
+			desktop: null,
+		),
+		tight-spacing: false,
+	),
+	"xl": (
+		mobile: 1.25rem,
+		tablet: null,
+		desktop: null,
+		line-height: (
+			mobile: 1.75rem,
+			tablet: null,
+			desktop: null,
+		),
+		heading: "h3",
+		tight-spacing: true,
+	),
+	"2-xl": (
+		mobile: 1.25rem,
+		tablet: 1.5rem,
+		desktop: null,
+		line-height: (
+			mobile: 1.75rem,
+			tablet: 2rem,
+			desktop: null,
+		),
+		tight-spacing: true,
+	),
+	"3-xl": (
+		mobile: 1.5rem,
+		tablet: 1.5rem,
+		desktop: 1.875rem,
+		line-height: (
+			mobile: 2rem,
+			tablet: 2rem,
+			desktop: 2.25rem,
+		),
+		heading: "h2",
+		tight-spacing: true,
+	),
+	"4-xl": (
+		mobile: 1.5rem,
+		tablet: 1.875rem,
+		desktop: 2.25rem,
+		line-height: (
+			mobile: 2rem,
+			tablet: 2.25rem,
+			desktop: 2.5rem,
+		),
+		tight-spacing: true,
+	),
+	"5-xl": (
+		mobile: 1.875rem,
+		tablet: 2.25rem,
+		desktop: 3rem,
+		line-height: (
+			mobile: 2.25rem,
+			tablet: 2.5rem,
+			desktop: 3.25rem,
+		),
+		heading: "h1",
+		tight-spacing: true,
+	),
+	"6-xl": (
+		mobile: 2.25rem,
+		tablet: 3rem,
+		desktop: 3.75rem,
+		line-height: (
+			mobile: 2.5rem,
+			tablet: 3.25rem,
+			desktop: 4rem,
+		),
+		tight-spacing: true,
+	),
+	// ↓ 7-xl through 9-xl have no heading tag — utility classes only
+	"7-xl": (
+			mobile: 3rem,
+			tablet: 3.75rem,
+			desktop: 4.5rem,
+			line-height: (
+				mobile: 3.25rem,
+				tablet: 4rem,
+				desktop: 4.75rem,
+			),
+			tight-spacing: true,
+		),
+	"8-xl": (
+		mobile: 3.75rem,
+		tablet: 4.5rem,
+		desktop: 6rem,
+		line-height: (
+			mobile: 4rem,
+			tablet: 4.75rem,
+			desktop: 6.25rem,
+		),
+		tight-spacing: true,
+	),
+	"9-xl": (
+		mobile: 4.5rem,
+		tablet: 6rem,
+		desktop: 8rem,
+		line-height: (
+			mobile: 4.75rem,
+			tablet: 6.25rem,
+			desktop: 8.25rem,
+		),
+		tight-spacing: true,
+	),
+);
 
-@media (min-width: 768px) {
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// MIXIN: generate-type-system
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//
+// Accepts the $type-scale map above and generates three things:
+//   1. CSS variables (--font-size-* and --line-height-*)
+//      scoped to :root, at each breakpoint
+//   2. wp-block-heading / wp-block-post-title rules for sizes
+//      that have a heading tag defined
+//   3. .has-*-font-size utility class rules for all sizes
+//
+@mixin generate-type-system($scale) {
+	// ── SECTION 1: CSS Variables ─────────────────────────────────────
+	//
+	// Mobile-first base values. Every size in the map emits a CSS
+	// variable here, using the "mobile" value as the default.
+	//
 	:root {
-		--font-size-2-xl: 1.5rem;
-		--font-size-3-xl: 1.5rem;
-		--font-size-4-xl: 1.875rem;
-		--font-size-5-xl: 2.25rem;
-		--font-size-6-xl: 3rem;
-		--font-size-7-xl: 3.75rem;
-		--font-size-8-xl: 4.5rem;
-		--font-size-9-xl: 6rem;
+		@each $key, $config in $scale {
+			// Font size CSS variable — e.g. --font-size-xl: 1.25rem
+			--font-size-#{$key}: #{map.get($config, "mobile")};
 
-		--line-height-2-xl: 32px;
-		--line-height-3-xl: 32px;
-		--line-height-4-xl: 36px;
-		--line-height-5-xl: 40px;
-		--line-height-6-xl: 52px;
-		--line-height-7-xl: 64px;
-		--line-height-8-xl: 76px;
-		--line-height-9-xl: 100px;
+			// Line height CSS variable — drill into the nested line-height
+			// map to get the mobile value. e.g. --line-height-xl: 1.75rem
+			--line-height-#{$key}: #{map.get(
+					map.get($config, "line-height"),
+					"mobile"
+				)};
+		}
+	}
+
+	// Tablet overrides (768px+).
+	// Only emits a CSS variable if the value is non-null in the map,
+	// so sizes that don't change at tablet produce no output.
+	@media (min-width: 768px) {
+		:root {
+			@each $key, $config in $scale {
+				$fs: map.get($config, "tablet");
+				$lh: map.get(map.get($config, "line-height"), "tablet");
+
+				// @if skips null values — no redundant overrides in the output
+				@if $fs {
+					--font-size-#{$key}: #{$fs};
+				}
+				@if $lh {
+					--line-height-#{$key}: #{$lh};
+				}
+			}
+		}
+	}
+
+	// Desktop overrides (1024px+).
+	// Same pattern as tablet — only non-null values are emitted.
+	@media (min-width: 1024px) {
+		:root {
+			@each $key, $config in $scale {
+				$fs: map.get($config, "desktop");
+				$lh: map.get(map.get($config, "line-height"), "desktop");
+
+				@if $fs {
+					--font-size-#{$key}: #{$fs};
+				}
+				@if $lh {
+					--line-height-#{$key}: #{$lh};
+				}
+			}
+		}
+	}
+
+	// ── SECTION 2: Block Heading + Utility Class Rules ────────────────
+	//
+	// font-weight: 700 applies to all .wp-block-heading and
+	// .wp-block-post-title elements regardless of level.
+	//
+	// A single @each loop then handles all three concerns:
+	//   - &:is(h*) rules inside .wp-block-heading for font-size
+	//   - h*.wp-block-heading and h*.wp-block-post-title rules
+	//     for line-height, margin-block-start and letter-spacing
+	//   - .has-*-font-size utility classes for all sizes
+	//
+	.wp-block-heading,
+	.wp-block-post-title {
+		font-weight: 700; // all headings are bold regardless of level
+	}
+
+	@each $key, $config in $scale {
+		$tag: map.get($config, "heading");
+		$tight-spacing: map.get($config, "tight-spacing");
+
+		@if $tag {
+			// ── Branch A: size is associated with a heading tag ──────────
+			//
+			// Generates four selectors for this heading level:
+			//   - .wp-block-heading:is(h*)    → font-size and margin-block-end
+			//     .wp-block-post-title:is(h*)   inside the shared block rule
+			//   - h*.wp-block-heading         → line-height
+			//     h*.wp-block-post-title        and optional letter-spacing
+			//   - .has-*-font-size            → same treatment for any element
+			//
+			.wp-block-heading,
+			.wp-block-post-title {
+				// font-size and margin-block-end scoped to this heading level
+				// e.g. &:is(h1) { font-size: var(--font-size-6-xl); ... }
+				&:is(#{$tag}) {
+					font-size: var(--font-size-#{$key});
+					margin-block-end: var(
+						--space-heading-sm
+					); // consistent bottom spacing across all heading levels
+				}
+			}
+
+			// line-height and letter-spacing
+			// applied via tag-scoped selectors and utility class
+			#{$tag}.wp-block-heading:not([class*="-font-size"]),
+			#{$tag}.wp-block-post-title:not([class*="-font-size"]),
+			.has-#{$key}-font-size {
+				line-height: var(--line-height-#{$key});
+
+				// Only apply tight letter spacing if specified in the map
+				@if $tight-spacing {
+					letter-spacing: var(--letter-spacing-tight);
+				}
+			}
+		} @else {
+			// ── Branch B: size has no heading tag — utility class only ───
+			//
+			// Generates just the .has-*-font-size utility class.
+			//
+			.has-#{$key}-font-size {
+				line-height: var(--line-height-#{$key});
+
+				// Only apply tight letter spacing if specified in the map
+				@if $tight-spacing {
+					letter-spacing: var(--letter-spacing-tight);
+				}
+			}
+		}
 	}
 }
 
-@media (min-width: 1024px) {
-	:root {
-		--font-size-3-xl: 1.875rem;
-		--font-size-4-xl: 2.25rem;
-		--font-size-5-xl: 3rem;
-		--font-size-6-xl: 3.75rem;
-		--font-size-7-xl: 4.5rem;
-		--font-size-8-xl: 6rem;
-		--font-size-9-xl: 8rem;
-
-		--line-height-3-xl: 36px;
-		--line-height-4-xl: 40px;
-		--line-height-5-xl: 52px;
-		--line-height-6-xl: 64px;
-		--line-height-7-xl: 76px;
-		--line-height-8-xl: 100px;
-		--line-height-9-xl: 132px;
-	}
-}
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// OUTPUT
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+//
+// Single call — pass the map in and everything is generated.
+// To add a new size, update $type-scale only. Nothing else changes.
+// To change letter spacing on a size, update its tight-spacing value
+// in $type-scale — true to apply, false to omit.
+//
+@include generate-type-system($type-scale);
 
 :root {
 	/* Font Families */
@@ -127,112 +386,6 @@
 
 :root .is-layout-constrained > .wp-block-heading:first-child {
 	margin-block-start: revert;
-}
-
-/* ------------------------------------------------------------------
-   WordPress Heading Block Styles
-------------------------------------------------------------------- */
-.wp-block-heading,
-.wp-block-post-title {
-	font-weight: 700;
-
-	&:is(h1) {
-		font-size: var(--font-size-6-xl);
-		margin-block-end: var(--space-heading-sm);
-	}
-
-	&:is(h2) {
-		font-size: var(--font-size-5-xl);
-		margin-block-end: var(--space-heading-sm);
-	}
-
-	&:is(h3) {
-		font-size: var(--font-size-4-xl);
-		margin-block-end: var(--space-heading-sm);
-	}
-
-	&:is(h4) {
-		font-size: var(--font-size-3-xl);
-		margin-block-end: var(--space-heading-sm);
-	}
-
-	&:is(h5) {
-		font-size: var(--font-size-2-xl);
-		margin-block-end: var(--space-heading-sm);
-	}
-
-	&:is(h6) {
-		font-size: var(--font-size-xl);
-		margin-block-end: var(--space-heading-sm);
-	}
-}
-
-h1.wp-block-heading,
-h1.wp-block-post-title,
-.has-6-xl-font-size {
-	line-height: var(--line-height-6-xl);
-	letter-spacing: var(--letter-spacing-tight);
-	margin-block-start: var(--line-height-6-xl);
-}
-
-h2.wp-block-heading,
-h2.wp-block-post-title,
-.has-5-xl-font-size {
-	line-height: var(--line-height-5-xl);
-	letter-spacing: var(--letter-spacing-tight);
-	margin-block-start: var(--line-height-5-xl);
-}
-
-h3.wp-block-heading,
-h3.wp-block-post-title,
-.has-4-xl-font-size {
-	line-height: var(--line-height-4-xl);
-	letter-spacing: var(--letter-spacing-tight);
-	margin-block-start: var(--line-height-4-xl);
-}
-
-h4.wp-block-heading,
-h4.wp-block-post-title,
-.has-3-xl-font-size {
-	line-height: var(--line-height-3-xl);
-	letter-spacing: var(--letter-spacing-tight);
-	margin-block-start: var(--line-height-3-xl);
-}
-
-h5.wp-block-heading,
-h5.wp-block-post-title,
-.has-2-xl-font-size {
-	line-height: var(--line-height-2-xl);
-	letter-spacing: var(--letter-spacing-tight);
-	margin-block-start: var(--line-height-2-xl);
-}
-
-h6.wp-block-heading,
-h6.wp-block-post-title,
-.has-xl-font-size {
-	line-height: var(--line-height-xl);
-	letter-spacing: var(--letter-spacing-tight);
-	margin-block-start: var(--line-height-xl);
-}
-
-.has-lg-font-size {
-	line-height: var(--line-height-lg);
-	margin-block-start: var(--line-height-lg);
-}
-
-.has-base-font-size {
-	line-height: var(--line-height-base);
-	margin-block-start: var(--line-height-base);
-}
-
-.has-sm-font-size {
-	line-height: var(--line-height-sm);
-	margin-block-start: var(--line-height-sm);
-}
-
-.has-xs-font-size {
-	line-height: var(--line-height-xs);
-	margin-block-start: var(--line-height-xs);
 }
 
 //Block font sizes

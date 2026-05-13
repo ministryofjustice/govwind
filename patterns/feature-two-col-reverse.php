@@ -14,19 +14,17 @@
 	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|80"}}}} -->
 		<div class="wp-block-columns alignwide">
-			<!-- wp:column {"width":"50%","verticalAlignment":"center"} -->
-			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
+			<!-- wp:column {"width":"40%","verticalAlignment":"center"} -->
+			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%">
 				<!-- wp:image {"align":"center","width":"100%","sizeSlug":"large","linkDestination":"none"} -->
 				<figure class="wp-block-image aligncenter size-large is-resized">
-					<img src="<?php echo esc_url(
-					    gw_placeholder_image(600, 400),
-					); ?>" alt="Feature image" style="width:100%" />
+					<img src="<?php gw_placeholder_image(600, 400); ?>" alt="Feature image" style="width:100%" />
 				</figure>
 				<!-- /wp:image -->
 			</div>
 			<!-- /wp:column -->
-			<!-- wp:column {"width":"50%","verticalAlignment":"top","style":{"spacing":{}}} -->
-			<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:50%;">
+			<!-- wp:column {"width":"60%","verticalAlignment":"top","style":{"spacing":{}}} -->
+			<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:60%;">
 				<!-- wp:heading {"textAlign":"left","level":2,"fontSize":"3-xl"} -->
 				<h2 class="wp-block-heading has-text-align-left has-3-xl-font-size">Feature pattern title</h2>
 				<!-- /wp:heading -->

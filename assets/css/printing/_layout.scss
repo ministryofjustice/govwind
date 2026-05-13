@@ -31,7 +31,7 @@
 	}
 	// Link suffix
 	a[target="_blank"]:after {
-		content:""; //removes "open in a new tab"
+		content: ""; //removes "open in a new tab"
 	}
 	a[href^="/"]:not(header a):not(a[href=""]):after,
 	a[href^="http"]:not(header a):not(a[href=""]):after {

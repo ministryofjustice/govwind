@@ -12,8 +12,8 @@
 <div class="wp-block-group alignfull has-background-color has-text-color has-background has-link-color py-8 md:py-20" style="background-color:var(--colour-primary);margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
 	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
 	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|80"}}}} -->
-		<div class="wp-block-columns alignwide">
+		<!-- wp:columns {"align":"wide","className":"flex-col-reverse md:flex-row","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|80"}}}} -->
+		<div class="wp-block-columns alignwide flex-col-reverse md:flex-row">
 			<!-- wp:column {"width":"40%","verticalAlignment":"center"} -->
 			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%">
 				<!-- wp:image {"align":"center","width":"100%","sizeSlug":"large","linkDestination":"none"} -->

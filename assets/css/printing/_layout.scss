@@ -12,7 +12,7 @@
 
 @media print {
 	// Hiding elements of the header which are interactive
-	// All navs, all groups except those contaning the logo/site name
+	// All navs, all groups except those containing the logo/site name
 	header {
 		*.wp-block-group:not(:has(.wp-block-site-title)):not(
 				:has(.wp-block-site-logo)
@@ -30,7 +30,11 @@
 		display: none;
 	}
 	// Link suffix
-	a[href^="http"]:not(header a):not(a[href=""])::after {
+	a[target="_blank"]:after {
+		content:""; //removes "open in a new tab"
+	}
+	a[href^="/"]:not(header a):not(a[href=""]):after,
+	a[href^="http"]:not(header a):not(a[href=""]):after {
 		content: " (" attr(href) ")";
 		font-size: 0.8rem;
 	}

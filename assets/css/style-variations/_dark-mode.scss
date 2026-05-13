@@ -1,5 +1,5 @@
 @mixin force-dark {
-	.force-dark {
+	.wb-force-dark {
 		&,
 		* {
 			&:not(:focus):not(:focus *) {

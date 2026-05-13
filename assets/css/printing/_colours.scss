@@ -1,0 +1,140 @@
+/**
+ * Printing colour changes
+ * This file amends the colours to be printer-friendly.
+ *
+ * Text is always true black, backgrounds are all true white.
+ * Header is black text on white with a line of the header colour beneath it.
+ * Footer is black on white, with black border given to buttons.
+ * Buttons have their background used for their border and are black on white.
+ * Other colours will always be light mode (dark mode only for @media screen).
+ *
+ * Blocks with a custom background have that background colour moved to a border.
+ * They will have black text on white.
+ *
+ **/
+
+@mixin wb-printable-background($colour) {
+	// Apply the old background colour to be a thick border
+	border: 10px solid $colour;
+	// Change the background to white and the text to black
+	background-color: #fff !important;
+	color: #000 !important;
+	* {
+		// Colour of all child elements needs to be black too
+		color: #000 !important;
+	}
+	// Change the link to the light mode link colour
+	a {
+		color: var(--link-text--light-mode) !important;
+	}
+	// Narrower border for buttons
+	&:is(.wp-element-button),
+	&:is(.wp-block-button__link) {
+		border-width: 6px;
+	}
+}
+
+@media print {
+	:root {
+		//colours - if undeclared, light mode shall be used
+		--colour-page-background: #fff;
+		--colour-foreground: #000;
+
+		--colour-header-background: #fff;
+		--colour-header-foreground: #000;
+		header {
+			// Uses the header colour as a bottom border
+			padding-bottom: 0.5rem;
+			border-bottom: 8px solid var(--header-background--light-mode);
+			margin-bottom: 0.5rem;
+		}
+		// No visited link colour
+		--colour-link-text-visited: var(--link-text--light-mode) !important;
+
+		// Buttons: move background colour to border
+		:where(main .wp-element-button, main .wp-block-button__link) {
+			border: 6px solid var(--button-background--light-mode);
+			color: #000;
+			background-color: #fff;
+		}
+
+		footer,
+		footer * {
+			color: #000 !important;
+			background-color: #fff !important;
+
+			button,
+			.wp-block-button a {
+				border: 1px solid #000; //force a border for buttons
+			}
+		}
+		footer {
+			margin-top: 0.5rem;
+			border-color: #000;
+			border-top-style: solid;
+		}
+
+		main .has-background:not(hr) {
+			// If a block has a custom background, we change it to a border and make the background white
+			// Browsers sometimes remove the background on print anyway, so we need to ensure the text is readable.
+			// Even lighter colours need to be done to ensure the page is consistent and to save ink.
+
+			// Fallback in case colour not known
+			@include wb-printable-background(#999);
+
+			&.has-colour-z-background-color {
+				@include wb-printable-background(var(--wp--preset--color--colour-z));
+			}
+			&.has-colour-y-background-color {
+				@include wb-printable-background(var(--wp--preset--color--colour-y));
+			}
+			// Darker (YZ) greyscale colours
+			&.has-greyscale-y-background-color {
+				@include wb-printable-background(var(--wp--preset--color--greyscale-y));
+			}
+			&.has-greyscale-z-background-color {
+				@include wb-printable-background(var(--wp--preset--color--greyscale-z));
+			}
+
+			// Lighter (AB) greyscale colours
+			&.has-greyscale-a-background-color {
+				@include wb-printable-background(var(--wp--preset--color--greyscale-a));
+			}
+			&.has-greyscale-b-background-color {
+				@include wb-printable-background(var(--wp--preset--color--greyscale-b));
+			}
+
+			// Site-specific colours which aren't in the default (we don't know whether they are dark or light)
+			&.has-site-colour-palette-1-background-color {
+				@include wb-printable-background(
+					var(--wp--preset--color--site-colour-palette-1)
+				);
+			}
+			&.has-site-colour-palette-2-background-color {
+				@include wb-printable-background(
+					var(--wp--preset--color--site-colour-palette-2)
+				);
+			}
+			&.has-site-colour-palette-3-background-color {
+				@include wb-printable-background(
+					var(--wp--preset--color--site-colour-palette-3)
+				);
+			}
+			&.has-site-colour-palette-4-background-color {
+				@include wb-printable-background(
+					var(--wp--preset--color--site-colour-palette-4)
+				);
+			}
+			&.has-site-colour-palette-5-background-color {
+				@include wb-printable-background(
+					var(--wp--preset--color--site-colour-palette-5)
+				);
+			}
+			&.has-site-colour-palette-6-background-color {
+				@include wb-printable-background(
+					var(--wp--preset--color--site-colour-palette-6)
+				);
+			}
+		}
+	}
+}

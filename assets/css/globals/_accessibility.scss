@@ -1,5 +1,5 @@
 // Dark mode support
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
 	// Only apply if theme supports dark mode
 	:root[data-theme="auto"],
 	:root:not([data-theme]) {

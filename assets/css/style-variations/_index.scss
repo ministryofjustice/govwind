@@ -57,8 +57,16 @@ $colour-list: list.join($palette-colour-list, $other-colour-list);
 :root {
 	@include wb-summon-palette($colours: $colour-list, $mode: light-mode);
 
-	@media (prefers-color-scheme: dark) {
-		@include wb-summon-palette($colours: $colour-list, $mode: dark-mode);
+	&:not(.light-mode) {
+		@media screen and (prefers-color-scheme: dark) {
+			@include wb-summon-palette($colours: $colour-list, $mode: dark-mode);
+		}
+	}
+
+	&.dark-mode {
+		@media screen {
+			@include wb-summon-palette($colours: $colour-list, $mode: dark-mode);
+		}
 	}
 }
 

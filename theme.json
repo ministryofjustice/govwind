@@ -157,13 +157,7 @@
 			"text": "var(--colour-foreground)"
 		},
 		"spacing": {
-			"blockGap": "var(--wp-block-gap)",
-			"padding": {
-				"top": "0",
-				"bottom": "0",
-				"left": "var(--wp-container-padding)",
-				"right": "var(--wp-container-padding)"
-			}
+			"blockGap": "var(--wp-block-gap)"
 		},
 		"typography": {
 			"fontFamily": "var(--font-family-pt-sans)",

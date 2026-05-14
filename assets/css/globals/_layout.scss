@@ -59,4 +59,22 @@
 	--timing-in: cubic-bezier(0.4, 0, 1, 1);
 	--timing-out: cubic-bezier(0, 0, 0.2, 1);
 	--timing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+	--gutter-size: 16px;
+	@media (width >= 768px) {
+		--gutter-size: 32px;
+	}
+	@media (width >= 1088px) {
+		//1088px = 1024px + 2*32px
+		--gutter-size: clamp(
+			32px,
+			-58.4px + 8.3333vw,
+			60px
+		); //gradual increase from 32 to 60px
+	}
+
+	body {
+		--wp--style--root--padding-right: var(--gutter-size);
+		--wp--style--root--padding-left: var(--gutter-size);
+	}
 }

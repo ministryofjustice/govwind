@@ -8,8 +8,8 @@
  * Keywords: feature, section, full width, product, service, reverse
  */
 ?>
-<!-- wp:group {"align":"full","className":"py-8 md:py-20","style":{"color":{"background":"var(--colour-primary)"},"elements":{"link":{"color":{"text":"var:preset|color|background"},":hover":{"color":{"text":"var:preset|color|background"}}}},"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"textColor":"background","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-background-color has-text-color has-background has-link-color py-8 md:py-20" style="background-color:var(--colour-primary);margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
+<!-- wp:group {"align":"full","className":"py-8 md:py-20","style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull py-8 md:py-20" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
 	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
 	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 		<!-- wp:columns {"align":"wide","className":"flex-col-reverse md:flex-row","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|80"}}}} -->

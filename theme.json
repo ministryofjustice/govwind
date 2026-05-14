@@ -239,8 +239,7 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var(--font-size-base)",
-					"lineHeight": "1.75"
+					"fontSize": "var(--font-size-base)"
 				},
 				":focus": {
 					"color": {

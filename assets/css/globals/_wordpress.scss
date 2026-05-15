@@ -1,6 +1,8 @@
+@use "variables" as *;
+
 :root {
 	/* WordPress-specific Design Tokens */
-	--wp-block-gap: var(--spacing-6);
+	@include fluid(--wp-block-gap, 16px, 40px, $size-md, $size-xxl);
 	--wp-container-padding: var(--spacing-4);
 	--wp-editor-width: var(--size-content);
 	--wp-wide-width: var(--size-wide);
@@ -23,7 +25,7 @@
 }
 
 /* Responsive WordPress adjustments */
-@media (min-width: 768px) {
+@media (min-width: $size-md) {
 	@theme {
 		--wp-container-padding: var(--spacing-6);
 		--wp-block-gap: var(--spacing-8);

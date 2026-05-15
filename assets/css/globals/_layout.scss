@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 :root {
 	/*
 		Layout Constraints
@@ -5,13 +7,13 @@
 
 	*/
 
-	--size-content: $size-xl;
-	--size-wide: $size-xxl;
-	--size-screen-sm: $size-sm;
-	--size-screen-md: $size-md;
-	--size-screen-lg: $size-lg;
-	--size-screen-xl: $size-xl;
-	--size-screen-2xl: $size-xxl;
+	--size-content: #{$size-xl};
+	--size-wide: #{$size-xxl};
+	--size-screen-sm: #{$size-sm};
+	--size-screen-md: #{$size-md};
+	--size-screen-lg: #{$size-lg};
+	--size-screen-xl: #{$size-xl};
+	--size-screen-2xl: #{$size-xxl};
 
 	/* Readable text */
 	--max-prose-width: 789px;
@@ -59,4 +61,18 @@
 	--timing-in: cubic-bezier(0.4, 0, 1, 1);
 	--timing-out: cubic-bezier(0, 0, 0.2, 1);
 	--timing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+	--gutter-size: 16px;
+	@media (width >= $size-md) {
+		--gutter-size: 32px;
+	}
+	@media (width >= $size-lg) {
+		//gradual increase from 32 to 128px, it'll reach 128px at a screen width 1536px
+		@include fluid(--gutter-size, 32px, 128px, $size-lg, $size-xxl);
+	}
+
+	body {
+		--wp--style--root--padding-right: var(--gutter-size);
+		--wp--style--root--padding-left: var(--gutter-size);
+	}
 }

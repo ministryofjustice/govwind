@@ -1,0 +1,22 @@
+/*
+Mobile nav starts at 600px - no variable as far as I can see - hard coded
+*/
+
+$size-sm: 640px;
+$size-md: 768px;
+$size-lg: 1024px;
+$size-xl: 1280px;
+$size-xxl: 1536px;
+
+/// Fluid clamp generator
+/// @param $min - minimum size (e.g. 16px)
+/// @param $max - maximum size (e.g. 40px)
+/// @param $vmin - minimum viewport (e.g. 768px)
+/// @param $vmax - maximum viewport (e.g. 1536px)
+
+@mixin fluid($property, $min, $max, $vmin, $vmax) {
+	$slope: calc(($max - $min) / ($vmax - $vmin)) * 100;
+	$intercept: $min - calc($slope * $vmin / 100);
+
+	#{$property}: clamp(#{$min}, #{$intercept} + #{$slope}vw, #{$max});
+}

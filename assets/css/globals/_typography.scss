@@ -8,6 +8,8 @@
 @use "sass:map";
 @use "sass:list";
 
+@use "variables" as *;
+
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // TYPE SCALE MAP
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -220,7 +222,7 @@ $type-scale: (
 	// Tablet overrides (768px+).
 	// Only emits a CSS variable if the value is non-null in the map,
 	// so sizes that don't change at tablet produce no output.
-	@media (min-width: 768px) {
+	@media (min-width: $size-md) {
 		:root {
 			@each $key, $config in $scale {
 				$fs: map.get($config, "tablet");
@@ -239,7 +241,7 @@ $type-scale: (
 
 	// Desktop overrides (1024px+).
 	// Same pattern as tablet — only non-null values are emitted.
-	@media (min-width: 1024px) {
+	@media (min-width: $size-lg) {
 		:root {
 			@each $key, $config in $scale {
 				$fs: map.get($config, "desktop");

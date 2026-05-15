@@ -1,12 +1,17 @@
 :root {
-	/* Layout Constraints */
-	--size-content: 1280px;
-	--size-wide: 1536px;
-	--size-screen-sm: 640px;
-	--size-screen-md: 768px;
-	--size-screen-lg: 1024px;
-	--size-screen-xl: 1280px;
-	--size-screen-2xl: 1536px;
+	/*
+		Layout Constraints
+		SCSS variables set in _breakpoint-visiblity.scss
+
+	*/
+
+	--size-content: $size-xl;
+	--size-wide: $size-xxl;
+	--size-screen-sm: $size-sm;
+	--size-screen-md: $size-md;
+	--size-screen-lg: $size-lg;
+	--size-screen-xl: $size-xl;
+	--size-screen-2xl: $size-xxl;
 
 	/* Readable text */
 	--max-prose-width: 789px;

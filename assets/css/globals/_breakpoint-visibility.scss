@@ -1,16 +1,15 @@
 /*
-For info:
---size-content: 1280px;
---size-wide: 1536px;
---size-screen-sm: 640px;
---size-screen-md: 768px;
---size-screen-lg: 1024px;
---size-screen-xl: 1280px;
---size-screen-2xl: 1536px;
+Shewing and hiding things at different breakpoints.
+Shewing warnings in the backend that things might be hidden or shewn at different widths.
 
+Sizes used in _layout.scss
 Mobile nav starts at 600px - no variable as far as I can see - hard coded
-
 */
+$size-sm: 640px;
+$size-md: 768px;
+$size-lg: 1024px;
+$size-xl: 1280px;
+$size-xxl: 1536px;
 
 @mixin editor-visibility($class, $colour, $text) {
 	//styles for editor screens, so hidden elements aren't missed whilst editing
@@ -18,13 +17,18 @@ Mobile nav starts at 600px - no variable as far as I can see - hard coded
 	.block-editor-iframe__html {
 		.#{$class} {
 			border: dashed 6px $colour;
-			&:not(.is-hovered):not(:hover):after {
+			&:not(.is-hovered):not(:hover):before {
 				// the native is-hovered class in WordPress uses its own :after pseudo element
 				content: " #{$text} ";
-				font-size: 80%;
+				font-weight: normal;
+				font-size: 14px;
 				color: #000;
 				position: absolute;
 				background: $colour;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				opacity: 0.9;
 			}
 		}
 	}
@@ -37,15 +41,53 @@ Mobile nav starts at 600px - no variable as far as I can see - hard coded
 	.#{$class}:not(.editor-editor-interface *):not(.block-editor-iframe__html *) {
 		display: none !important;
 	}
+	@include hide-background(#{$class}-bg);
 }
 
-//editor interface
-@include editor-visibility(wb-mobile-only, #fcd48a, Mobile only);
-@include editor-visibility(wb-desktop-only, #a6dbf7, Desktop only);
-
-@media (width <= 600px) {
-	@include hide-element(wb-desktop-only);
+@mixin hide-background($class) {
+	.#{$class}:not(.editor-editor-interface *):not(.block-editor-iframe__html *) {
+		background-image: none !important;
+	}
 }
-@media (width > 600px) {
-	@include hide-element(wb-mobile-only);
+
+$breakpoints: (
+	"": "600px",
+	sm-: $size-sm,
+	md-: $size-md,
+	lg-: $size-lg,
+	xl-: $size-xl,
+);
+
+@each $name, $size in $breakpoints {
+	@include editor-visibility(
+		wb-#{$name}mobile-only,
+		#fcd48a,
+		"Narrow only (≤#{$size})"
+	);
+
+	@include editor-visibility(
+		wb-#{$name}desktop-only,
+		#a6dbf7,
+		"Wide only (>#{$size})"
+	);
+
+	@include editor-visibility(
+		wb-#{$name}mobile-only-bg,
+		#f7a6a6,
+		"Background only at ≤#{$size}"
+	);
+
+	@include editor-visibility(
+		wb-#{$name}desktop-only-bg,
+		#f7a6a6,
+		"Background only at >#{$size}"
+	);
+
+	@media (width <= #{$size}) {
+		@include hide-element(wb-#{$name}desktop-only);
+	}
+
+	@media (width > #{$size}) {
+		@include hide-element(wb-#{$name}mobile-only);
+	}
 }

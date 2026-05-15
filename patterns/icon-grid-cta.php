@@ -34,79 +34,54 @@
 		<!-- wp:group {"align":"wide","className":"grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3","layout":{"type":"default"}} -->
 		<div class="wp-block-group alignwide grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3">
 
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(
-    	gw_placeholder_image(80, 80),
-    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"greyscale-B","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group has-greyscale-b-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:wb-blocks/icon {"size":2} /-->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(
-    	gw_placeholder_image(80, 80),
-    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"greyscale-B","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group has-greyscale-b-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:wb-blocks/icon {"size":2} /-->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(
-    	gw_placeholder_image(80, 80),
-    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"greyscale-B","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group has-greyscale-b-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:wb-blocks/icon {"size":2} /-->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(
-    	gw_placeholder_image(80, 80),
-    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"greyscale-B","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group has-greyscale-b-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:wb-blocks/icon {"size":2} /-->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php echo esc_url(
-    	gw_placeholder_image(80, 80),
-    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"greyscale-B","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group has-greyscale-b-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:wb-blocks/icon {"size":2} /-->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-				<!-- wp:image {"width":"40px","height":"40px","scale":"contain","sizeSlug":"large","className":"is-style-default shrink-0"} -->
-				<figure class="wp-block-image size-large is-resized is-style-default shrink-0"><img src="<?php gw_placeholder_image(
-    	80,
-    	80,
-    ); ?>" alt="" style="object-fit:contain;width:40px;height:40px"/></figure>
-				<!-- /wp:image -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"greyscale-B","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group has-greyscale-b-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:wb-blocks/icon {"size":2} /-->
 				<!-- wp:paragraph -->
 				<p><strong>Add section text in here</strong></p>
 				<!-- /wp:paragraph -->
@@ -129,6 +104,5 @@
 
 	</div>
 	<!-- /wp:group -->
-
 </div>
 <!-- /wp:group -->

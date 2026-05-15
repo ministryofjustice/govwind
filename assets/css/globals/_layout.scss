@@ -64,13 +64,9 @@
 	@media (width >= 768px) {
 		--gutter-size: 32px;
 	}
-	@media (width >= 1088px) {
-		//1088px = 1024px + 2*32px
-		--gutter-size: clamp(
-			32px,
-			-58.4px + 8.3333vw,
-			60px
-		); //gradual increase from 32 to 60px
+	@media (width >= 1024px) {
+		//gradual increase from 32 to 128px, it'll reach 128px at a screen width 1536px
+		--gutter-size: clamp(32px, 18.75vw - 160px, 128px);
 	}
 
 	body {

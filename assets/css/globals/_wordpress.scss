@@ -1,6 +1,10 @@
 :root {
 	/* WordPress-specific Design Tokens */
-	--wp-block-gap: var(--spacing-6);
+	--wp-block-gap: clamp(
+		16px,
+		8px + 1.0417vw,
+		40px
+	); //16px at 768px, 40px at 1536px
 	--wp-container-padding: var(--spacing-4);
 	--wp-editor-width: var(--size-content);
 	--wp-wide-width: var(--size-wide);

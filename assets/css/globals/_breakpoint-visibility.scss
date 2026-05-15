@@ -44,12 +44,16 @@ Shewing warnings in the backend that things might be hidden or shewn at differen
 	}
 }
 
+//
 $breakpoints: (
-	"": "600px",
+	xs-: $size-xs,
 	sm-: $size-sm,
 	md-: $size-md,
+	// with no specific width set, assume medium
+	"": $size-md,
 	lg-: $size-lg,
 	xl-: $size-xl,
+	xxl-: $size-xxl,
 );
 
 @each $name, $size in $breakpoints {

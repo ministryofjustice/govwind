@@ -18,19 +18,25 @@
 <!-- wp:post-title {"level":1,"style":{"elements":{"link":{"color":{"text":"var:preset|color|site-colour-palette-3"}}},"spacing":{"margin":{"top":"1rem"}}},"textColor":"site-colour-palette-3","fontSize":"5-xl"} /-->
 
 <!-- wp:paragraph {"className":"is-style-default"} -->
-<p class="is-style-default"><?php esc_html_e(
-                	"Delivering clear, accessible, and reliable digital services built to meet the needs of citizens and communities.",
-                	"govwind",
-                ); ?></p>
+<p class="is-style-default">
+	<?php esc_html_e(
+ 	"Delivering clear, accessible, and reliable digital services built to meet the needs of citizens and communities.",
+ 	"govwind",
+ ); ?>
+</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"33.33%"} -->
 <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":1134,"sizeSlug":"full","linkDestination":"none","className":"hidden md:block!","style":{"border":{"radius":{"topLeft":"0px","topRight":"0px","bottomLeft":"0px","bottomRight":"0px"}}}} -->
-<figure class="wp-block-image size-full has-custom-border hidden md:block! hidden md:block! [&>img]:absolute [&>img]:h-full! [&>img]:max-w-max!"><img src="<?php gw_placeholder_image(
-                	600,
-                	600,
-                ); ?>" alt="" class="wp-image-1134" style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px"/></figure>
+<figure class="wp-block-image size-full has-custom-border hidden md:block! hidden md:block! [&>img]:absolute [&>img]:h-full! [&>img]:max-w-max!">
+	<img
+		src="<?php gw_placeholder_image(600, 600); ?>"
+		alt=""
+		class="wp-image-1134"
+		style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px"
+	/>
+</figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

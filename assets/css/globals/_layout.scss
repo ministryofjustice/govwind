@@ -5,10 +5,17 @@
 		Layout Constraints
 		SCSS variables set in _breakpoint-visiblity.scss
 
+		$size-xs: 600px;
+		$size-sm: 640px;
+		$size-md: 782px;
+		$size-lg: 1080px;
+		$size-xl: 1280px;
+		$size-xxl: 1536px;
 	*/
 
 	--size-content: #{$size-xl};
 	--size-wide: #{$size-xxl};
+	--size-screen-xs: #{$size-xs};
 	--size-screen-sm: #{$size-sm};
 	--size-screen-md: #{$size-md};
 	--size-screen-lg: #{$size-lg};

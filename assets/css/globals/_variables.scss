@@ -1,17 +1,14 @@
-/*
-Mobile nav starts at 600px - no variable as far as I can see - hard coded
-*/
-
+$size-xs: 600px; //WP hard-baked narrow breakpoint
 $size-sm: 640px;
-$size-md: 768px;
-$size-lg: 1024px;
-$size-xl: 1280px;
+$size-md: 782px; //WP hard-baked medium breakpoint
+$size-lg: 1080px; //WP hard-baked wide breakpoint
+$size-xl: 1280px; //WP hard-baked extra-wide breakpoint
 $size-xxl: 1536px;
 
 /// Fluid clamp generator
 /// @param $min - minimum size (e.g. 16px)
 /// @param $max - maximum size (e.g. 40px)
-/// @param $vmin - minimum viewport (e.g. 768px)
+/// @param $vmin - minimum viewport (e.g. 782px)
 /// @param $vmax - maximum viewport (e.g. 1536px)
 
 @mixin fluid($property, $min, $max, $vmin, $vmax) {

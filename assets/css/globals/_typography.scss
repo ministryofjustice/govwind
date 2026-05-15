@@ -219,7 +219,7 @@ $type-scale: (
 		}
 	}
 
-	// Tablet overrides (768px+).
+	// Tablet overrides (782px+).
 	// Only emits a CSS variable if the value is non-null in the map,
 	// so sizes that don't change at tablet produce no output.
 	@media (min-width: $size-md) {
@@ -239,7 +239,7 @@ $type-scale: (
 		}
 	}
 
-	// Desktop overrides (1024px+).
+	// Desktop overrides (1080px+).
 	// Same pattern as tablet — only non-null values are emitted.
 	@media (min-width: $size-lg) {
 		:root {

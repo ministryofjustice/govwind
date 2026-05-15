@@ -7,18 +7,24 @@ nav.is-style-drawer {
 	* This file contains all the required additional colour declarations for the drawer nav
 	*/
 
-	.wp-block-navigation-item.has-child {
-		.wp-block-navigation-item__label {
+	.wp-block-navigation-item {
+		.wp-block-navigation-item__label,
+		.wp-block-navigation__submenu-icon {
 			color: var(--colour-header-nav-links);
 		}
 		a.wp-block-navigation-item__content,
 		button {
+			&:hover {
+				.wp-block-navigation-item__label {
+					box-shadow: 0 0.15em currentColor;
+				}
+			}
 			&:focus {
 				background-color: var(--colour-focus-background-muted);
-				box-shadow:
-					0 -0.075em var(--colour-focus-background-muted),
-					0 0.15em var(--colour-focus-outline);
 				.wp-block-navigation-item__label {
+					box-shadow:
+						0 -0.075em var(--colour-focus-background-muted),
+						0 0.15em var(--colour-focus-outline);
 					color: var(--colour-focus-text);
 					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
 				}
@@ -31,10 +37,12 @@ nav.is-style-drawer {
 			}
 			&:focus-visible {
 				background-color: var(--colour-focus-background);
-				box-shadow:
-					0 -0.075em var(--colour-focus-background),
-					0 0.15em var(--colour-focus-outline);
-				outline: none;
+				outline: 2px solid var(--colour-focus-outline);
+				.wp-block-navigation-item__label {
+					box-shadow:
+						0 -0.075em var(--colour-focus-background),
+						0 0.15em var(--colour-focus-outline);
+				}
 			}
 		}
 	}

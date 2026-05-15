@@ -18,7 +18,11 @@
 			<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%">
 				<!-- wp:image {"align":"center","width":"100%","sizeSlug":"large","linkDestination":"none"} -->
 				<figure class="wp-block-image aligncenter size-large is-resized">
-					<img src="<?php gw_placeholder_image(600, 400); ?>" alt="Feature image" style="width:100%" />
+					<img
+						src="<?php gw_placeholder_image(600, 400); ?>"
+						alt="Feature image"
+						style="width:100%"
+					/>
 				</figure>
 				<!-- /wp:image -->
 			</div>

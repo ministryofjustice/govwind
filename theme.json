@@ -333,12 +333,6 @@
 					"button": {
 						"border": {
 							"radius": "var(--radius-md)"
-						},
-						"margin": {
-							"top": "var(--spacing-6)",
-							"right": "0",
-							"bottom": "0",
-							"left": "0"
 						}
 					}
 				}
@@ -346,6 +340,17 @@
 			"core/heading": {
 				"typography": {
 					"fontWeight": "700"
+				}
+			},
+			"core/columns": {
+				"spacing": {
+					"blockGap": "4rem",
+					"margin": {
+						"top": "var(--spacing-6)",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
+					}
 				}
 			},
 			"core/image": {

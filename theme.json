@@ -333,6 +333,12 @@
 					"button": {
 						"border": {
 							"radius": "var(--radius-md)"
+						},
+						"margin": {
+							"top": "var(--spacing-6)",
+							"right": "0",
+							"bottom": "0",
+							"left": "0"
 						}
 					}
 				}

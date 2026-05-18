@@ -41,9 +41,9 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:button {"style":{"border":{"width":"0px","style":"none"},"spacing":{"padding":{"top":"4px","bottom":"4px"}}}} -->
+			<!-- wp:button {"style":{"border":{"width":"0px","style":"none"}}} -->
 			<div class="wp-block-button">
-				<a class="wp-block-button__link wp-element-button" href="#" style="border-style:none;border-width:0px;padding-top:4px;padding-bottom:4px">Apply now</a>
+				<a class="wp-block-button__link wp-element-button" href="#" style="border-style:none;border-width:0px">Apply now</a>
 			</div>
 			<!-- /wp:button -->
 		</div>

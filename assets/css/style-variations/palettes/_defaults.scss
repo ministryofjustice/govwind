@@ -99,6 +99,9 @@
 	--link-text-visited--light-mode: #8200db;
 	--quote-border--light-mode: #737373; // At the moment, this block might be designed differently, so this might go
 
+	// Root background colour (visible beneath footer on short pages)
+	--root-background-colour--light-mode: var(--palette-greyscale-1--light-mode);
+
 	// WB Block colours
 	// Reference other colours, rather than create new ones
 	--wb-accordion-hover-bg: var(--colour-subtle);
@@ -208,4 +211,9 @@
 	--link-text-hover--dark-mode: #9fd0ff;
 	--link-text-visited--dark-mode: #c4a2d1;
 	--quote-border--dark-mode: #8c8c8c; // At the moment, this block might be designed differently, so this might go
+
+
+	// Root background colour (visible beneath footer on short pages)
+	--root-background-colour--dark-mode: var(--palette-greyscale-1--dark-mode);
+
 }

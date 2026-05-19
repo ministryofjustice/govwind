@@ -7,64 +7,32 @@
  * Keywords: hero, page header, page heading, breadcrumb, title
  */
 ?>
-<!-- wp:group {"align":"full","style":{"color":{"background":"var(--colour-primary)"},"elements":{"link":{"color":{"text":"var:preset|color|background"},":hover":{"color":{"text":"var:preset|color|background"}}}},"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"textColor":"background","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-background-color has-text-color has-background has-link-color" style="background-color:var(--colour-primary);margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
+<!-- wp:group {"metadata":{"categories":["header","featured"],"patternName":"govwind/page-heading-hero","name":"Page Heading Hero"},"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|greyscale-A"},":hover":{"color":{"text":"var:preset|color|background"}}}}},"backgroundColor":"colour-Z","textColor":"greyscale-A","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-greyscale-a-color has-colour-z-background-color has-text-color has-background has-link-color"><!-- wp:group {"style":{"spacing":{"padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-right:0;padding-left:0"><!-- wp:columns {"align":"wide"} -->
+<div class="wp-block-columns alignwide"><!-- wp:column {"width":"66.66%","style":{"spacing":{"padding":{"bottom":"2rem"}}}} -->
+<div class="wp-block-column" style="padding-bottom:2rem;flex-basis:66.66%"><!-- wp:group {"metadata":{"name":"Breadcrumb"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:boldblocks/breadcrumb-block /--></div>
+<!-- /wp:group -->
 
-    <!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
-    <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+<!-- wp:post-title {"level":1,"style":{"elements":{"link":{"color":{"text":"var:preset|color|site-colour-palette-3"}}},"spacing":{"margin":{"top":"1rem"}}},"textColor":"site-colour-palette-3","fontSize":"5-xl"} /-->
 
-        <!-- wp:columns {"align":"wide"} -->
-        <div class="wp-block-columns alignwide">
-
-            <!-- wp:column {"width":"66.66%"} -->
-            <div class="wp-block-column" style="flex-basis:66.66%">
-
-                <!-- wp:group {"metadata":{"name":"Breadcrumb"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-                <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
-                    <!-- wp:boldblocks/breadcrumb-block /-->
-                </div>
-                <!-- /wp:group -->
-
-                <!-- wp:spacer {"height":"19px"} -->
-                <div style="height:19px" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
-
-                <!-- wp:post-title {"level":1} /-->
-
-                <!-- wp:paragraph {"className":"is-style-default"} -->
-                <p class="is-style-default"><?php esc_html_e(
+<!-- wp:paragraph {"className":"is-style-default"} -->
+<p class="is-style-default"><?php esc_html_e(
                 	"Delivering clear, accessible, and reliable digital services built to meet the needs of citizens and communities.",
                 	"govwind",
                 ); ?></p>
-                <!-- /wp:paragraph -->
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
 
-                <!-- wp:spacer {"height":"30px"} -->
-                <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-                <!-- /wp:spacer -->
-
-            </div>
-            <!-- /wp:column -->
-
-            <!-- wp:column {"width":"33.33%"} -->
-            <div class="wp-block-column" style="flex-basis:33.33%">
-
-            <!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":{"topLeft":"0px","topRight":"0px","bottomLeft":"0px","bottomRight":"0px"}}},"className":"hidden md:block!"} -->
-            <figure class="wp-block-image size-full has-custom-border hidden md:block!">
-                <img src="<?php gw_placeholder_image(
+<!-- wp:column {"width":"33.33%"} -->
+<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":1134,"sizeSlug":"full","linkDestination":"none","className":"hidden md:block!","style":{"border":{"radius":{"topLeft":"0px","topRight":"0px","bottomLeft":"0px","bottomRight":"0px"}}}} -->
+<figure class="wp-block-image size-full has-custom-border hidden md:block! hidden md:block! [&>img]:absolute [&>img]:h-full! [&>img]:max-w-max!"><img src="<?php gw_placeholder_image(
                 	600,
                 	600,
-                ); ?>" alt="" style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px"/>
-            </figure>
-            <!-- /wp:image -->
-
-            </div>
-            <!-- /wp:column -->
-
-        </div>
-        <!-- /wp:columns -->
-
-    </div>
-    <!-- /wp:group -->
-
-</div>
+                ); ?>" alt="" class="wp-image-1134" style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->

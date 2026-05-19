@@ -296,6 +296,7 @@ $type-scale: (
 					margin-block-end: var(
 						--space-heading-sm
 					); // consistent bottom spacing across all heading levels
+					text-wrap: balance; // all headings have text-wrap balance
 				}
 			}
 

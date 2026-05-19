@@ -44,6 +44,7 @@
 			]
 		},
 		"typography": {
+			"defaultFontSizes": false,
 			"fluid": false,
 			"fontSizes": [
 				{ "slug": "xs", "size": "var(--font-size-xs)", "name": "Extra Small" },

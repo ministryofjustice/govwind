@@ -208,14 +208,24 @@ $type-scale: (
 	:root {
 		@each $key, $config in $scale {
 			// Font size CSS variable — e.g. --font-size-xl: 1.25rem
-			--font-size-#{$key}: #{map.get($config, "mobile")};
+			$fs: map.get($config, "mobile");
+			$fs_next: map.get($config, "tablet");
+			$lh: map.get(map.get($config, "line-height"), "mobile");
+			$lh_next: map.get(map.get($config, "line-height"), "tablet");
+
+			--font-size-#{$key}: #{$fs};
+
+			// @if skips null values — no redundant overrides in the output
+			@if $fs_next {
+				@include fluid(--font-size-#{$key}, $fs, $fs_next, $size-md, $size-xl);
+			}
 
 			// Line height CSS variable — drill into the nested line-height
 			// map to get the mobile value. e.g. --line-height-xl: 1.75rem
-			--line-height-#{$key}: #{map.get(
-					map.get($config, "line-height"),
-					"mobile"
-				)};
+			--line-height-#{$key}: #{$lh};
+			@if $lh_next {
+				@include fluid(--line-height-#{$key}, $lh, $lh_next, $size-md, $size-lg);
+			}
 		}
 	}
 
@@ -225,15 +235,29 @@ $type-scale: (
 	@media (min-width: $size-md) {
 		:root {
 			@each $key, $config in $scale {
+				$fs_prev: map.get($config, "mobile");
 				$fs: map.get($config, "tablet");
+				$fs_next: map.get($config, "desktop");
+				$lh_prev: map.get(map.get($config, "line-height"), "mobile");
 				$lh: map.get(map.get($config, "line-height"), "tablet");
+				$lh_next: map.get(map.get($config, "line-height"), "desktop");
 
 				// @if skips null values — no redundant overrides in the output
 				@if $fs {
 					--font-size-#{$key}: #{$fs};
+					@if $fs_next {
+						@include fluid(--font-size-#{$key}, $fs, $fs_next, $size-md, $size-lg);
+					}
+				} @else if $fs_next {
+					@include fluid(--font-size-#{$key}, $fs_prev, $fs_next, $size-md, $size-lg);
 				}
 				@if $lh {
 					--line-height-#{$key}: #{$lh};
+					@if $lh_next {
+						@include fluid(--line-height-#{$key}, $lh, $lh_next, $size-md, $size-lg);
+					}
+				} @else if $lh_next {
+					@include fluid(--font-size-#{$key}, $lh_prev, $lh_next, $size-md, $size-lg);
 				}
 			}
 		}

@@ -5,6 +5,27 @@ $size-lg: 1080px; //WP hard-baked wide breakpoint
 $size-xl: 1280px; //WP hard-baked extra-wide breakpoint
 $size-xxl: 1536px;
 
+@use "sass:math";
+@use "sass:string";
+
+@function rem-to-px($rem, $base: 16px) {
+	@if math.is-unitless($rem) {
+		@error 'rem-to-px() expects a rem value. Got: number without unit';
+	} @else if math.unit($rem) != "rem" {
+		@error 'rem-to-px() expects a rem value. Got: #{$rem}';
+	}
+	@return math.div($rem, 1rem) * $base;
+}
+
+@function px-to-rem($px, $base: 16px) {
+	@if math.is-unitless($px) {
+		@error 'px-to-rem() expects a px value. Got: number without unit';
+	} @else if math.unit($px) != "px" {
+		@error 'px-to-rem() expects a px value. Got: #{$px}';
+	}
+	@return math.div($px, $base) * 1rem;
+}
+
 /// Fluid clamp generator
 /// @param $min - minimum size (e.g. 16px)
 /// @param $max - maximum size (e.g. 40px)
@@ -12,8 +33,24 @@ $size-xxl: 1536px;
 /// @param $vmax - maximum viewport (e.g. 1536px)
 
 @mixin fluid($property, $min, $max, $vmin, $vmax) {
-	$slope: calc(($max - $min) / ($vmax - $vmin)) * 100;
-	$intercept: $min - calc($slope * $vmin / 100);
+	@if math.unit($min) == "rem" {
+		$min: rem-to-px($min);
+	}
+	@if math.unit($max) == "rem" {
+		$max: rem-to-px($max);
+	}
 
-	#{$property}: clamp(#{$min}, #{$intercept} + #{$slope}vw, #{$max});
+	@if math.unit($max) != "px" or math.unit($min) != "px" {
+		// Only REMs and PX supported, REMs have been converted by now
+		@error 'fluid() expects px or rem values for min and max.';
+	}
+
+	$slope: math.div(($max - $min), ($vmax - $vmin));
+	$intercept: $min - ($slope * $vmin);
+
+	#{$property}: clamp(
+		#{$min},
+		calc(#{$intercept} + #{100 * $slope}vw),
+		#{$max}
+	);
 }

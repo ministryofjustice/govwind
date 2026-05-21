@@ -224,7 +224,13 @@ $type-scale: (
 			// map to get the mobile value. e.g. --line-height-xl: 1.75rem
 			--line-height-#{$key}: #{$lh};
 			@if $lh_next {
-				@include fluid(--line-height-#{$key}, $lh, $lh_next, $size-md, $size-lg);
+				@include fluid(
+					--line-height-#{$key},
+					$lh,
+					$lh_next,
+					$size-md,
+					$size-lg
+				);
 			}
 		}
 	}
@@ -246,18 +252,42 @@ $type-scale: (
 				@if $fs {
 					--font-size-#{$key}: #{$fs};
 					@if $fs_next {
-						@include fluid(--font-size-#{$key}, $fs, $fs_next, $size-md, $size-lg);
+						@include fluid(
+							--font-size-#{$key},
+							$fs,
+							$fs_next,
+							$size-md,
+							$size-lg
+						);
 					}
 				} @else if $fs_next {
-					@include fluid(--font-size-#{$key}, $fs_prev, $fs_next, $size-md, $size-lg);
+					@include fluid(
+						--font-size-#{$key},
+						$fs_prev,
+						$fs_next,
+						$size-md,
+						$size-lg
+					);
 				}
 				@if $lh {
 					--line-height-#{$key}: #{$lh};
 					@if $lh_next {
-						@include fluid(--line-height-#{$key}, $lh, $lh_next, $size-md, $size-lg);
+						@include fluid(
+							--line-height-#{$key},
+							$lh,
+							$lh_next,
+							$size-md,
+							$size-lg
+						);
 					}
 				} @else if $lh_next {
-					@include fluid(--font-size-#{$key}, $lh_prev, $lh_next, $size-md, $size-lg);
+					@include fluid(
+						--font-size-#{$key},
+						$lh_prev,
+						$lh_next,
+						$size-md,
+						$size-lg
+					);
 				}
 			}
 		}

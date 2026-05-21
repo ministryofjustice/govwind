@@ -5,31 +5,3 @@ a {
 		text-decoration-thickness: 0.125em; // 2px at base size, increases proportionally with font size
 	}
 }
-
-summary {
-	color: var(--colour-link-text);
-	&:hover {
-		color: var(--colour-link-text-hover);
-	}
-	&:focus {
-		color: var(--colour-focus-text);
-		background: var(--colour-focus-background-muted);
-		box-shadow:
-			0 -0.075em var(--colour-focus-background-muted),
-			0 0.15em var(--colour-focus-outline);
-		a {
-			color: var(--colour-focus-text);
-		}
-	}
-	&:focus-visible {
-		background: var(--colour-focus-background);
-		box-shadow:
-			0 -0.075em var(--colour-focus-background),
-			0 0.15em var(--colour-focus-outline);
-		outline-style: solid;
-		outline-color: transparent;
-		a {
-			color: var(--colour-focus-text);
-		}
-	}
-}

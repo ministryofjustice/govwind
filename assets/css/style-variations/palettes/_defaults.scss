@@ -99,8 +99,16 @@
 	--link-text-visited--light-mode: #8200db;
 	--quote-border--light-mode: #737373; // At the moment, this block might be designed differently, so this might go
 
-	//DARK MODE
+	// WB Block colours
+	// Reference other colours, rather than create new ones
+	--wb-accordion-hover-bg: var(--colour-subtle);
+	--wb-accordion-focus-bg: var(--colour-focus-background-muted);
+	--wb-accordion-focus-visible-bg: var(--colour-focus-background);
+	--wb-accordion-focus-visible-outline: currentColor;
 
+	/********************************************************************
+		DARK MODE
+	********************************************************************/
 	//palette
 	--palette-1--dark-mode: oklch(
 		var(--brand-brightness-primary-dark) var(--brand-intensity-subtle)

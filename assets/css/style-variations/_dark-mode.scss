@@ -10,6 +10,12 @@
 		}
 		&.has-background,
 		*.has-background {
+			&.has-colour-y-background-color {
+				outline: 1px solid var(--wp--preset--color--colour-y);
+			}
+			&.has-colour-z-background-color {
+				outline: 1px solid var(--wp--preset--color--colour-z);
+			}
 			&:not(:focus):not(:focus *) {
 				background-color: var(--forced-dark-colour) !important;
 			}

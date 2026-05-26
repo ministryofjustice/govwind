@@ -238,8 +238,8 @@
 				},
 				":focus": {
 					"color": {
-						"text": "var(--colour-focus-text)",
-						"background": "var(--colour-focus-background-muted)"
+						"text": "var(--colour-focus-text)!important",
+						"background": "var(--colour-focus-background-muted)!important"
 					},
 					"outline": {
 						"color": "var(--colour-focus-outline)",
@@ -250,8 +250,8 @@
 				},
 				":focus-visible": {
 					"color": {
-						"text": "var(--colour-focus-text)",
-						"background": "var(--colour-focus-background)"
+						"text": "var(--colour-focus-text)!important",
+						"background": "var(--colour-focus-background)!important"
 					},
 					"outline": {
 						"color": "var(--colour-focus-outline)",

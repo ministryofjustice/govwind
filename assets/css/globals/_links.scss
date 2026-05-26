@@ -5,3 +5,23 @@ a {
 		text-decoration-thickness: 0.125em; // 2px at base size, increases proportionally with font size
 	}
 }
+
+/********
+	* The following is what would be created by theme.json, but wrapped in the importants layer
+	* This way it overrides the custom colours which can override the normal theme.json styling
+	* COLOURS ONLY - BUTTON LINKS ONLY
+********/
+@layer importants {
+	:root :where(.wp-element-button:focus, .wp-block-button__link:focus) {
+		background-color: var(--colour-focus-background-muted) !important;
+		color: var(--colour-focus-text) !important;
+	}
+	:root
+		:where(
+			.wp-element-button:focus-visible,
+			.wp-block-button__link:focus-visible
+		) {
+		background-color: var(--colour-focus-background) !important;
+		color: var(--colour-focus-text) !important;
+	}
+}

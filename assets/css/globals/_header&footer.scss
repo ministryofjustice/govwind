@@ -106,3 +106,12 @@ footer {
 		border: 1px solid var(--colour-header-foreground);
 	}
 }
+
+:root {
+	background-color: var(--colour-root-background);
+
+	.editor-styles-wrapper {
+		// The editor screen always wants the page background, not the root background
+		background-color: var(--colour-page-background);
+	}
+}

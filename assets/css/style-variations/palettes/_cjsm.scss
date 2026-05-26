@@ -48,6 +48,6 @@
 	--focus-background-muted--light-mode: #f8f4e4; //also needs to contrast with focus-text
 
 	// Beneath footer (root background colour)
-	--root-background-colour--light-mode: var(--palette-1--light-mode);
-	--root-background-colour--dark-mode: var(--palette-3--dark-mode);
+	// As the footer uses wb-force-dark, we don't set a dark mode here
+	--root-background--light-mode: var(--palette-1--light-mode);
 }

@@ -29,7 +29,7 @@
 
 <!-- wp:column {"width":"33.33%"} -->
 <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":1134,"sizeSlug":"full","linkDestination":"none","className":"hidden md:block!","style":{"border":{"radius":{"topLeft":"0px","topRight":"0px","bottomLeft":"0px","bottomRight":"0px"}}}} -->
-<figure class="wp-block-image size-full has-custom-border hidden md:block! md:relative left-[var(--wp--style--root--padding-left)] [&>img]:h-full! [&>img]:w-full! [&>img]:max-w-max! hidden md:block! [&>img]:object-cover [&>img]:object-left">
+<figure class="wp-block-image size-full has-custom-border hidden md:block! hidden md:block! [&>img]:absolute [&>img]:h-full! [&>img]:max-w-max!">
 	<img
 		src="<?php gw_placeholder_image(600, 600); ?>"
 		alt=""

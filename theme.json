@@ -217,7 +217,7 @@
 					"text": "var(--colour-button-text)"
 				},
 				"border": {
-					"radius": "var(--radius-md)"
+					"radius": "var(--site-radius)"
 				},
 				"spacing": {
 					"padding": {
@@ -333,7 +333,7 @@
 				"elements": {
 					"button": {
 						"border": {
-							"radius": "var(--radius-md)"
+							"radius": "var(--site-radius)"
 						}
 					}
 				}

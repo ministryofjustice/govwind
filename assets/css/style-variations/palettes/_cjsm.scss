@@ -50,4 +50,6 @@
 	// Beneath footer (root background colour)
 	// As the footer uses wb-force-dark, we don't set a dark mode here
 	--root-background--light-mode: var(--palette-1--light-mode);
+
+	--site-radius: 100px;
 }

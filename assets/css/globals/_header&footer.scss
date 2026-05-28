@@ -20,6 +20,7 @@ header {
 		}
 
 		.wb-search-form-wrapper {
+			border-radius: var(--site-radius);
 			background-color: var(--colour-header-search-form-background);
 			color: var(--colour-header-search-form-text);
 

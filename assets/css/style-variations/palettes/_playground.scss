@@ -31,4 +31,7 @@
 	// Header colours
 	--header-logo-focus-filter--light-mode: invert(1) hue-rotate(180deg); // we invert the logo on focus
 	--header-logo-focus-filter--dark-mode: invert(1) hue-rotate(180deg); // we invert the logo on focus
+
+	// Non-colours
+	--site-radius: var(--radius-full);
 }

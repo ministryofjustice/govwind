@@ -24,6 +24,11 @@ header {
 			background-color: var(--colour-header-search-form-background);
 			color: var(--colour-header-search-form-text);
 
+			.wp-block-search__input {
+				margin-left: calc(clamp(0px, var(--site-radius), 30px) / 4);
+				// ensures the search text isn't affected by the radius clipping it
+				// by adding a margin ¼ of the size of the border-radius
+			}
 			.wp-block-search__button {
 				padding: 8px;
 				margin: 0;

@@ -63,4 +63,8 @@
 	--radius-2-xl: 1rem;
 	--radius-3-xl: 1.5rem;
 	--radius-full: 9999px;
+
+	// This is the site-wide radius
+	// This default can be overridden at the site level the same way as colours
+	--site-radius: var(--radius-default);
 }

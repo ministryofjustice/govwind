@@ -31,3 +31,9 @@
 		}
 	}
 }
+.wb-accordion {
+	.wb-accordion-toggle-all,
+	.wb-accordion__section summary {
+		border-radius: var(--site-radius);
+	}
+}

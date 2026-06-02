@@ -46,6 +46,16 @@ header {
 			.wp-block-search__inside-wrapper {
 				padding-block: 6px;
 				padding-inline: 6px;
+				border-radius: var(--site-radius);
+
+				&:has(input:focus) {
+					outline: 2px solid var(--colour-focus-background-muted);
+					outline-offset: 1px;
+					box-shadow: 0 0 0 6px;
+				}
+				&:has(input:focus-visible) {
+					outline-color: var(--colour-focus-background);
+				}
 			}
 		}
 

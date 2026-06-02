@@ -169,6 +169,7 @@ nav.is-style-detached {
 			}
 			&:focus {
 				background-color: var(--colour-focus-background-muted);
+				outline: none;
 				> span,
 				&:after {
 					color: var(--colour-focus-text);

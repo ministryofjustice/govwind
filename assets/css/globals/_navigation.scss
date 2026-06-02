@@ -8,12 +8,38 @@ nav.is-style-drawer {
 	*/
 
 	.wp-block-navigation-item {
+		border-radius: var(--site-radius);
 		.wp-block-navigation-item__label,
 		.wp-block-navigation__submenu-icon {
 			color: var(--colour-header-nav-links);
 		}
-		a.wp-block-navigation-item__content,
-		button {
+		a.wp-block-navigation-item__content {
+			&:hover:not(:focus) {
+				.wp-block-navigation-item__label {
+					box-shadow: 0 0.15em currentColor;
+				}
+			}
+			&:not(.wp-block-navigation-submenu a):focus {
+				background-color: unset !important;
+				box-shadow: none !important;
+			}
+			&:focus {
+				.wp-block-navigation-item__label {
+					background-color: var(--colour-focus-background-muted);
+					color: var(--colour-focus-text);
+					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
+				}
+			}
+			&:focus-visible {
+				.wp-block-navigation-item__label {
+					background-color: var(--colour-focus-background);
+					color: var(--colour-focus-text);
+				}
+			}
+		}
+
+		.wp-block-navigation-submenu__toggle {
+			border-radius: var(--site-radius);
 			&:hover {
 				.wp-block-navigation-item__label {
 					box-shadow: 0 0.15em currentColor;
@@ -21,12 +47,10 @@ nav.is-style-drawer {
 			}
 			&:focus {
 				background-color: var(--colour-focus-background-muted);
+				outline: 2px solid var(--colour-focus-outline);
 				.wp-block-navigation-item__label {
-					box-shadow:
-						0 -0.075em var(--colour-focus-background-muted),
-						0 0.15em var(--colour-focus-outline);
+					box-shadow: none;
 					color: var(--colour-focus-text);
-					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
 				}
 				+ .wp-block-navigation__submenu-icon {
 					z-index: 1; //the focus background will otherwise obscure this.
@@ -39,34 +63,23 @@ nav.is-style-drawer {
 				background-color: var(--colour-focus-background);
 				outline: 2px solid var(--colour-focus-outline);
 				.wp-block-navigation-item__label {
-					box-shadow:
-						0 -0.075em var(--colour-focus-background),
-						0 0.15em var(--colour-focus-outline);
+					box-shadow: none;
 				}
 			}
-		}
-	}
-	.wp-block-navigation-item.has-child:has(button[aria-expanded="true"]) {
-		// Inverse colours for control when menu is open
-		background-color: var(--colour-header-nav-links);
-		button .wp-block-navigation-item__label {
-			color: var(--colour-header-nav-background);
-		}
-		.wp-block-navigation__submenu-icon > svg {
-			stroke: var(--colour-header-nav-background);
-		}
-		&:has(:focus) {
-			background-color: var(--colour-focus-background-muted);
-			button .wp-block-navigation-item__label {
-				color: var(--colour-focus-text);
-				text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
+			&[aria-expanded="true"]:not(:focus) {
+				// Toggle is open
+				// Inverse colours for control when menu is open
+				background-color: var(--colour-header-nav-links);
+				.wp-block-navigation-item__label {
+					color: var(--colour-header-nav-background);
+				}
+				+ .wp-block-navigation__submenu-icon {
+					z-index: 1; //the focus background will otherwise obscure this.
+					> svg {
+						stroke: var(--colour-header-nav-background);
+					}
+				}
 			}
-			.wp-block-navigation__submenu-icon > svg {
-				stroke: var(--colour-focus-text);
-			}
-		}
-		&:has(:focus-visible) {
-			background-color: var(--colour-focus-background);
 		}
 	}
 

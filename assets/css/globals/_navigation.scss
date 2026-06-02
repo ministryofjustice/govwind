@@ -12,6 +12,26 @@ nav.is-style-drawer {
 		.wp-block-navigation-item__label,
 		.wp-block-navigation__submenu-icon {
 			color: var(--colour-header-nav-links);
+			position: relative;
+			z-index: 1; //the focus background will otherwise obscure this.
+			svg {
+				stroke: currentColor;
+			}
+		}
+		&.current-menu-item {
+			// Reverse colours for current page & ancestor
+			a.wp-block-navigation-item__content {
+				pointer-events: none; //disable clicking (current page - would do nothing)
+				border-radius: var(--site-radius);
+				background-color: var(--colour-header-nav-links);
+			}
+			.wp-block-navigation-submenu__toggle {
+				background-color: var(--colour-header-nav-links);
+			}
+			.wp-block-navigation-item__label,
+			.wp-block-navigation__submenu-icon {
+				color: var(--colour-header-nav-background);
+			}
 		}
 		a.wp-block-navigation-item__content {
 			&:hover:not(:focus) {
@@ -53,10 +73,7 @@ nav.is-style-drawer {
 					color: var(--colour-focus-text);
 				}
 				+ .wp-block-navigation__submenu-icon {
-					z-index: 1; //the focus background will otherwise obscure this.
-					svg {
-						stroke: var(--colour-focus-text);
-					}
+					color: var(--colour-focus-text);
 				}
 			}
 			&:focus-visible {
@@ -74,10 +91,7 @@ nav.is-style-drawer {
 					color: var(--colour-header-nav-background);
 				}
 				+ .wp-block-navigation__submenu-icon {
-					z-index: 1; //the focus background will otherwise obscure this.
-					> svg {
-						stroke: var(--colour-header-nav-background);
-					}
+					color: var(--colour-header-nav-background);
 				}
 			}
 		}

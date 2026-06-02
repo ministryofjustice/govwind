@@ -20,16 +20,19 @@ nav.is-style-drawer {
 		}
 		&.current-menu-item {
 			// Reverse colours for current page & ancestor
-			a.wp-block-navigation-item__content {
+			> a.wp-block-navigation-item__content {
 				pointer-events: none; //disable clicking (current page - would do nothing)
+			}
+			> a.wp-block-navigation-item__content,
+			> .wp-block-navigation-submenu__toggle {
 				border-radius: var(--site-radius);
 				background-color: var(--colour-header-nav-links);
+
+				.wp-block-navigation-item__label {
+					color: var(--colour-header-nav-background);
+				}
 			}
-			.wp-block-navigation-submenu__toggle {
-				background-color: var(--colour-header-nav-links);
-			}
-			.wp-block-navigation-item__label,
-			.wp-block-navigation__submenu-icon {
+			> .wp-block-navigation__submenu-icon {
 				color: var(--colour-header-nav-background);
 			}
 		}
@@ -39,12 +42,14 @@ nav.is-style-drawer {
 					box-shadow: 0 0.15em currentColor;
 				}
 			}
-			&:not(.wp-block-navigation-submenu a):focus {
+			&:focus {
+				// This overrides the site-wide settings, as here we only want the span to be highlighted
 				background-color: unset !important;
 				box-shadow: none !important;
 			}
 			&:focus {
 				.wp-block-navigation-item__label {
+					box-shadow: 0 0.15em;
 					background-color: var(--colour-focus-background-muted);
 					color: var(--colour-focus-text);
 					text-decoration: inherit; //this ensures the colour of the decoration is the same as the text, otherwise the <a> text-decoration is used and that isn't always the same colour
@@ -94,6 +99,13 @@ nav.is-style-drawer {
 					color: var(--colour-header-nav-background);
 				}
 			}
+		}
+		.wp-block-navigation-submenu
+			.current-menu-item
+			> .wp-block-navigation-item__content {
+			// current page of submenu, outline added as colours might not contrast
+			outline: 2px solid;
+			outline-offset: 0;
 		}
 	}
 

@@ -46,6 +46,18 @@ header {
 			.wp-block-search__inside-wrapper {
 				padding-block: 6px;
 				padding-inline: 6px;
+				border-radius: var(--site-radius);
+
+				&:not(.search-drawer-open *) {
+					&:has(input:focus) {
+						outline: 2px solid var(--colour-focus-background-muted);
+						outline-offset: 1px;
+						box-shadow: 0 0 0 6px;
+					}
+					&:has(input:focus-visible) {
+						outline-color: var(--colour-focus-background);
+					}
+				}
 			}
 		}
 
@@ -55,11 +67,23 @@ header {
 			}
 			.wb-search-form-wrapper {
 				background-color: var(--colour-header-search-drawer-background);
+				padding-left: var(--wp--style--root--padding-left);
+				padding-right: var(--wp--style--root--padding-right);
 
 				.wp-block-search__input {
 					background-color: var(--colour-header-search-drawer-input-background);
 					color: var(--colour-header-search-drawer-input-text);
 					border-color: var(--colour-header-search-drawer-input-border);
+					margin-right: 0.5rem;
+					padding: 0rem 0.5rem;
+					&:focus {
+						outline: 3px solid var(--colour-focus-background-muted);
+						outline-offset: 2px;
+						box-shadow: 0 0 0 2px;
+					}
+					&:focus-visible {
+						outline-color: var(--colour-focus-background);
+					}
 				}
 			}
 		}

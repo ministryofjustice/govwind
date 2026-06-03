@@ -366,6 +366,14 @@ $type-scale: (
 					letter-spacing: var(--letter-spacing-tight);
 				}
 			}
+
+			// margin-block-start determined by heading level
+			// not affected by font size - even though it is uses the line height variable
+			// can be independently overwritten
+			#{$tag}.wp-block-heading,
+			#{$tag}.wp-block-post-title {
+				margin-block-start: var(--line-height-#{$key});
+			}
 		} @else {
 			// ── Branch B: size has no heading tag — utility class only ───
 			//

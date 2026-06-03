@@ -1,0 +1,16 @@
+input,
+select,
+textarea {
+	&:not(header *):not(footer *) {
+		border-radius: var(--site-radius);
+		border: solid 1px var(--colour-foreground);
+		&:focus {
+			outline: 5px solid var(--colour-focus-background-muted);
+			outline-offset: 2px;
+			box-shadow: 0 0 0 3px;
+		}
+		&:focus-visible {
+			outline-color: var(--colour-focus-background);
+		}
+	}
+}

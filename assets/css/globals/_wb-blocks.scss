@@ -37,3 +37,10 @@
 		border-radius: var(--site-radius);
 	}
 }
+
+.wp-block-search__input {
+	&:not(header *):not(footer *) {
+		margin: 3px 0.5rem 3px 0;
+		padding: 0 0.5rem;
+	}
+}

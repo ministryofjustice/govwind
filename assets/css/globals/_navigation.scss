@@ -19,11 +19,19 @@ nav.is-style-drawer {
 			}
 		}
 		&.current-menu-item {
-			// Reverse colours for current page & ancestor
+			// Reverse colours for current page
 			> a.wp-block-navigation-item__content {
 				pointer-events: none; //disable clicking (current page - would do nothing)
+				border-radius: var(--site-radius);
+				background-color: var(--colour-header-nav-links);
+
+				.wp-block-navigation-item__label {
+					color: var(--colour-header-nav-background);
+				}
 			}
-			> a.wp-block-navigation-item__content,
+		}
+		&.current-menu-ancestor {
+			// Reverse colours for current page ancestor
 			> .wp-block-navigation-submenu__toggle {
 				border-radius: var(--site-radius);
 				background-color: var(--colour-header-nav-links);
@@ -39,7 +47,7 @@ nav.is-style-drawer {
 		a.wp-block-navigation-item__content {
 			&:hover:not(:focus) {
 				.wp-block-navigation-item__label {
-					box-shadow: 0 0.15em currentColor;
+					box-shadow: 0 0.15em;
 				}
 			}
 			&:focus {
@@ -67,7 +75,7 @@ nav.is-style-drawer {
 			border-radius: var(--site-radius);
 			&:hover {
 				.wp-block-navigation-item__label {
-					box-shadow: 0 0.15em currentColor;
+					box-shadow: 0 0.15em;
 				}
 			}
 			&:focus {
@@ -100,12 +108,17 @@ nav.is-style-drawer {
 				}
 			}
 		}
-		.wp-block-navigation-submenu
-			.current-menu-item
-			> .wp-block-navigation-item__content {
-			// current page of submenu, outline added as colours might not contrast
-			outline: 2px solid;
-			outline-offset: 0;
+		.wp-block-navigation-submenu {
+			.wp-block-navigation-item__content {
+				font-weight: 400;
+			}
+			.current-menu-item > .wp-block-navigation-item__content {
+				background-color: transparent; //override the background which has been changed above for the primary level nav
+				font-weight: 700;
+				.wp-block-navigation-item__label {
+					box-shadow: 0 0.15em;
+				}
+			}
 		}
 	}
 

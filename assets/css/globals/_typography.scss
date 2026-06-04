@@ -370,8 +370,8 @@ $type-scale: (
 			// margin-block-start determined by heading level
 			// not affected by font size - even though it is uses the line height variable
 			// can be independently overwritten
-			#{$tag}.wp-block-heading,
-			#{$tag}.wp-block-post-title {
+			#{$tag}.wp-block-heading:not(:first-child),
+			#{$tag}.wp-block-post-title:not(:first-child) {
 				margin-block-start: var(--line-height-#{$key});
 			}
 		} @else {
@@ -449,7 +449,11 @@ $type-scale: (
    Override WordPress FSE layout constraints for headings
 ------------------------------------------------------------------- */
 
-:root .is-layout-constrained > .wp-block-heading:first-child {
+:root
+	.is-layout-constrained:not(.has-background)
+	> .wp-block-heading:first-child {
+	// We make a specific exception for ".has-background", as backgrounds will usually want a consistent padding
+	// Therefore, the existing margin of 0 for :first-child, should be retained if ".has-background" is present.
 	margin-block-start: revert;
 }
 

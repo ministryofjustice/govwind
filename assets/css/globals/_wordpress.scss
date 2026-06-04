@@ -8,17 +8,13 @@
 	--wp-wide-width: var(--size-wide);
 
 	/* WordPress Block Specific Tokens */
-	--wp-button-radius: var(--radius-md);
-	--wp-button-padding-x: var(--spacing-4);
-	--wp-button-padding-y: var(--spacing-2);
-
 	--wp-quote-border-width: 4px;
 	--wp-quote-padding: var(--spacing-4);
 
 	--wp-code-bg: var(--color-muted);
 	--wp-code-padding-x: var(--spacing-2);
 	--wp-code-padding-y: var(--spacing-1);
-	--wp-code-radius: var(--radius-sm);
+	--wp-code-radius: 0;
 
 	/* WordPress Admin Bar */
 	--wp-admin-bar-height: 32px;
@@ -28,7 +24,6 @@
 @media (min-width: $size-md) {
 	@theme {
 		--wp-container-padding: var(--spacing-6);
-		--wp-block-gap: var(--spacing-8);
 		--wp-admin-bar-height: 46px;
 	}
 }

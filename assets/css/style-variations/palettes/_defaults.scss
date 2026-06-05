@@ -105,6 +105,7 @@
 	// WB Block colours
 	// Reference other colours, rather than create new ones
 	--wb-accordion-hover-bg: var(--colour-subtle);
+	--wb-accordion-focus-text: var(--colour-focus-text);
 	--wb-accordion-focus-bg: var(--colour-focus-background-muted);
 	--wb-accordion-focus-visible-bg: var(--colour-focus-background);
 	--wb-accordion-focus-visible-outline: currentColor;

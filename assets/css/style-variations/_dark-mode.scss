@@ -1,15 +1,33 @@
 @mixin force-dark {
+	/********
+		* This mixin forces an element to be dark unless it is focussed upon
+		* Text and borders are forced light to contrast with the background which is forced dark
+		* If a set background is used and it is one of the mandatory colours (X or Y), we add a 
+		thin outline of that colour, we also change the border colour to that colour (instead of forced light)
+		* Specific exception for the WB Icon block
+	********/
+
 	.wb-force-dark {
 		&,
 		* {
 			&:not(:focus):not(:focus *) {
 				color: var(--forced-light-colour) !important;
 				border-color: var(--forced-light-colour) !important;
-				background-color: var(--forced-dark-colour) !important;
+				&:not(.wb-icon) {
+					background-color: var(--forced-dark-colour) !important;
+				}
 			}
 		}
 		&.has-background,
 		*.has-background {
+			&.has-colour-y-background-color {
+				outline: 1px solid var(--wp--preset--color--colour-y);
+				border-color: var(--wp--preset--color--colour-y) !important;
+			}
+			&.has-colour-z-background-color {
+				outline: 1px solid var(--wp--preset--color--colour-z);
+				border-color: var(--wp--preset--color--colour-z) !important;
+			}
 			&:not(:focus):not(:focus *) {
 				background-color: var(--forced-dark-colour) !important;
 			}
@@ -20,12 +38,25 @@
 				color: var(--forced-light-colour) !important;
 			}
 		}
-		:where(.wp-element-button, .wp-block-button__link) {
-			// buttons will need a border as their background will be forced to be the same as the page background.
-			&:not([style*="border-width"]),
-			&:is([style*="border-width:0"]) {
-				border-style: solid !important;
-				border-width: 2px !important;
+		a:not(:focus):not(:focus *):is(main *) {
+			// revert the links to their normal dark mode colour (main area only)
+			&,
+			span {
+				color: var(--colour-link-text) !important;
+			}
+			&:hover,
+			&:hover span {
+				color: var(--colour-link-text-hover) !important;
+			}
+		}
+		.wp-element-button,
+		.wp-block-button__link {
+			&:not(:focus):not(:focus *) {
+				&,
+				&:hover {
+					background-color: var(--colour-button-background) !important;
+					color: var(--colour-button-text) !important;
+				}
 			}
 		}
 	}

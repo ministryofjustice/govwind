@@ -1,4 +1,12 @@
 @mixin force-dark {
+	/********
+		* This mixin forces an element to be dark unless it is focussed upon
+		* Text and borders are forced light to contrast with the background which is forced dark
+		* If a set background is used and it is one of the mandatory colours (X or Y), we add a 
+		thin outline of that colour, we also change the border colour to that colour (instead of forced light)
+	********/
+
+
 	.wb-force-dark {
 		&,
 		* {
@@ -12,9 +20,13 @@
 		*.has-background {
 			&.has-colour-y-background-color {
 				outline: 1px solid var(--wp--preset--color--colour-y);
+				outline-offset: -1px;
+				border-color: var(--wp--preset--color--colour-y) !important;
 			}
 			&.has-colour-z-background-color {
 				outline: 1px solid var(--wp--preset--color--colour-z);
+				outline-offset: -1px;
+				border-color: var(--wp--preset--color--colour-z) !important;
 			}
 			&:not(:focus):not(:focus *) {
 				background-color: var(--forced-dark-colour) !important;

@@ -49,12 +49,14 @@
 				color: var(--colour-link-text-hover) !important;
 			}
 		}
-		:where(.wp-element-button, .wp-block-button__link) {
-			// buttons will need a border as their background will be forced to be the same as the page background.
-			&:not([style*="border-width"]),
-			&:is([style*="border-width:0"]) {
-				border-style: solid !important;
-				border-width: 2px !important;
+		.wp-element-button,
+		.wp-block-button__link {
+			&:not(:focus):not(:focus *) {
+				&,
+				&:hover {
+					background-color: var(--colour-button-background) !important;
+					color: var(--colour-button-text) !important;
+				}
 			}
 		}
 	}

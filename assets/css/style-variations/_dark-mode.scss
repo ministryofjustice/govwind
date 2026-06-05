@@ -4,12 +4,13 @@
 		* Text and borders are forced light to contrast with the background which is forced dark
 		* If a set background is used and it is one of the mandatory colours (X or Y), we add a 
 		thin outline of that colour, we also change the border colour to that colour (instead of forced light)
+		* Specific exception for the WB Icon block
 	********/
 
 	.wb-force-dark {
 		&,
 		* {
-			&:not(:focus):not(:focus *) {
+			&:not(:focus):not(:focus *):not(.wb-icon) {
 				color: var(--forced-light-colour) !important;
 				border-color: var(--forced-light-colour) !important;
 				background-color: var(--forced-dark-colour) !important;

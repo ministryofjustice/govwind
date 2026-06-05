@@ -6,7 +6,6 @@
 		thin outline of that colour, we also change the border colour to that colour (instead of forced light)
 	********/
 
-
 	.wb-force-dark {
 		&,
 		* {
@@ -20,12 +19,10 @@
 		*.has-background {
 			&.has-colour-y-background-color {
 				outline: 1px solid var(--wp--preset--color--colour-y);
-				outline-offset: -1px;
 				border-color: var(--wp--preset--color--colour-y) !important;
 			}
 			&.has-colour-z-background-color {
 				outline: 1px solid var(--wp--preset--color--colour-z);
-				outline-offset: -1px;
 				border-color: var(--wp--preset--color--colour-z) !important;
 			}
 			&:not(:focus):not(:focus *) {
@@ -36,6 +33,16 @@
 		*.has-text-color {
 			&:not(:focus):not(:focus *) {
 				color: var(--forced-light-colour) !important;
+			}
+		}
+		a:not(:focus):not(:focus *):is(main *) {
+			// revert the links to their normal dark mode colour (main area only)
+			&,
+			span {
+				color: var(--colour-link-text) !important;
+				&:hover {
+					color: var(--colour-link-text-hover) !important;
+				}
 			}
 		}
 		:where(.wp-element-button, .wp-block-button__link) {

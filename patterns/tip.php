@@ -14,18 +14,11 @@
     <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
     <div class="wp-block-group">
 
-        <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
+        <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
         <div class="wp-block-group">
-            <!-- wp:image {"width":"24px","height":"24px","scale":"contain","sizeSlug":"large","className":"is-style-default"} -->
-            <figure class="wp-block-image size-large is-resized is-style-default">
-                <img src="<?php gw_placeholder_image(
-                	96,
-                	96,
-                ); ?>" alt="tip placeholder image" style="object-fit:contain;width:24px;height:24px" />
-            </figure>
-            <!-- /wp:image -->
-            <!-- wp:heading {"fontSize":"lg"} -->
-            <h2 class="wp-block-heading has-lg-font-size"><?php esc_html_e(
+            <!-- wp:wb-blocks/icon {"icon":"action/lightbulb_outline","size":1,"alt":"Light bulb icon"} /-->
+            <!-- wp:heading {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"fontSize":"lg"} -->
+            <h2 class="wp-block-heading has-lg-font-size" style="margin-top:0px;margin-bottom:0px"><?php esc_html_e(
             	"Add tip heading",
             	"govwind",
             ); ?></h2>

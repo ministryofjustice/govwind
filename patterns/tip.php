@@ -14,11 +14,11 @@
     <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
     <div class="wp-block-group">
 
-        <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
+        <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
         <div class="wp-block-group">
             <!-- wp:wb-blocks/icon {"icon":"action/lightbulb_outline","size":1,"alt":"Light bulb icon"} /-->
-            <!-- wp:heading {"style":{"spacing":{"margin":{"top":"-3px"}}},"fontSize":"lg"} -->
-            <h2 class="wp-block-heading has-lg-font-size" style="margin-top:-3px"><?php esc_html_e(
+            <!-- wp:heading {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"fontSize":"lg"} -->
+            <h2 class="wp-block-heading has-lg-font-size" style="margin-top:0px;margin-bottom:0px"><?php esc_html_e(
             	"Add tip heading",
             	"govwind",
             ); ?></h2>

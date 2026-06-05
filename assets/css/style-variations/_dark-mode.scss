@@ -10,10 +10,12 @@
 	.wb-force-dark {
 		&,
 		* {
-			&:not(:focus):not(:focus *):not(.wb-icon) {
+			&:not(:focus):not(:focus *) {
 				color: var(--forced-light-colour) !important;
 				border-color: var(--forced-light-colour) !important;
-				background-color: var(--forced-dark-colour) !important;
+				&:not(.wb-icon) {
+					background-color: var(--forced-dark-colour) !important;
+				}
 			}
 		}
 		&.has-background,
@@ -41,9 +43,10 @@
 			&,
 			span {
 				color: var(--colour-link-text) !important;
-				&:hover {
-					color: var(--colour-link-text-hover) !important;
-				}
+			}
+			&:hover,
+			&:hover span {
+				color: var(--colour-link-text-hover) !important;
 			}
 		}
 		:where(.wp-element-button, .wp-block-button__link) {

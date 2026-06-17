@@ -44,3 +44,16 @@
 		padding: 0 0.5rem;
 	}
 }
+
+.wb-table-of-contents {
+	&__item {
+		a:visited:not(:focus):not(:hover) {
+			// This prevents the visited state in the table of contents
+			color: var(--colour-link-text);
+		}
+		.toc-sub-menu-control {
+			background: transparent;
+			color: var(--colour-link-text);
+		}
+	}
+}

@@ -16,7 +16,7 @@ Govwind is a minimal block theme that combines WordPress block templates with a 
 
 | Path | Contents |
 |------|----------|
-| `templates/` | Block templates (`index`, `single`, `page`, `archive`, `search`, `404`, `home`) |
+| `templates/` | Block templates (`index`, `single`, `page`, `page-no-title`, `archive`, `search`, `404`, `home`) |
 | `parts/` | Template parts — header, footer, and navigation variants |
 | `patterns/` | Block patterns (CTAs, features, hero, footers, etc.) |
 | `styles/` | `theme.json` style variations (e.g. `cjsm`, serif headings) |
@@ -47,17 +47,17 @@ Build for production:
 npm run build
 ```
 
-The build compiles `main.scss` (Sass), generates the Tailwind stylesheet, and copies the PT Sans / Public Sans webfonts into `dist/`.
+The build compiles `main.scss` (Sass), generates the Tailwind stylesheet, and copies the PT Sans / Public Sans webfonts into `dist/files/`.
 
 ### Other scripts
 
 | Script | Purpose |
 |--------|---------|
 | `npm run dev` | Clean `dist/` then watch |
-| `npm run format` | Prettier-format JS/TS/CSS/SCSS/JSON/PHP |
+| `npm run format` | Prettier-format JS/TS/JSX/TSX/HTML/CSS/SCSS/JSON/PHP |
 | `npm run check` | Prettier check (no writes) |
 | `npm run clean` | Empty `dist/` |
-
-## License
+|  `npm run release` | Runs build and format |
+## Licence
 
 MIT

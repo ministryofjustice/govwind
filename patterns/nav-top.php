@@ -54,7 +54,7 @@ if ($show_header_menu == "yes") {
 	//}
 	?>
     <!-- /wp:navigation -->
-    <nav class="wp-block-group col-start-2" id="header-navigation" role="navigation" aria-label="Primary navigation" data-more-text="<?php echo $more_text; ?>">
+    <nav class="wp-block-group col-start-2" id="header-navigation" role="navigation" aria-label="Primary navigation" data-more-text="<?php echo esc_attr($more_text); ?>">
         <?php wp_nav_menu($topmenu_args); ?>
     </nav>
 <?php

@@ -46,7 +46,7 @@ if ($show_header_menu == "yes") {
 	];
 	?>
 	<!-- wp:group {"tagName":"nav"} -->
-	<nav class="wp-block-group" id="header-navigation" role="navigation" aria-label="Primary navigation" data-more-text="<?php echo $more_text; ?>">
+	<nav class="wp-block-group" id="header-navigation" role="navigation" aria-label="Primary navigation" data-more-text="<?php echo esc_attr($more_text); ?>">
         <?php
 	/*
 		<button type="button" class="hale-header__mobile-controls hale-header__mobile-controls--menu govuk-header__menu-button govuk-js-header-toggle" aria-controls="menu-menu-top-menu" aria-label="Show or hide navigation menu" hidden>

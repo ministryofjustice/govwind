@@ -22,7 +22,7 @@ if (trim($fullname) != "") { ?>
 
 <!-- wp:paragraph -->
 <p class="">
-    Penned by <?php echo $fullname; ?>
+    Penned by <?php echo esc_html($fullname); ?>
 </p>
 <!-- /wp:paragraph -->
 

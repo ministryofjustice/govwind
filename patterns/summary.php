@@ -16,7 +16,7 @@ $summary = get_field("post_summary");
 
 if (!empty($summary)): ?>
 	<div class="pb-10">
-		<?php echo wpautop($summary); ?>
+		<?php echo wpautop(esc_html($summary)); ?>
 	</div>
 <?php endif;
 

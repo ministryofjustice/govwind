@@ -14,7 +14,7 @@ add_filter(
 				$image .
 				'
         <a href="' .
-				$field["value"]["url"] .
+				esc_url($field["value"]["url"]) .
 				'">View File</a>';
 		}
 		return $block_content;

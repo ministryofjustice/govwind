@@ -95,8 +95,8 @@
 		<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"fontSize":"sm","layout":{"type":"flex","orientation":"vertical","justifyContent":"left","flexWrap":"wrap"}} -->
 		<div class="wp-block-group has-sm-font-size">
 			<!-- wp:wb-blocks/hmg-svg {"logo":"ogl"} /-->
-			<!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|text"}}}},"textColor":"text"} -->
-			<p class="has-text-align-center has-text-color has-link-color">All content is available under the&nbsp;<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated</p>
+			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|text"}}}},"textColor":"text"} -->
+			<p class="has-text-color has-link-color">All content is available under the&nbsp;<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->

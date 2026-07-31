@@ -1,4 +1,8 @@
 <?php
+// Prevent direct access
+if (!defined("ABSPATH")) {
+	exit();
+}
 
 /**
  * These actions and functions support multi-lingual pages

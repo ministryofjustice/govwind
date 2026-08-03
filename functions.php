@@ -117,6 +117,11 @@ function gw_add_body_class($classes)
 add_filter("body_class", "gw_add_body_class");
 
 /**
+ * Languages and lang attribute support
+ */
+require get_template_directory() . "/inc/languages.php";
+
+/**
  * Breadcrumbs
  */
 require get_template_directory() . "/inc/breadcrumbs.php";

@@ -2,7 +2,7 @@
 
 @theme {
 	--content: "./*.php" "./**/*.php" "./**/*.html" "./**/*.js" "./**/*.scss"
-		"./templates/**/*.php" "./patterns/**/*.php" "./parts/**/*.php";
+		"./templates/**/*.php" "./patterns/**/*.php" "./parts/**/*.php" "./dist/**/*.css";
 }
 
 /* Import the compiled Sass theme */

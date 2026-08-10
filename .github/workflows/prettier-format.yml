@@ -2,7 +2,7 @@ name: Prettier Check
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, test-prettier-workflow-permissions]
   workflow_dispatch:
 
 jobs:

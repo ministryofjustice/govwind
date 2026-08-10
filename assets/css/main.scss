@@ -25,3 +25,38 @@
 		max-width: var(--size-wide);
 	}
 }
+
+.gw-flexy-stuff {
+	@apply govwind:flex-col-reverse govwind:md:flex-row;
+}
+
+.gw-flexy-stuff {
+	&.v1{
+	&.v1{
+	&.v1{
+
+	}
+	@apply govwind:flex-col-reverse govwind:md:flex-row;
+}
+
+.gw-flexy-stuff{
+	&:is(.gw-pattern-v1-0 *),
+	&:is(.gw-pattern-v2-0 *),
+	&:is(.gw-pattern-v2-1 *),
+	&:is(.gw-pattern-v3 *) {
+		@apply govwind:flex-col-reverse govwind:md:flex-row;
+	}
+}
+
+.gw-flexy-stuff:not(.gw-pattern-v1-0),
+.gw-flexy-stuff:not(.gw-pattern-v1-0 *) {
+	@apply govwind:flex-col-reverse govwind:md:flex-row;
+}
+
+.gw:flex-col-reverse {
+	@apply govwind:flex-col-reverse;
+}
+
+.gw:md:flex-row {
+	@apply govwind:md:flex-row;
+}

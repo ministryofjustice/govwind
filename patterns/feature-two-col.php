@@ -8,6 +8,7 @@
  * Keywords: feature, section, full width, product, service
  */
 ?>
+<?php //TAILWIND!! ?>
 <!-- wp:group {"align":"full","className":"py-8 md:py-20","style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull py-8 md:py-20" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
 	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{}}} -->

@@ -11,8 +11,8 @@
  */
 ?>
 
-<!-- wp:heading {"level":1,"align":"left"} -->
-<h1 class="wp-block-heading text-5xl pb-10">
+<!-- wp:heading {"level":1,"align":"left","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|60"}}}} -->
+<h1 class="wp-block-heading" style="padding-bottom:var(--wp--preset--spacing--60)">
 	<?php single_post_title(); ?>
 </h1>
 <!-- /wp:heading -->

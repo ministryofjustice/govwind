@@ -25,12 +25,14 @@
 
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
 		<div class="wp-block-group">
+			<?php //TAILWIND!!! ?>
 			<!-- wp:paragraph {"className":"!max-w-none"} -->
 			<p class="!max-w-none">Add in the supporting paragraph text here for this section.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
+		<?php //TAILWIND!!! ?>
 		<!-- wp:group {"align":"wide","className":"grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3","layout":{"type":"default"}} -->
 		<div class="wp-block-group alignwide grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3">
 

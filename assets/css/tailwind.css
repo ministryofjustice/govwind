@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-	--content: "./*.php" "./**/*.php" "./**/*.html" "./**/*.js" "./**/*.scss"
-		"./templates/**/*.php" "./patterns/**/*.php" "./parts/**/*.php";
+	--content: "";
 }
 
 /* Import the compiled Sass theme */

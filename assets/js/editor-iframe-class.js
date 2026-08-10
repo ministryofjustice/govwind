@@ -5,6 +5,8 @@
  * Vars:
  * - siteData (from functions.php), which only has "name" which the site
  * name, already sanitized for use in the class.
+ * - siteData (from functions.php), which has "name" (the sanitized site name) 
+ * and "id" (the blog ID).
  */
 
 wp.domReady(() => {

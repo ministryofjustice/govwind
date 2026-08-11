@@ -1,7 +1,7 @@
 @import "tailwindcss"  prefix(govwind);
 
 @theme {
-	--content: "./assets/css/patterns/*.php";
+	--content: "./assets/css/globals/patterns/_patterns.scss" "./assets/css/temp-old-tailwind.txt";
 }
 
 /* Import the compiled Sass theme */

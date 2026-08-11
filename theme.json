@@ -112,7 +112,6 @@
 			"customPadding": true,
 			"customMargin": true,
 			"units": ["px", "rem", "%", "vh", "vw"]
-			
 		},
 		"useRootPaddingAwareAlignments": true
 	},

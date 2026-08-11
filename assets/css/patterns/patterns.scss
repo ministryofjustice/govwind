@@ -1,0 +1,19 @@
+
+@layer utilities {
+	
+	.gw-flex-col-reverse {
+		@apply govwind:flex-col-reverse govwind:md:flex-row;
+	}
+
+	.gw-responsive-y-padding-8-20 {
+		@apply govwind:py-8 govwind:md:py-20;
+	}
+
+	.gw-responsive-y-padding-0-16 {
+		@apply govwind:py-0 govwind:md:py-16
+	}
+
+	.gw-visually-hidden {
+		@apply govwind:sr-only;
+	}
+}

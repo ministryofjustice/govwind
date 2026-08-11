@@ -1,0 +1,30 @@
+
+@layer utilities {
+	
+	.gw-flex-columns-reverse {
+		@apply govwind:flex-col-reverse govwind:md:flex-row;
+	}
+
+	.gw-responsive-y-padding-8-20 {
+		@apply govwind:py-8 govwind:md:py-20;
+	}
+
+	.gw-responsive-y-padding-0-16 {
+		@apply govwind:py-0 govwind:md:py-16;
+	}
+
+	.gw-visually-hidden {
+		// This will hide items from the editor interface too - we might want to amend this, as we have done in _breakpoint-visibilty.scss (globals)
+		@apply govwind:sr-only;
+	}
+
+	.gw-grid-columns-3 {
+		@apply govwind:grid govwind:grid-cols-1 govwind:md:grid-cols-3 govwind:gap-2 govwind:md:gap-3;
+	}
+
+	.gw-abstract-heading-image {
+		// This Tailwind creates the effect we want for the abstract image
+		// We use the --wp--style--root--padding-left so it is flush against the page edge rather than the content area edge
+		@apply govwind:relative govwind:size-full govwind:left-[var(--wp--style--root--padding-left)] govwind:[&>img]:h-full! govwind:[&>img]:w-full! govwind:[&>img]:max-w-max! govwind:[&>img]:object-cover govwind:[&>img]:object-left;
+	}
+}

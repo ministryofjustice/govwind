@@ -11,7 +11,7 @@
  * the block name, prefix it gw-
  * a version number, increment if changes are made
 */
-	$versioning='gw-page-heading-hero v1-0';
+	$versioning='gw-heading-abstract-image v1-0';
 ?>
 
 
@@ -35,10 +35,9 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
-<?php //TAILWIND!!! ?>
 <!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":1134,"sizeSlug":"full","linkDestination":"none","className":"hidden md:block! md:relative left-[var(\u002d\u002dwp\u002d\u002dstyle\u002d\u002droot\u002d\u002dpadding-left)] [\u0026\u003eimg]:h-full! [\u0026\u003eimg]:w-full! [\u0026\u003eimg]:max-w-max! hidden md:block! [\u0026\u003eimg]:object-cover [\u0026\u003eimg]:object-left","style":{"border":{"radius":{"topLeft":"0px","topRight":"0px","bottomLeft":"0px","bottomRight":"0px"}}}} -->
-<figure class="wp-block-image size-full has-custom-border hidden md:block! md:relative left-[var(--wp--style--root--padding-left)] [&>img]:h-full! [&>img]:w-full! [&>img]:max-w-max! [&>img]:object-cover [&>img]:object-left"><img src="<?php gw_placeholder_image(
+<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":1134,"sizeSlug":"full","linkDestination":"none","className":"gw-abstract-heading-image wb-md-desktop-only","style":{"border":{"radius":{"topLeft":"0px","topRight":"0px","bottomLeft":"0px","bottomRight":"0px"}}}} -->
+<figure class="wp-block-image has-custom-border gw-abstract-heading-image wb-md-desktop-only"><img src="<?php gw_placeholder_image(
 	600,
 	600,
 ); ?>" alt="" class="wp-image-1134" style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px"/></figure>

@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: CTA Centered
- * Slug: govwind/cta-centered
+ * Title: CTA Centred
+ * Slug: govwind/cta-centred
  * Categories: call-to-action
- * Description: A full-width call to action section with centered text and button.
+ * Description: A full-width call to action section with centred text and button.
  * Keywords: cta, call to action, homepage
  *
  * Versioning (below):

@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Page Heading Hero
- * Slug: govwind/page-heading-hero
+ * Title: Heading Hero with Abstract Image
+ * Slug: govwind/heading-abstract-image
  * Categories: header, featured
- * Description: A full-width page heading hero with breadcrumb, title, description, and supporting image.
- * Keywords: hero, page header, page heading, breadcrumb, title
+ * Description: A full-width page heading hero with breadcrumb, title, description, and supporting image which disappears on mobile.
+ * Keywords: hero, page header, page heading, breadcrumb, title, abstract image
 
  *
  * Versioning (below):

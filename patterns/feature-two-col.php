@@ -6,11 +6,16 @@
  * Inserter: yes
  * Description: A full-width feature section highlighting service with text and an image.
  * Keywords: feature, section, full width, product, service
- */
+ * 
+ * Versioning (below):
+ * the block name, prefix it gw-
+ * a version number, increment if changes are made
+*/
+	$versioning='gw-feature-two-col v1-0';
 ?>
-<?php //TAILWIND!! ?>
-<!-- wp:group {"align":"full","className":"py-8 md:py-20","style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull py-8 md:py-20" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
+
+<!-- wp:group {"align":"full","className":"gw-responsive-y-padding-8-20 <?php echo $versioning;?>","style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull gw-responsive-y-padding-8-20 <?php echo $versioning;?>" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
 	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{}}} -->
 	<div class="wp-block-group" style="">
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"4rem"}}}} -->

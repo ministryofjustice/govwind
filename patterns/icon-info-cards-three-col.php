@@ -7,13 +7,16 @@
  * Description: 3 cards that contains an icon, heading and text
  * Inserter: true
  *
- * @package WordPress
- * @subpackage Govwind
- * @since Govwind 0.1.0
- */
+ *
+ * Versioning (below):
+ * the block name, prefix it gw-
+ * a version number, increment if changes are made
+*/
+	$versioning='gw-icon-info-card-three-col v1-0';
 ?>
-<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40"}}}} -->
-<div class="wp-block-columns">
+
+<!-- wp:columns {"className":"<?php echo $versioning;?>","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-columns <?php echo $versioning;?>">
 
     <!-- wp:column -->
     <div class="wp-block-column">

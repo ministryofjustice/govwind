@@ -9,10 +9,15 @@
  * @package WordPress
  * @subpackage Govwind
  * @since Govwind 0.1.0
- */
+ *
+ * Versioning (below):
+ * the block name, prefix it gw-
+ * a version number, increment if changes are made
+*/
+	$versioning='gw-header-default v1-0';
 ?>
-<!-- wp:group {"align":"full","className":"is-style-default","style":{"elements":{"link":{"color":{"text":"var:preset|color|header-text"}}}},"backgroundColor":"header-bg","textColor":"header-text"} -->
-<div class="wp-block-group alignfull is-style-default has-header-text-color has-header-bg-background-color has-text-color has-background has-link-color">
+<!-- wp:group {"className":"<?php echo $versioning;?>","align":"full","className":"is-style-default","style":{"elements":{"link":{"color":{"text":"var:preset|color|header-text"}}}},"backgroundColor":"header-bg","textColor":"header-text"} -->
+<div class="wp-block-group alignfull is-style-default has-header-text-color has-header-bg-background-color has-text-color has-background has-link-color <?php echo $versioning;?>">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->

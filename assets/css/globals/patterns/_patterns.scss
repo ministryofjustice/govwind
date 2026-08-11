@@ -1,6 +1,6 @@
 
 @layer utilities {
-	
+	/*
 	.gw-flex-columns-reverse {
 		@apply govwind:flex-col-reverse govwind:md:flex-row;
 	}
@@ -26,5 +26,33 @@
 		// This Tailwind creates the effect we want for the abstract image
 		// We use the --wp--style--root--padding-left so it is flush against the page edge rather than the content area edge
 		@apply govwind:relative govwind:size-full govwind:left-[var(--wp--style--root--padding-left)] govwind:[&>img]:h-full! govwind:[&>img]:w-full! govwind:[&>img]:max-w-max! govwind:[&>img]:object-cover govwind:[&>img]:object-left;
+	}
+*/
+
+	.gw-flex-columns-reverse {
+		@apply flex-col-reverse md:flex-row;
+	}
+
+	.gw-responsive-y-padding-8-20 {
+		@apply py-8 md:py-20;
+	}
+
+	.gw-responsive-y-padding-0-16 {
+		@apply py-0 md:py-16;
+	}
+
+	.gw-visually-hidden {
+		// This will hide items from the editor interface too - we might want to amend this, as we have done in _breakpoint-visibilty.scss (globals)
+		@apply sr-only;
+	}
+
+	.gw-grid-columns-3 {
+		@apply grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3;
+	}
+
+	.gw-abstract-heading-image {
+		// This Tailwind creates the effect we want for the abstract image
+		// We use the --wp--style--root--padding-left so it is flush against the page edge rather than the content area edge
+		@apply relative size-full left-[var(--wp--style--root--padding-left)] [&>img]:h-full! [&>img]:w-full! [&>img]:max-w-max! [&>img]:object-cover [&>img]:object-left;
 	}
 }

@@ -3,7 +3,7 @@
  * allows the site-specific colours to be used.
  *
  * Vars:
- * - siteData (from functions.php), which has "name" (the sanitized site name) 
+ * - siteData (from functions.php), which has "name" (the sanitized site name)
  * and "id" (the blog ID).
  */
 

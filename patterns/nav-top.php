@@ -54,7 +54,7 @@ if ($show_header_menu == "yes") {
 	//}
 	?>
     <!-- /wp:navigation -->
-    <nav 
+    <nav
 		class="wp-block-group col-start-2"
 		id="header-navigation"
 		role="navigation"

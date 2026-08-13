@@ -170,11 +170,19 @@ add_action("enqueue_block_editor_assets", function () {
 	$site_name = sanitize_title(get_bloginfo("name")); // convert to safe CSS class
 	$site_ID = get_current_blog_id();
 
+	// Only load JS if file exists
+	$js_file = get_template_directory() . "/assets/js/editor-iframe-class.js";
+	if (!file_exists($js_file)) {
+		return;
+	}
+
+	$js_version = filemtime($js_file);
+
 	wp_enqueue_script(
 		"editor-iframe-class",
 		get_template_directory_uri() . "/assets/js/editor-iframe-class.js",
 		["wp-dom-ready", "wp-edit-post"],
-		filemtime(get_template_directory() . "/assets/js/editor-iframe-class.js"),
+		$js_version,
 		true,
 	);
 

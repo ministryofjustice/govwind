@@ -33,12 +33,8 @@
 	--button-text--dark-mode: #ffffff;
 
 	// Header colours
-	--header-nav-background--light-mode: var(
-		--header-background--light-mode
-	); //sets the nav background to match the rest of the header
-	--header-nav-background--dark-mode: var(
-		--header-background--dark-mode
-	); //sets the nav background to match the rest of the header
+	--header-nav-background--light-mode: transparent; //sets the nav background to match the rest of the header
+	--header-nav-links-current--light-mode: var(--header-background--light-mode);
 	--header-button-background--light-mode: #2466a4;
 	--header-button-outline--light-mode: none;
 	--header-logo-focus-filter--light-mode: invert(1) hue-rotate(180deg); // we invert the logo on focus

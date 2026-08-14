@@ -7,8 +7,7 @@ Shewing warnings in the backend that things might be hidden or shewn at differen
 
 @mixin editor-visibility($class, $colour, $text) {
 	//styles for editor screens, so hidden elements aren't missed whilst editing
-	.editor-editor-interface,
-	.block-editor-iframe__html {
+	.editor-styles-wrapper {
 		.#{$class} {
 			border: dashed 6px $colour;
 			&:not(.is-hovered):not(:hover):before {
@@ -32,14 +31,14 @@ Shewing warnings in the backend that things might be hidden or shewn at differen
 	.#{$class} {
 		opacity: 0.65;
 	}
-	.#{$class}:not(.editor-editor-interface *):not(.block-editor-iframe__html *) {
+	.#{$class}:not(.editor-styles-wrapper *) {
 		display: none !important;
 	}
 	@include hide-background(#{$class}-bg);
 }
 
 @mixin hide-background($class) {
-	.#{$class}:not(.editor-editor-interface *):not(.block-editor-iframe__html *) {
+	.#{$class}:not(.editor-styles-wrapper *) {
 		background-image: none !important;
 	}
 }

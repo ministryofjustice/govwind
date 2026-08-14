@@ -65,19 +65,6 @@ function govwind_enqueue_assets()
 }
 add_action("wp_enqueue_scripts", "govwind_enqueue_assets");
 
-// Enhanced editor styles support
-add_action("enqueue_block_editor_assets", function () {
-	$css_file = get_template_directory() . "/dist/style.css";
-	$css_version = file_exists($css_file) ? filemtime($css_file) : "1.0.0";
-
-	wp_enqueue_style(
-		"govwind-editor-style",
-		get_template_directory_uri() . "/dist/style.css",
-		[],
-		$css_version,
-	);
-});
-
 // Register custom block categories
 function govwind_register_block_categories($categories)
 {
@@ -177,23 +164,25 @@ function govwind_add_block_editor_class($classes)
  * the colour-picker palette are correct for the site.
  *
  * Outputs for the JS file:
- * - siteData, which only has "name" which the sanitized site name.
+ * - siteData, which has "name" (the sanitized site name) and "id" (the blog ID).
  */
 add_action("enqueue_block_editor_assets", function () {
 	$site_name = sanitize_title(get_bloginfo("name")); // convert to safe CSS class
 	$site_ID = get_current_blog_id();
 
-	// Only affects the block editor pages (and only really affects the colour picker palette)
-	$screen = get_current_screen();
-	if ($screen && $screen->is_block_editor()) {
-		echo "<script>document.documentElement.classList.add('website-$site_ID');</script>";
+	// Only load JS if file exists
+	$js_file = get_template_directory() . "/assets/js/editor-iframe-class.js";
+	if (!file_exists($js_file)) {
+		return;
 	}
+
+	$js_version = filemtime($js_file);
 
 	wp_enqueue_script(
 		"editor-iframe-class",
 		get_template_directory_uri() . "/assets/js/editor-iframe-class.js",
 		["wp-dom-ready", "wp-edit-post"],
-		false,
+		$js_version,
 		true,
 	);
 
@@ -202,6 +191,16 @@ add_action("enqueue_block_editor_assets", function () {
 		"name" => $site_name,
 		"id" => $site_ID,
 	]);
+
+	// Only affects the block editor pages (and only really affects the colour picker palette)
+	$screen = get_current_screen();
+	if ($screen && $screen->is_block_editor()) {
+		wp_add_inline_script(
+			"editor-iframe-class",
+			"document.documentElement.classList.add('website-$site_ID');",
+			"before",
+		);
+	}
 });
 
 /**

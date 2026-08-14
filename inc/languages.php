@@ -53,7 +53,7 @@ add_action("init", function () {
 add_action("enqueue_block_editor_assets", function () {
 	$screen = get_current_screen();
 
-	if ($screen && $screen->post_type !== "page") {
+	if (!$screen || $screen->post_type !== "page") {
 		return;
 	}
 

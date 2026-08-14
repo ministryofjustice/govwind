@@ -55,6 +55,7 @@ $breakpoints: (
 	xxl-: $size-xxl,
 );
 
+//Old WB prefix
 @each $name, $size in $breakpoints {
 	@include editor-visibility(
 		wb-#{$name}mobile-only,
@@ -86,5 +87,40 @@ $breakpoints: (
 
 	@media (width > #{$size}) {
 		@include hide-element(wb-#{$name}mobile-only);
+	}
+}
+
+//New GW prefix
+@each $name, $size in $breakpoints {
+	@include editor-visibility(
+		gw-#{$name}mobile-only,
+		#fcd48a,
+		"Narrow only (≤#{$size})"
+	);
+
+	@include editor-visibility(
+		gw-#{$name}desktop-only,
+		#a6dbf7,
+		"Wide only (>#{$size})"
+	);
+
+	@include editor-visibility(
+		gw-#{$name}mobile-only-bg,
+		#f7a6a6,
+		"Background only at ≤#{$size}"
+	);
+
+	@include editor-visibility(
+		gw-#{$name}desktop-only-bg,
+		#f7a6a6,
+		"Background only at >#{$size}"
+	);
+
+	@media (width <= #{$size}) {
+		@include hide-element(gw-#{$name}desktop-only);
+	}
+
+	@media (width > #{$size}) {
+		@include hide-element(gw-#{$name}mobile-only);
 	}
 }

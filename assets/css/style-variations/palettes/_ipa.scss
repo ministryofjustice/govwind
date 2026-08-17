@@ -6,45 +6,49 @@
 :root.website-61,
 :root:has(body.website-61) {
 	// Brand unique colour variables
-	--brand-colour: 249.67; //degrees round the colour wheel
-	--brand-intensity-vivid: 0.0711; //intensity mainly for light theme
-	--brand-intensity-subtle: 0.066; //intensity mainly for dark theme
-	--brand-brightness-primary-light: 33.29%;
-	--brand-brightness-accent-light: 43%;
+	--brand-colour: 329.8; //degrees round the colour wheel
+	--brand-intensity-vivid: 0.155; //intensity mainly for light theme
+	--brand-brightness-primary-light: 47.4%;
 	--brand-brightness-primary-dark: 80%;
-	--brand-brightness-accent-dark: 76%;
 
 	// Extra colours for palette - needs to be included in the list of colours in _index.scss
-	--palette-2--light-mode: #12314e;
-	--palette-3--light-mode: #dac777;
-	--palette-4--light-mode: #f8f4e4;
+	--palette-1--light-mode: #8d3780;
+	--palette-2--light-mode: #3153a9;
+	--palette-3--light-mode: #00c7c7;
+	--palette-4--light-mode: #f96a00;
+	--palette-5--light-mode: var(--green--dark-mode);
 
 	// swap the light colours and dark colours in dark mode
-	--palette-1--dark-mode: #dac777;
-	--palette-2--dark-mode: #f8f4e4;
-	--palette-3--dark-mode: var(--palette-1--light-mode);
-	--palette-4--dark-mode: var(--palette-2--light-mode);
+	--palette-1--dark-mode: #b85aa9;
+	--palette-2--dark-mode: var(--palette-3--light-mode);
+	--palette-3--dark-mode: var(--palette-2--light-mode);
+	--palette-4--dark-mode: #ca5000;
+	--palette-5--dark-mode: var(--green--dark-mode);
 
 	// Button colours
-	--button-background--light-mode: #2466a4;
-	--button-background--dark-mode: #2466a4;
+	--button-background--light-mode: var(--palette-2--light-mode);
+	--button-background--dark-mode: #3153a9;
 	--button-text--dark-mode: #ffffff;
+	--button-border--dark-mode: currentColor;
 
 	// Header colours
 	--header-nav-background--light-mode: transparent; //sets the nav background to match the rest of the header
 	--header-nav-links-current--light-mode: var(--header-background--light-mode);
-	--header-button-background--light-mode: #2466a4;
+	--header-button-background--light-mode: #3153a9;
 	--header-button-outline--light-mode: none;
 	--header-logo-focus-filter--light-mode: invert(1) hue-rotate(180deg); // we invert the logo on focus
 
+	// No context colours
+	--green--light-mode: #00773b;
+	--green--dark-mode: #00b95c;
+
 	// Focus colours
 	// dark mode uses light mode colours by default
-	--focus-background-muted--light-mode: #f8f4e4; //also needs to contrast with focus-text
 
 	// Beneath footer (root background colour)
 	// As the footer uses wb-force-dark, we don't set a dark mode here
 	--root-background--light-mode: var(--palette-1--light-mode);
 
 	// Non-colours
-	--site-radius: var(--radius-md);
+	--site-radius: var(--radius-full);
 }

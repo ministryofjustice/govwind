@@ -1,0 +1,80 @@
+{
+	"version": 3,
+	"title": "IPA palette",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "colour-Y",
+					"color": "var(--colour-palette-1)",
+					"name": "Primary"
+				},
+				{
+					"slug": "colour-Z",
+					"color": "var(--colour-palette-2)",
+					"name": "Secondary"
+				},
+				{
+					"slug": "site-colour-palette-3",
+					"color": "var(--colour-palette-3)",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "site-colour-palette-4",
+					"color": "var(--colour-palette-4)",
+					"name": "Quaternary"
+				},
+				{
+					"slug": "site-colour-palette-5",
+					"color": "var(--colour-palette-5)",
+					"name": "Quinary"
+				},
+				{
+					"slug": "site-colour-palette-1-trans",
+					"color": "rgb(from var(--colour-palette-1) r g b / 20%);",
+					"name": "Primary transparent"
+				},
+				{
+					"slug": "site-colour-palette-2-trans",
+					"color": "rgb(from var(--colour-palette-2) r g b / 20%);",
+					"name": "Secondary transparent"
+				},
+				{
+					"slug": "site-colour-palette-3-trans",
+					"color": "rgb(from var(--colour-palette-3) r g b / 20%);",
+					"name": "Tertiary transparent"
+				},
+				{
+					"slug": "site-colour-palette-4-trans",
+					"color": "rgb(from var(--colour-palette-4) r g b / 20%);",
+					"name": "Quaternary transparent"
+				},
+				{
+					"slug": "site-colour-palette-5-trans",
+					"color": "rgb(from var(--colour-palette-5) r g b / 20%);",
+					"name": "Quinary transparent"
+				},
+				{
+					"slug": "greyscale-A",
+					"color": "var(--colour-palette-greyscale-1)",
+					"name": "Greyscale 1"
+				},
+				{
+					"slug": "greyscale-B",
+					"color": "var(--colour-palette-greyscale-2)",
+					"name": "Greyscale 2"
+				},
+				{
+					"slug": "greyscale-Y",
+					"color": "var(--colour-palette-greyscale-3)",
+					"name": "Greyscale 3"
+				},
+				{
+					"slug": "greyscale-Z",
+					"color": "var(--colour-palette-greyscale-4)",
+					"name": "Greyscale 4"
+				}
+			]
+		}
+	}
+}

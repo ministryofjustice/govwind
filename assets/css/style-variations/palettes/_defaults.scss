@@ -50,6 +50,9 @@
 		--header-nav-background--light-mode
 	);
 	--header-nav-links--light-mode: #fff;
+	--header-nav-links-current--light-mode: var(
+		--header-nav-background--light-mode
+	); // needs to contrast with --header-nav-links--light-mode
 	--header-nav-drawer-background--light-mode: #f5f5f5;
 	--header-nav-drawer-links--light-mode: #0a0a0a;
 	--header-nav-separator-line--light-mode: #d9d9d9;
@@ -94,6 +97,7 @@
 	// e.g. links will probably still be blue even if the website colour is yellow
 	--button-background--light-mode: #1a65a6;
 	--button-text--light-mode: #ffffff;
+	--button-border--light-mode: var(--button-background--light-mode);
 	--link-text--light-mode: #1a65a6;
 	--link-text-hover--light-mode: #0f385c;
 	--link-text-visited--light-mode: #8200db;
@@ -150,6 +154,9 @@
 		--header-nav-separator-line--light-mode
 	);
 	--header-nav-links--dark-mode: var(--header-nav-links--light-mode);
+	--header-nav-links-current--dark-mode: var(
+		--header-nav-links-current--light-mode
+	); // needs to contrast with --header-nav-links--dark-mode
 	--header-button-background--dark-mode: var(
 		--header-button-background--light-mode
 	);
@@ -208,6 +215,7 @@
 	// Components
 	--button-background--dark-mode: #6cb6ff;
 	--button-text--dark-mode: #0a0a0a;
+	--button-border--dark-mode: var(--button-background--dark-mode);
 	--link-text--dark-mode: #6cb6ff;
 	--link-text-hover--dark-mode: #9fd0ff;
 	--link-text-visited--dark-mode: #c4a2d1;

@@ -2,6 +2,7 @@
 @forward "palettes/defaults";
 @forward "palettes/playground";
 @forward "palettes/cjsm";
+@forward "palettes/ipa";
 /*
 Add site-specific stylesheets thus:
 @forward "palettes/ccrc";
@@ -20,6 +21,7 @@ $palette-colour-list:
 	//palettes 3+ not used by all sites
 	palette-3,
 	palette-4,
+	palette-5,
 	palette-greyscale-1,
 	palette-greyscale-2,
 	palette-greyscale-3,
@@ -34,13 +36,14 @@ $other-colour-list:
 	muted, subtle, strong, error, error-muted, focus-text, focus-background,
 	focus-background-muted, focus-outline, header-background, header-foreground,
 	header-nav-background, header-nav-background-overflow, header-nav-links,
-	header-nav-drawer-background, header-nav-drawer-links,
-	header-nav-separator-line, header-button-background, header-button-foreground,
-	header-button-outline, header-search-form-background, header-search-form-text,
+	header-nav-links-current, header-nav-drawer-background,
+	header-nav-drawer-links, header-nav-separator-line, header-button-background,
+	header-button-foreground, header-button-outline,
+	header-search-form-background, header-search-form-text,
 	header-search-drawer-label, header-search-drawer-background,
 	header-search-drawer-input-background, header-search-drawer-input-text,
 	header-search-drawer-input-border, header-button-outline,
-	header-logo-focus-filter, button-background, button-text,
+	header-logo-focus-filter, button-background, button-text, button-border,
 	button-background-hover, button-text-hover, link-text, link-text-hover,
 	link-text-visited, quote-border, "red", "green", "blue";
 

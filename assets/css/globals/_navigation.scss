@@ -26,7 +26,7 @@ nav.is-style-drawer {
 				background-color: var(--colour-header-nav-links);
 
 				.wp-block-navigation-item__label {
-					color: var(--colour-header-nav-background);
+					color: var(--colour-header-nav-links-current);
 				}
 			}
 		}
@@ -37,11 +37,11 @@ nav.is-style-drawer {
 				background-color: var(--colour-header-nav-links);
 
 				.wp-block-navigation-item__label {
-					color: var(--colour-header-nav-background);
+					color: var(--colour-header-nav-links-current);
 				}
 			}
 			> .wp-block-navigation__submenu-icon {
-				color: var(--colour-header-nav-background);
+				color: var(--colour-header-nav-links-current);
 			}
 		}
 		a.wp-block-navigation-item__content {

@@ -217,7 +217,9 @@
 					"text": "var(--colour-button-text)"
 				},
 				"border": {
-					"radius": "var(--site-radius)"
+					"radius": "var(--site-radius)",
+					"color": "var(--colour-button-border)",
+					"width": "1px"
 				},
 				"spacing": {
 					"padding": {

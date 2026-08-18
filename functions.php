@@ -65,7 +65,7 @@ function govwind_enqueue_assets()
 }
 add_action("wp_enqueue_scripts", "govwind_enqueue_assets");
 
-// Enhanced editor styles support - necessary for colour pallette.
+// Enhanced editor styles support - necessary for colour palette.
 add_action("enqueue_block_editor_assets", function () {
 	$css_file = get_template_directory() . "/dist/style.css";
 	$css_version = file_exists($css_file) ? filemtime($css_file) : "1.0.0";

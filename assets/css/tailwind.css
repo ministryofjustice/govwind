@@ -1,9 +1,42 @@
 @import "tailwindcss";
 
-@theme {
-	--content: "./*.php" "./**/*.php" "./**/*.html" "./**/*.js" "./**/*.scss"
-		"./templates/**/*.php" "./patterns/**/*.php" "./parts/**/*.php";
-}
+@source inline("pb-10");
+@source inline("sr-only");
+@source inline("col-start-2");
+@source inline("md:py-20");
+@source inline("py-8");
+@source inline("!max-w-none");
+@source inline("[&>img]:h-full!");
+@source inline("[&>img]:max-w-max!");
+@source inline("[&>img]:object-cover");
+@source inline("[&>img]:object-left");
+@source inline("[&>img]:w-full!");
+@source inline("flex-col-reverse");
+@source inline("gap-2");
+@source inline("grid");
+@source inline("grid-cols-1");
+@source inline("hidden");
+@source inline("left-[var(--wp--style--root--padding-left)]");
+@source inline("lg:inline-block");
+@source inline("lg:mx-0");
+@source inline("mb-10");
+@source inline("md:block!");
+@source inline("md:flex-row");
+@source inline("md:gap-3");
+@source inline("md:grid-cols-3");
+@source inline("md:py-16");
+@source inline("md:relative");
+@source inline("md:rounded");
+@source inline("mx-auto");
+@source inline("pt-3");
+@source inline("py-0");
+@source inline("size-full");
+@source inline("text-5xl");
+@source inline("w-[150px]");
+
+ /*@import "tailwindcss"  prefix(govwind);*/
+
+@source "./assets/css/globals/patterns/_patterns.scss";
 
 /* Import the compiled Sass theme */
 @import "../../dist/theme.css";

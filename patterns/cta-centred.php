@@ -1,16 +1,20 @@
 <?php
 /**
- * Title: CTA Centered
- * Slug: govwind/cta-centered
+ * Title: CTA Centred
+ * Slug: govwind/cta-centred
  * Categories: call-to-action
- * Description: A full-width call to action section with centered text and button.
+ * Description: A full-width call to action section with centred text and button.
  * Keywords: cta, call to action, homepage
  *
- */
+ * Versioning (below):
+ * the block name, prefix it gw-
+ * a version number, increment if changes are made
+*/
+	$versioning='gw-cta-centred v1-0';
 ?>
 
-<!-- wp:group {"align":"full","className":"has-background-background-color has-background","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-background-background-color has-background" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6);padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:group {"align":"full","className":"has-background-background-color has-background <?php echo $versioning;?>","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-background-background-color has-background <?php echo $versioning;?>" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6);padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
     
     <!-- wp:heading {"textAlign":"center"} -->
     <h2 class="wp-block-heading has-text-align-center">Ready to get started?</h2>

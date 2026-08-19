@@ -6,10 +6,16 @@
  * Inserter: yes
  * Keywords: video, youtube, vimeo, embed, transcript
  * Description: Video with reveal that can be used for transcripts
- */
+ *
+ * Versioning (below):
+ * the block name, prefix it gw-
+ * a version number, increment if changes are made
+*/
+	$versioning='gw-video-with-reveal v1-0';
 ?>
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
+
+<!-- wp:group {"className":"<?php echo $versioning;?>","style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group <?php echo $versioning;?>" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
 <!-- wp:embed {"url":"https://www.youtube.com/watch?v=ih7DZk-9US8","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} -->
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio" style="margin-bottom:var(--wp--preset--spacing--50)"><div class="wp-block-embed__wrapper">
 https://www.youtube.com/watch?v=ih7DZk-9US8

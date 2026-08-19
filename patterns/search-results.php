@@ -8,11 +8,19 @@
  * @package WordPress
  * @subpackage Govwind
  * @since Govwind 0.1.0
- */
+
+ *
+ * Versioning (below):
+ * the block name, prefix it gw-
+ * a version number, increment if changes are made
+*/
+	$versioning='gw-search-results v1-0';
 ?>
 
-<!-- wp:group {"tagName":"main","className":"gw-main-content-area","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group gw-main-content-area" style="margin-top:0;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+
+
+<!-- wp:group {"tagName":"main","className":"gw-main-content-area <?php echo $versioning;?>","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"0"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group gw-main-content-area <?php echo $versioning;?>" style="margin-top:0;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 
 	<!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[],"format":[]}} -->
 

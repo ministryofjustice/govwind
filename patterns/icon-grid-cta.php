@@ -6,11 +6,16 @@
  * Description: A section with title, description, six icon boxes in a 3x2 grid, and a read more button.
  * Keywords: icon, grid, cta, features, section
  * Inserter: true
- */
+ *
+ * Versioning (below):
+ * the block name, prefix it gw-
+ * a version number, increment if changes are made
+*/
+	$versioning='gw-icon-grid-cta v1-0';
 ?>
 
-<!-- wp:group {"metadata":{"categories":["features"],"patternName":"govwind/icon-grid-cta","name":"Icon Grid with CTA"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6);padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:group {"className":"<?php echo $versioning;?>","metadata":{"categories":["features"],"patternName":"govwind/icon-grid-cta","name":"Icon Grid with CTA"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide <?php echo $versioning;?>" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6);padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
@@ -25,14 +30,14 @@
 
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
 		<div class="wp-block-group">
-			<!-- wp:paragraph {"className":"!max-w-none"} -->
-			<p class="!max-w-none">Add in the supporting paragraph text here for this section.</p>
+			<!-- wp:paragraph {"className":""} -->
+			<p class="">Add in the supporting paragraph text here for this section.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"align":"wide","className":"grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3","layout":{"type":"default"}} -->
-		<div class="wp-block-group alignwide grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3">
+		<!-- wp:group {"align":"wide","className":"gw-grid-columns-3","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide gw-grid-columns-3">
 
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"greyscale-B","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 			<div class="wp-block-group has-greyscale-b-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">

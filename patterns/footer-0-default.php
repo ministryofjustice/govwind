@@ -13,12 +13,11 @@
  * Versioning (below):
  * the block name, prefix it gw-
  * a version number, increment if changes are made
-*/
-	$versioning='gw-footer-0 v1-0';
-?>
+ */
+$versioning = "gw-footer-0 v1-0"; ?>
 
-<!-- wp:group {"className":"<?php echo $versioning;?>","metadata":{"categories":["footer"],"patternName":"govwind/footer-crown","name":"Footer (Crown copyright)"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}},"border":{"top":{"color":"var:preset|color|black","width":"5px"},"right":{"width":"0px","color":"var:preset|color|black","style":"none"},"bottom":{"width":"0px","color":"var:preset|color|black","style":"none"},"left":{"width":"0px","color":"var:preset|color|black","style":"none"}}},"layout":{"type":"constrained"}} -->
-<div class="has-global-padding wp-block-group alignfull wb-force-dark <?php echo $versioning;?>" style="border-top-color:var(--wp--preset--color--black);border-top-width:5px;border-right-color:var(--wp--preset--color--black);border-right-style:none;border-right-width:0px;border-bottom-color:var(--wp--preset--color--black);border-bottom-style:none;border-bottom-width:0px;border-left-color:var(--wp--preset--color--black);border-left-style:none;border-left-width:0px;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:group {"className":"<?php echo $versioning; ?>","metadata":{"categories":["footer"],"patternName":"govwind/footer-crown","name":"Footer (Crown copyright)"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}},"border":{"top":{"color":"var:preset|color|black","width":"5px"},"right":{"width":"0px","color":"var:preset|color|black","style":"none"},"bottom":{"width":"0px","color":"var:preset|color|black","style":"none"},"left":{"width":"0px","color":"var:preset|color|black","style":"none"}}},"layout":{"type":"constrained"}} -->
+<div class="has-global-padding wp-block-group alignfull wb-force-dark <?php echo $versioning; ?>" style="border-top-color:var(--wp--preset--color--black);border-top-width:5px;border-right-color:var(--wp--preset--color--black);border-right-style:none;border-right-width:0px;border-bottom-color:var(--wp--preset--color--black);border-bottom-style:none;border-bottom-width:0px;border-left-color:var(--wp--preset--color--black);border-left-style:none;border-left-width:0px;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 	<!-- wp:columns -->
 	<div class="wp-block-columns">
 		<!-- wp:column {"width":"50%"} -->

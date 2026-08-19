@@ -8,13 +8,12 @@
  * @package WordPress
  * @subpackage Govwind
  * @since Govwind 0.1.0
- * 
+ *
  * Versioning (below):
  * the block name, prefix it gw-
  * a version number, increment if changes are made
-*/
-	$versioning='gw-author v1-0';
-?>
+ */
+$versioning = "gw-author v1-0"; ?>
 
 <?php
 $firstname = get_the_author_meta("first_name");
@@ -26,7 +25,7 @@ if (trim($fullname) == "") {
 if (trim($fullname) != "") { ?>
 
 <!-- wp:paragraph -->
-<p class=" <?php echo $versioning;?>">
+<p class=" <?php echo $versioning; ?>">
     Penned by <?php echo esc_html($fullname); ?>
 </p>
 <!-- /wp:paragraph -->

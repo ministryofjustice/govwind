@@ -1,4 +1,3 @@
-
 @layer utilities {
 	/*
 	.gw-flex-columns-reverse {
@@ -47,12 +46,12 @@
 	}
 
 	.gw-grid-columns-3 {
-		@apply grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3;
+		@apply grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-3;
 	}
 
 	.gw-abstract-heading-image {
 		// This Tailwind creates the effect we want for the abstract image
 		// We use the --wp--style--root--padding-left so it is flush against the page edge rather than the content area edge
-		@apply relative size-full left-[var(--wp--style--root--padding-left)] [&>img]:h-full! [&>img]:w-full! [&>img]:max-w-max! [&>img]:object-cover [&>img]:object-left;
+		@apply relative left-[var(--wp--style--root--padding-left)] size-full [&>img]:h-full! [&>img]:w-full! [&>img]:max-w-max! [&>img]:object-cover [&>img]:object-left;
 	}
 }

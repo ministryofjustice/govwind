@@ -10,12 +10,11 @@
  * Versioning (below):
  * the block name, prefix it gw-
  * a version number, increment if changes are made
-*/
-	$versioning='gw-icon-grid-cta v1-0';
-?>
+ */
+$versioning = "gw-icon-grid-cta v1-0"; ?>
 
-<!-- wp:group {"className":"<?php echo $versioning;?>","metadata":{"categories":["features"],"patternName":"govwind/icon-grid-cta","name":"Icon Grid with CTA"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide <?php echo $versioning;?>" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6);padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:group {"className":"<?php echo $versioning; ?>","metadata":{"categories":["features"],"patternName":"govwind/icon-grid-cta","name":"Icon Grid with CTA"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide <?php echo $versioning; ?>" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6);padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">

@@ -13,13 +13,12 @@
  * Versioning (below):
  * the block name, prefix it gw-
  * a version number, increment if changes are made
-*/
-	$versioning='gw-footer-3 v1-0';
-?>
+ */
+$versioning = "gw-footer-3 v1-0"; ?>
 
 
-<!-- wp:group {"className":"<?php echo $versioning;?>","metadata":{"categories":["footer"],"patternName":"govwind/footer-crown","name":"Footer (Crown copyright)"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}},"border":{"top":{"color":"var:preset|color|black","width":"5px"},"right":{"width":"0px","color":"var:preset|color|black","style":"none"},"bottom":{"width":"0px","color":"var:preset|color|black","style":"none"},"left":{"width":"0px","color":"var:preset|color|black","style":"none"}},"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white","gradient":"midnight","layout":{"type":"constrained"}} -->
-<div class="has-global-padding wp-block-group alignfull has-white-color has-midnight-gradient-background has-text-color has-background has-link-color wb-force-dark <?php echo $versioning;?>" style="border-top-color:var(--wp--preset--color--black);border-top-width:5px;border-right-color:var(--wp--preset--color--black);border-right-style:none;border-right-width:0px;border-bottom-color:var(--wp--preset--color--black);border-bottom-style:none;border-bottom-width:0px;border-left-color:var(--wp--preset--color--black);border-left-style:none;border-left-width:0px;padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+<!-- wp:group {"className":"<?php echo $versioning; ?>","metadata":{"categories":["footer"],"patternName":"govwind/footer-crown","name":"Footer (Crown copyright)"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}},"border":{"top":{"color":"var:preset|color|black","width":"5px"},"right":{"width":"0px","color":"var:preset|color|black","style":"none"},"bottom":{"width":"0px","color":"var:preset|color|black","style":"none"},"left":{"width":"0px","color":"var:preset|color|black","style":"none"}},"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white","gradient":"midnight","layout":{"type":"constrained"}} -->
+<div class="has-global-padding wp-block-group alignfull has-white-color has-midnight-gradient-background has-text-color has-background has-link-color wb-force-dark <?php echo $versioning; ?>" style="border-top-color:var(--wp--preset--color--black);border-top-width:5px;border-right-color:var(--wp--preset--color--black);border-right-style:none;border-right-width:0px;border-bottom-color:var(--wp--preset--color--black);border-bottom-style:none;border-bottom-width:0px;border-left-color:var(--wp--preset--color--black);border-left-style:none;border-left-width:0px;padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:heading {"className":"gw-visually-hidden"} -->
 <h2 class="wp-block-heading gw-visually-hidden" id="footer-nav-heading">Footer links</h2>

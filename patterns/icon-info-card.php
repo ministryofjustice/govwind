@@ -14,12 +14,11 @@
  * Versioning (below):
  * the block name, prefix it gw-
  * a version number, increment if changes are made
-*/
-	$versioning='gw-icon-info-card v1-0';
-?>
+ */
+$versioning = "gw-icon-info-card v1-0"; ?>
 
-<!-- wp:group {"className":"<?php echo $versioning;?>","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"},"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}},"dimensions":{"minHeight":"100px"},"typography":{"fontSize":"1rem"}},"backgroundColor":"greyscale-B","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-greyscale-b-background-color has-background <?php echo $versioning;?>" style="min-height:100px;margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem;font-size:1rem">
+<!-- wp:group {"className":"<?php echo $versioning; ?>","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"},"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}},"dimensions":{"minHeight":"100px"},"typography":{"fontSize":"1rem"}},"backgroundColor":"greyscale-B","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-greyscale-b-background-color has-background <?php echo $versioning; ?>" style="min-height:100px;margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem;font-size:1rem">
 
     <!-- wp:wb-blocks/icon {"size":2.5} /-->
 

@@ -1,4 +1,4 @@
-@import "tailwindcss"  prefix(govwind);
+@import "tailwindcss" prefix(govwind);
 
 @source "./assets/css/globals/patterns/_patterns.scss";
 

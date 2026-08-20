@@ -9,12 +9,11 @@
  * Versioning (below):
  * the block name, prefix it gw-
  * a version number, increment if changes are made
-*/
-	$versioning='gw-toc-section v1-0';
-?>
+ */
+$versioning = "gw-toc-section v1-0"; ?>
 
-<!-- wp:columns {"className":"<?php echo $versioning;?>","style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}}} -->
-<div class="wp-block-columns <?php echo $versioning;?>" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
+<!-- wp:columns {"className":"<?php echo $versioning; ?>","style":{"spacing":{"margin":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"}}}} -->
+<div class="wp-block-columns <?php echo $versioning; ?>" style="margin-top:var(--wp--preset--spacing--6);margin-bottom:var(--wp--preset--spacing--6)">
 <!-- wp:column {"width":"33.33%"} -->
     <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:wb-blocks/table-of-contents /--></div>
 <!-- /wp:column -->

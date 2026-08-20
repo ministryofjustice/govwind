@@ -11,11 +11,10 @@
  * the block name, prefix it gw-
  * a version number, increment if changes are made
 */
-	$versioning='gw-heading-abstract-image v1-0';
-?>
+$versioning = "gw-heading-abstract-image v1-0"; ?>
 
-<!-- wp:group {"metadata":{"categories":["header","featured"],"patternName":"govwind/page-heading-hero","name":"Page Heading Hero"},"align":"full","className":"wb-force-dark <?php echo $versioning;?>","style":{"elements":{"link":{"color":{"text":"var:preset|color|greyscale-A"},":hover":{"color":{"text":"var:preset|color|background"}}}}},"backgroundColor":"colour-Z","textColor":"greyscale-A","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull wb-force-dark has-greyscale-a-color has-colour-z-background-color has-text-color has-background has-link-color <?php echo $versioning;?>"><!-- wp:group {"style":{"spacing":{"padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["header","featured"],"patternName":"govwind/page-heading-hero","name":"Page Heading Hero"},"align":"full","className":"wb-force-dark <?php echo $versioning; ?>","style":{"elements":{"link":{"color":{"text":"var:preset|color|greyscale-A"},":hover":{"color":{"text":"var:preset|color|background"}}}}},"backgroundColor":"colour-Z","textColor":"greyscale-A","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull wb-force-dark has-greyscale-a-color has-colour-z-background-color has-text-color has-background has-link-color <?php echo $versioning; ?>"><!-- wp:group {"style":{"spacing":{"padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-right:0;padding-left:0"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"66.66%","style":{"spacing":{"padding":{"bottom":"2.1rem"}}}} -->
 <div class="wp-block-column" style="padding-bottom:2.1rem;flex-basis:66.66%"><!-- wp:group {"metadata":{"name":"Breadcrumb"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->

@@ -34,7 +34,7 @@
 @source inline("text-5xl");
 @source inline("w-[150px]");
 
- /*@import "tailwindcss"  prefix(govwind);*/
+/*@import "tailwindcss"  prefix(govwind);*/
 
 @source "./assets/css/globals/patterns/_patterns.scss";
 

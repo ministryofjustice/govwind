@@ -13,15 +13,14 @@
  * Versioning (below):
  * the block name, prefix it gw-
  * a version number, increment if changes are made
-*/
-	$versioning='gw-header-min v1-0';
-?>
+ */
+$versioning = "gw-header-min v1-0"; ?>
 <!-- wp:group {"metadata":{"categories":["header"],"patternName":"govwind/header-default","name":"Simple Header"},
-     "align":"full","className":"has-header-text-color has-text-color is-style-default <?php echo $versioning;?>",
+     "align":"full","className":"has-header-text-color has-text-color is-style-default <?php echo $versioning; ?>",
      "style":{"elements":{"link":{"color":{"text":"var:preset|color|header-text"}}}},
      "backgroundColor":"primary","textColor":"header-text"} -->
 <div class="wp-block-group alignfull has-header-text-color has-text-color is-style-default 
-           has-primary-background-color has-background has-link-color <?php echo $versioning;?>">
+           has-primary-background-color has-background has-link-color <?php echo $versioning; ?>">
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
         <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->

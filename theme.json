@@ -124,7 +124,7 @@
 			"blockGap": "var(--wp-block-gap)"
 		},
 		"typography": {
-			"fontFamily": "var(--font-family-pt-sans)",
+			"fontFamily": "var(--font-family-public-sans)",
 			"fontSize": "var(--font-size-base)",
 			"lineHeight": "var(--line-height-base)",
 			"textAlign": "left"

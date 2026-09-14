@@ -3,7 +3,7 @@
 	"title": "Serif headings",
 	"styles": {
 		"typography": {
-			"fontFamily": "var(--font-family-pt-sans)"
+			"fontFamily": "var(--font-family-public-sans)"
 		},
 		"blocks": {
 			"core/heading": {

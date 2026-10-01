@@ -2,7 +2,7 @@ input,
 select,
 textarea {
 	&:not(header *):not(footer *) {
-		border-radius: var(--site-radius);
+		border-radius: var(--site-radius-restricted);
 		border: solid 1px var(--colour-foreground);
 		&:focus {
 			outline: 5px solid var(--colour-focus-background-muted);

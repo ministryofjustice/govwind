@@ -67,4 +67,5 @@
 	// This is the site-wide radius
 	// This default can be overridden at the site level the same way as colours
 	--site-radius: var(--radius-default);
+	--site-radius-restricted: min(var(--site-radius), 2rem);
 }

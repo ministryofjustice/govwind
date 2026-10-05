@@ -319,7 +319,15 @@
 					}
 				}
 			},
+			"core/post-featured-image": {
+				"border": {
+					"radius": "var(--site-radius-restricted)"
+				}
+			},
 			"core/image": {
+				"border": {
+					"radius": "var(--site-radius-restricted)"
+				},
 				"spacing": {
 					"margin": {
 						"top": "var(--spacing-6)",

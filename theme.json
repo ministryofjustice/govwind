@@ -124,7 +124,7 @@
 			"blockGap": "var(--wp-block-gap)"
 		},
 		"typography": {
-			"fontFamily": "var(--font-family-pt-sans)",
+			"fontFamily": "var(--font-family-public-sans)",
 			"fontSize": "var(--font-size-base)",
 			"lineHeight": "var(--line-height-base)",
 			"textAlign": "left"
@@ -378,11 +378,7 @@
 						"left": "0"
 					}
 				},
-				"typography": {
-					"fontSize": "var(--font-size-lg)",
-					"fontStyle": "italic",
-					"lineHeight": "var(--line-height-lg)"
-				}
+				"css": "& cite {margin-top:var(--spacing-6);}"
 			},
 			"core/code": {
 				"color": {

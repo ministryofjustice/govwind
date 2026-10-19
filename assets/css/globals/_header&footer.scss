@@ -1,4 +1,6 @@
-header {
+header,
+[class*=gw-header-] {
+// .gw-header-* will be coming, but not supported yet
 	background-color: var(--colour-header-background);
 	color: var(--colour-header-foreground);
 
@@ -120,7 +122,8 @@ header {
 	* These styles just need to deal with the identifying of links & hover states 
 	* (colours and hover colours are dealt with in WordPress, hover states are the same as elsewhere)
 */
-footer {
+footer,
+[class*="gw-footer-"] {
 	a,
 	.wp-block-navigation a {
 		text-decoration: underline;

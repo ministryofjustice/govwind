@@ -14,14 +14,14 @@
 	// Extra colours for palette - needs to be included in the list of colours in _index.scss
 	--palette-1--light-mode: #8d3780;
 	--palette-2--light-mode: #3153a9;
-	--palette-3--light-mode: #A1DFE0;
-	--palette-4--light-mode: #F4EBF3;
+	--palette-3--light-mode: #a1dfe0;
+	--palette-4--light-mode: #f4ebf3;
 
 	// swap the light colours and dark colours in dark mode
 	--palette-1--dark-mode: #b85aa9;
 	--palette-2--dark-mode: #728ed6;
 	--palette-3--dark-mode: #297779;
-	--palette-4--dark-mode: #421D56;
+	--palette-4--dark-mode: #421d56;
 
 	// Button colours
 	--button-background--light-mode: var(--palette-2--light-mode);

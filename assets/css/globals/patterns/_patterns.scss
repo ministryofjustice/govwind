@@ -23,6 +23,6 @@
 	.gw-abstract-heading-image {
 		// This Tailwind creates the effect we want for the abstract image
 		// We use the --wp--style--root--padding-left so it is flush against the page edge rather than the content area edge
-		@apply govwind:relative govwind:size-full govwind:left-[var(--wp--style--root--padding-left)] govwind:[&>img]:h-full! govwind:[&>img]:w-full! govwind:[&>img]:max-w-max! govwind:[&>img]:object-cover govwind:[&>img]:object-left;
+		@apply govwind:relative govwind:size-full govwind:left-[var(--wp--style--root--padding-left)] govwind:[&>img]:h-full! govwind:[&>img]:w-full! govwind:[&>img]:max-w-max! govwind:[&>img]:object-cover govwind:[&>img]:object-left govwind:[&>img]:overflow-x-visible;
 	}
 }

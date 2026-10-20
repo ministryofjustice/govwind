@@ -2,6 +2,7 @@
  * the :root class is for the public facing website
  * the body class is for the page editor interface
  */
+@use "../../mixins" as *;
 
 :root.website-61,
 :root:has(body.website-61) {
@@ -49,4 +50,10 @@
 
 	// Non-colours
 	--site-radius: var(--radius-full);
+
+	// Special background for header logo
+	// Just use colour name as it doesn't change for dark mode and isn't used anywhere else.
+	.gw-ipa-logo {
+		@include extend-background(white, left);
+	}
 }

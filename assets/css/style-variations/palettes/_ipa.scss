@@ -55,5 +55,8 @@
 	// Just use colour name as it doesn't change for dark mode and isn't used anywhere else.
 	.gw-ipa-logo {
 		@include extend-background(white, left);
+		* {
+			color: black !important; // force black; stop the text colour changing to white for dark mode
+		}
 	}
 }

@@ -1,6 +1,6 @@
 header,
-[class*=gw-header-] {
-// .gw-header-* will be coming, but not supported yet
+[class*="gw-header-"] {
+	// .gw-header-* will be coming, but not supported yet
 	background-color: var(--colour-header-background);
 	color: var(--colour-header-foreground);
 

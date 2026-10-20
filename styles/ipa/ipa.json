@@ -25,11 +25,6 @@
 					"name": "Quaternary"
 				},
 				{
-					"slug": "site-colour-palette-5",
-					"color": "var(--colour-palette-5)",
-					"name": "Quinary"
-				},
-				{
 					"slug": "site-colour-palette-1-trans",
 					"color": "rgb(from var(--colour-palette-1) r g b / 20%);",
 					"name": "Primary transparent"
@@ -48,11 +43,6 @@
 					"slug": "site-colour-palette-4-trans",
 					"color": "rgb(from var(--colour-palette-4) r g b / 20%);",
 					"name": "Quaternary transparent"
-				},
-				{
-					"slug": "site-colour-palette-5-trans",
-					"color": "rgb(from var(--colour-palette-5) r g b / 20%);",
-					"name": "Quinary transparent"
 				},
 				{
 					"slug": "greyscale-A",

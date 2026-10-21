@@ -17,54 +17,21 @@ Extend Background Mixin
 
 
 *******/
+@use "sass:list";
 
 @mixin extend-background($colour, $side: left) {
 	background-color: $colour;
 
-	$offset: -1;
+	$offset: if($side == right, 1, -1);
+	$shadows: ();
 
-	@if $side == right {
-		$offset: 1;
+	@for $i from 1 through 39 {
+		$shadows: list.append(
+			$shadows,
+			($i * 50px * $offset) 0 0 0 $colour,
+			$separator: comma
+		);
 	}
 
-	box-shadow:
-		#{050px * $offset} 0 0 0 $colour,
-		#{100px * $offset} 0 0 0 $colour,
-		#{150px * $offset} 0 0 0 $colour,
-		#{200px * $offset} 0 0 0 $colour,
-		#{250px * $offset} 0 0 0 $colour,
-		#{300px * $offset} 0 0 0 $colour,
-		#{350px * $offset} 0 0 0 $colour,
-		#{400px * $offset} 0 0 0 $colour,
-		#{450px * $offset} 0 0 0 $colour,
-		#{500px * $offset} 0 0 0 $colour,
-		#{550px * $offset} 0 0 0 $colour,
-		#{600px * $offset} 0 0 0 $colour,
-		#{650px * $offset} 0 0 0 $colour,
-		#{700px * $offset} 0 0 0 $colour,
-		#{750px * $offset} 0 0 0 $colour,
-		#{800px * $offset} 0 0 0 $colour,
-		#{850px * $offset} 0 0 0 $colour,
-		#{900px * $offset} 0 0 0 $colour,
-		#{950px * $offset} 0 0 0 $colour,
-		#{1000px * $offset} 0 0 0 $colour,
-		#{1050px * $offset} 0 0 0 $colour,
-		#{1100px * $offset} 0 0 0 $colour,
-		#{1150px * $offset} 0 0 0 $colour,
-		#{1200px * $offset} 0 0 0 $colour,
-		#{1250px * $offset} 0 0 0 $colour,
-		#{1300px * $offset} 0 0 0 $colour,
-		#{1350px * $offset} 0 0 0 $colour,
-		#{1400px * $offset} 0 0 0 $colour,
-		#{1450px * $offset} 0 0 0 $colour,
-		#{1500px * $offset} 0 0 0 $colour,
-		#{1550px * $offset} 0 0 0 $colour,
-		#{1600px * $offset} 0 0 0 $colour,
-		#{1650px * $offset} 0 0 0 $colour,
-		#{1700px * $offset} 0 0 0 $colour,
-		#{1750px * $offset} 0 0 0 $colour,
-		#{1800px * $offset} 0 0 0 $colour,
-		#{1850px * $offset} 0 0 0 $colour,
-		#{1900px * $offset} 0 0 0 $colour,
-		#{1950px * $offset} 0 0 0 $colour;
+	box-shadow: $shadows;
 }

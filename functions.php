@@ -230,3 +230,57 @@ function gw_placeholder_image(int $w = 500, int $h = 300, string $t = ""): void
 			"/assets/images/placeholder.php?w=$w&h=$h&t=$t",
 	);
 }
+
+/**
+ * Adds CSS classes to the style variation (colour) preview tiles
+ * (Appearance > editor > styles > browse styles)
+ *
+ * Generates a class using the variation's title found in the "aria-label" attribute
+ * So "CJSM Palette" becomes "cjsm-palette-preview"
+ *
+ * A generic class of "palette-preview" is also added
+ */
+
+add_action("enqueue_block_editor_assets", function () {
+	$js = <<<'JS'
+	(function () {
+	    function addVariationClasses() {
+	        document.querySelectorAll(
+	            '.global-styles-ui-variations_item'
+	        ).forEach(function (item) {
+	            const title = item.getAttribute('aria-label');
+
+	            if (!title) {
+	                return;
+	            }
+
+	            const className = title
+	                .normalize('NFKD')
+	                .replace(/[\u0300-\u036f]/g, '')
+	                .toLowerCase()
+	                .trim()
+	                .replace(/[^a-z0-9]+/g, '-')
+	                .replace(/^-+|-+$/g, '') + "-preview";
+
+	            const preview = item.querySelector(
+	                '.global-styles-ui-variations_item-preview'
+	            );
+
+	            if (preview && className) {
+					preview.classList.add("palette-preview");
+	                preview.classList.add(className);
+	            }
+	        });
+	    }
+
+	    addVariationClasses();
+
+	    new MutationObserver(addVariationClasses).observe(
+	        document.body,
+	        { childList: true, subtree: true }
+	    );
+	})();
+	JS;
+
+	wp_add_inline_script("wp-edit-site", $js, "after");
+});

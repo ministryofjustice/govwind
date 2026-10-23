@@ -1,9 +1,9 @@
-$size-xs: 600px; //WP hard-baked narrow breakpoint
-$size-sm: 640px;
-$size-md: 782px; //WP hard-baked medium breakpoint
-$size-lg: 1080px; //WP hard-baked wide breakpoint
-$size-xl: 1280px; //WP hard-baked extra-wide breakpoint
-$size-xxl: 1536px;
+$size-xs: 37.5rem; //WP hard-baked narrow breakpoint = 600px
+$size-sm: 40rem; // 640px
+$size-md: 48.875rem; //WP hard-baked medium breakpoint = 782px
+$size-lg: 67.5rem; //WP hard-baked wide breakpoint = 1080px
+$size-xl: 80rem; //WP hard-baked extra-wide breakpoint = 1280px
+$size-xxl: 96rem; // 1536px
 
 @use "sass:math";
 @use "sass:string";
@@ -29,19 +29,19 @@ $size-xxl: 1536px;
 /// Fluid clamp generator
 /// @param $min - minimum size (e.g. 16px)
 /// @param $max - maximum size (e.g. 40px)
-/// @param $vmin - minimum viewport (e.g. 782px)
-/// @param $vmax - maximum viewport (e.g. 1536px)
+/// @param $vmin - minimum viewport (e.g. 40rem)
+/// @param $vmax - maximum viewport (e.g. 96rem)
 
 @mixin fluid($property, $min, $max, $vmin, $vmax) {
-	@if math.unit($min) == "rem" {
-		$min: rem-to-px($min);
+	@if math.unit($min) == "px" {
+		$min: px-to-rem($min);
 	}
-	@if math.unit($max) == "rem" {
-		$max: rem-to-px($max);
+	@if math.unit($max) == "px" {
+		$max: px-to-rem($max);
 	}
 
-	@if math.unit($max) != "px" or math.unit($min) != "px" {
-		// Only REMs and PX supported, REMs have been converted by now
+	@if math.unit($max) != "rem" or math.unit($min) != "rem" {
+		// Only REMs and PX supported, PXs have been converted by now
 		@error 'fluid() expects px or rem values for min and max.';
 	}
 

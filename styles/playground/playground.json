@@ -15,12 +15,12 @@
 					"name": "Primary accent"
 				},
 				{
-					"slug": "site-colour-palette-3",
+					"slug": "playground-colour-palette-3",
 					"color": "var(--colour-palette-3)",
 					"name": "Secondary"
 				},
 				{
-					"slug": "site-colour-palette-4",
+					"slug": "playground-colour-palette-4",
 					"color": "var(--colour-palette-4)",
 					"name": "Secondary accent"
 				},

@@ -1,0 +1,37 @@
+/********
+
+Extend Background Mixin
+
+	Extends an element's background colour beyond its own boundaries 
+	using box shadows, allowing the background to reach the edge of 
+	the viewport. 
+	
+	Params:
+	$colour: colour to use as the background
+	$side (optional): left or right, defaults to left
+
+	Assumptions:
+	- The element is not less than 50px wide.  
+	- We don't care about screen widths which shew 2000px to the side of the element.
+	- There are no elements to the side which will be impacted by the extended background.
+
+
+*******/
+@use "sass:list";
+
+@mixin extend-background($colour, $side: left) {
+	background-color: $colour;
+
+	$offset: if($side == right, 1, -1);
+	$shadows: ();
+
+	@for $i from 1 through 39 {
+		$shadows: list.append(
+			$shadows,
+			($i * 50px * $offset) 0 0 0 $colour,
+			$separator: comma
+		);
+	}
+
+	box-shadow: $shadows;
+}

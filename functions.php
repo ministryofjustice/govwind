@@ -122,6 +122,11 @@ add_filter("body_class", "gw_add_body_class");
 require get_template_directory() . "/inc/languages.php";
 
 /**
+ * Image handling
+ */
+require_once get_template_directory() . "/inc/image-management.php";
+
+/**
  * Breadcrumbs
  */
 require get_template_directory() . "/inc/breadcrumbs.php";
@@ -215,18 +220,3 @@ add_action("enqueue_block_editor_assets", function () {
 		);
 	}
 });
-
-/**
- * function echos out the path for the image only
- * $w = width in pixels (int only)
- * $h = height in pixels (int only)
- * int only protection here and in the placeholder file
- */
-function gw_placeholder_image(int $w = 500, int $h = 300, string $t = ""): void
-{
-	$t = urlencode(mb_substr($t, 0, 20, "UTF-8"));
-	echo esc_url(
-		get_template_directory_uri() .
-			"/assets/images/placeholder.php?w=$w&h=$h&t=$t",
-	);
-}

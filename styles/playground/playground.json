@@ -15,14 +15,14 @@
 					"name": "Primary accent"
 				},
 				{
-					"slug": "playground-colour-palette-3",
+					"slug": "site-colour-palette-3",
 					"color": "var(--colour-palette-3)",
-					"name": "Secondary"
+					"name": "Yellowish"
 				},
 				{
-					"slug": "playground-colour-palette-4",
+					"slug": "site-colour-palette-4",
 					"color": "var(--colour-palette-4)",
-					"name": "Secondary accent"
+					"name": "Reddish"
 				},
 				{
 					"slug": "greyscale-A",

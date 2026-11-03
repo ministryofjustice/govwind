@@ -1,0 +1,19 @@
+name: Release
+
+# Releases when a merge to main bumps the Version header in style.css.
+# See the shared workflow for details.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: read # to title the release after the merged PR
+
+jobs:
+  release:
+    uses: ministryofjustice/wb-workflows/.github/workflows/wb-package.yml@4830f5453174d7723ad4c7ced84de3cb6b5bd710
+    with:
+      mode: release
+      version-file: style.css
+      package-name: govwind

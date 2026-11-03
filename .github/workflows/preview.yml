@@ -1,0 +1,18 @@
+name: Build preview
+
+# Builds any branch into a pre-release zip for testing on a shared environment.
+#   Actions tab -> "Build preview" -> Run workflow -> pick the branch
+#   or: gh workflow run preview.yml --ref my-branch
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preview:
+    uses: ministryofjustice/wb-workflows/.github/workflows/wb-package.yml@4830f5453174d7723ad4c7ced84de3cb6b5bd710
+    with:
+      mode: preview
+      version-file: style.css
+      package-name: govwind

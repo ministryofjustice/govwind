@@ -1,0 +1,22 @@
+# Files shipped in the release and preview zips.
+# rsync filter rules: checked top to bottom, first match wins.
+# "***" means the folder and everything in it; "- *" drops anything not listed.
++ /style.css
++ /functions.php
++ /theme.json
++ /composer.json
++ /README.md
++ /inc/***
++ /parts/***
++ /patterns/***
++ /styles/***
++ /templates/***
+# assets/css is Sass source compiled into dist/; images and JS are loaded directly.
++ /assets/
++ /assets/images/***
++ /assets/js/***
+# dist/theme.css is inlined into dist/style.css by the build.
++ /dist/
++ /dist/style.css
++ /dist/files/***
+- *

@@ -11,8 +11,7 @@ permissions:
 
 jobs:
   preview:
-    # TODO: pin to a commit SHA once the shared workflow is settled.
-    uses: ministryofjustice/wb-workflows/.github/workflows/wb-package.yml@main
+    uses: ministryofjustice/wb-workflows/.github/workflows/wb-package.yml@4830f5453174d7723ad4c7ced84de3cb6b5bd710
     with:
       mode: preview
       version-file: style.css

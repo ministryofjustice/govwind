@@ -17,12 +17,12 @@
 				{
 					"slug": "site-colour-palette-3",
 					"color": "var(--colour-palette-3)",
-					"name": "Secondary"
+					"name": "Yellowish"
 				},
 				{
 					"slug": "site-colour-palette-4",
 					"color": "var(--colour-palette-4)",
-					"name": "Secondary accent"
+					"name": "Reddish"
 				},
 				{
 					"slug": "greyscale-A",

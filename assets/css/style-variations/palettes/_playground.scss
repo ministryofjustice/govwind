@@ -3,6 +3,7 @@
  * the body class is for the page editor interface
  */
 
+.playground-palette-preview,
 :root.website-2,
 :root:has(body.website-2) {
 	// Brand unique colours
@@ -11,10 +12,10 @@
 	--brand-intensity-subtle: 0.066; //intensity mainly for dark theme
 
 	// Extra colours for palette - needs to be included in the list of colours in _index.scss
-	--palette-3--light-mode: #dac777;
-	--palette-4--light-mode: #f8f4e4;
+	--palette-3--light-mode: #ffdd00;
+	--palette-4--light-mode: #ff0000;
 	--palette-3--dark-mode: #4c4215;
-	--palette-4--dark-mode: #47453e;
+	--palette-4--dark-mode: #880000;
 
 	// Button colours
 	--button-background--light-mode: oklch(0.3 0.071 249);

@@ -57,6 +57,7 @@ $colour-list: list.join($palette-colour-list, $other-colour-list);
 	}
 }
 
+.palette-preview,
 :root {
 	@include wb-summon-palette($colours: $colour-list, $mode: light-mode);
 

@@ -22,12 +22,17 @@
 				{
 					"slug": "site-colour-palette-4",
 					"color": "var(--colour-palette-4)",
-					"name": "Quaternary"
+					"name": "Primary accent"
 				},
 				{
 					"slug": "site-colour-palette-5",
 					"color": "var(--colour-palette-5)",
-					"name": "Quaternary"
+					"name": "Secondary accent"
+				},
+				{
+					"slug": "site-colour-palette-6",
+					"color": "var(--colour-palette-6)",
+					"name": "Tertiary accent"
 				},
 				{
 					"slug": "greyscale-A",

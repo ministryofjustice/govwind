@@ -18,12 +18,16 @@
 	--palette-2--light-mode: #3153a9;
 	--palette-3--light-mode: #a1dfe0;
 	--palette-4--light-mode: #f4ebf3;
+	--palette-5--light-mode: #d6dcef;
+	--palette-6--light-mode: #e6f6f5;
 
 	// swap the light colours and dark colours in dark mode
-	--palette-1--dark-mode: #b85aa9;
-	--palette-2--dark-mode: #728ed6;
-	--palette-3--dark-mode: #297779;
+	--palette-1--dark-mode: #eacde9;
+	--palette-2--dark-mode: #d6dcef;
+	--palette-3--dark-mode: #15acaf;
 	--palette-4--dark-mode: #421d56;
+	--palette-5--dark-mode: #3153a9;
+	--palette-6--dark-mode: #297779;
 
 	// Button colours
 	--button-background--light-mode: var(--palette-2--light-mode);

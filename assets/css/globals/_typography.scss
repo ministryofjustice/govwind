@@ -154,16 +154,16 @@ $type-scale: (
 	),
 	// ↓ 7-xl through 9-xl have no heading tag — utility classes only
 	"7-xl": (
-			mobile: 3rem,
-			tablet: 3.75rem,
-			desktop: 4.5rem,
-			line-height: (
-				mobile: 3.25rem,
-				tablet: 4rem,
-				desktop: 4.75rem,
-			),
-			tight-spacing: true,
+		mobile: 3rem,
+		tablet: 3.75rem,
+		desktop: 4.5rem,
+		line-height: (
+			mobile: 3.25rem,
+			tablet: 4rem,
+			desktop: 4.75rem,
 		),
+		tight-spacing: true,
+	),
 	"8-xl": (
 		mobile: 3.75rem,
 		tablet: 4.5rem,

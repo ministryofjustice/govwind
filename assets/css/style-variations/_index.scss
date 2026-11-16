@@ -1,4 +1,5 @@
 // Forward all theme modules
+@forward "palettes/ai-conference";
 @forward "palettes/defaults";
 @forward "palettes/playground";
 @forward "palettes/cjsm";
@@ -45,8 +46,8 @@ $other-colour-list:
 	header-search-drawer-input-background, header-search-drawer-input-text,
 	header-search-drawer-input-border, header-button-outline,
 	header-logo-focus-filter, button-background, button-text, button-border,
-	button-background-hover, button-text-hover, link-text, link-text-hover,
-	link-text-visited, quote-border, "red", "green", "blue";
+	button-background-hover, button-text-hover, button-border-hover, link-text,
+	link-text-hover, link-text-visited, quote-border, "red", "green", "blue";
 
 $colour-list: list.join($palette-colour-list, $other-colour-list);
 

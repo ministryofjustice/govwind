@@ -1,0 +1,171 @@
+/**
+ * the :root class is for the public facing website
+ * the body class is for the page editor interface
+ */
+
+.ai-conference-palette-preview,
+:root.website-2, // Playground
+:root:has(body.website-2),
+:root.website-75, // AI conference
+:root:has(body.website-75) {
+	// The JSON file has these colours hard-coded
+	// This is because there is no light/dark mode for this site
+	// So there is no advantage to calling the colour variables
+	// Although a change in these colours will need updating in both places
+
+	// Forced dark mode handling - no dark/light mode on this site
+	--forced-dark-colour: unset;
+	--forced-light-colour: unset;
+
+	//palette
+	// these are the colours that are pickable in the colour palette - see theme.json
+	--palette-1--light-mode: #ff8510;
+	--palette-2--light-mode: #ffbe4f;
+	--palette-3--light-mode: #ff39a8;
+	--palette-4--light-mode: #b84cff;
+	--palette-5--light-mode: #007fff;
+	--palette-6--light-mode: #00ddac;
+	--palette-greyscale-1--light-mode: #010101; // The page background
+	--palette-greyscale-2--light-mode: #0c1629;
+	--palette-greyscale-3--light-mode: #2d4054;
+	--palette-greyscale-4--light-mode: #95a7bb;
+	--palette-greyscale-5--light-mode: #dce5ef;
+	--palette-greyscale-6--light-mode: #fefefe; // Used for text
+
+	// Basic colours
+	// these are defaulted to palette greyscale colours
+	--page-background--light-mode: var(--palette-greyscale-1--light-mode);
+	--foreground--light-mode: var(--palette-greyscale-6--light-mode);
+
+	//header colours
+	--header-background--light-mode: var(--palette-greyscale-3--light-mode);
+	--header-foreground--light-mode: var(--palette-greyscale-6--light-mode);
+	--header-nav-background--light-mode: var(--palette-greyscale-3--light-mode);
+	--header-nav-links--light-mode: var(--palette-greyscale-6--light-mode);
+	--header-nav-links-current--light-mode: var(
+		--palette-greyscale-1--light-mode
+	);
+	--header-nav-drawer-background--light-mode: var(
+		--palette-greyscale-3--light-mode
+	);
+	--header-nav-drawer-links--light-mode: var(--palette-greyscale-6--light-mode);
+	--header-nav-separator-line--light-mode: var(
+		--palette-greyscale-4--light-mode
+	);
+	--header-button-outline--light-mode: 2px solid
+		var(--palette-greyscale-4--light-mode); // Use especially if button colour matches header colour
+
+	//header search
+	--header-search-form-background--light-mode: var(
+		--palette-greyscale-6--light-mode
+	);
+	--header-search-form-text--light-mode: var(--palette-greyscale-1--light-mode);
+	--header-search-drawer-label--light-mode: var(
+		--palette-greyscale-1--light-mode
+	);
+	--header-search-drawer-background--light-mode: var(
+		--palette-greyscale-6--light-mode
+	);
+	--header-search-drawer-input-background--light-mode: var(
+		--palette-greyscale-6--light-mode
+	);
+	--header-search-drawer-input-text--light-mode: var(
+		--palette-greyscale-1--light-mode
+	);
+	--header-search-drawer-input-border--light-mode: var(
+		--palette-greyscale-1--light-mode
+	);
+
+	// Auxillary colours
+	// these colours are not available for selecting in the palette
+	// they are genral colours which could be used all over the place
+	--foreground-hint--light-mode: var(--palette-greyscale-4--light-mode);
+	--disabled--light-mode: var(--palette-greyscale-3--light-mode);
+	--muted--light-mode: var(--palette-greyscale-4--light-mode);
+	--subtle--light-mode: var(--palette-greyscale-5--light-mode);
+	--strong--light-mode: var(--palette-greyscale-5--light-mode);
+	--error--light-mode: #ff0000;
+	--error-muted--light-mode: #c10007;
+	// no context colours
+	--red--light-mode: #ff0000;
+	--green--light-mode: #4dff30;
+	--blue--light-mode: #6cb6ff;
+
+	// Component colours (set in theme.json usually)
+	// Hard coded colours so they aren't affected by brand colour changes
+	// e.g. links will probably still be blue even if the website colour is yellow
+	--button-background--light-mode: #1a65a6;
+	--button-background-hover--light-mode: #007fb0;
+	--button-text--light-mode: #ffffff;
+	--button-border--light-mode: var(--button-text--light-mode);
+	--link-text--light-mode: #6db6ff;
+	--link-text-hover--light-mode: #007fff;
+	--link-text-visited--light-mode: #cd81ff;
+
+	// Root background colour (visible beneath footer on short pages)
+	--root-background--light-mode: var(--palette-greyscale-2--light-mode);
+
+	// WB Block colours
+	// Reference other colours, rather than create new ones
+	--wb-accordion-hover-bg: var(--colour-subtle);
+	--wb-accordion-focus-text: var(--colour-focus-text);
+	--wb-accordion-focus-bg: var(--colour-focus-background-muted);
+	--wb-accordion-focus-visible-bg: var(--colour-focus-background);
+	--wb-accordion-focus-visible-outline: currentColor;
+
+	/********************************************************************
+		DARK MODE
+		THERE IS NO DARK MODE DIFFERENCE FOR THIS SITE
+	********************************************************************/
+	//palette
+	--palette-1--dark-mode: var(--palette-1--light-mode);
+	--palette-2--dark-mode: var(--palette-2--light-mode);
+	--palette-3--dark-mode: var(--palette-3--light-mode);
+	--palette-4--dark-mode: var(--palette-4--light-mode);
+	--palette-5--dark-mode: var(--palette-5--light-mode);
+	--palette-6--dark-mode: var(--palette-6--light-mode);
+	--palette-greyscale-1--dark-mode: var(--palette-greyscale-1--light-mode);
+	--palette-greyscale-2--dark-mode: var(--palette-greyscale-2--light-mode);
+	--palette-greyscale-3--dark-mode: var(--palette-greyscale-3--light-mode);
+	--palette-greyscale-4--dark-mode: var(--palette-greyscale-4--light-mode);
+	--palette-greyscale-5--dark-mode: var(--palette-greyscale-5--light-mode);
+	--palette-greyscale-6--dark-mode: var(--palette-greyscale-6--light-mode);
+
+	//basic colours
+	// these are defaulted to palette greyscale colours
+	--page-background--dark-mode: var(--page-background--light-mode);
+	--foreground--dark-mode: var(--foreground--light-mode);
+
+	// General
+	--foreground-hint--dark-mode: var(--foreground-hint--light-mode);
+	--disabled--dark-mode: var(--disabled--light-mode);
+	--muted--dark-mode: var(--muted--light-mode);
+	--subtle--dark-mode: var(--subtle--light-mode);
+	--strong--dark-mode: var(--strong--light-mode);
+	--error--dark-mode: var(--error--light-mode);
+	--error-muted--dark-mode: var(--error-muted--light-mode);
+	// no context colours
+	--red--dark-mode: var(--red--light-mode);
+	--green--dark-mode: var(--green--light-mode);
+	--blue--dark-mode: var(--blue--light-mode);
+
+	// Components
+	--button-background--dark-mode: var(--button-background--light-mode);
+	--button-background-hover--dark-mode: var(
+		--button-background-hover--light-mode
+	);
+	--button-text--dark-mode: var(--button-text--light-mode);
+	--button-border--dark-mode: var(--button-border--light-mode);
+	--link-text--dark-mode: var(--link-text--light-mode);
+	--link-text-hover--dark-mode: var(--link-text-hover--light-mode);
+	--link-text-visited--dark-mode: var(--link-text-visited--light-mode);
+	--quote-border--dark-mode: var(
+		--quote-border--light-mode
+	); // At the moment, this block might be designed differently, so this might go
+
+	// Root background colour (visible beneath footer on short pages)
+	--root-background--dark-mode: var(--root-background--light-mode);
+
+	// Non-colours
+	--site-radius: var(--radius-md);
+}

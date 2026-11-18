@@ -201,6 +201,15 @@
 				"typography": {
 					"fontSize": "var(--font-size-base)"
 				},
+				":hover": {
+					"color": {
+						"text": "var(--colour-button-text-hover)",
+						"background": "var(--colour-button-background-hover)"
+					},
+					"border": {
+						"color": "var(--colour-button-border-hover)"
+					}
+				},
 				":focus": {
 					"color": {
 						"text": "var(--colour-focus-text)!important",

@@ -3,9 +3,9 @@
  * the body class is for the page editor interface
  */
 
-.playground-palette-preview,
-:root.website-2,
-:root:has(body.website-2) {
+//:root.website-2,
+//:root:has(body.website-2),
+.playground-palette-preview {
 	// Brand unique colours
 	--brand-colour: 249; //degrees round the colour wheel
 	--brand-intensity-vivid: 0.064; //intensity mainly for light theme

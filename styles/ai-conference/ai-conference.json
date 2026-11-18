@@ -1,0 +1,72 @@
+{
+	"version": 3,
+	"title": "AI Conference palette",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "colour-Y",
+					"color": "#ff8510",
+					"name": "Orange"
+				},
+				{
+					"slug": "colour-Z",
+					"color": "#ffbe4f",
+					"name": "Yellow"
+				},
+				{
+					"slug": "site-colour-palette-3",
+					"color": "#ff39a8",
+					"name": "Pink"
+				},
+				{
+					"slug": "site-colour-palette-4",
+					"color": "#b84cff",
+					"name": "Purple"
+				},
+				{
+					"slug": "site-colour-palette-5",
+					"color": "#007fff",
+					"_comment": "blue - but blue is a reserved colour name, as is red and green",
+					"name": "Azure"
+				},
+				{
+					"slug": "site-colour-palette-6",
+					"color": "#00ddac",
+					"_comment": "green - but green is a reserved colour name, as is red and blue",
+					"name": "Aquamarine"
+				},
+				{
+					"slug": "greyscale-A",
+					"color": "#010101",
+					"name": "Black"
+				},
+				{
+					"slug": "greyscale-B",
+					"color": "#0c1629",
+					"name": "Off black"
+				},
+				{
+					"slug": "greyscale-C",
+					"color": "#2d4054",
+					"name": "Dark grey"
+				},
+				{
+					"slug": "greyscale-X",
+					"color": "#95a7bb",
+					"name": "Light grey"
+				},
+				{
+					"slug": "greyscale-Y",
+					"color": "#dce5ef",
+					"name": "Off white"
+				},
+				{
+					"slug": "greyscale-Z",
+					"color": "#fefefe",
+					"name": "White"
+				}
+			]
+		}
+	}
+}

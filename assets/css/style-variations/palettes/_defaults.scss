@@ -42,7 +42,7 @@
 		var(--brand-brightness-primary-light) var(--brand-intensity-vivid)
 			var(--brand-colour)
 	);
-	--header-foreground--light-mode: #ffffff;
+	--header-foreground--light-mode: #ffffff; //needs to contrast with above
 	--header-nav-background--light-mode: oklch(
 		var(--brand-brightness-accent-light) var(--brand-intensity-vivid)
 			var(--brand-colour)
@@ -50,24 +50,39 @@
 	--header-nav-background-overflow--light-mode: var(
 		--header-nav-background--light-mode
 	);
-	--header-nav-links--light-mode: #fff;
-	--header-nav-links-current--light-mode: #0a0a0a; // needs to contrast with --header-nav-links--light-mode
+	--header-nav-links--light-mode: var(--palette-greyscale-1--light-mode);
+	--header-nav-links-current--light-mode: var(
+		--palette-greyscale-4--light-mode
+	); // needs to contrast with --header-nav-links--light-mode
 	--header-nav-drawer-background--light-mode: #f5f5f5;
-	--header-nav-drawer-links--light-mode: #0a0a0a;
+	--header-nav-drawer-links--light-mode: var(--palette-greyscale-4--light-mode);
 	--header-nav-separator-line--light-mode: #d9d9d9;
 	--header-button-background--light-mode: var(--header-background--light-mode);
 	--header-button-foreground--light-mode: var(--header-foreground--light-mode);
-	--header-button-outline--light-mode: 2px solid #e5e5e5; // Use especially if button colour matches header colour
+	--header-button-outline--light-mode: 2px solid
+		var(--palette-greyscale-2--light-mode); // Use especially if button colour matches header colour
 	--header-logo-focus-filter--light-mode: none;
 
 	//header search
-	--header-search-form-background--light-mode: #ffffff;
-	--header-search-form-text--light-mode: #0a0a0a;
-	--header-search-drawer-label--light-mode: #0a0a0a;
-	--header-search-drawer-background--light-mode: #ffffff;
-	--header-search-drawer-input-background--light-mode: #ffffff;
-	--header-search-drawer-input-text--light-mode: #0a0a0a;
-	--header-search-drawer-input-border--light-mode: #0a0a0a;
+	--header-search-form-background--light-mode: var(
+		--palette-greyscale-1--light-mode
+	);
+	--header-search-form-text--light-mode: var(--palette-greyscale-4--light-mode);
+	--header-search-drawer-label--light-mode: var(
+		--palette-greyscale-4--light-mode
+	);
+	--header-search-drawer-background--light-mode: var(
+		--palette-greyscale-1--light-mode
+	);
+	--header-search-drawer-input-background--light-mode: var(
+		--palette-greyscale-1--light-mode
+	);
+	--header-search-drawer-input-text--light-mode: var(
+		--palette-greyscale-4--light-mode
+	);
+	--header-search-drawer-input-border--light-mode: var(
+		--palette-greyscale-4--light-mode
+	);
 
 	// Auxillary colours
 	// these colours are not available for selecting in the palette
@@ -95,8 +110,15 @@
 	// Hard coded colours so they aren't affected by brand colour changes
 	// e.g. links will probably still be blue even if the website colour is yellow
 	--button-background--light-mode: #1a65a6;
+	--button-background-hover--light-mode: var(
+		--button-background--light-mode
+	); //the same as the normal background - usually adjusted using opacity and brightness changes in the block
 	--button-text--light-mode: #ffffff;
-	--button-border--light-mode: var(--button-background--light-mode);
+	--button-text-hover--light-mode: var(
+		--button-text--light-mode
+	); //the same as the non-hover colour
+	--button-border--light-mode: transparent; // adopts the background colour, so effectively no border
+	--button-border-hover--light-mode: var(--button-border--light-mode);
 	--link-text--light-mode: #1a65a6;
 	--link-text-hover--light-mode: #0f385c;
 	--link-text-visited--light-mode: #8200db;
@@ -199,7 +221,7 @@
 	--error--dark-mode: #f00;
 	--error-muted--dark-mode: #c10007;
 	// no context colours
-	--red--dark-mode: #f56b79;
+	--red--dark-mode: #ff0000;
 	--green--dark-mode: #4dff30;
 	--blue--dark-mode: #6cb6ff;
 
@@ -213,8 +235,11 @@
 
 	// Components
 	--button-background--dark-mode: #6cb6ff;
+	--button-background-hover--dark-mode: var(--button-background--dark-mode);
 	--button-text--dark-mode: #0a0a0a;
-	--button-border--dark-mode: var(--button-background--dark-mode);
+	--button-text-hover--dark-mode: var(--button-text--dark-mode);
+	--button-border--dark-mode: transparent; // adopts the background colour, so effectively no border
+	--button-border-hover--dark-mode: var(--button-border--dark-mode);
 	--link-text--dark-mode: #6cb6ff;
 	--link-text-hover--dark-mode: #9fd0ff;
 	--link-text-visited--dark-mode: #c4a2d1;

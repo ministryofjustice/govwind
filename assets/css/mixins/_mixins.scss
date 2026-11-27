@@ -22,7 +22,8 @@ Extend Background Mixin
 @mixin extend-background($colour, $side: left) {
 	background-color: $colour;
 
-	$offset: if($side == right, 1, -1);
+	//	$offset: if($side == right, 1, -1);
+	$offset: if(sass($side == right): 1; else: -1);
 	$shadows: ();
 
 	@for $i from 1 through 39 {

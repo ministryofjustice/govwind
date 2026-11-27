@@ -1,0 +1,63 @@
+:root {
+	#cookie-compliance-banner {
+		--cookie-banner-container-max-width: 100%;
+		--cookie-banner-container-width: var(--wp--style--global--content-size);
+
+		color: var(--colour-foreground);
+		background: var(--colour-page-background);
+		padding-left: var(--wp--style--root--padding-left);
+		padding-right: var(--wp--style--root--padding-right);
+	}
+	#cookie-compliance-banner,
+	#cookie-settings-page {
+		button {
+			color: var(--colour-button-text);
+			background-color: var(--colour-button-background);
+			border-radius: var(--site-radius);
+			&:hover {
+				background-color: var(--colour-button-background-hover);
+				border-color: var(--colour-button-border-hover);
+				color: var(--colour-button-text-hover);
+				filter: brightness(1.1);
+				opacity: 0.95;
+			}
+			&:focus {
+				background-color: var(--colour-focus-background-muted) !important;
+				color: var(--colour-focus-text) !important;
+				outline-color: var(--colour-focus-outline);
+				outline-offset: 0px;
+				outline-style: solid;
+				outline-width: 3px;
+			}
+			&:focus-visible {
+				background-color: var(--colour-focus-background) !important;
+				color: var(--colour-focus-text) !important;
+				outline-color: var(--colour-focus-outline);
+				outline-style: solid;
+			}
+		}
+		a {
+			color: var(--colour-link-text);
+
+			&:hover {
+				color: var(--colour-link-text-hover);
+			}
+			&:focus {
+				background-color: var(--colour-focus-background-muted) !important;
+				color: var(--colour-focus-text) !important;
+				text-decoration: none;
+				box-shadow:
+					0 -0.075em var(--colour-focus-background-muted),
+					0 0.15em var(--colour-focus-outline);
+			}
+			&:focus-visible {
+				background-color: var(--colour-focus-background) !important;
+				outline-color: transparent;
+				outline-style: solid;
+				box-shadow:
+					0 -0.075em var(--colour-focus-background),
+					0 0.15em var(--colour-focus-outline);
+			}
+		}
+	}
+}

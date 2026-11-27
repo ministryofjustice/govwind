@@ -1,7 +1,7 @@
 :root {
 	#cookie-compliance-banner {
 		--cookie-banner-container-max-width: 100%;
-		--cookie-banner-container-width: 1280px;
+		--cookie-banner-container-width: var(--wp--style--global--content-size);
 
 		color: var(--colour-foreground);
 		background: var(--colour-page-background);
